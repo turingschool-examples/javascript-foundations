@@ -5,6 +5,7 @@
 1. Read the README.md
 2. Run your first test suite ```npm test test/unicorn-test.js```
 3. Make the tests pass
+4. Lather, rinse, repeat through the creatures in order
 
 ## Creature Order
 
