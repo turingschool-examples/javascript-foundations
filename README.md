@@ -2,10 +2,11 @@
 
 ## Installation Steps
 
-1. Read the README.md
-2. Run your first test suite ```npm test test/unicorn-test.js```
-3. Make the tests pass
-4. Lather, rinse, repeat through the creatures in order
+1. Clone the repo
+2. cd into the directory
+3. Run your first test suite ```npm test test/unicorn-test.js```
+4. Make the tests pass
+5. Lather, rinse, repeat through the creatures (in order), running tests and making things pass
 
 ## Creature Order
 
