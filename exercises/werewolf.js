@@ -1,6 +1,5 @@
-function Werewolf(name, location) {
-  this.name = name;
-  this.location = location;
+function Werewolf() {
+
 }
 
 function Victim() {
