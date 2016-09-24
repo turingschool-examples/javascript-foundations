@@ -79,4 +79,4 @@ describe('Person', function () {
     assert(victim.stoned);
   });
 
-})
+});
