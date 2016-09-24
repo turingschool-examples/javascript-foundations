@@ -29,12 +29,12 @@ describe('Wizard', function() {
 
   it.skip('should have root powers', function() {
     var wizard = new Wizard({name: 'Jhun', bearded: false});
-    assert.equal(wizard.incantation('chown lumos'), 'sudo LUMOS');
+    assert.equal(wizard.incantation('chown lumos'), 'CHOWN LUMOS');
   });
 
   it.skip('should has lots of root powers', function() {
     var wizard = new Wizard({name: 'Jhun', bearded: false});
-    assert.equal(wizard.incantation('Expecto Patronum'), 'sudo EXPECTO PATRONUM');
+    assert.equal(wizard.incantation('Expecto Patronum'), 'EXPECTO PATRONUM');
   });
 
   it.skip('should start rested', function() {
