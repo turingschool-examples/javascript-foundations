@@ -27,7 +27,7 @@ describe('Hobbit', function () {
     assert.equal(hobbit.age, 0);
   });
 
-  it.skip('should have gained 1 year after every birhtday', function() {
+  it.skip('should have gained 1 year after every birthday', function() {
     var hobbit = new Hobbit('Meriadoc')
     assert.equal(hobbit.age, 0);
     hobbit.celebrate_birthday();
