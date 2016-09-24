@@ -46,7 +46,7 @@ describe('Medusa', function () {
     medusa.stare(victim3);
     medusa.stare(victim4);
 
-    assert.equal(medusa.statues.length, 3)
+    assert.equal(medusa.statues.length, 3);
   });
 
   it.skip('should unstone the the first victim and stone the 4th coming in', function() {
