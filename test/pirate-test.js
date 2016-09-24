@@ -45,7 +45,7 @@ describe('Pirate', function () {
 
   it.skip('should be able to rob ships', function() {
     //create a pirate
-    //assert that a pirate.rob_ship() returns 'YAARRR'
+    //assert that a pirate.robShip() returns 'YAARRR'
   });
 
   it.skip('should start with a booty of 0', function() {
@@ -53,10 +53,10 @@ describe('Pirate', function () {
     //assert that pirate.booty returns 0
   });
 
-  it.skip('should have a booty of 100 after rob_ship()', function() {
+  it.skip('should have a booty of 100 after robShip()', function() {
     //create pirate
     //assert that pirate.booty returns 0
-    //call rob_ship
+    //call robShip
     //assert booty returns 100
   });
 });
