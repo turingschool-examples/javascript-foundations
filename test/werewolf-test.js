@@ -108,4 +108,4 @@ describe('Victim', function () {
     assert(!vicitm.alive);
   });
 
-})
+});
