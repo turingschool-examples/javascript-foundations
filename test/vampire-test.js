@@ -37,4 +37,5 @@ describe('Vampire', function() {
     vampire.drink();
     assert(!vampire.thirsty);
   });
-})
+  
+});
