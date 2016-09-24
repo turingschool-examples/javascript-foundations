@@ -27,7 +27,7 @@ describe('Unicorn', function () {
     assert.equal(unicorn.color, 'white');
   });
 
-  it.skip('should be refute isWhite', function() {
+  it.skip('should refute isWhite', function() {
     var unicorn = new Unicorn('Steve', 'red');
     assert(!unicorn.isWhite());
   });
