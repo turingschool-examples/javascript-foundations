@@ -19,16 +19,16 @@ describe('Hobbit', function () {
 
   it.skip('should have an unadventurous disposition', function() {
     var hobbit = new Hobbit('Samwise');
-    assert.equal(hobbit.disposition, 'homebody')
+    assert.equal(hobbit.disposition, 'homebody');
   });
 
   it.skip('should have an age', function() {
-    var hobbit = new Hobbit('Meriadoc')
+    var hobbit = new Hobbit('Meriadoc');
     assert.equal(hobbit.age, 0);
   });
 
   it.skip('should have gained 1 year after every birthday', function() {
-    var hobbit = new Hobbit('Meriadoc')
+    var hobbit = new Hobbit('Meriadoc');
     assert.equal(hobbit.age, 0);
     hobbit.celebrate_birthday();
     hobbit.celebrate_birthday();
@@ -43,14 +43,14 @@ describe('Hobbit', function () {
   }
 
   it.skip('should be considered a child at the age of 32', function() {
-    var hobbit = new Hobbit('Taylor')
+    var hobbit = new Hobbit('Taylor');
     timeTravel(32, hobbit);
     assert.equal(hobbit.age, 32);
     assert(!hobbit.adult());
   });
 
   it.skip('should be considered an adult at 33', function() {
-    var hobbit = new Hobbit('Taylor')
+    var hobbit = new Hobbit('Taylor');
     timeTravel(33, hobbit);
     assert.equal(hobbit.age, 33);
     assert(hobbit.adult());
@@ -76,5 +76,4 @@ describe('Hobbit', function () {
     //check that .hasRing() for Sam returns false
   });
 
-
-})
+});
