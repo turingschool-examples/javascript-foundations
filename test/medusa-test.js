@@ -51,7 +51,20 @@ describe('Medusa', function () {
   });
 
   it.skip('should unstone the the first victim and stone the 4th coming in', function() {
-    // your code here
+    // create medusa
+    // create first victim
+    // create second victim
+    // create third victim
+    // create fourth victim
+
+    // medusa stares at first victim
+    // assert that the first victim is stoned
+    // medusa stares at second victim
+    // medusa stares at third victim
+    // medusa stares at fourth victim
+    // assert the fourth victim is stoned
+
+    // assert that the first victim is not stoned
   });
 })
 

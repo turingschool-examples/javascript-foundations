@@ -109,6 +109,7 @@ describe('Centaur', function () {
 
     assert.equal(centaur.sleep(), 'ZZZZ');
     assert.equal(centaur.cranky, false);
+    
     centaur.standUp();
     assert.equal(centaur.shoot(),'Twang!!!');
   });
