@@ -22,6 +22,8 @@ describe('Medusa', function () {
     assert.deepEqual(medusa.statues, []);
   });
 
+  // Pass first 3 tests for Person down below
+
   it.skip('should gain a statue when staring at a person', function() {
     var medusa = new Medusa('Brenna');
     var victim = new Person('Jhun');
@@ -32,7 +34,6 @@ describe('Medusa', function () {
     assert.equal(medusa.statues[0].name, 'Jhun');
 
   });
-  // pass first 3 tests for person down below
 
   it.skip('should only be able to have three victims as a statue', function() {
     var medusa = new Medusa('Meeka');
@@ -78,5 +79,4 @@ describe('Person', function () {
     medusa.stare(victim);
     assert(victim.stoned);
   });
-
 });

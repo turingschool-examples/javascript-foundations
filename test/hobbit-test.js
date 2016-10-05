@@ -39,8 +39,8 @@ describe('Hobbit', function () {
   function timeTravel(num, hobbit) {
     for(var i = 0; i < num; i++) {
       hobbit.celebrate_birthday();
-    }
-  }
+    };
+  };
 
   it.skip('should be considered a child at the age of 32', function() {
     var hobbit = new Hobbit('Taylor');
@@ -55,8 +55,6 @@ describe('Hobbit', function () {
     assert.equal(hobbit.age, 33);
     assert(hobbit.adult());
   });
-
-
 
   it.skip('should be short', function() {
     //create a hobbit
@@ -75,5 +73,4 @@ describe('Hobbit', function () {
     //check that .hasRing() for Frodo returns true
     //check that .hasRing() for Sam returns false
   });
-
 });

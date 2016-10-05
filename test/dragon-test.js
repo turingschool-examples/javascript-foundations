@@ -23,24 +23,23 @@ describe('Dragon', function () {
   });
 
   it.skip('should have a color', function () {
-    var dragon = new Dragon('Saphira', 'blue', 'Eragon');
+    var dragon = new Dragon('Saphira', 'Eragon', 'blue');
     assert.equal(dragon.color, 'blue');
   });
 
   it.skip('should start off being hungry', function() {
     var dragon = new Dragon('Josh');
-    assert(dragon.hungry());
+    assert(dragon.hungry);
   });
 
   it.skip('should be full after eating 3 times', function() {
     var dragon = new Dragon('Lady Vox');
-    assert(dragon.hungry());
+    assert(dragon.hungry);
     dragon.eat();
-    assert(dragon.hungry());
+    assert(dragon.hungry);
     dragon.eat();
-    assert(dragon.hungry());
+    assert(dragon.hungry);
     dragon.eat();
-    assert(!dragon.hungry());
+    assert(!dragon.hungry);
   });
-  
 });

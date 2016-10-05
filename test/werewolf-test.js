@@ -75,8 +75,6 @@ describe('Werewolf', function () {
   it.skip('should not be able to consume victim in human form', function() {
     //your code
   });
-
-
 });
 
 describe('Victim', function () {
@@ -105,7 +103,6 @@ describe('Victim', function () {
     var victim = new Victim('TayTay');
     werewolf.change();
     werewolf.eat(victim);
-    assert(!vicitm.alive);
+    assert(!victim.alive);
   });
-
 });
