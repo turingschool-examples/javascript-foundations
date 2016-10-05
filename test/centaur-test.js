@@ -7,11 +7,6 @@ describe('Centaur', function () {
     assert.isFunction(Centaur);
   });
 
-  it.skip('should instantiate our good friend, Blocky', function () {
-    var centaur = new Centaur('Blocky');
-    assert.equal(centaur.name, 'Blocky');
-  });
-
   it.skip('should have a name', function () {
     var centaur = new Centaur('George');
     assert.equal(centaur.name, 'George');
@@ -34,7 +29,7 @@ describe('Centaur', function () {
 
   it.skip('should not be cranky when first created', function() {
     var centaur = new Centaur('George');
-    assert(centaur.cranky, false);
+    assert(!centaur.cranky);
   });
 
   it.skip('should be standing up when first created', function() {
@@ -45,7 +40,7 @@ describe('Centaur', function () {
   it.skip('should be cranky after running or shooting a bow three times', function() {
     var centaur = new Centaur('George');
 
-    assert(centaur.cranky, false);
+    assert(!centaur.cranky);
 
     centaur.shoot()
     centaur.run()
@@ -62,11 +57,6 @@ describe('Centaur', function () {
     }
 
     assert.equal(centaur.shoot(), 'NO!');
-  });
-
-  it.skip('should not sleep while standing', function() {
-    var centaur = new Centaur('George');
-    assert.equal(centaur.sleep(), 'NO!');
   });
 
   it.skip('should not sleep while standing', function() {
@@ -100,15 +90,6 @@ describe('Centaur', function () {
     assert.equal(centaur.run(), 'NO!');
   });
 
-  it.skip('should not run or shoot while laying down', function() {
-    var centaur = new Centaur('George');
-
-    centaur.layDown();
-
-    assert.equal(centaur.shoot(), 'NO!');
-    assert.equal(centaur.run(), 'NO!');
-  });
-
   it.skip('should be able to sleep when laying down', function() {
     var centaur = new Centaur('George');
     centaur.layDown();
@@ -127,7 +108,9 @@ describe('Centaur', function () {
     centaur.layDown();
 
     assert.equal(centaur.sleep(), 'ZZZZ');
-    assert.equal(centaur.cranky(), false);
+    assert.equal(centaur.cranky, false);
+    
+    centaur.standUp();
     assert.equal(centaur.shoot(),'Twang!!!');
   });
 
@@ -140,7 +123,7 @@ describe('Centaur', function () {
 
     centaur.drinkPotion();
 
-    assert(centaur.cranky)
+    assert(!centaur.cranky)
   });
 
   it.skip('should only drink potion while standing', function() {
@@ -155,7 +138,7 @@ describe('Centaur', function () {
   it.skip('should be cranky if it drinks potion while rested', function() {
     var centaur = new Centaur('George');
 
-    assert(centaur.cranky, false);
+    assert(!centaur.cranky);
 
     centaur.drinkPotion();
 

@@ -53,30 +53,28 @@ describe('Werewolf', function () {
   });
 
   it.skip('should start off not hungry', function() {
-    //your code
+    // your code here
   });
 
   it.skip('should become hungry after changing into werewolf form', function() {
-    //your code
+    // your code here
   });
 
   it.skip('should be able to eat(victim) once hungry', function() {
-    //your code
+    // your code here
   });
 
   it.skip('should not be hungry after changing back to human form', function() {
-    //your code
+    // your code here
   });
 
   it.skip('should change back to human form after eating', function() {
-    //your code
+    // your code here
   });
 
   it.skip('should not be able to consume victim in human form', function() {
-    //your code
+    // your code here
   });
-
-
 });
 
 describe('Victim', function () {
@@ -105,7 +103,6 @@ describe('Victim', function () {
     var victim = new Victim('TayTay');
     werewolf.change();
     werewolf.eat(victim);
-    assert(!vicitm.alive);
+    assert(!victim.alive);
   });
-
 });

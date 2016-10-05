@@ -29,34 +29,35 @@ describe('Pirate', function () {
 
   it.skip('should not be cursed by default', function() {
     var pirate = new Pirate('SteveBeard', 'cook');
-    assert(!pirate.cursed());
+    assert(!pirate.cursed);
   });
 
   it.skip('should become cursed after 3 heinous acts', function() {
     var pirate = new Pirate('JoshBeard', 'cook');
-    assert(!pirate.cursed());
+    assert(!pirate.cursed);
     pirate.commitHeinousAct();
-    assert(!pirate.cursed());
+    assert(!pirate.cursed);
     pirate.commitHeinousAct();
-    assert(!pirate.cursed());
+    assert(!pirate.cursed);
     pirate.commitHeinousAct();
-    assert(pirate.cursed());
+    assert(pirate.cursed);
   });
 
   it.skip('should be able to rob ships', function() {
-    //create a pirate
-    //assert that a pirate.robShip() returns 'YAARRR'
+    var pirate = new Pirate('JeffBeard');
+    assert.equal(pirate.robShip(), 'YAARRR!');
   });
 
   it.skip('should start with a booty of 0', function() {
-    //create pirate
-    //assert that pirate.booty returns 0
+    var pirate = new Pirate('JeffBeard');
+    assert.equal(pirate.booty, 0);
   });
 
   it.skip('should have a booty of 100 after robShip()', function() {
-    //create pirate
-    //assert that pirate.booty returns 0
-    //call robShip
-    //assert booty returns 100
+    var pirate = new Pirate('JeffBeard');
+    assert.equal(pirate.booty, 0);
+
+    pirate.robShip();
+    assert.equal(pirate.booty, 100);
   });
 });

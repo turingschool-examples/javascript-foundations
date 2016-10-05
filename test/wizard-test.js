@@ -38,23 +38,24 @@ describe('Wizard', function() {
   });
 
   it.skip('should start rested', function() {
-    //create wizard
-    // isRested() returns true
+    // create wizard
+    // assert isRested() returns true
   });
 
   it.skip('should be able to cast spells', function() {
-    //create wizard
-    //assert wizard.cast() returns 'MAGIC BULLET'
+    // create wizard
+    // assert wizard.cast() returns 'MAGIC BULLET'
   });
 
   it.skip('should only be able to cast 3 spells', function() {
-    //create wizard
-    //assert isRested()
-    //cast()
-    //assert isRested()
-    //cast()
-    //cast()
-    //assert isRested() is false
-    //assert cast() returns 'I SHALL NOT CAST'
+    // create wizard
+    // assert isRested() is true
+    // cast()
+    // assert isRested() is true
+    // cast()
+    // assert isRested() is true
+    // cast()
+    // assert isRested() is false
+    // assert cast() returns 'I SHALL NOT CAST!'
   });
 });
