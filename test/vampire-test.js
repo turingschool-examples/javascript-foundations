@@ -35,6 +35,6 @@ describe('Vampire', function() {
   it.skip('should refute thirsty if vampire has drank', function() {
     var vampire = new Vampire('Meeka');
     vampire.drink();
-    assert(!vampire.thirsty);
+    assert.equal(vampire.thirsty, false);
   });
 });

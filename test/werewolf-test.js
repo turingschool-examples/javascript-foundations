@@ -30,26 +30,29 @@ describe('Werewolf', function () {
   it.skip('should refute human form after changing', function() {
     var werewolf = new Werewolf('Steve', 'Gusto');
     werewolf.change();
-    assert(!werewolf.human);
+    assert.equal(werewolf.human, false);
   });
 
   it.skip('should show assert wolf form after change', function() {
     var werewolf = new Werewolf('Lousia', 'Gusto');
-    assert(!werewolf.wolf);
+
+    assert.equal(werewolf.wolf, false);
     werewolf.change();
     assert(werewolf.wolf);
   });
 
   it.skip('should show what form its in', function() {
     var werewolf = new Werewolf('Lousia', 'Gusto');
-    assert(!werewolf.wolf);
+
+    assert.equal(werewolf.wolf, false);
     werewolf.change();
     werewolf.change();
-    assert(!werewolf.wolf);
+    assert.equal(werewolf.wolf, false);
     assert(werewolf.human);
+
     werewolf.change();
     assert(werewolf.wolf);
-    assert(!werewolf.human);
+    assert.equal(werewolf.human, false);
   });
 
   it.skip('should start off not hungry', function() {
@@ -101,8 +104,9 @@ describe('Victim', function () {
   it.skip('should be dead after being eaten', function () {
     var werewolf = new Werewolf('TayTay');
     var victim = new Victim('TayTay');
+
     werewolf.change();
     werewolf.eat(victim);
-    assert(!victim.alive);
+    assert.equal(victim.alive, false);
   });
 });

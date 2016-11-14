@@ -46,7 +46,7 @@ describe('Hobbit', function () {
     var hobbit = new Hobbit('Taylor');
     timeTravel(32, hobbit);
     assert.equal(hobbit.age, 32);
-    assert(!hobbit.adult);
+    assert.equal(hobbit.adult, false);
   });
 
   it.skip('should be considered an adult at 33', function() {
@@ -63,10 +63,10 @@ describe('Hobbit', function () {
 
   it.skip('should be considered old at the age of 101', function() {
     var hobbit = new Hobbit('Samwise');
-    assert(!hobbit.old)
+    assert.equal(hobbit.old, false)
 
     timeTravel(100, hobbit);
-    assert(!hobbit.old)
+    assert.equal(hobbit.old, false)
 
     hobbit.celebrate_birthday();
     assert(hobbit.old)
@@ -77,6 +77,6 @@ describe('Hobbit', function () {
     var hobbit2 = new Hobbit('Samwise');
 
     assert(hobbit1.hasRing)
-    assert(!hobbit2.hasRing)
+    assert.equal(hobbit2.hasRing, false)
   });
 });

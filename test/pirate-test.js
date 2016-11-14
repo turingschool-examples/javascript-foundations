@@ -29,16 +29,18 @@ describe('Pirate', function () {
 
   it.skip('should not be cursed by default', function() {
     var pirate = new Pirate('SteveBeard', 'cook');
-    assert(!pirate.cursed);
+    assert.equal(pirate.cursed, false);
   });
 
   it.skip('should become cursed after 3 heinous acts', function() {
     var pirate = new Pirate('JoshBeard', 'cook');
-    assert(!pirate.cursed);
+
+    assert.equal(pirate.cursed, false);
     pirate.commitHeinousAct();
-    assert(!pirate.cursed);
+    assert.equal(pirate.cursed, false);
     pirate.commitHeinousAct();
-    assert(!pirate.cursed);
+    assert.equal(pirate.cursed, false);
+
     pirate.commitHeinousAct();
     assert(pirate.cursed);
   });

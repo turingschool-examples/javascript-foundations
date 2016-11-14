@@ -88,7 +88,7 @@ describe('Person', function () {
     var medusa = new Medusa('Brenna');
     var victim = new Person('Jhun');
 
-    assert(!victim.stoned);
+    assert.equal(victim.stoned, false);
     medusa.stare(victim);
     assert(victim.stoned);
   });

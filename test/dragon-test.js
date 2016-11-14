@@ -40,6 +40,6 @@ describe('Dragon', function () {
     dragon.eat();
     assert(dragon.hungry);
     dragon.eat();
-    assert(!dragon.hungry);
+    assert.equal(dragon.hungry, false);
   });
 });

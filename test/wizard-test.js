@@ -24,7 +24,7 @@ describe('Wizard', function() {
 
   it.skip('should not always be bearded', function() {
     var wizard = new Wizard({name: 'Jhun', bearded: false});
-    assert(!wizard.bearded)
+    assert.equal(wizard.bearded, false)
   });
 
   it.skip('should have root powers', function() {
