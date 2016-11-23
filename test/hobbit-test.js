@@ -30,15 +30,15 @@ describe('Hobbit', function () {
   it.skip('should have gained 1 year after every birthday', function() {
     var hobbit = new Hobbit('Meriadoc');
     assert.equal(hobbit.age, 0);
-    hobbit.celebrate_birthday();
-    hobbit.celebrate_birthday();
-    hobbit.celebrate_birthday();
+    hobbit.celebrateBirthday();
+    hobbit.celebrateBirthday();
+    hobbit.celebrateBirthday();
     assert.equal(hobbit.age, 3);
   });
 
   function timeTravel(num, hobbit) {
     for(var i = 0; i < num; i++) {
-      hobbit.celebrate_birthday();
+      hobbit.celebrateBirthday();
     };
   };
 
@@ -68,7 +68,7 @@ describe('Hobbit', function () {
     timeTravel(100, hobbit);
     assert.equal(hobbit.old, false)
 
-    hobbit.celebrate_birthday();
+    hobbit.celebrateBirthday();
     assert(hobbit.old)
   });
 
