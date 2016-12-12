@@ -97,8 +97,8 @@ describe('Victim', function () {
   });
 
   it.skip('should start alive', function () {
-    var werewolf = new Victim('TayTay');
-    assert(werewolf.alive);
+    var victim = new Victim('TayTay');
+    assert(victim.alive);
   });
 
   it.skip('should be dead after being eaten', function () {
