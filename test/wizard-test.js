@@ -39,7 +39,7 @@ describe('Wizard', function() {
 
   it.skip('should start rested', function() {
     // create wizard
-    // assert isRested() returns true
+    // assert isRested returns true
   });
 
   it.skip('should be able to cast spells', function() {
@@ -49,13 +49,13 @@ describe('Wizard', function() {
 
   it.skip('should only be able to cast 3 spells', function() {
     // create wizard
-    // assert isRested() is true
+    // assert isRested is true
     // cast()
-    // assert isRested() is true
+    // assert isRested is true
     // cast()
-    // assert isRested() is true
+    // assert isRested is true
     // cast()
-    // assert isRested() is false
+    // assert isRested is false
     // assert cast() returns 'I SHALL NOT CAST!'
   });
 });
