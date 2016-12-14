@@ -8,6 +8,10 @@
 4. Make the tests pass
 5. Lather, rinse, repeat through the creatures (in order), running tests and making things pass
 
+## Video Tutorial!
+
+[Here is a video](https://www.youtube.com/watch?v=_SDCWo2Yi2M) that walks through the setup and first mythical creature.
+
 ## Creature Order
 
 * `unicorn`
