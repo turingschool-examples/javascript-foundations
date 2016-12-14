@@ -42,7 +42,7 @@ describe('Pirate', function () {
     assert.equal(pirate.cursed, false);
 
     pirate.commitHeinousAct();
-    assert(pirate.cursed);
+    assert.equal(pirate.cursed, true);
   });
 
   it.skip('should be able to rob ships', function() {

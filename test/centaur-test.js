@@ -34,7 +34,7 @@ describe('Centaur', function () {
 
   it.skip('should be standing up when first created', function() {
     var centaur = new Centaur('George');
-    assert(centaur.standing);
+    assert.equal(centaur.standing, true);
   });
 
   it.skip('should be cranky after running or shooting a bow three times', function() {
@@ -46,7 +46,7 @@ describe('Centaur', function () {
     centaur.run()
     centaur.shoot()
 
-    assert(centaur.cranky)
+    assert.equal(centaur.cranky, true)
   });
 
   it.skip('should not shoot when cranky', function() {
@@ -67,7 +67,7 @@ describe('Centaur', function () {
   it.skip('after laying down it is not standing', function() {
     var centaur = new Centaur('George');
 
-    assert(centaur.standing);
+    assert.equal(centaur.standing, true);
     assert.equal(centaur.layingDown, false);
 
     centaur.layDown();
@@ -77,7 +77,7 @@ describe('Centaur', function () {
 
     centaur.standUp();
 
-    assert(centaur.standing);
+    assert.equal(centaur.standing, true);
     assert.equal(centaur.layingDown, false);
   });
 
@@ -103,7 +103,7 @@ describe('Centaur', function () {
       centaur.shoot();
     }
 
-    assert(centaur.cranky);
+    assert.equal(centaur.cranky, true);
 
     centaur.layDown();
 
@@ -142,6 +142,6 @@ describe('Centaur', function () {
 
     centaur.drinkPotion();
 
-    assert(centaur.cranky);
+    assert.equal(centaur.cranky, true);
   });
 });

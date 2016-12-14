@@ -19,7 +19,7 @@ describe('Wizard', function() {
 
   it.skip('should have a beard by default', function() {
     var wizard = new Wizard({name: 'Jhun'});
-    assert(wizard.bearded);
+    assert.equal(wizard.bearded, true);
   });
 
   it.skip('should not always be bearded', function() {

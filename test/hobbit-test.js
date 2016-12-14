@@ -53,12 +53,12 @@ describe('Hobbit', function () {
     var hobbit = new Hobbit('Taylor');
     timeTravel(33, hobbit);
     assert.equal(hobbit.age, 33);
-    assert(hobbit.adult);
+    assert.equal(hobbit.adult, true);
   });
 
   it.skip('should be short', function() {
     var hobbit = new Hobbit('Samwise');
-    assert(hobbit.isShort)
+    assert.equal(hobbit.isShort, true)
   });
 
   it.skip('should be considered old at the age of 101', function() {
@@ -69,14 +69,14 @@ describe('Hobbit', function () {
     assert.equal(hobbit.old, false)
 
     hobbit.celebrateBirthday();
-    assert(hobbit.old)
+    assert.equal(hobbit.old, true)
   });
 
   it.skip('should have the ring if its name is Frodo', function() {
     var hobbit1 = new Hobbit('Frodo');
     var hobbit2 = new Hobbit('Samwise');
 
-    assert(hobbit1.hasRing)
+    assert.equal(hobbit1.hasRing, true)
     assert.equal(hobbit2.hasRing, false)
   });
 });

@@ -29,16 +29,18 @@ describe('Dragon', function () {
 
   it.skip('should start off being hungry', function() {
     var dragon = new Dragon('Josh');
-    assert(dragon.hungry);
+    assert.equal(dragon.hungry, true);
   });
 
   it.skip('should be full after eating 3 times', function() {
     var dragon = new Dragon('Lady Vox');
-    assert(dragon.hungry);
+
+    assert.equal(dragon.hungry, true);
     dragon.eat();
-    assert(dragon.hungry);
+    assert.equal(dragon.hungry, true);
     dragon.eat();
-    assert(dragon.hungry);
+    assert.equal(dragon.hungry, true);
+
     dragon.eat();
     assert.equal(dragon.hungry, false);
   });

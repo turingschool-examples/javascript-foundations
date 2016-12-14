@@ -29,7 +29,7 @@ describe('Vampire', function() {
 
   it.skip('should have vampire return true if thirsty', function() {
     var vampire = new Vampire('Andy');
-    assert(vampire.thirsty);
+    assert.equal(vampire.thirsty, true);
   });
 
   it.skip('should refute thirsty if vampire has drank', function() {

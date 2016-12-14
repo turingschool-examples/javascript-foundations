@@ -90,6 +90,6 @@ describe('Person', function () {
 
     assert.equal(victim.stoned, false);
     medusa.stare(victim);
-    assert(victim.stoned);
+    assert.equal(victim.stoned, true);
   });
 });

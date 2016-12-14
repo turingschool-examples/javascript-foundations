@@ -24,7 +24,7 @@ describe('Werewolf', function () {
 
   it.skip('should default to human form', function () {
     var werewolf = new Werewolf('Mike','Basement lair');
-    assert(werewolf.human);
+    assert.equal(werewolf.human, true);
   });
 
   it.skip('should refute human form after changing', function() {
@@ -38,7 +38,7 @@ describe('Werewolf', function () {
 
     assert.equal(werewolf.wolf, false);
     werewolf.change();
-    assert(werewolf.wolf);
+    assert.equal(werewolf.wolf, true);
   });
 
   it.skip('should show what form its in', function() {
@@ -48,10 +48,10 @@ describe('Werewolf', function () {
     werewolf.change();
     werewolf.change();
     assert.equal(werewolf.wolf, false);
-    assert(werewolf.human);
+    assert.equal(werewolf.human, true);
 
     werewolf.change();
-    assert(werewolf.wolf);
+    assert.equal(werewolf.wolf, true);
     assert.equal(werewolf.human, false);
   });
 
@@ -98,7 +98,7 @@ describe('Victim', function () {
 
   it.skip('should start alive', function () {
     var victim = new Victim('TayTay');
-    assert(victim.alive);
+    assert.equal(victim.alive, true);
   });
 
   it.skip('should be dead after being eaten', function () {
