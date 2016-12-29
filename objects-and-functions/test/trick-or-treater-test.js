@@ -6,35 +6,35 @@ var TrickOrTreater = require('../lib/trick-or-treater');
 
 describe('TrickOrTreater', function () {
 
-  it('should be a function', function () {
+  it.skip('should be a function', function () {
     assert.isFunction(TrickOrTreater);
   });
 
-  it('should were a costume', function () {
+  it.skip('should were a costume', function () {
     costume = new Costume('Cowboy');
     trickOrTreater = new TrickOrTreater(costume);
     assert.equal(trickOrTreater.dressedUpAs, 'Cowboy');
   });
 
-  it('should were a different costume', function () {
+  it.skip('should were a different costume', function () {
     costume = new Costume('Cowboy');
     trickOrTreater = new TrickOrTreater(costume);
     assert.equal(trickOrTreater.dressedUpAs, 'Cowboy');
   });
 
-  it('should have an empty bag by default', function () {
+  it.skip('should have an empty bag by default', function () {
     costume = new Costume('Alien');
     trick_or_treater = new TrickOrTreater(costume);
     assert.deepEqual(trick_or_treater.bag, []);
   });
 
-  it('should have a bag with no candy', function () {
+  it.skip('should have a bag with no candy', function () {
     costume = new Costume('Knight');
     trick_or_treater = new TrickOrTreater(costume);
     assert.equal(trick_or_treater.has_candy, false);
   });
 
-  it('should get candy', function () {
+  it.skip('should get candy', function () {
     costume = new Costume('Spaceship Mechanic');
     trick_or_treater = new TrickOrTreater(costume);
     candy = new Candy('Gummy Bears');
@@ -42,7 +42,7 @@ describe('TrickOrTreater', function () {
     assert.equal(trick_or_treater.has_candy, true);
   });
 
-  it('should count candies', function () {
+  it.skip('should count candies', function () {
     costume = new Costume('Spaceship Mechanic');
     trick_or_treater = new TrickOrTreater(costume);
     candy = new Candy('Gummy Bears');
@@ -51,7 +51,7 @@ describe('TrickOrTreater', function () {
     assert.equal(trick_or_treater.count_candies, 1);
   });
 
-  it('should eat candies', function () {
+  it.skip('should eat candies', function () {
     costume = new Costume('Spaceship Mechanic');
     trick_or_treater = new TrickOrTreater(costume);
     candy1 = new Candy('Gummy Bears');
@@ -67,7 +67,7 @@ describe('TrickOrTreater', function () {
     assert.equal(trick_or_treater.count_candies, 0);
   });
 
-  it('should have an empty bag after eating candies', function () {
+  it.skip('should have an empty bag after eating candies', function () {
     costume = new Costume('Spaceship Mechanic');
     trick_or_treater = new TrickOrTreater(costume);
     candy1 = new Candy('Gummy Bears');
