@@ -1,0 +1,15 @@
+{
+  "name": "foundations",
+  "version": "1.0.0",
+  "description": "Practice programs for mastering the basics of JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Turing School",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.0.2"
+  }
+}
