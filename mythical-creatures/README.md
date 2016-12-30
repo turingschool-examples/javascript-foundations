@@ -1,18 +1,17 @@
 # Mythical Creatures
 
-## Installation Steps
+### Installation Steps
 
-1. Clone the repo
-2. cd into the directory
-3. Run your first test suite ```npm test test/unicorn-test.js```
-4. Make the tests pass
-5. Lather, rinse, repeat through the creatures (in order), running tests and making things pass
+1. run `npm install`
+2. Run your first test suite `npm test test/unicorn-test.js`
+3. Make the tests pass
+4. Lather, rinse, repeat through the creatures (in order), running tests and making things pass
 
-## Video Tutorial!
+### Video Tutorial!
 
 [Here is a video](https://www.youtube.com/watch?v=_SDCWo2Yi2M) that walks through the setup and first mythical creature.
 
-## Creature Order
+### Creature Order
 
 * `unicorn`
 * `vampire`
@@ -24,7 +23,7 @@
 * `werewolf`
 * `centaur`
 
-## Extra Challenges
+### Extra Challenges
 
 ### The Dreaded `if` Statement
 
