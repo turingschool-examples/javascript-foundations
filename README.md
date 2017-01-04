@@ -13,6 +13,8 @@
 
 [Here is a video](https://www.youtube.com/watch?v=_SDCWo2Yi2M) that walks through the setup and first mythical creature.
 
+Note: `npm install` is not mentioned in the video, but is a required step as listed above.
+
 ## Creature Order
 
 * `unicorn`
