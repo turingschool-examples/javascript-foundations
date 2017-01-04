@@ -2,9 +2,10 @@
 
 ## Installation Steps
 
-1. Clone the repo
-2. cd into the directory
-3. Run your first test suite ```npm test test/unicorn-test.js```
+1. Clone the repo using `git clone git@github.com:turingschool-examples/javascript-foundations.git`
+2. cd into the `javascript-foundations` directory
+3. Run the command `npm install` in your terminal
+3. Run your first test suite `npm test test/unicorn-test.js` (you should see many pending tests, but none passing yet)
 4. Make the tests pass
 5. Lather, rinse, repeat through the creatures (in order), running tests and making things pass
 
