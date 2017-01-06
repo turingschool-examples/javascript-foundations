@@ -6,4 +6,4 @@ cd into the respective directory and follow the instructions in the README
 
 1. Mythical Creatures
 2. Objects and Functions
-3. Wizarding Objects 
+3. Wizarding Objects
