@@ -3,23 +3,23 @@ var Pet = require('../lib/pet');
 
 describe('Pet', function() {
 
-  it('should be a function', function() {
+  it.skip('should be a function', function() {
     assert.isFunction(Pet);
   });
 
-  it('should have a name', function() {
+  it.skip('should have a name', function() {
     var pet = new Pet('Crookshanks', 'cat');
 
     assert.equal(pet.name, 'Crookshanks');
   });
 
-  it('should have a type', function() {
+  it.skip('should have a type', function() {
     var pet = new Pet('Crookshanks', 'cat');
 
     assert.equal(pet.type, 'cat');
   });
 
-  it('should have a differnt name and type', function() {
+  it.skip('should have a differnt name and type', function() {
     var pet = new Pet('Hedwig', 'owl');
 
     assert.equal(pet.name, 'Hedwig');

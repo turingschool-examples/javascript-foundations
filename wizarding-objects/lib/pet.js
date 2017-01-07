@@ -1,6 +1,3 @@
-function Pet (name, type) {
-  this.name = name;
-  this.type = type;
-};
+function Pet () {};
 
 module.exports = Pet;
