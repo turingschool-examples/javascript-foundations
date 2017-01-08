@@ -8,7 +8,7 @@ describe('Bag', function () {
     assert.isFunction(Bag);
   });
 
-  it.skip('should be an empty bag', function () {
+  it('should be an empty bag', function () {
     bag = new Bag();
     assert.equal(bag.empty, true);
   })

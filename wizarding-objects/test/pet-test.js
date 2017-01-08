@@ -3,11 +3,11 @@ var Pet = require('../lib/pet');
 
 describe('Pet', function() {
 
-  it.skip('should be a function', function() {
+  it('should be a function', function() {
     assert.isFunction(Pet);
   });
 
-  it.skip('should have a name', function() {
+  it('should have a name', function() {
     var pet = new Pet('Crookshanks', 'cat');
 
     assert.equal(pet.name, 'Crookshanks');
