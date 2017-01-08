@@ -49,7 +49,7 @@ describe('Bag', function () {
     bag = new Bag();
     candy = new Candy('Lindt Chocolate');
     bag.push(candy);
-    assert.equal(bag.contains('Lindt Chocolate', true));
+    assert.equal(bag.contains('Lindt Chocolate'), true);
     assert.equal(bag.contains('Hershey\'s Kisses'), false);
   });
 });
