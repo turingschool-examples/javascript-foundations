@@ -42,6 +42,14 @@ describe('TrickOrTreater', function () {
     assert.equal(trickOrTreater.hasCandy, true);
   });
 
+  it.skip('should add new candy into bag', function() {
+    costume = new Costume('Zombie');
+    trickOrTreater = new TrickOrTreater(costume);
+    candy = new Candy('Skittles');
+    trickOrTreater.putCandyInBag(candy);
+    assert.equal(trickOrTreater.bag.length, 1);
+  });
+
   it.skip('should count candies', function () {
     costume = new Costume('Spaceship Mechanic');
     trickOrTreater = new TrickOrTreater(costume);
@@ -76,7 +84,7 @@ describe('TrickOrTreater', function () {
     trickOrTreater.putCandyInBag(candy1);
     trickOrTreater.putCandyInBag(candy2);
     trickOrTreater.putCandyInBag(candy3);
-    assert.equal(trickOrTreater.countCandies, 3);
+    assert.equal(trickOrTreater.bag.length, 3);
     trickOrTreater.eat();
     trickOrTreater.eat();
     trickOrTreater.eat();
