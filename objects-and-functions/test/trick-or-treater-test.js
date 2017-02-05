@@ -42,7 +42,7 @@ describe('TrickOrTreater', function () {
     assert.equal(trickOrTreater.hasCandy, true);
   });
 
-  it.skip('should add new candy into bag', function() {
+  it.skip('should add new candy into bag', function () {
     costume = new Costume('Zombie');
     trickOrTreater = new TrickOrTreater(costume);
     candy = new Candy('Skittles');
