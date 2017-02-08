@@ -7,11 +7,6 @@ describe('Wizard', function() {
     assert.isFunction(Wizard);
   });
 
-  it.skip('should instantiate our good friend, Wizard', function() {
-    var wizard = new Wizard();
-    assert.isObject(wizard);
-  });
-
   it.skip('should have a name', function() {
     var wizard = new Wizard({name: 'Jhun'});
     assert.equal(wizard.name, 'Jhun');
