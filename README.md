@@ -19,8 +19,6 @@ You should see something like:
 > foundations@1.0.0 test /Users/robbie/turing/front-end/1mod/javascript-foundations
 > mocha "mythical-creatures/test/unicorn-test.js"
 
-
-
   Unicorn
     - should be a function
     - should instantiate our good friend, Unicorn
