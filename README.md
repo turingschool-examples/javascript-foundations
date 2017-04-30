@@ -2,11 +2,12 @@
 
 Each exercise emphasizes the fundamentals of object oriented programming in JavaScript.
 
-cd into the respective directory and follow the instructions in the README  
+To begin, `cd` into each of the directories and follow the instructions in the README.
 
 1. Mythical Creatures
 2. Objects and Functions
 3. Wizarding Objects
+4. Wizarding Arrays
 
 ## Installation Steps
 
