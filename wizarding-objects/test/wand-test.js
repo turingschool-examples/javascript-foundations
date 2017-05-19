@@ -39,5 +39,7 @@ describe('Wand', function () {
     var wand = new Wand('Cherry', 14, 'Basilisk Fang');
 
     assert.equal(wand.cast('Accio'), 'Casting Accio!')
+
+    assert.equal(wand.cast('Wingardium Leviosa'), 'Casting Wingardium Leviosa!')
   });
 });
