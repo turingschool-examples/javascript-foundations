@@ -6,7 +6,7 @@ describe('iteratorFactory', function() {
   it('can be instantiated', function() {
     var factory = new iteratorFactory();
 
-    assert.equal(typeof factory, iteratorFactory);
+    assert.equal(typeof factory, "object");
   });
 
   it.skip('has a prototype function called `sum`', function() {
@@ -36,7 +36,7 @@ describe('iteratorFactory', function() {
 
     assert.equal(factory.sumAndSquare([1, 2, 3, 4, 5]), 225);
 
-    assert.equal(factory.sumAndSquare([10, 11, 12, 13, 14]), 730);
+    assert.equal(factory.sumAndSquare([10, 11, 12, 13, 14]), 3600);
   })
 
   it.skip('can filter out odd numbers from a collection of integers', function() {
