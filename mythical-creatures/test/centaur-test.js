@@ -132,7 +132,7 @@ describe('Centaur', function () {
     centaur.drinkPotion();
     centaur.layDown();
 
-    assert.equal(centaur.drinkPotion(), 'Not while I\'m standing!');
+    assert.equal(centaur.drinkPotion(), 'Not while I\'m laying down!');
   });
 
   it.skip('should be cranky if it drinks potion while rested', function() {

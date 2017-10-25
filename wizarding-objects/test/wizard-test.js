@@ -17,7 +17,7 @@ describe('Wizard', function () {
     assert.equal(wizard.name, 'Hermione');
   });
 
-  it.skip('should have a different name', function () {
+  it.skip('could have a different name', function () {
     var wizard = new Wizard('Ron');
 
     assert.equal(wizard.name, 'Ron');
@@ -34,8 +34,10 @@ describe('Wizard', function () {
 
   it.skip('should be able to have many pets', function (){
     var wizard = new Wizard('Hermione');
+ 
     var pet = new Pet('Crookshanks', 'cat');
     var pet2 = new Pet('Hedwig', 'owl');
+   
     wizard.givePet(pet);
     wizard.givePet(pet2);
 
@@ -46,8 +48,10 @@ describe('Wizard', function () {
 
   it.skip('should list pets as a string', function () {
     var wizard = new Wizard('Hermione');
+    
     var pet = new Pet('Crookshanks', 'cat');
     var pet2 = new Pet('Hedwig', 'owl');
+    
     wizard.givePet(pet);
     wizard.givePet(pet2);
 
@@ -57,6 +61,7 @@ describe('Wizard', function () {
   it.skip('should have a wand', function () {
     var wizard = new Wizard('Hermione');
     var wand = new Wand("Cherry", 12, "Unicorn Hair");
+ 
     wizard.giveWand(wand);
 
     assert.equal(wizard.wand, wand);
@@ -65,9 +70,11 @@ describe('Wizard', function () {
   it.skip('should cast a spell', function () {
     var wizard = new Wizard('Hermione');
     var wand = new Wand("Cherry", 12, "Unicorn Hair");
+   
     wizard.giveWand(wand);
 
     assert.equal(wizard.wand, wand);
     assert.equal(wizard.castSpell('Expecto Patromun'), 'Casting Expecto Patromun!');
+    assert.equal(wizard.castSpell('Accio'), 'Casting Accio!');
   });
 });

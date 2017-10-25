@@ -19,7 +19,7 @@ describe('Pet', function() {
     assert.equal(pet.type, 'cat');
   });
 
-  it.skip('should have a differnt name and type', function() {
+  it.skip('should have a different name and type', function() {
     var pet = new Pet('Hedwig', 'owl');
 
     assert.equal(pet.name, 'Hedwig');
