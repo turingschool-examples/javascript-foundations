@@ -1,5 +1,6 @@
 var assert = require('chai').assert;
-var {Medusa, Person} = require('../exercises/medusa');
+var Medusa = require('../exercises/medusa');
+var Person = require('../exercises/person');
 
 describe('Medusa', function () {
 
