@@ -1,5 +1,6 @@
 var assert = require('chai').assert;
-var {Direwolf, Stark} = require('../exercises/direwolf');
+var Direwolf = require('../exercises/direwolf');
+var Stark = require('../exercises/stark');
 
 describe('Direwolf', function () {
 
