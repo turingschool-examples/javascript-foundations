@@ -24,6 +24,7 @@ describe('Hobbit', function () {
 
   it.skip('should have an age', function() {
     var hobbit = new Hobbit('Meriadoc');
+    assert.equal(hobbit.name, 'Meriadoc');
     assert.equal(hobbit.age, 0);
   });
 

@@ -15,7 +15,9 @@ describe('Werewolf', function () {
 
   it.skip('should have a name', function () {
     var werewolf = new Werewolf('Jorge');
+    var werewolf2 = new Werewolf('Sal');
     assert.equal(werewolf.name, 'Jorge');
+    assert.equal(werewolf2.name, 'Sal');
   });
 
   it.skip('should have a location', function () {

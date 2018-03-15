@@ -18,8 +18,9 @@ describe('Medusa', function () {
     assert.equal(medusa.name, 'Bree');
   });
 
-  it.skip('should start with no statues', function()  {
+  it.skip('should start with no statues', function() {
     var medusa = new Medusa('Taytay');
+    assert.equal(medusa.name, 'Taytay');
     assert.deepEqual(medusa.statues, []);
   });
 
