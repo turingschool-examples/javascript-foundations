@@ -2,9 +2,14 @@ var assert = require('chai').assert;
 
 describe('For Each', function () {
 
-  it.skip('should blank', function () {
+  it('should capitalize each string in the array', function () {
+    var favoriteColors = [
+      'Red',
+      'Green',
+      'Blue',
+      'Yellow'
+    ];
 
-
-    assert.isFunction(Centaur);
+    assert.deepEqual(favoriteColors, ['RED', 'GREEN', 'BLUE', 'YELLOW']);
   });
 });
