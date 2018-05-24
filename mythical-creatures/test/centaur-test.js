@@ -73,7 +73,7 @@ describe('Centaur', function () {
     centaur.layDown();
 
     assert.equal(centaur.standing, false);
-    assert(centaur.layingDown);
+    assert.equal(centaur.layingDown, true);
 
     centaur.standUp();
 
