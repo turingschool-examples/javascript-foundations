@@ -28,6 +28,14 @@ Unskip each test, one at a time in order, so you can concentrate on making one t
 * `werewolf`
 * `centaur`
 
+### Extra Creatures
+If you've done the creatures above and feel comfortable with those, try conquering a few more creatures!
+
+* `direwolf`
+* `fairy`
+* `ogre`
+* `sphinx`
+
 ### Extra Challenges
 
 #### The Dreaded `if` Statement
