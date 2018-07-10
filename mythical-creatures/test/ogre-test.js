@@ -33,7 +33,7 @@ describe('Ogre', function () {
     var human = new Human('Jane');
 
     assert.equal(human.name, 'Jane');
-    
+
     ogre.encounter(human);
     assert.equal(human.encounterCounter, 1);
   });
@@ -54,18 +54,18 @@ describe('Ogre', function () {
     var ogre = new Ogre('Brak');
     var human = new Human('Jane');
 
-    assert.equal(human.noticesOgre(), false); 
+    assert.equal(human.noticesOgre(), false);
 
-    ogre.encounter(human);      
-    ogre.encounter(human);      
-    ogre.encounter(human); 
+    ogre.encounter(human);
+    ogre.encounter(human);
+    ogre.encounter(human);
     assert.equal(human.noticesOgre(), true);
 
     ogre.encounter(human);
-    ogre.encounter(human); 
+    ogre.encounter(human);
     assert.equal(human.noticesOgre(), false);
 
-    ogre.encounter(human); 
+    ogre.encounter(human);
     assert.equal(human.noticesOgre(), true);
   });
 
@@ -100,9 +100,9 @@ describe('Ogre', function () {
     ogre.encounter(human);
     ogre.encounter(human);
     ogre.encounter(human);
-    ogre.encounter(human);    
     ogre.encounter(human);
-    
+    ogre.encounter(human);
+
     assert.equal(human.encounterCounter, 6);
     assert.equal(ogre.swings, 2);
     assert.equal(human.knockedOut, true);

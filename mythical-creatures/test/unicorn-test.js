@@ -17,6 +17,11 @@ describe('Unicorn', function () {
     assert.equal(unicorn.name, 'Bree');
   });
 
+  it.skip('should be able to have a different name', function () {
+    var unicorn = new Unicorn('Pam');
+    assert.equal(unicorn.name, 'Pam');
+  });
+
   it.skip('should have a color', function() {
     var unicorn = new Unicorn('TayTay', 'blue');
     assert.equal(unicorn.color, 'blue');

@@ -41,7 +41,7 @@ describe('Direwolf', function () {
     var direwolf = new Direwolf('Shaggydog', 'Karhold', 'Smol Pupper');
 
     assert.equal(direwolf.name, 'Shaggydog');
-    assert.equal(direwolf.home, 'Karhold');    
+    assert.equal(direwolf.home, 'Karhold');
     assert.equal(direwolf.size, 'Smol Pupper');
   });
 
@@ -80,7 +80,7 @@ describe('Direwolf', function () {
     assert.deepEqual(direwolf.starksToProtect, []);
 
     direwolf.protect(stark);
-    assert.equal(direwolf.starksToProtect.length, 1);    
+    assert.equal(direwolf.starksToProtect.length, 1);
     assert.equal(direwolf.starksToProtect[0].name, 'Arya');
   });
 
@@ -107,7 +107,7 @@ describe('Direwolf', function () {
     direwolf2.protect(stark3);
     direwolf2.protect(stark4);
     direwolf2.protect(stark5);
-    
+
     assert.equal(direwolf1.starksToProtect.length, 2);
     assert.equal(direwolf1.starksToProtect[0].name, 'Sansa');
     assert.equal(direwolf1.starksToProtect[1].name, 'John');
@@ -130,7 +130,7 @@ describe('Direwolf', function () {
     var stark2 = new Stark('Sansa', 'Dorn');
 
     assert.equal(stark1.safe, false);
-    assert.equal(stark2.safe, false);    
+    assert.equal(stark2.safe, false);
 
     direwolf.protect(stark1);
     assert.equal(stark1.safe, true);

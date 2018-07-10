@@ -19,6 +19,7 @@ describe('Dragon', function () {
 
   it.skip('should have a rider', function () {
     var dragon = new Dragon('Saphira', 'Eragon');
+    assert.equal(dragon.name, 'Saphira');
     assert.equal(dragon.rider, 'Eragon');
   });
 

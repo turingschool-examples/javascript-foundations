@@ -19,6 +19,7 @@ describe('Vampire', function() {
 
   it.skip('should have a pet bat as a default', function() {
     var vampire = new Vampire('Brittany');
+    assert.equal(vampire.name, 'Brittany');
     assert.equal(vampire.pet, 'bat');
   });
 
