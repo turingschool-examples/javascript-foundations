@@ -12,13 +12,13 @@ To begin, `cd` into each of the directories and follow the instructions in the R
 ## Installation Steps
 
 1. Run `npm install`
-2. Test that the unit tests are working: Run the command `npm test mythical-creatures/test/unicorn-test.js` in your terminal
+2. Test that the unit tests are working: Run the command `npm test es5-mythical-creatures/test/unicorn-test.js` in your terminal
 
 You should see something like:
 
 ```shell
 > foundations@1.0.0 test /Users/robbie/turing/front-end/1mod/javascript-foundations
-> mocha "mythical-creatures/test/unicorn-test.js"
+> mocha "es5-mythical-creatures/test/unicorn-test.js"
 
   Unicorn
     - should be a function
@@ -34,4 +34,8 @@ You should see something like:
   7 pending
 ```
 
-Go into each subdirectory, `mythical-creatures`, `objects-and-functions`, and `wizarding-objects`, read the README, and work on making the test suite pass.
+Go into each subdirectory, `es5-mythical-creatures`, `objects-and-functions`, and `es5-wizarding-objects`, read the README, and work on making the test suite pass.
+
+## A note on es5 vs es6
+
+Note that there are similar directores like `es5-mythical-creatures` and `es6-mythical-creatures`.  For now, focus only on working through the es5 directories since the syntax there will be most familiar.  If you've worked through many of the tests in Mythical Creatures, Wizarding Objects, Wizarding Arrays, and are excited to start diving into es6 syntax using arrow functions, block-scoped variables, and classes, feel free to start diving into those next.
