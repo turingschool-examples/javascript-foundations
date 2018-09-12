@@ -61,7 +61,7 @@ describe('Monster', function(){
     assert.equal(child.scared, false);
   })
 
-  it('When children scream, they should produce energy equal to the scariness of the monster minus the number of times they have screamed', function(){
+  it('When children scream, they should produce scream-energy equal to the scariness of the monster minus the number of times they have screamed', function(){
     var monster1 = new Monster("George", 3);
     var monster2 = new Monster("Sully", 6);
     var child = new Child("Timmy");
@@ -69,7 +69,7 @@ describe('Monster', function(){
     assert.equal(child.scream(monster2), 4)
   })
 
-  it('Monsters should collect the scream-energy of childred in a container', function(){
+  it('Monsters should collect the scream-energy in a container', function(){
     var monster = new Monster("Sully", 5);
     var child = new Child("Timmy")
     assert.deepEqual(monster.screamContainer, [])
@@ -91,7 +91,7 @@ describe('Monster', function(){
     assert.equal(child.scared, false)
   }) 
   
-  it('Monsters should be able to turn in total scream-energy at the end of the day', function(){
+  it('Monsters should be able to turn-in total scream-energy at the end of the day', function(){
     var monster = new Monster("Randall", 4);
     var child = new Child("Timmy")
     var child2 = new Child("Susie")
