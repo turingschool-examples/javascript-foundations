@@ -32,6 +32,7 @@ Unskip each test, one at a time in order, so you can concentrate on making one t
 If you've done the creatures above and feel comfortable with those, try conquering a few more creatures!
 
 * `direwolf`
+* `monster`
 * `fairy`
 * `ogre`
 * `sphinx`
