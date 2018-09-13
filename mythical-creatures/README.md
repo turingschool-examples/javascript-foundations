@@ -33,9 +33,10 @@ If you've done the creatures above and feel comfortable with those, try conqueri
 
 * `direwolf`
 * `fairy`
-* `Monster`
+* `monster`
 * `ogre`
 * `sphinx`
+* `alien`
 
 ### Extra Challenges
 
