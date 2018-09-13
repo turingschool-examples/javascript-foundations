@@ -33,6 +33,7 @@ If you've done the creatures above and feel comfortable with those, try conqueri
 
 * `direwolf`
 * `fairy`
+* `Monster`
 * `ogre`
 * `sphinx`
 
