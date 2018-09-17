@@ -37,8 +37,8 @@ describe('Hobbit', () => {
     assert.equal(hobbit.age, 3);
   });
 
-   timeTravel(num, hobbit) => {
-    for(const i = 0; i < num; i++) {
+   const timeTravel = (num, hobbit) => {
+    for(let i = 0; i < num; i++) {
       hobbit.celebrateBirthday();
     };
   };

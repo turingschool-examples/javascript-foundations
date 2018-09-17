@@ -25,17 +25,17 @@ describe('A wizard\'s potions cabinet and potions', () => {
 
     it.skip('indicates whether or not it is rare', () => {
       // note: potions with a `rareness` score above 7 count as rare potions.
-      const potion = new Potion('truth serum', 0);
-      assert.equal(potion.isRare(), false);
+      const potion1 = new Potion('truth serum', 0);
+      assert.equal(potion1.isRare(), false);
 
-      const potion = new Potion('truth serum', 7);
-      assert.equal(potion.isRare(), false);
+      const potion2 = new Potion('truth serum', 7);
+      assert.equal(potion2.isRare(), false);
 
-      const potion = new Potion('truth serum', 8);
-      assert.equal(potion.isRare(), true);
+      const potion3 = new Potion('truth serum', 8);
+      assert.equal(potion3.isRare(), true);
 
-      const potion = new Potion('truth serum', 12);
-      assert.equal(potion.isRare(), true);
+      const potion4 = new Potion('truth serum', 12);
+      assert.equal(potion4.isRare(), true);
     });
   });
 
@@ -94,11 +94,11 @@ describe('A wizard\'s potions cabinet and potions', () => {
 
       cabinet.add(potions);
 
-      const retrievedPotion = cabinet.takePotionWithName('rogaine');
-      assert.equal(retrievedPotion, potion3);
+      const retrievedPotion1 = cabinet.takePotionWithName('rogaine');
+      assert.equal(retrievedPotion1, potion3);
 
-      const retrievedPotion = cabinet.takePotionWithName('youth elixir');
-      assert.equal(retrievedPotion, potion2);
+      const retrievedPotion2 = cabinet.takePotionWithName('youth elixir');
+      assert.equal(retrievedPotion2, potion2);
 
       assert.equal(cabinet.potions.length, 3);
     });

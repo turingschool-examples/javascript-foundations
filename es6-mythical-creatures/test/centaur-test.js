@@ -52,7 +52,7 @@ describe('Centaur', () => {
   it.skip('should not shoot when cranky', () => {
     const centaur = new Centaur('George');
 
-    for (const i = 0; i < 3; i++)  {
+    for (let i = 0; i < 3; i++)  {
       centaur.shoot();
     }
 
@@ -99,7 +99,7 @@ describe('Centaur', () => {
   it.skip('should not be cranky after sleeping', () => {
     const centaur = new Centaur('George');
 
-    for (const i = 0; i < 3; i++)  {
+    for (let i = 0; i < 3; i++)  {
       centaur.shoot();
     }
 
@@ -117,7 +117,7 @@ describe('Centaur', () => {
   it.skip('should not be cranky after drinking potion', () => {
     const centaur = new Centaur('George');
 
-    for (const i = 0; i < 3; i++)  {
+    for (let i = 0; i < 3; i++)  {
       centaur.shoot();
     }
 

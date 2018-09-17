@@ -6,7 +6,7 @@ Before you can work on or run any of these tests, you need to make sure you inst
 
 ### Running the Tests
 
-In your terminal, change into the `mythical-creatures` directory, and run the command `npm test mythical-creatures/test/unicorn-test.js`. To run other tests, just replace the creature name.
+In your terminal, change into the `mythical-creatures` directory, and run the command `npm test es6-mythical-creatures/test/unicorn-test.js`. To run other tests, just replace the creature name.
 
 Most of the tests are skipped. When you see `it.skip('should be a function', () => {` in a test, it means that test has been skipped. They are skipped for a good reason - that way, when you run the test suite for the first time, you don't see tons of errors screaming at you in the terminal.
 

@@ -8,7 +8,7 @@ describe('A wizard\'s robe', () => {
 
     assert.equal(robe.pockets.length, 10);
 
-    for (const i = 0; i < 10; i++) {
+    for (let i = 0; i < 10; i++) {
       assert.equal(robe.pockets[i].length, 0);
     }
   });
@@ -36,13 +36,13 @@ describe('A wizard\'s robe', () => {
 
     const cats = ['1 cat', '2 cat', '3 cat', '4 cat', '5 cat', '6 cat', '7 cat', '8 cat', '9 cat', '10 cat'];
 
-    for (const i = 0; i < cats.length; i++) {
+    for (let i = 0; i < cats.length; i++) {
       robe.addToPocket(cats[i]);
 
       assert.equal(robe.pockets[i][0], cats[i]);
     }
 
-    for (const i = 0; i < robe.pockets.length; i++) {
+    for (let i = 0; i < robe.pockets.length; i++) {
       assert.equal(robe.pockets[0].length, 1);
     }
   });
@@ -63,7 +63,7 @@ describe('A wizard\'s robe', () => {
     const robe = new Robe();
     const cats = ['1 cat', '2 cat', '3 cat', '4 cat', '5 cat', '6 cat', '7 cat', '8 cat', '9 cat', '10 cat'];
 
-    for (const i = 0; i < cats.length; i++) {
+    for (let i = 0; i < cats.length; i++) {
       robe.addToPocket(cats[i]);
     }
 
@@ -71,7 +71,7 @@ describe('A wizard\'s robe', () => {
 
     assert.equal(robe.pockets.length, 10);
 
-    for (const i = 0; i < 10; i++) {
+    for (let i = 0; i < 10; i++) {
       assert.equal(robe.pockets[i].length, 0);
     }
   });
