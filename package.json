@@ -8,8 +8,8 @@
   },
   "author": "Turing School",
   "license": "MIT",
-  "devDependencies": {
-    "chai": "^3.5.0",
-    "mocha": "^3.0.2"
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
   }
 }
