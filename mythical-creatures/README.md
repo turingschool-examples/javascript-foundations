@@ -12,6 +12,10 @@ Most of the tests are skipped. When you see `it.skip('should be a function', () 
 
 Unskip each test, one at a time in order, so you can concentrate on making one test pass. Unskip the test by deleting the `.skip` from the test's first line so it should look more like `it('should be a function', () => {`. Run the test to see what kind of error you are getting, and then implement the code to make the test pass!
 
+### Video Tutorial!
+
+[Here is a video](https://youtu.be/wfrwMYn2BCg) that walks through the setup and first mythical creature.
+
 ### Creature Order
 
 * `unicorn`
