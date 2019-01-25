@@ -20,4 +20,6 @@ Unskip each test, one at a time in order, so you can concentrate on making one t
 * test/costume-test.js  
 * test/trick_or_treater-test.js  
 
+*Note: You MAY NEED TO MAKE NEW FILES*
+
 _Adapted from Ruby [Objects and Methods](https://github.com/turingschool/ruby-exercises/tree/master/objects-and-methods)_
