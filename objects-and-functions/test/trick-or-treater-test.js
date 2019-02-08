@@ -17,9 +17,9 @@ describe('TrickOrTreater', function () {
   });
 
   it.skip('should wear a different costume', function () {
-    costume = new Costume('Cowboy');
+    costume = new Costume('Ghost');
     trickOrTreater = new TrickOrTreater(costume);
-    assert.equal(trickOrTreater.dressedUpAs, 'Cowboy');
+    assert.equal(trickOrTreater.dressedUpAs, 'Ghost');
   });
 
   it.skip('should have an empty bag by default', function () {
