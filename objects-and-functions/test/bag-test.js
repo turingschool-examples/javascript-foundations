@@ -4,11 +4,11 @@ var Candy = require('../lib/candy');
 
 describe('Bag', function () {
 
-  it('should be a function', function () {
+  it.skip('should be a function', function () {
     assert.isFunction(Bag);
   });
 
-  it('should be an empty bag', function () {
+  it.skip('should be an empty bag', function () {
     var bag = new Bag();
     assert.equal(bag.empty, true);
   })
