@@ -1,22 +1,128 @@
 class Dragon {
-  constructor (name, rider, color, hungry = true) {
-   this.name = name
-   this.rider = rider
-   this.color = color
-   this.hungry = hungry
-   this.hunger = 0
+  constructor(name, rider, color) {
+    this.name = name;
+    this.rider = rider;
+    this.color = color;
+    this.hungry = true;
+    this.counter = 0
   }
 
   eat() {
-    this.hunger += 1;
-    if(this.hunger >= 3) {
-    this.hungry = false;
-   }
-   // return this.hunger;
+    this.counter += 1;
+    if(this.counter >= 3) {
+      this.hungry = false;
+    }
   }
+};
+
+module.exports = Dragon
+
+
+
+class Car {
+  constructor(brand, model, color, wheels = 4, ) {
+    this.brand = brand;
+    this.model = model;
+    this.color = color;
+    this.wheels = wheels
+  }
+  
 }
 
-module.exports = Dragon;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+car1 = {
+  brand: "ford",
+  model: "Exploer",
+  color: "red"
+}
+
+car2 = {
+  brand: "Toyota",
+  model: "Tacoma",
+  color: "green"
+}
+
+car3 = {
+  brand: "Nissan",
+  model: "Maxima",
+  color: "black"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// class Dragon {
+//   constructor (name, rider, color, hungry = true) {
+//    this.name = name;
+//    this.rider = rider;
+//    this.color = color;
+//    this.hungry = hungry;
+//    this.count = 0;
+//   };
+
+//   eat() {
+//     this.count += 1;
+//     if(this.count >= 3) {
+//     this.count = false;
+//    }
+//    // return this.hunger;
+//   };
+// }
+
+// module.exports = Dragon;
 
 //Process to follow...
 //1. Read the test
