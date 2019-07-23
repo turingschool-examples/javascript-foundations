@@ -25,12 +25,12 @@ class Fairy {
       this.disposition = 'Vengeful'
     }
 
-    // replaceInfant(infant) {
-    //   infant = {
-    //     name: infant.name,
-    //     eyes: infant.eyes,
-    //     // disposition: infant.disposition
-    //   }
+    replaceInfant(infant) {
+      infant = {
+        name: infant.name,
+        eyes: infant.eyes,
+        // disposition: infant.disposition
+      }
     }
 }
 
