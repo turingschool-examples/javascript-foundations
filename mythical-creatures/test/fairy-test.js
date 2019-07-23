@@ -6,25 +6,25 @@ describe('Fairy', () => {
     assert.isFunction(Fairy);
   });
 
-  it.skip('should instantiate a fairy', () => {
+  it('should instantiate a fairy', () => {
     const fairy = new Fairy();
 
     assert.isObject(fairy);
   });
 
-  it.skip('should have a name', () => {
+  it('should have a name', () => {
     const fairy = new Fairy('Holly');
 
     assert.equal(fairy.name, 'Holly');
   });
 
-  it.skip('should have some fairy dust by default', () => {
+  it('should have some fairy dust by default', () => {
     const fairy = new Fairy('Mab');
 
     assert.equal(fairy.dust, 10);
   });
 
-  it.skip('should get a small amount of fairy dust when others believe in her', () => {
+  it('should get a small amount of fairy dust when others believe in her', () => {
     const fairy = new Fairy('Sookie');
     const dustBefore = fairy.dust;
 
@@ -35,7 +35,7 @@ describe('Fairy', () => {
     assert.equal(difference, 1);
   });
 
-  it.skip('should get a lot of fairy dust from believeing in herself', () => {
+  it('should get a lot of fairy dust from believeing in herself', () => {
     const fairy = new Fairy('Tinkerbell');
     const dustBefore = fairy.dust;
 
@@ -46,13 +46,13 @@ describe('Fairy', () => {
     assert.equal(difference, 10);
   });
 
-  it.skip('should start with an Iris flower dress', () => {
+  it('should start with an Iris flower dress', () => {
     const fairy = new Fairy('Rose');
 
     assert.deepEqual(fairy.clothes, {dresses: ['Iris']});
   });
 
-  it.skip('should turn flowers into more dresses', () => {
+  it('should turn flowers into more dresses', () => {
     const fairy = new Fairy('Honeysuckle');
 
     fairy.makeDresses(['Daffodil', 'Tulip', 'Poppy']);
@@ -60,7 +60,7 @@ describe('Fairy', () => {
     assert.deepEqual(fairy.clothes.dresses, ['Iris', 'Daffodil', 'Tulip', 'Poppy']);
   });
 
-  it.skip('should turn more flowers into even more dresses', () => {
+  it('should turn more flowers into even more dresses', () => {
     const fairy = new Fairy('Cosmo Pepperfeet');
 
     fairy.makeDresses(['Ranunculus', 'Daisy']);
@@ -69,13 +69,13 @@ describe('Fairy', () => {
     assert.deepEqual(fairy.clothes.dresses, ['Iris', 'Ranunculus', 'Daisy', 'Hydrangea', 'Forget-me-not'])
   });
 
-  it.skip('should start out good natured', () => {
+  it('should start out good natured', () => {
     const fairy = new Fairy('Cologne');
 
     assert.equal(fairy.disposition, 'Good natured');
   });
 
-  it.skip('should become real scary when provoked', () => {
+  it('should become real scary when provoked', () => {
     const fairy = new Fairy('Aine');
 
     fairy.provoke();
@@ -83,7 +83,7 @@ describe('Fairy', () => {
     assert.equal(fairy.disposition, 'Vengeful');
   });
 
-  it.skip('should steal infants and return near identical changelings when feeling vengeful', () => {
+  it('should steal infants and return near identical changelings when feeling vengeful', () => {
     const fairy = new Fairy('Claudine');
     const firstInfant = { name: 'Sue', eyes: 'Blue', disposition: 'Sweet'};
     const secondInfant = { name: 'Henry', eyes: 'Brown', disposition: 'Charming'};
