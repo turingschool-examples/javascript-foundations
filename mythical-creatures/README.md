@@ -30,11 +30,6 @@ Unskip each test, one at a time in order, so you can concentrate on making one t
 
 ### Extra Challenges
 
-#### The Dreaded `if` Statement
-
-Can you complete implementations of each of the creatures without using `if`
-statements? Think about how removing them affects your code.
-
 #### Imagine Two Creatures
 
 Can you add two new creatures to the repository? How about a Hydra? Add unit
@@ -44,6 +39,10 @@ tests exercising some of the following concepts:
 * Using methods to change the internal state of an instance
 * Using methods to query the internal state of an instance
 
+#### `if` Statement Alternatives
+
+How many `if` statements can you replace with conditional statements and logical operators? Can you challenge yourself to try out new modes of control flow?
+
 ### Extra Creatures
 If you've done the creatures above and feel comfortable with those, try conquering a few more creatures!
 
@@ -52,7 +51,7 @@ If you've done the creatures above and feel comfortable with those, try conqueri
 * `ogre`
 * `sphinx`
 
-#### Practicing new javascript features
+#### Practicing new JavaScript features
 
-Notice, some of the syntax with the tests and files are using newer javascript features introduced in es6, like arrow functions, block-scoped variables, and classes.  See if you can start flexing your es6 muscles and write your solutions and tests using the new syntax!  
+Notice, some of the syntax with the tests and files are using newer JavaScript features introduced in es6, like arrow functions, block-scoped variables, and classes.  See if you can start flexing your es6 muscles and write your solutions and tests using the new syntax!  
 
