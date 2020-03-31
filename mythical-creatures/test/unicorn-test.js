@@ -3,7 +3,7 @@ var Unicorn = require('../exercises/unicorn');
 
 describe('Unicorn', function() {
 
-  it.skip('should be a function', function() {
+  it('should be a function', function() {
     assert.isFunction(Unicorn);
   });
 
