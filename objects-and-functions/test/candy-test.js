@@ -9,11 +9,13 @@ describe('Candy', function () {
 
   it.skip('should have a type', function () {
     var candy = new Candy('Skittles');
+    
     assert.equal(candy.type, 'Skittles');
   });
 
   it.skip('should have another candy type', function () {
     var candy = new Candy('Mars');
+    
     assert.equal(candy.type, 'Mars');
   });
 });

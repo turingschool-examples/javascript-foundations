@@ -8,12 +8,14 @@ describe('Costume', function () {
   });
 
   it.skip('should have a style', function () {
-    var costume = new Costume('Batman');
-    assert.equal(costume.style, 'Batman');
+    var costume = new Costume('sexy plesiosaur');
+
+    assert.equal(costume.style, 'sexy plesiosaur');
   });
 
   it.skip('should have another style of costume', function() {
-    var costume = new Costume('Princess');
-    assert.equal(costume.style, 'Princess');
+    var costume = new Costume('ghost');
+
+    assert.equal(costume.style, 'ghost');
   });
 });

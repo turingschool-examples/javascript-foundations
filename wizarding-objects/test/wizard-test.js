@@ -12,21 +12,18 @@ describe('Wizard', () => {
   });
 
   it.skip('should have a name', () => {
-    const wizard = new Wizard('Hermione'); // yes we know Hermione is not a wizard
+    const hermyown = new Wizard('Hermione');
+    const wonwon = new Wizard('Ron');
 
-    assert.equal(wizard.name, 'Hermione');
-  });
-
-  it.skip('could have a different name', () => {
-    const wizard = new Wizard('Ron');
-
-    assert.equal(wizard.name, 'Ron');
+    assert.equal(hermyown.name, 'Hermione');
+    assert.equal(wonwon.name, 'Ron');
   });
 
   it.skip('should have a pet', () => {
     const wizard = new Wizard('Hermione');
     const pet = new Pet('Crookshanks', 'cat');
-    wizard.givePet(pet);
+
+    wizard.adoptPet(pet);
 
     assert.equal(wizard.petsCount, 1);
     assert.equal(wizard.pets[0], pet);
@@ -35,27 +32,29 @@ describe('Wizard', () => {
   it.skip('should be able to have many pets', () => {
     const wizard = new Wizard('Hermione');
  
-    const pet = new Pet('Crookshanks', 'cat');
+    const pet1 = new Pet('Crookshanks', 'cat');
     const pet2 = new Pet('Hedwig', 'owl');
    
-    wizard.givePet(pet);
-    wizard.givePet(pet2);
+    wizard.adoptPet(pet1);
+    wizard.adoptPet(pet2);
 
     assert.equal(wizard.petsCount, 2);
-    assert.equal(wizard.pets[0], pet);
+    assert.equal(wizard.pets[0], pet1);
     assert.equal(wizard.pets[1], pet2);
   });
 
   it.skip('should list pets as a string', () => {
     const wizard = new Wizard('Hermione');
     
-    const pet = new Pet('Crookshanks', 'cat');
+    const pet1 = new Pet('Crookshanks', 'cat');
     const pet2 = new Pet('Hedwig', 'owl');
     
-    wizard.givePet(pet);
-    wizard.givePet(pet2);
+    wizard.adoptPet(pet1);
+    wizard.adoptPet(pet2);
 
-    assert.equal(wizard.petList(), "Crookshanks, a cat, Hedwig, an owl.");
+    var hermionesPets = wizard.petList();
+
+    assert.equal(hermionesPets, "A cat named Crookshanks; an owl named Hedwig.");
   });
 
   it.skip('should have a wand', () => {

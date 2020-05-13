@@ -9,51 +9,56 @@ describe('Werewolf', function() {
   });
 
   it.skip('should instantiate our good friend, Werewolf', function() {
-    var werewolf = new Werewolf();
-    assert.isObject(werewolf);
+    var larry = new Werewolf();
+
+    assert.intanceOf(larry, Werewolf);
   });
 
   it.skip('should have a name', function() {
-    var werewolf = new Werewolf('Jorge');
+    var werewolf = new Werewolf('Jeff');
     var werewolf2 = new Werewolf('Sal');
-    assert.equal(werewolf.name, 'Jorge');
+
+    assert.equal(werewolf.name, 'Jeff');
     assert.equal(werewolf2.name, 'Sal');
   });
 
-  it.skip('should have a location', function() {
-    var werewolf = new Werewolf('Horace','Basement lair');
-    assert.equal(werewolf.location, 'Basement lair');
-  });
-
   it.skip('should default to human form', function() {
-    var werewolf = new Werewolf('Mike','Basement lair');
+    var werewolf = new Werewolf('Casey');
+
     assert.equal(werewolf.human, true);
   });
 
-  it.skip('should refute human form after changing', function() {
-    var werewolf = new Werewolf('Steve', 'Gusto');
-    werewolf.change();
+  it.skip('should not be in human form after transforming', function() {
+    var werewolf = new Werewolf('Scott');
+
+    werewolf.transform();
+
     assert.equal(werewolf.human, false);
   });
 
-  it.skip('should show assert wolf form after change', function() {
-    var werewolf = new Werewolf('Lousia', 'Gusto');
+  it.skip('should show assert wolf form after transforming', function() {
+    var werewolf = new Werewolf('Lousia');
 
     assert.equal(werewolf.wolf, false);
-    werewolf.change();
+
+    werewolf.transform();
+
     assert.equal(werewolf.wolf, true);
   });
 
   it.skip('should show what form its in', function() {
-    var werewolf = new Werewolf('Lousia', 'Gusto');
+    var werewolf = new Werewolf('Lousia');
 
     assert.equal(werewolf.wolf, false);
-    werewolf.change();
-    werewolf.change();
+
+    werewolf.transform();
+    werewolf.transform();
+
     assert.equal(werewolf.wolf, false);
     assert.equal(werewolf.human, true);
 
-    werewolf.change();
+    werewolf.transform();
+
     assert.equal(werewolf.wolf, true);
     assert.equal(werewolf.human, false);
   });
@@ -74,11 +79,11 @@ describe('Werewolf', function() {
     // your code here
   });
 
-  it.skip('should change back to human form after eating', function() {
+  it.skip('should transform back to human form after eating', function() {
     // your code here
   });
 
-  it.skip('should not be able to consume victim in human form', function() {
+  it.skip('should not be able to eat a victim while in human form', function() {
     // your code here
   });
 });
@@ -91,25 +96,13 @@ describe('Victim', function() {
 
   it.skip('should instantiate our good friend, Victim', function() {
     var victim = new Victim();
-    assert.isObject(victim);
+
+    assert.instanceOf(victim, Victim);
   });
 
   it.skip('should have a name', function() {
-    var victim = new Victim('Jorge');
-    assert.equal(victim.name, 'Jorge');
-  });
+    var victim = new Victim('Leta');
 
-  it.skip('should start alive', function() {
-    var victim = new Victim('TayTay');
-    assert.equal(victim.alive, true);
-  });
-
-  it.skip('should be dead after being eaten', function() {
-    var werewolf = new Werewolf('TayTay');
-    var victim = new Victim('TayTay');
-
-    werewolf.change();
-    werewolf.eat(victim);
-    assert.equal(victim.alive, false);
+    assert.equal(victim.name, 'Leta');
   });
 });

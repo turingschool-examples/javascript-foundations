@@ -28,15 +28,15 @@ describe('Wand', () => {
   });
 
   it.skip('should have another type, size and core', () => {
-    const wand = new Wand('Cherry', 14, 'Basilisk Fang');
+    const wand = new Wand('Cherry', 14, 'Dragon Heartstring');
 
     assert.equal(wand.type, 'Cherry');
     assert.equal(wand.size, 14);
-    assert.equal(wand.core, 'Basilisk Fang');
+    assert.equal(wand.core, 'Dragon Heartstring');
   });
 
   it.skip('should cast a spell', () => {
-    const wand = new Wand('Cherry', 14, 'Basilisk Fang');
+    const wand = new Wand('Cherry', 14, 'Dragon Heartstring');
 
     assert.equal(wand.cast('Accio'), 'Casting Accio!')
 

@@ -8,39 +8,47 @@ describe('Centaur', function() {
   });
 
   it.skip('should have a name', function() {
-    var centaur1 = new Centaur('George');
-    assert.equal(centaur1.name, 'George');
-    var centaur2 = new Centaur('Bob');
+    var centaur1 = new Centaur({ name: 'Georgiana' });
+    var centaur2 = new Centaur({ name: 'Bob' });
+
+    assert.equal(centaur1.name, 'Georgiana');
     assert.equal(centaur2.name, 'Bob');
   });
 
   it.skip('should have a breed', function() {
-    var centaur = new Centaur('George', 'Palomino');
+    var centaur = new Centaur({ name: 'Georgiana', type: 'Palomino' });
+
     assert.equal(centaur.breed, 'Palomino');
   });
 
   it.skip('should have excellent bow skills', function() {
-    var centaur = new Centaur('George');
+    var centaur = new Centaur({ name: 'Georgiana', type: 'Palomino' });
+
     assert.equal(centaur.shoot(), 'Twang!!!');
   });
 
   it.skip('should have a horse sound when it runs', function() {
-    var centaur = new Centaur('George');
-    assert.equal(centaur.run(), 'Clop clop clop clop!!!');
+    var centaur = new Centaur({ name: 'Georgiana', type: 'Palomino' });
+
+    var soundEffect = centaur.run();
+
+    assert.equal(soundEffect, 'Clop clop clop clop!!!');
   });
 
   it.skip('should not be cranky when first created', function() {
-    var centaur = new Centaur('George');
+    var centaur = new Centaur({ name: 'Georgiana', type: 'Palomino' });
+
     assert.equal(centaur.cranky, false);
   });
 
   it.skip('should be standing up when first created', function() {
-    var centaur = new Centaur('George');
+    var centaur = new Centaur({ name: 'Georgiana', type: 'Palomino' });
+
     assert.equal(centaur.standing, true);
   });
 
   it.skip('should be cranky after running or shooting a bow three times', function() {
-    var centaur = new Centaur('George');
+    var centaur = new Centaur({ name: 'Georgiana', type: 'Palomino' });
 
     assert.equal(centaur.cranky, false);
 
@@ -51,23 +59,46 @@ describe('Centaur', function() {
     assert.equal(centaur.cranky, true)
   });
 
-  it.skip('should not shoot when cranky', function() {
-    var centaur = new Centaur('George');
+  it.skip('should be cranky after running or shooting a bow three times', function() {
+    var centaur = new Centaur({ name: 'Georgiana', type: 'Palomino' });
 
-    for (var i = 0; i < 3; i++)  {
-      centaur.shoot();
-    }
+    assert.equal(centaur.cranky, false);
+
+    centaur.run()
+    centaur.run()
+    centaur.shoot()
+
+    assert.equal(centaur.cranky, true)
+  });
+
+  it.skip('should not shoot when cranky', function() {
+    var centaur = new Centaur({ name: 'Georgiana', type: 'Palomino' });
+
+    centaur.shoot();
+    centaur.shoot();
+    centaur.run();
 
     assert.equal(centaur.shoot(), 'NO!');
   });
 
+  it.skip('should not run when cranky', function() {
+    var centaur = new Centaur({ name: 'Georgiana', type: 'Palomino' });
+
+    centaur.shoot();
+    centaur.shoot();
+    centaur.shoot();
+
+    assert.equal(centaur.run(), 'NO!');
+  });
+
   it.skip('should not sleep while standing', function() {
-    var centaur = new Centaur('George');
+    var centaur = new Centaur({ name: 'Georgiana', type: 'Palomino' });
+
     assert.equal(centaur.sleep(), 'NO!');
   });
 
   it.skip('after laying down it is not standing', function() {
-    var centaur = new Centaur('George');
+    var centaur = new Centaur({ name: 'Georgiana', type: 'Palomino' });
 
     assert.equal(centaur.standing, true);
     assert.equal(centaur.layingDown, false);
@@ -84,7 +115,7 @@ describe('Centaur', function() {
   });
 
   it.skip('should not run or shoot while laying down', function() {
-    var centaur = new Centaur('George');
+    var centaur = new Centaur({ name: 'Georgiana', type: 'Palomino' });
 
     centaur.layDown();
 
@@ -93,35 +124,39 @@ describe('Centaur', function() {
   });
 
   it.skip('should be able to sleep when laying down', function() {
-    var centaur = new Centaur('George');
+    var centaur = new Centaur({ name: 'Georgiana', type: 'Palomino' });
+
     centaur.layDown();
+
     assert.equal(centaur.sleep(), 'ZZZZ');
   });
 
   it.skip('should not be cranky after sleeping', function() {
-    var centaur = new Centaur('George');
+    var centaur = new Centaur({ name: 'Georgiana', type: 'Palomino' });
 
-    for (var i = 0; i < 3; i++)  {
-      centaur.shoot();
-    }
+    centaur.run();
+    centaur.run();
+    centaur.run();
 
     assert.equal(centaur.cranky, true);
 
     centaur.layDown();
+    var snooze = centaur.sleep();
 
-    assert.equal(centaur.sleep(), 'ZZZZ');
+    assert.equal(snooze, 'ZZZZ');
     assert.equal(centaur.cranky, false);
 
     centaur.standUp();
+
     assert.equal(centaur.shoot(),'Twang!!!');
   });
 
   it.skip('should not be cranky after drinking potion', function() {
-    var centaur = new Centaur('George');
+    var centaur = new Centaur({ name: 'Georgiana', type: 'Palomino' });
 
-    for (var i = 0; i < 3; i++)  {
-      centaur.shoot();
-    }
+    centaur.shoot();
+    centaur.run();
+    centaur.shoot();
 
     centaur.drinkPotion();
 
@@ -129,18 +164,15 @@ describe('Centaur', function() {
   });
 
   it.skip('should only drink potion while standing', function() {
-    var centaur = new Centaur('George');
+    var centaur = new Centaur({ name: 'Georgiana', type: 'Palomino' });
 
-    centaur.drinkPotion();
     centaur.layDown();
 
     assert.equal(centaur.drinkPotion(), 'Not while I\'m laying down!');
   });
 
   it.skip('should be cranky if it drinks potion while rested', function() {
-    var centaur = new Centaur('George');
-
-    assert.equal(centaur.cranky, false);
+    var centaur = new Centaur({ name: 'Georgiana', type: 'Palomino' });
 
     centaur.drinkPotion();
 
