@@ -11,7 +11,7 @@ describe('Werewolf', function() {
   it.skip('should instantiate our good friend, Werewolf', function() {
     var larry = new Werewolf();
 
-    assert.intanceOf(larry, Werewolf);
+    assert.instanceOf(larry, Werewolf);
   });
 
   it.skip('should have a name', function() {
