@@ -5,7 +5,7 @@ describe('Magician', function() {
 
   it.skip('should be a function that instantiates a class', function() {
     assert.isFunction(Magician);
-    assert.instanceOf(new Magician(), Magician());
+    assert.instanceOf(new Magician(), Magician);
   });
 
   it.skip('should have a name', function() {
