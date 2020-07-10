@@ -10,9 +10,9 @@ class Vampire {
     };
   };
 
-    drink() {
-      this.thirsty = false;
-    };
+  drink() {
+    this.thirsty = false;
+  };
 };
 
 module.exports = Vampire;
