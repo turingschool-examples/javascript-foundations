@@ -1,5 +1,5 @@
 class Vampire {
-  constructor(name, pet, thirsty) {
+  constructor(name, pet) {
     this.name = name;
     this.thirsty = true;
 
