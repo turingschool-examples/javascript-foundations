@@ -77,7 +77,7 @@ describe('Medusa', function() {
     medusa.stare(victim3);
 
     assert.equal(medusa.statues.length, 3);
-    assert.equal(medusa.statues, [victim1, victim2, victim3]);
+    assert.deepEqual(medusa.statues, [victim1, victim2, victim3]);
 
     medusa.stare(victim4);
 
@@ -100,7 +100,7 @@ describe('Person', function() {
     var scott = new Person('Scott');
     var eric = new Person('Eric');
 
-    assert.equal(scott.name, 'Steve');
+    assert.equal(scott.name, 'Scott');
     assert.equal(eric.name, 'Eric');
   });
 
