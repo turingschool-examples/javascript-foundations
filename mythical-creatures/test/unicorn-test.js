@@ -21,7 +21,6 @@ describe('Unicorn', function() {
 
   it('should be able to have a different name', function() {
     var unicorn = new Unicorn('Pam');
-                //constructor('Pam');
 
     assert.equal(unicorn.name, 'Pam');
   });
