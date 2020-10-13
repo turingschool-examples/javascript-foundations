@@ -2,7 +2,7 @@
 
 Each exercise emphasizes the fundamentals of object oriented programming in JavaScript.
 
-To begin, `cd` into each of the directories and follow the instructions in the README.
+To begin, fork this repo, clone the fork to your local machine, then `cd` into each of the directories and follow the instructions in the README.
 
 1. Mythical Creatures
 2. Objects and Functions
@@ -35,4 +35,3 @@ You should see something like:
 ```
 
 Go into each subdirectory, `mythical-creatures`, `objects-and-functions`, `wizarding-objects`, and `wizarding-arrays`, read the README, and work on making the test suite pass.
-
