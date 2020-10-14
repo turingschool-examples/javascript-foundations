@@ -1,8 +1,9 @@
 class Unicorn {
   constructor(name, color) {
     this.name = name;
-    this.color = color;
-  }
+    color === undefined ? this.color = 'white' : this.color = color;
+  }  
+  
 }
 
 module.exports = Unicorn;
