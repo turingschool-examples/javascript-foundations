@@ -27,11 +27,11 @@ describe('Unicorn', function() {
 
   it('should have a color', function() {
     var unicorn = new Unicorn('TayTay', 'blue');
-    
+
     assert.equal(unicorn.color, 'blue');
   });
 
-  it.skip('should be white as default', function() {
+  it('should be white as default', function() {
     var unicorn = new Unicorn('Louisa');
 
     assert.equal(unicorn.color, 'white');
@@ -45,7 +45,7 @@ describe('Unicorn', function() {
 
   it.skip('should say sparklying stuff', function() {
     var unicorn = new Unicorn('Brenna');
-    
+
     assert.equal(unicorn.says('Wonderful!'), '**;* Wonderful! *;**');
     assert.equal(unicorn.says('Batman has a great smile'), '**;* Batman has a great smile *;**');
   });
