@@ -3,17 +3,17 @@ var Pirate = require('../exercises/pirate');
 
 describe('Pirate', function() {
 
-  it.skip('should be a function', function() {
+  it('should be a function', function() {
     assert.isFunction(Pirate);
   });
 
-  it.skip('should instantiate our good friend, Pirate', function() {
+  it('should instantiate our good friend, Pirate', function() {
     var dreadPirateRoberts = new Pirate();
 
     assert.instanceOf(dreadPirateRoberts, Pirate);
   });
 
-  it.skip('should have a name', function() {
+  it('should have a name', function() {
     var blackbeard = new Pirate('Blackbeard');
     var chengISao = new Pirate('Cheng I Sao');
 
@@ -21,14 +21,14 @@ describe('Pirate', function() {
     assert.equal(chengISao.name, 'Cheng I Sao');
   });
 
-  it.skip('should be a scallywag by default', function() {
+  it('should be a scallywag by default', function() {
     var pirate = new Pirate('Anne Bonny');
 
     assert.equal(pirate.name, 'Anne Bonny');
     assert.equal(pirate.job, 'scallywag');
   });
 
-  it.skip('should be able to have another job', function() {
+  it('should be able to have another job', function() {
     var david = new Pirate('David', 'cook');
     var pam = new Pirate('Pam', 'captain');
 
@@ -36,25 +36,25 @@ describe('Pirate', function() {
     assert.equal(pam.job, 'captain');
   });
 
-  it.skip('should not be cursed by default', function() {
+  it('should not be cursed by default', function() {
     var pirate = new Pirate('Mary Read', 'cook');
 
     assert.equal(pirate.cursed, false);
   });
 
-  it.skip('should be able to rob ships', function() {
+  it('should be able to rob ships', function() {
     var pirate = new Pirate('Grace OMalley');
 
     assert.equal(pirate.robShip(), 'YAARRR!');
   });
 
-  it.skip('should start with a booty of 0', function() {
+  it('should start with a booty of 0', function() {
     var pirate = new Pirate('Rachel Wall');
 
     assert.equal(pirate.booty, 0);
   });
 
-  it.skip('should get 100 gold pieces when robbing a ship', function() {
+  it('should get 100 gold pieces when robbing a ship', function() {
     var pirate = new Pirate('Robbie');
 
     pirate.robShip();
