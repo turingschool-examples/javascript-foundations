@@ -8,6 +8,10 @@ class Unicorn {
     return this.color !== 'white' ? false : true;
   }  
   
+  says(sparklyingStuff) {
+    return `**;* ${sparklyingStuff} *;**`;
+  }
+
 }
 
 module.exports = Unicorn;
