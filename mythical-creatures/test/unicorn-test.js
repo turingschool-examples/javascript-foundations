@@ -43,7 +43,7 @@ describe('Unicorn', function() {
     assert.equal(unicorn.isWhite(), false);
   });
 
-  it.skip('should say sparklying stuff', function() {
+  it('should say sparklying stuff', function() {
     var unicorn = new Unicorn('Brenna');
 
     assert.equal(unicorn.says('Wonderful!'), '**;* Wonderful! *;**');
