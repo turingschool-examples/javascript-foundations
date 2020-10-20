@@ -57,12 +57,19 @@ describe('Direwolf', function() {
     assert.equal(stark.name, 'Bran');
   });
 
-  it.skip('should have a default home of Winterfell', function() {
+  it.skip('should have a default location of Winterfell', function() {
     const stark = new Stark('Bran');
 
     assert.equal(stark.name, 'Bran');
     assert.equal(stark.location, 'Winterfell');
   });
+
+  it.skip('should be able to have different locations', function() {
+    const stark = new Stark('Eddard', 'King\'s Landing')
+
+    assert.equal(stark.name, 'Eddard')
+    assert.equal(stark.location, 'King\'s Landing')
+  })
 
   it.skip('should start with no Starks to protect', function() {
     const direwolf = new Direwolf('Nymeria');
@@ -121,8 +128,13 @@ describe('Direwolf', function() {
     const stark = new Stark('John', 'Winterfell');
 
     assert.equal(stark.safe, false);
-    assert.equal(stark.houseWords(), 'Winter is Coming');
   });
+
+  it.skip('should know their house words', function() {
+    const stark = new Stark ('Benjen')
+
+    assert.equal(stark.sayHouseWords(), 'Winter is Coming')
+  })
 
   it.skip('should change house words once protected', function() {
     const direwolf = new Direwolf('Nymeria', 'Dorn');
@@ -136,8 +148,8 @@ describe('Direwolf', function() {
     assert.equal(stark1.safe, true);
     assert.equal(stark2.safe, false);
 
-    assert.equal(stark1.houseWords(), 'The North Remembers');
-    assert.equal(stark2.houseWords(), 'Winter is Coming');
+    assert.equal(stark1.sayHouseWords(), 'The North Remembers');
+    assert.equal(stark2.sayHouseWords(), 'Winter is Coming');
   });
 
   it.skip('should hunt white walkers when not protecting Starks', function() {
@@ -166,4 +178,16 @@ describe('Direwolf', function() {
     assert.equal(direwolf2.starksToProtect[0].name, 'Sansa');
     assert.equal(stark2.safe, false);
   });
+
+  it.skip('should be able to call their direwolf to become protected', function() {
+    const stark = new Stark('Arya', 'Riverlands')
+
+    var direwolf = stark.callDirewolf('Nymeria', 'Winterfell')
+
+    assert.instanceOf(direwolf, Direwolf)
+    assert.equal(direwolf.name, 'Nymeria')
+    assert.equal(direwolf.home, 'Riverlands')
+    assert.deepEqual(direwolf.starksToProtect[0].name, 'Arya')
+    assert.equal(stark.safe, true)
+  })
 });
