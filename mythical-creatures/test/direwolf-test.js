@@ -137,9 +137,9 @@ describe('Direwolf', function() {
   })
 
   it.skip('should change house words once protected', function() {
-    const direwolf = new Direwolf('Nymeria', 'Dorn');
-    const stark1 = new Stark('Arya', 'Dorn');
-    const stark2 = new Stark('Sansa', 'Dorn');
+    const direwolf = new Direwolf('Nymeria', 'Dorne');
+    const stark1 = new Stark('Arya', 'Dorne');
+    const stark2 = new Stark('Sansa', 'Dorne');
 
     assert.equal(stark1.safe, false);
     assert.equal(stark2.safe, false);
