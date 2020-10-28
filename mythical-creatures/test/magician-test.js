@@ -3,29 +3,29 @@ var Magician = require('../exercises/magician');
 
 describe('Magician', function() {
 
-  it.skip('should be a function that instantiates a class', function() {
+  it('should be a function that instantiates a class', function() {
     assert.isFunction(Magician);
-    assert.instanceOf(new Magician(), Magician);
+    assert.instanceOf(new Magician({}), Magician);
   });
 
-  it.skip('should have a name', function() {
+  it('should have a stage name', function() {
     var magician1 = new Magician({ name: 'Scott' });
     var magician2 = new Magician({ name: 'Casey' });
 
-    assert.equal(magician1.name, 'Scott');
-    assert.equal(magician2.name, 'Casey');
+    assert.equal(magician1.name, 'The Great Scott');
+    assert.equal(magician2.name, 'The Great Casey');
   });
 
-  it.skip('should have a top hat by default', function() {
+  it('should prefer wearing a top hat', function() {
     var magician = new Magician({ name: 'Scott' });
 
-    assert.equal(magician.topHat, true);
+    assert.equal(magician.favoriteAccessory, 'top hat');
   });
 
-  it.skip('should not always have a hat', function() {
-    var magician = new Magician({ name: 'Casey', topHat: false });
+  it('should be able to have a different favorite accessory', function() {
+    var magician = new Magician({ name: 'Casey', clothingItem: 'cape' });
 
-    assert.equal(magician.topHat, false)
+    assert.equal(magician.favoriteAccessory, 'cape')
   });
 
   it.skip('should be able to cast a spell', function() {
