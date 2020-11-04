@@ -3,12 +3,12 @@ var Magician = require('../exercises/magician');
 
 describe('Magician', function() {
 
-  it('should be a function that instantiates a class', function() {
+  it.skip('should be a function that instantiates a class', function() {
     assert.isFunction(Magician);
     assert.instanceOf(new Magician({}), Magician);
   });
 
-  it('should have a stage name', function() {
+  it.skip('should have a stage name', function() {
     var magician1 = new Magician({ name: 'Scott' });
     var magician2 = new Magician({ name: 'Casey' });
 
@@ -16,7 +16,7 @@ describe('Magician', function() {
     assert.equal(magician2.name, 'The Great Casey');
   });
 
-  it('should be able to have an assistant', function () {
+  it.skip('should be able to have an assistant', function () {
     var magician1 = new Magician({ name: 'Scott', assistant: true });
     var magician2 = new Magician({ name: 'Casey', assistant: false });
 
@@ -27,19 +27,19 @@ describe('Magician', function() {
     assert.equal(magician2.assistant, false);
   });
 
-  it('should prefer wearing a top hat', function() {
+  it.skip('should prefer wearing a top hat', function() {
     var magician = new Magician({ name: 'Scott' });
 
     assert.equal(magician.favoriteAccessory, 'top hat');
   });
 
-  it('should be able to have a different favorite accessory', function() {
+  it.skip('should be able to have a different favorite accessory', function() {
     var magician = new Magician({ name: 'Casey', clothing: 'cape' });
 
     assert.equal(magician.favoriteAccessory, 'cape')
   });
 
-  it('should be able to perform an incantation', function() {
+  it.skip('should be able to perform an incantation', function() {
     var magician = new Magician({ name: 'Scott' });
     
     var spell = magician.performIncantation('abracadabra');
@@ -49,7 +49,7 @@ describe('Magician', function() {
     assert.equal(charm, 'ALLAKAZAAM!');
   });
   
-  it('should be able to pull a rabbit from the hat, if the magician has a top hat', function() {
+  it.skip('should be able to pull a rabbit from the hat, if the magician has a top hat', function() {
     var magician1 = new Magician({ name: 'Hannah' });
     var magician2 = new Magician({ name: 'Kayla', clothing: 'top hat' });
     
@@ -60,7 +60,7 @@ describe('Magician', function() {
     assert.equal(spell2, 'PULL RABBIT FROM TOP HAT');
   });
   
-  it('should be able to pull a dove from the sleeve, if the magician does not have a top hat', function() {
+  it.skip('should be able to pull a dove from the sleeve, if the magician does not have a top hat', function() {
     var magician = new Magician({ name: 'Leta', clothing: 'cape' });
     
     var spell = magician.performTrick();
@@ -68,13 +68,13 @@ describe('Magician', function() {
     assert.equal(spell, 'PULL DOVE FROM SLEEVE');
   });
   
-  it('should start not very confident', function() {
+  it.skip('should start not very confident', function() {
     var magician = new Magician({ name: 'Leta' });
     
     assert.equal(magician.confidencePercentage, 10);
   });
   
-  it('should gain confidence after performing spells', function() {
+  it.skip('should gain confidence after performing spells', function() {
     var magician = new Magician({ name: 'Leta' });
 
     magician.performTrick();
@@ -88,7 +88,7 @@ describe('Magician', function() {
     assert.equal(magician.confidencePercentage, 50);
   });
 
-  it('should not be able to saw someone in half unless they\'re 100% confident', function() {
+  it.skip('should not be able to saw someone in half unless they\'re 100% confident', function() {
     var magician = new Magician({ name: 'Scott', assistant: true });
 
     assert.equal(magician.performShowStopper(), 'Oh no, this trick is not ready!');
@@ -100,7 +100,7 @@ describe('Magician', function() {
     assert.equal(magician.performShowStopper(), 'WOW! The magician totally just sawed that person in half!');
   });
 
-  it('should not be able to saw someone in half unless they have an assistant', function () {
+  it.skip('should not be able to saw someone in half unless they have an assistant', function () {
     var magician1 = new Magician({ name: 'Scott', assistant: false });
     var magician2 = new Magician({ name: 'Hannah', assistant: true });
 
