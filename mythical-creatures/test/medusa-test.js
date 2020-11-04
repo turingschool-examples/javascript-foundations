@@ -1,6 +1,7 @@
 var assert = require('chai').assert;
 var Medusa = require('../exercises/medusa');
 var Person = require('../exercises/person');
+var Statue = require('../exercises/statue');
 
 describe('Medusa', function() {
 
@@ -28,26 +29,21 @@ describe('Medusa', function() {
     assert.deepEqual(medusa.statues, []);
   });
 
-  // STOP! Skip down to the bottom of the file and pass first 3 tests for Person down below!
+  // STOP! Skip down to the bottom of the file and pass the tests for Person and Statue!
 
   it.skip('should gain a statue when staring at a person', function() {
     var medusa = new Medusa('Eric');
-    var victim = new Person('Robbie');
+    var victim1 = new Person('Robbie');
+    var victim2 = new Person('Bob');
 
-    medusa.stare(victim);
+    medusa.gazeAtVictim(victim1);
+    medusa.gazeAtVictim(victim2);
 
-    assert.equal(medusa.statues.length, 1);
-    assert.instanceOf(medusa.statues[0], Person);
+    assert.equal(medusa.statues.length, 2);
+    assert.instanceOf(medusa.statues[0], Statue);
+    assert.instanceOf(medusa.statues[1], Statue);
     assert.equal(medusa.statues[0].name, 'Robbie');
-  });
-
-  it.skip('should stone the victim when added to the statues array', function() {
-    var medusa = new Medusa('Eric');
-    var victim = new Person('Robbie');
-
-    medusa.stare(victim);
-
-    assert.equal(medusa.statues[0].stoned, true);
+    assert.equal(medusa.statues[1].name, 'Bob');
   });
 
   it.skip('should only be able to have three victims as statues', function() {
@@ -57,12 +53,15 @@ describe('Medusa', function() {
     var victim3 = new Person('Scott');
     var victim4 = new Person('Bob');
 
-    medusa.stare(victim1);
-    medusa.stare(victim2);
-    medusa.stare(victim3);
-    medusa.stare(victim4);
+    medusa.gazeAtVictim(victim1);
+    medusa.gazeAtVictim(victim2);
+    medusa.gazeAtVictim(victim3);
+    medusa.gazeAtVictim(victim4);
 
     assert.equal(medusa.statues.length, 3);
+    assert.instanceOf(medusa.statues[0], Statue);
+    assert.instanceOf(medusa.statues[1], Statue);
+    assert.instanceOf(medusa.statues[2], Statue);
   });
 
   it.skip('should let the first victim go free when stoning the 4th', function() {
@@ -72,23 +71,64 @@ describe('Medusa', function() {
     var victim3 = new Person('Scott');
     var victim4 = new Person('Bob');
 
-    medusa.stare(victim1);
-    medusa.stare(victim2);
-    medusa.stare(victim3);
+    var statue1 = new Statue('Pam');
+    var statue2 = new Statue('Khalid');
+    var statue3 = new Statue('Scott');
+    var statue4 = new Statue('Bob');
+
+    medusa.gazeAtVictim(victim1);
+    medusa.gazeAtVictim(victim2);
+    medusa.gazeAtVictim(victim3);
 
     assert.equal(medusa.statues.length, 3);
-    assert.deepEqual(medusa.statues, [victim1, victim2, victim3]);
+    assert.deepEqual(medusa.statues, [statue1, statue2, statue3]);
 
-    medusa.stare(victim4);
+    medusa.gazeAtVictim(victim4);
 
     assert.equal(medusa.statues.length, 3);
-    assert.deepEqual(medusa.statues, [victim2, victim3, victim4]);  
-    assert.equal(victim4.stoned, true);
-    assert.equal(victim1.stoned, false);
+    assert.deepEqual(medusa.statues, [statue2, statue3, statue4]);  
   });
-})
+
+  it.skip('should return a freed statue to Person form', function() {
+    var medusa = new Medusa('Hannah');
+    var victim1 = new Person('Pam');
+    var victim2 = new Person('Khalid');
+    var victim3 = new Person('Scott');
+    var victim4 = new Person('Bob');
+
+    medusa.gazeAtVictim(victim1);
+    medusa.gazeAtVictim(victim2);
+    medusa.gazeAtVictim(victim3);
+
+    var person = medusa.gazeAtVictim(victim4);
+
+    assert.instanceOf(person, Person);
+    assert.equal(person.name, 'Pam');
+  });
+
+  it.skip('should be relieved when returned to Person form', function () {
+    var medusa = new Medusa('Pam');
+    var victim1 = new Person('Travis');
+    var victim2 = new Person('Kayla');
+    var victim3 = new Person('Leta');
+    var victim4 = new Person('Hannah');
+
+    medusa.gazeAtVictim(victim1);
+    medusa.gazeAtVictim(victim2);
+    medusa.gazeAtVictim(victim3);
+
+    var person = medusa.gazeAtVictim(victim4);
+
+    assert.instanceOf(person, Person);
+    assert.equal(person.name, 'Travis');
+    assert.equal(person.mood, 'relieved');
+  });
+});
 
 describe('Person', function() {
+  it.skip('should be a function', function () {
+    assert.isFunction(Person);
+  });
 
   it.skip('should instantiate our good friend, Person', function() {
     var person = new Person();
@@ -104,14 +144,29 @@ describe('Person', function() {
     assert.equal(eric.name, 'Eric');
   });
 
-  it.skip('should be stoned after looking into Medusas eyes', function() {
-    var medusa = new Medusa('Pam');
-    var victim = new Person('Khalid');
+  it.skip('should be feel frightened', function() {
+    var hannah = new Person('Hannah');
+  
+    assert.equal(hannah.mood, 'frightened');
+  });
+});
 
-    assert.equal(victim.stoned, false);
+describe('Statue', function () {
+  it.skip('should be a function', function () {
+    assert.isFunction(Statue);
+  });
 
-    medusa.stare(victim);
+  it.skip('should instantiate a Statue', function () {
+    var statue = new Statue();
 
-    assert.equal(victim.stoned, true);
+    assert.instanceOf(statue, Statue);
+  });
+
+  it.skip('should have the name of its former self', function () {
+    var kayla = new Statue('Kayla');
+    var hannah = new Statue('Hannah');
+
+    assert.equal(kayla.name, 'Kayla');
+    assert.equal(hannah.name, 'Hannah');
   });
 });
