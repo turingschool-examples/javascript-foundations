@@ -4,17 +4,17 @@ var Victim = require('../exercises/victim');
 
 describe('Werewolf', function() {
 
-  it('should be a function', function() {
+  it.skip('should be a function', function() {
     assert.isFunction(Werewolf);
   });
 
-  it('should instantiate our good friend, Werewolf', function() {
+  it.skip('should instantiate our good friend, Werewolf', function() {
     var larry = new Werewolf();
 
     assert.instanceOf(larry, Werewolf);
   });
 
-  it('should have a name', function() {
+  it.skip('should have a name', function() {
     var werewolf = new Werewolf('Jeff');
     var werewolf2 = new Werewolf('Sal');
 
@@ -22,13 +22,13 @@ describe('Werewolf', function() {
     assert.equal(werewolf2.name, 'Sal');
   });
 
-  it('should default to human form', function() {
+  it.skip('should default to human form', function() {
     var werewolf = new Werewolf('Casey');
 
     assert.equal(werewolf.form, 'human');
   });
 
-  it('should not be in human form after transforming', function() {
+  it.skip('should not be in human form after transforming', function() {
     var werewolf = new Werewolf('Scott');
     var transformedWolf =  werewolf.completeTransformation();
 
@@ -36,7 +36,7 @@ describe('Werewolf', function() {
     assert.equal(transformedWolf, 'Aaa-Woooo!')
   });
 
-  it('should be able to transform from wolf to human', function() {
+  it.skip('should be able to transform from wolf to human', function() {
     var werewolf = new Werewolf('Lousia');
 
     assert.equal(werewolf.form, 'human');
@@ -51,7 +51,7 @@ describe('Werewolf', function() {
     assert.equal(werewolf.form, 'human');
   });
 
-  it('should show what form its in', function() {
+  it.skip('should show what form its in', function() {
     var werewolf = new Werewolf('Lousia');
 
     assert.equal(werewolf.form, 'human');
@@ -66,39 +66,64 @@ describe('Werewolf', function() {
     assert.equal(werewolf.form, 'wolf');
   });
 
-  it('should start off not hungry', function() {
+  it.skip('should start off not hungry', function() {
     var werewolf = new Werewolf('Lousia');
 
     assert.equal(werewolf.hungry, false);
-
-    // your code here
   });
 
-  it('should become hungry after changing into werewolf form', function() {
+  it.skip('should become hungry after changing into werewolf form', function() {
     var werewolf = new Werewolf('Clementine');
 
     werewolf.completeTransformation();
 
     assert.equal(werewolf.form, 'wolf');
     assert.equal(werewolf.hungry, true);
-
-    // your code here
   });
 
-  it.skip('should be able to eat(victim) once hungry', function() {
-    // your code here
+  it.skip('should not be hungry after changing back to human form', function () {
+    var werewolf = new Werewolf('Pep');
+
+    werewolf.completeTransformation();
+    werewolf.completeTransformation();
+
+    assert.equal(werewolf.form, 'human');
+    assert.equal(werewolf.hungry, false);
   });
 
-  it.skip('should not be hungry after changing back to human form', function() {
-    // your code here
+  // STOP! Scroll to the bottom and complete the Victim tests
+
+  it.skip('should be able to eat a victim once hungry', function () {
+    var werewolf = new Werewolf('Baby');
+    var victim = new Victim('Hannah');
+
+    werewolf.completeTransformation();
+    var fullWolf = werewolf.eatVictim(victim);
+
+    assert.equal(victim.alive, false);
+    assert.equal(fullWolf, 'Yum, Hannah was delicious.');
   });
 
   it.skip('should transform back to human form after eating', function() {
-    // your code here
+    var werewolf = new Werewolf('Baby');
+    var victim = new Victim('Hannah');
+
+    werewolf.completeTransformation();
+    werewolf.eatVictim(victim);
+
+    assert.equal(werewolf.form, 'human');
   });
 
   it.skip('should not be able to eat a victim while in human form', function() {
-    // your code here
+    var werewolf = new Werewolf('Scott');
+    var victim = new Victim('Baby');
+
+    werewolf.completeTransformation();
+    werewolf.completeTransformation();
+    
+    var humanWolf = werewolf.eatVictim(victim);
+
+    assert.equal(humanWolf, "No way am I eating Baby, I'd like a burger!");
   });
 });
 
@@ -119,4 +144,12 @@ describe('Victim', function() {
 
     assert.equal(victim.name, 'Leta');
   });
+
+  it.skip('should be alive', function () {
+    var victim = new Victim('Leta');
+
+    assert.equal(victim.alive, true);
+  });
 });
+
+// Scroll back up to finish the Werewolf tests!
