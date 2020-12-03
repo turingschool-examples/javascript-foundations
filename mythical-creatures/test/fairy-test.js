@@ -2,7 +2,7 @@ const assert = require('chai').assert;
 const Fairy = require('../exercises/fairy');
 
 describe('Fairy', () => {
-  it('should be a function', () => {
+  it.skip('should be a function', () => {
     assert.isFunction(Fairy);
   });
 
@@ -78,7 +78,7 @@ describe('Fairy', () => {
   it.skip('should become real scary when provoked', () => {
     const fairy = new Fairy('Aine');
 
-    fairy.provoke();
+    fairy.becomeProvoked();
 
     assert.equal(fairy.disposition, 'Vengeful');
   });
@@ -88,7 +88,7 @@ describe('Fairy', () => {
     const firstInfant = { name: 'Sue', eyes: 'Blue', disposition: 'Sweet'};
     const secondInfant = { name: 'Henry', eyes: 'Brown', disposition: 'Charming'};
     
-    fairy.provoke();
+    fairy.becomeProvoked();
     fairy.replaceInfant(firstInfant);
     fairy.replaceInfant(secondInfant);
 
@@ -110,7 +110,9 @@ describe('Fairy', () => {
     const firstInfant = { name: 'Mary', eyes: 'Green', disposition: 'Calm' };
     const secondInfant = { name: 'Clarke', eyes: 'Brown', disposition: 'Gentle'};
 
-    fairy.provoke();
+    assert.deepEqual(fairy.humanWards, [])
+
+    fairy.becomeProvoked();
     fairy.replaceInfant(firstInfant);
     fairy.replaceInfant(secondInfant);
 
@@ -123,7 +125,7 @@ describe('Fairy', () => {
     const secondInfant = { name: 'Clarence', eyes: 'Brown', disposition: 'Delightful' };
     const thirdInfant = { name: 'Louise', eyes: 'Brown', disposition: 'Agreeable' };
 
-    fairy.provoke();
+    fairy.becomeProvoked();
 
     fairy.replaceInfant(firstInfant);
     fairy.replaceInfant(secondInfant);
