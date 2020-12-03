@@ -80,7 +80,7 @@ describe('Pirate', function() {
     assert.equal(pirate.robShip(), 'ARG! I\'ve been cursed!');
   });
 
-  it.skip('should be able to get uncursed for 300 booty', function() {
+  it.skip('should be able to lift curse for 300 booty', function() {
     var pirate = new Pirate('Scott');
 
     function timeTravel() {
@@ -91,19 +91,18 @@ describe('Pirate', function() {
 
     timeTravel();
 
-    pirate.buyBlessing();
-
+    assert.equal(pirate.liftCurse(), 'Your curse has been lifted!'
     assert.equal(pirate.booty, 200);
     assert.equal(pirate.cursed, false);
   })
 
-  it.skip('should only be able to buy blessing if cursed', function() {
+  it.skip('should only be able to lift curse if cursed', function() {
     var pirate = new Pirate('Kayla', 'captain');
 
     pirate.robShip();
 
     assert.equal(pirate.booty, 100);
-    assert.equal(pirate.buyBlessing(), 'You don\'t need this blessing!');
+    assert.equal(pirate.liftCurse(), 'You don\'t need to lift a curse!');
     assert.equal(pirate.booty, 100);
   })
 
