@@ -19,8 +19,8 @@ Unskip each test, one at a time in order, so you can concentrate on making one t
 ### Creature Order
 
 * `unicorn`
-* `vampire`
 * `dragon`
+* `vampire`
 * `hobbit`
 * `pirate`
 * `magician`
