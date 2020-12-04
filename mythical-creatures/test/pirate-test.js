@@ -3,10 +3,6 @@ var Pirate = require('../exercises/pirate');
 
 describe('Pirate', function() {
 
-  it.skip('should be a function', function() {
-    assert.isFunction(Pirate);
-  });
-
   it.skip('should instantiate our good friend, Pirate', function() {
     var dreadPirateRoberts = new Pirate();
 
@@ -55,7 +51,7 @@ describe('Pirate', function() {
   });
 
   it.skip('should get 100 gold pieces when robbing a ship', function() {
-    var pirate = new Pirate('Robbie');
+    var pirate = new Pirate('Hannah');
 
     pirate.robShip();
 
@@ -65,4 +61,49 @@ describe('Pirate', function() {
 
     assert.equal(pirate.booty, 200);
   });
+
+  it.skip('should get cursed after robbing 5 ships', function() {
+    var pirate = new Pirate('Robbie');
+
+    pirate.robShip();
+    pirate.robShip();
+    pirate.robShip();
+    pirate.robShip();
+    pirate.robShip();
+
+    assert.equal(pirate.booty, 500);
+
+    pirate.robShip();
+
+    assert.equal(pirate.booty, 500);
+    assert.equal(pirate.cursed, true);
+    assert.equal(pirate.robShip(), 'ARG! I\'ve been cursed!');
+  });
+
+  it.skip('should be able to lift curse for 300 booty', function() {
+    var pirate = new Pirate('Scott');
+
+    function timeTravel() {
+      for(var i = 0; i < 6; i++) {
+        pirate.robShip();
+      }
+    }
+
+    timeTravel();
+
+    assert.equal(pirate.liftCurse(), 'Your curse has been lifted!'
+    assert.equal(pirate.booty, 200);
+    assert.equal(pirate.cursed, false);
+  })
+
+  it.skip('should only be able to lift curse if cursed', function() {
+    var pirate = new Pirate('Kayla', 'captain');
+
+    pirate.robShip();
+
+    assert.equal(pirate.booty, 100);
+    assert.equal(pirate.liftCurse(), 'You don\'t need to lift a curse!');
+    assert.equal(pirate.booty, 100);
+  })
+
 });

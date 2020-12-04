@@ -7,32 +7,22 @@ describe('Hobbit', function() {
     assert.isFunction(Hobbit);
   });
 
-  it.skip('should instantiate our good friend, Hobbit', function() {
-    var hobbit = new Hobbit();
-
-    assert.instanceOf(hobbit, Hobbit);
-  });
-
   it.skip('should have a name', function() {
-    var bilbo = new Hobbit('Bilbo');
-    
-    assert.equal(bilbo.name, 'Bilbo');
-  });
-  
-  it.skip('should be able to have a different name', function() {
-    // create a variable hobbit whose value is an instance of the Hobbit class (pass in your name as an argument)
+    var bilbo = new Hobbit({ name: 'Bilbo' });
+    var mark = new Hobbit({ name: 'Mark' });
 
-    // assert that hobbit.name is equal to your name
+    assert.equal(bilbo.name, 'Bilbo');
+    assert.equal(mark.name, 'Mark');
   });
 
   it.skip('should start out 0 years old', function() {
-    // create a variable hobbit whose value is an instance of the Hobbit class (pass in whatever name you want)
+    var bilbo = new Hobbit({ name: 'Bilbo' });
 
-    // assert that hobbit.age is 0
+    assert.equal(bilbo.age, 0);
   });
 
   it.skip('should gain 1 year after every birthday', function() {
-    var hobbit = new Hobbit('Meriadoc');
+    var hobbit = new Hobbit({ name: 'Meriadoc' });
 
     hobbit.celebrateBirthday();
     hobbit.celebrateBirthday();
@@ -48,7 +38,7 @@ describe('Hobbit', function() {
   };
 
   it.skip('should be considered a child at the age of 32', function() {
-    var hobbit = new Hobbit('Taylor');
+    var hobbit = new Hobbit({ name: 'Taylor' });
 
     timeTravel(32, hobbit);
 
@@ -57,7 +47,7 @@ describe('Hobbit', function() {
   });
 
   it.skip('should be considered an adult at 33', function() {
-    var hobbit = new Hobbit('Taylor');
+    var hobbit = new Hobbit({ name: 'Taylor' });
 
     timeTravel(33, hobbit);
 
@@ -66,7 +56,7 @@ describe('Hobbit', function() {
   });
 
   it.skip('should be considered old at the age of 101', function() {
-    var hobbit = new Hobbit('Samwise');
+    var hobbit = new Hobbit({ name: 'Samwise' });
 
     assert.equal(hobbit.old, false)
 
@@ -80,11 +70,14 @@ describe('Hobbit', function() {
     assert.equal(hobbit.old, true)
   });
 
-  it.skip('should have the ring if its name is Frodo', function() {
-    var hobbit1 = new Hobbit('Frodo');
-    var hobbit2 = new Hobbit('Samwise');
+  it.skip('should be able to get the ring if its name is Frodo', function() {
+    var hobbit1 = new Hobbit({ name: 'Frodo' });
+    var hobbit2 = new Hobbit({ name: 'Samwise' });
 
+    assert.equal(hobbit1.getRing(), 'Here is the ring!');
     assert.equal(hobbit1.hasRing, true);
+
+    assert.equal(hobbit2.getRing(), 'You can\'t have it!');
     assert.equal(hobbit2.hasRing, false);
   });
 });

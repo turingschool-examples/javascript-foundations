@@ -28,10 +28,15 @@ describe('Dragon', function() {
     assert.equal(dragon.rider, 'Eragon');
   });
 
-  it.skip('should have a color', function() {
-    var dragon = new Dragon('Saphira', 'Eragon', 'blue');
+  it.skip('should greet their rider', function() {
+    var dragon1 = new Dragon('Gray', 'Marley');
+    var dragon2 = new Dragon('Sky', 'Susie');
 
-    assert.equal(dragon.color, 'blue');
+    var greeting1 = dragon1.greet();
+    var greeting2 = dragon2.greet();
+
+    assert.equal(greeting1, 'Hi, Marley!');
+    assert.equal(greeting2, 'Hi, Susie!');
   });
 
   it.skip('should start off being hungry', function() {
@@ -44,15 +49,15 @@ describe('Dragon', function() {
     var dragon = new Dragon('Lady Vox');
 
     dragon.eat();
-    
-    assert.equal(dragon.hungry, true);
-    
-    dragon.eat();
-    
+
     assert.equal(dragon.hungry, true);
 
     dragon.eat();
-    
+
+    assert.equal(dragon.hungry, true);
+
+    dragon.eat();
+
     assert.equal(dragon.hungry, false);
   });
 });
