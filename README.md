@@ -4,10 +4,10 @@ Each exercise emphasizes the fundamentals of object oriented programming in Java
 
 To begin, fork this repo, clone the fork to your local machine, then `cd` into each of the directories and follow the instructions in the README.
 
-1. Mythical Creatures
-2. Objects and Functions
-3. Wizarding Objects
-4. Wizarding Arrays
+1. [Mythical Creatures](./mythical-creatures)
+2. [Objects and Functions](./objects-and-functions)
+3. [Wizarding Objects](./wizarding-objects)
+4. [Wizarding Arrays](./wizarding-arrays)
 
 ## Installation Steps
 
