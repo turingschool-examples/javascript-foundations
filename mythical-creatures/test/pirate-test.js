@@ -91,7 +91,7 @@ describe('Pirate', function() {
 
     timeTravel();
 
-    assert.equal(pirate.liftCurse(), 'Your curse has been lifted!'
+    assert.equal(pirate.liftCurse(), 'Your curse has been lifted!');
     assert.equal(pirate.booty, 200);
     assert.equal(pirate.cursed, false);
   })
