@@ -62,7 +62,7 @@ describe('Pirate', function() {
     assert.equal(pirate.booty, 200);
   });
 
-  it.skip('should get cursed after robbing 5 ships', function() {
+  it.skip('should get cursed after robbing 5 ships instead of getting money', function() {
     var pirate = new Pirate('Robbie');
 
     pirate.robShip();
