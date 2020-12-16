@@ -86,7 +86,7 @@ describe('Medusa', function() {
     medusa.gazeAtVictim(victim4);
 
     assert.equal(medusa.statues.length, 3);
-    assert.deepEqual(medusa.statues, [statue2, statue3, statue4]);  
+    assert.deepEqual(medusa.statues, [statue2, statue3, statue4]);
   });
 
   it.skip('should return a freed statue to Person form', function() {
@@ -144,9 +144,9 @@ describe('Person', function() {
     assert.equal(eric.name, 'Eric');
   });
 
-  it.skip('should be feel frightened', function() {
+  it.skip('should feel frightened', function() {
     var hannah = new Person('Hannah');
-  
+
     assert.equal(hannah.mood, 'frightened');
   });
 });
