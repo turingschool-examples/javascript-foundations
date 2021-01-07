@@ -2,55 +2,55 @@ var assert = require('chai').assert;
 var Settler = require('../src/settler.js');
 
 describe('Settler', function() {
-  it.skip('should have a name', function() {
+  it('should have a name', function() {
     var traveler = new Settler({name: 'Will'});
 
     assert.equal(traveler.name, 'Will');
   })
 
-  it.skip('should be able to have a different name', function() {
+  it('should be able to have a different name', function() {
     var traveler = new Settler({name: 'Leta'});
 
     assert.equal(traveler.name, 'Leta');
   })
 
-  it.skip('should have an age', function() {
+  it('should have an age', function() {
     var traveler = new Settler({name: 'Will', age: 33});
 
     assert.equal(traveler.age, 33);
   })
 
-  it.skip('should be able to have a different age', function() {
+  it('should be able to have a different age', function() {
     var traveler = new Settler({name: 'Will', age: 21});
 
     assert.equal(traveler.age, 21);
   })
 
-  it.skip('should have an unknown nationality by default', function() {
+  it('should have an unknown nationality by default', function() {
     var traveler = new Settler({name: 'Will', age: 21});
 
     assert.equal(traveler.nationality, 'unknown');
   })
 
-  it.skip('should be able to have a nationality', function() {
+  it('should be able to have a nationality', function() {
     var traveler = new Settler({name: 'Will', age: 21, nationality: 'English'});
 
     assert.equal(traveler.nationality, 'English');
   })
 
-  it.skip('should be healthy by default', function() {
+  it('should be healthy by default', function() {
     var traveler = new Settler({name: 'Will', age: 21, nationality: 'English'});
 
     assert.equal(traveler.status, 'healthy');
   })
 
-  it.skip('should have no ailments by default', function() {
+  it('should have no ailments by default', function() {
     var traveler = new Settler({name: 'Will', age: 21, nationality: 'English'});
 
     assert.deepEqual(traveler.ailments, []);
   })
 
-  it.skip('should be able to experience distress', function() {
+  it('should be able to experience distress', function() {
     var traveler = new Settler({name: 'Will', age: 21, nationality: 'English'});
 
     traveler.experienceDistress('broken arm')
@@ -59,7 +59,7 @@ describe('Settler', function() {
     assert.equal(traveler.status, 'fair');
   })
 
-  it.skip('should be able to become more distressed', function() {
+  it('should be able to become more distressed', function() {
     var traveler = new Settler({name: 'Will', age: 21, nationality: 'English'});
 
     traveler.experienceDistress('broken arm')
@@ -69,7 +69,7 @@ describe('Settler', function() {
     assert.equal(traveler.status, 'poor');
   })
 
-  it.skip('should be able to be killed', function() {
+  it('should be able to be killed', function() {
     var traveler = new Settler({name: 'Will', age: 21, nationality: 'English'});
 
     traveler.experienceDistress('broken arm')
@@ -80,7 +80,7 @@ describe('Settler', function() {
     assert.equal(traveler.status, 'dead');
   })
 
-  it.skip('should not be able to experience distress after death', function() {
+  it('should not be able to experience distress after death', function() {
     var traveler = new Settler({name: 'Will', age: 21, nationality: 'English'});
 
     traveler.experienceDistress('broken arm')
@@ -92,7 +92,7 @@ describe('Settler', function() {
     assert.equal(traveler.status, 'dead');
   })
 
-  it.skip('should be able to be healed', function() {
+  it('should be able to be healed', function() {
     var traveler = new Settler({name: 'Will', age: 21, nationality: 'English'});
 
     traveler.experienceDistress('broken arm')
@@ -103,7 +103,7 @@ describe('Settler', function() {
     assert.equal(traveler.status, 'healthy');
   })
 
-  it.skip('should not be able to be healed if dead', function() {
+  it('should not be able to be healed if dead', function() {
     var traveler = new Settler({name: 'Will', age: 21, nationality: 'English'});
 
     traveler.experienceDistress('broken arm')
