@@ -1,4 +1,5 @@
 # Material + Craft Tests
+Original author: [Kayla Wood](https://github.com/kaylaewood)
 ![crafting](https://gph.is/g/4DA086n)
 
 ## Installation Steps

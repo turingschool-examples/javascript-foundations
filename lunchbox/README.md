@@ -1,4 +1,5 @@
 # Lunch Box
+Original author: [Amy Holt](https://github.com/ameseee)
 
 ## Installation Steps
 

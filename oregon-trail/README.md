@@ -1,4 +1,5 @@
 # The Oregon Trail
+Original author: [Will Mitchell](https://github.com/wvmitchell)
 
 ## Installation Steps
 
