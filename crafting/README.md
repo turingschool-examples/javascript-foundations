@@ -1,4 +1,5 @@
 # Material + Craft Tests
+![crafting](https://gph.is/g/4DA086n)
 
 ## Installation Steps
 

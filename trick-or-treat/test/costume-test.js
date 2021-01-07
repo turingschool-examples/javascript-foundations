@@ -8,9 +8,9 @@ describe('Costume', function () {
   });
 
   it.skip('should have a style', function () {
-    var costume = new Costume('sexy plesiosaur');
+    var costume = new Costume('dinosaur');
 
-    assert.equal(costume.style, 'sexy plesiosaur');
+    assert.equal(costume.style, 'dinosaur');
   });
 
   it.skip('should have another style of costume', function() {
