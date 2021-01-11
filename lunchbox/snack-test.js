@@ -38,7 +38,7 @@ describe('Snack', function() {
     assert.equal(pistachio.amount, 70);
   });
 
-  it('should be cutting it close if 20% or left remaining', function() {
+  it('should be cutting it close if 20% or less remaining', function() {
     var pistachio = new Snack("Pistachio");
 
     pistachio.getEaten();
@@ -59,10 +59,10 @@ describe('Snack', function() {
     var fruit = new Snack("Fruit");
     var apple = new Snack("Apple");
 
-    assert.equal(pistachio.healthy, false);
-    assert.equal(mixedFruit.healthy, true);
-    assert.equal(fruit.healthy, true);
-    assert.equal(apple.healthy, false);
+    assert.equal(pistachio.checkForHealthy(), false);
+    assert.equal(mixedFruit.checkForHealthy(), true);
+    assert.equal(fruit.checkForHealthy(), true);
+    assert.equal(apple.checkForHealthy(), false);
     // this is obviously a silly way to find healthy food IRL.
   });
 
