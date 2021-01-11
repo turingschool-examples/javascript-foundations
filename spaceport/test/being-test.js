@@ -2,65 +2,57 @@ var assert = require('chai').assert;
 var Being = require('../src/being');
 
 describe('Being', function() {
-  it.skip('is alive by default', function() {
-    var alien = new Being('Walter')
+  it.skip('should be alive by default', function() {
+    var scott = new Being('Scott');
 
-    assert.isTrue(alien.isAlive)
-  })
+    assert.isTrue(scott.isAlive);
+  });
 
   it.skip('should have a name', function() {
-    var alien = new Being('Walter')
+    var kayla = new Being('Kayla');
+    var hannah = new Being('Hannah');
 
-    assert.equal(alien.name, 'Walter')
-  })
+    assert.equal(kayla.name, 'Kayla');
+    assert.equal(hannah.name, 'Hannah');
+  });
 
-  it.skip('can have a different name', function() {
-    var alien = new Being('Ed')
+  it.skip('should have a species', function() {
+    var clementine = new Being('Clem', 'feline');
+    var captain = new Being('Cap', 'canine');
 
-    assert.equal(alien.name, 'Ed')
-  })
+    assert.equal(clementine.species, 'feline');
+    assert.equal(captain.species, 'canine');
+  });
 
-  it.skip('has a species', function() {
-    var alien = new Being('Ed', 'human')
+  it.skip('should have 0 credits by default', function() {
+    var krill = new Being('Scott', 'krill');
 
-    assert.equal(alien.species, 'human')
-  })
+    assert.equal(krill.credits, 0);
+  });
 
-  it.skip('has a different species', function() {
-    var alien = new Being('Ed', 'krill')
+  it.skip('should be able to add credits', function() {
+    var baby = new Being('Baby', 'feline');
 
-    assert.equal(alien.species, 'krill')
-  })
+    baby.addCredits(2000);
 
-  it.skip('has no credits by default', function() {
-    var alien = new Being('Ed', 'krill')
+    assert.equal(baby.credits, 2000);
+  });
 
-    assert.equal(alien.credits, 0)
-  })
+  it.skip('should be able to add even more credits', function() {
+    var krill = new Being('Scott', 'krill');
 
-  it.skip('can update credits', function() {
-    var alien = new Being('Ed', 'krill')
+    krill.updateCredits(2000);
+    krill.updateCredits(1000);
 
-    alien.updateCredits(2000)
+    assert.equal(krill.credits, 3000);
+  });
 
-    assert.equal(alien.credits, 2000)
-  })
+  it.skip('should be able to reduce credits', function() {
+    var alien = new Being('Kayla', 'alien');
 
-  it.skip('can update credits if it alread has some', function() {
-    var alien = new Being('Ed', 'krill')
+    alien.updateCredits(2000);
+    alien.updateCredits(-1000);
 
-    alien.updateCredits(2000)
-    alien.updateCredits(1000)
-
-    assert.equal(alien.credits, 3000)
-  })
-
-  it.skip('can reduce credits as well', function() {
-    var alien = new Being('Ed', 'krill')
-
-    alien.updateCredits(2000)
-    alien.updateCredits(-1000)
-
-    assert.equal(alien.credits, 1000)
-  })
+    assert.equal(alien.credits, 1000);
+  });
 })
