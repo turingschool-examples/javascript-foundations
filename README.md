@@ -41,6 +41,7 @@ First Priority:
 - [ ] 🧶 [Crafting](./crafting)
 - [ ] ⛷ [Ski Lift](./ski-lift)
 - [ ] ⛄️ [Snowman](./do-you-wanna-build-a-snowman)
+- [ ] 🚀 [Spaceport](./spaceport)
 - [ ] 🎃 [Trick or Treat](./trick-or-treat)
 - [ ] 🍔 [Lunch Box](./lunchbox)
 - [ ] 🏞 [Oregon Trail](./oregon-trail)
