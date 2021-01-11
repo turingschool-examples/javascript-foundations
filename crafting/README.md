@@ -1,6 +1,6 @@
 # Material + Craft Tests
-Original author: [Kayla Wood](https://github.com/kaylaewood)
-![crafting](https://gph.is/g/4DA086n)
+Original author: [Kayla Wood](https://github.com/kaylaewood)  
+![crafting](https://media.giphy.com/media/H8Du95kBeT2zaf8Cax/giphy.gif)  
 
 ## Installation Steps
 
