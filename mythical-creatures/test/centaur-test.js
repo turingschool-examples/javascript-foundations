@@ -12,7 +12,7 @@ describe('Centaur', function() {
     // instantiate another Centaur object with a different name
 
     // assert that the first centaur's name is your name
-    // assert that the second Centaur's name is the other name
+    // assert that the second centaur's name is the other name
 
     //NOTE: We will not ask you to write your own tests in a mod 1 assessment, but it is good practice to prepare for mod 2!
   });
