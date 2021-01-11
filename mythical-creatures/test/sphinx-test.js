@@ -7,9 +7,11 @@ describe('Sphinx', () => {
   });
 
   it('should have no name', () => {
-    const sphinx = new Sphinx();
+    // instantiate a Sphinx object with no arguments
 
-    assert.equal(sphinx.name, null);
+    // assert that the spinx's name is null
+
+    //NOTE: We will not ask you to write your own tests in a mod 1 assessment, but it is good practice to prepare for mod 2!
   });
 
   it('should start with no riddles', () => {
@@ -21,7 +23,7 @@ describe('Sphinx', () => {
   it('should collect riddles', () => {
     const sphinx = new Sphinx();
     const riddle = {
-      riddle: 'What word becomes shorter when you add two letters to it?', 
+      riddle: 'What word becomes shorter when you add two letters to it?',
       answer: 'short'
     };
 
@@ -33,7 +35,7 @@ describe('Sphinx', () => {
   it('should collect only three riddles', () => {
     const sphinx = new Sphinx();
     const riddle1 = {
-      riddle: 'What word becomes shorter when you add two letters to it?', 
+      riddle: 'What word becomes shorter when you add two letters to it?',
       answer: 'short'
     };
     const riddle2 = {
@@ -60,7 +62,7 @@ describe('Sphinx', () => {
   it('should accept a correct answer and remove riddle from list', () => {
     const sphinx = new Sphinx();
     const riddle1 = {
-      riddle: 'What word becomes shorter when you add two letters to it?', 
+      riddle: 'What word becomes shorter when you add two letters to it?',
       answer: 'short'
     };
 
@@ -73,7 +75,7 @@ describe('Sphinx', () => {
   it('should accept answers in any order', () => {
     const sphinx = new Sphinx();
     const riddle1 = {
-      riddle: 'What word becomes shorter when you add two letters to it?', 
+      riddle: 'What word becomes shorter when you add two letters to it?',
       answer: 'short'
     };
     const riddle2 = {
@@ -96,7 +98,7 @@ describe('Sphinx', () => {
   it('should mock heroes when they get the answer right', () => {
     const sphinx = new Sphinx();
     const riddle1 = {
-      riddle: 'What word becomes shorter when you add two letters to it?', 
+      riddle: 'What word becomes shorter when you add two letters to it?',
       answer: 'short'
     };
     const riddle2 = {
@@ -120,7 +122,7 @@ describe('Sphinx', () => {
   it('should eat the hero if their answer isn\'t correct for any riddles', () => {
     const sphinx = new Sphinx();
     const riddle1 = {
-      riddle: 'What word becomes shorter when you add two letters to it?', 
+      riddle: 'What word becomes shorter when you add two letters to it?',
       answer: 'short'
     };
     const riddle2 = {
@@ -144,7 +146,7 @@ describe('Sphinx', () => {
   it('should scream with rage if a hero gets all riddles correct', () => {
     const sphinx = new Sphinx();
     const riddle1 = {
-      riddle: 'What word becomes shorter when you add two letters to it?', 
+      riddle: 'What word becomes shorter when you add two letters to it?',
       answer: 'short'
     };
     const riddle2 = {
@@ -163,7 +165,7 @@ describe('Sphinx', () => {
   it('should scream specifically about the last riddle to be answered', () => {
     const sphinx = new Sphinx();
     const riddle1 = {
-      riddle: 'What word becomes shorter when you add two letters to it?', 
+      riddle: 'What word becomes shorter when you add two letters to it?',
       answer: 'short'
     };
     const riddle2 = {

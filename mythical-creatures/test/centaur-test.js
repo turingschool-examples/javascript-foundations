@@ -8,11 +8,13 @@ describe('Centaur', function() {
   });
 
   it.skip('should have a name', function() {
-    var centaur1 = new Centaur({ name: 'Georgiana' });
-    var centaur2 = new Centaur({ name: 'Bob' });
+    // instantiate a Centaur object with an object as an argument. The object should have a key of name and value of your name
+    // instantiate another Centaur object with a different name
 
-    assert.equal(centaur1.name, 'Georgiana');
-    assert.equal(centaur2.name, 'Bob');
+    // assert that the first centaur's name is your name
+    // assert that the second Centaur's name is the other name
+
+    //NOTE: We will not ask you to write your own tests in a mod 1 assessment, but it is good practice to prepare for mod 2!
   });
 
   it.skip('should have a breed', function() {

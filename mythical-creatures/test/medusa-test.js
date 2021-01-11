@@ -21,6 +21,8 @@ describe('Medusa', function() {
 
     // assert that the first medusa's name is your name
     // assert that the second medusa's name is the other name
+
+    //NOTE: We will not ask you to write your own tests in a mod 1 assessment, but it is good practice to prepare for mod 2!
   });
 
   it.skip('should start with no statues', function() {
