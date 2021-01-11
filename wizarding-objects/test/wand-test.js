@@ -3,29 +3,29 @@ const Wand = require('../lib/wand');
 
 describe('Wand', () => {
 
-  it('should be a function', () => {
+  it.skip('should be a function', () => {
     assert.isFunction(Wand);
   });
 
-  it('should have a type', () => {
+  it.skip('should have a type', () => {
     const wand = new Wand('Elm');
 
     assert.equal(wand.type, 'Elm');
   });
 
-  it('should have a size', () => {
+  it.skip('should have a size', () => {
     const wand = new Wand('Elm', 12);
 
     assert.equal(wand.size, 12);
   });
 
-  it('should have a core', () => {
+  it.skip('should have a core', () => {
     const wand = new Wand('Elm', 12, 'Unicorn Hair');
 
     assert.equal(wand.core, 'Unicorn Hair');
   });
 
-  it('should have another type, size and core', () => {
+  it.skip('should have another type, size and core', () => {
     const wand = new Wand('Cherry', 14, 'Dragon Heartstring');
 
     assert.equal(wand.type, 'Cherry');
@@ -33,7 +33,7 @@ describe('Wand', () => {
     assert.equal(wand.core, 'Dragon Heartstring');
   });
 
-  it('should cast a spell', () => {
+  it.skip('should cast a spell', () => {
     const wand = new Wand('Cherry', 14, 'Dragon Heartstring');
 
     assert.equal(wand.cast('Accio'), 'Casting Accio!')
