@@ -8,11 +8,7 @@ In order to be able to run these tests you need to install the dependencies at t
 
 You can run the tests from the root of this repository. When you type `pwd` in the console, the last path location should be `javascript-foundations`.
 
-To run a single test file, enter the following command in your terminal. To run other test files, simply update the command with the name of the test you would like to run.
-
-```shell
-$ npm test wizarding-arrays/test/spell-test.js
-```
+To run a single test file, enter `npm test wizarding-arrays/test/spell-test.js` in your terminal. To run other test files, simply update the command with the name of the test you would like to run.
 
 #### Practicing new javascript features
 
