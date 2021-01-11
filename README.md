@@ -34,7 +34,6 @@ You should see something like:
 
 There are lots of test suites in this repo! Our recommendation is to complete each **Mythical Creature** before the End of Module Assessment. After you've completed all of the creatures, start working through the other test suites listed below (in any order). We find that when students complete the same test suite over and over, memorization and pattern matching kick in (which is not what we want!). These test suites should be improving your problem solving skills. If you feel yourself being able to write code without reading the full test, it’s probably time for a new test suite. You can (and should) be strategic about how you use these - for example, you might use one of the repos for a mock final assessment with your mentor.
 
-First Priority:
 - [ ] 🧚 ‍[Mythical Creatures](./mythical-creatures)
 - [ ] ⛳️ [Golf Course](./golf-course)
 - [ ] 🛹 [Skate Park](./skate-park)
