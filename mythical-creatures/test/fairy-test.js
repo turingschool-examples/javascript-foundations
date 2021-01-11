@@ -13,9 +13,13 @@ describe('Fairy', () => {
   });
 
   it.skip('should have a name', () => {
-    const fairy = new Fairy('Holly');
+    // instantiate a Fairy object with your name as an argument
+    // instantiate another Fairy object with someone else's name as an argument
 
-    assert.equal(fairy.name, 'Holly');
+    // assert that the first fairy's name is your name
+    // assert that the second fairy's name is the other name
+
+    //NOTE: We will not ask you to write your own tests in a mod 1 assessment, but it is good practice to prepare for mod 2!
   });
 
   it.skip('should have some fairy dust by default', () => {
@@ -29,7 +33,7 @@ describe('Fairy', () => {
     const dustBefore = fairy.dust;
 
     fairy.receiveBelief();
-    
+
     const dustAfter = fairy.dust;
     const difference = dustAfter - dustBefore;
     assert.equal(difference, 1);
@@ -87,7 +91,7 @@ describe('Fairy', () => {
     const fairy = new Fairy('Claudine');
     const firstInfant = { name: 'Sue', eyes: 'Blue', disposition: 'Sweet'};
     const secondInfant = { name: 'Henry', eyes: 'Brown', disposition: 'Charming'};
-    
+
     fairy.becomeProvoked();
     fairy.replaceInfant(firstInfant);
     fairy.replaceInfant(secondInfant);

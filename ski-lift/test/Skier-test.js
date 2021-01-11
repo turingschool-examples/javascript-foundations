@@ -1,0 +1,69 @@
+var assert = require("chai").assert;
+var Skier = require("../src/Skier");
+
+describe("Skier", function () {
+  it.skip('should instantiate a skier object', function () {
+    var skier = new Skier();
+
+    assert.instanceOf(skier, Skier);
+  });
+
+  it.skip('should have a name', function () {
+    var skier = new Skier('Hannah');
+
+    assert.equal(skier.name, 'Hannah');
+  });
+
+  it.skip('should be able to have a lift ticket', function() {
+    var skier = new Skier('Scott', true);
+
+    assert.equal(skier.hasLiftTicket, true);
+  });
+
+  it.skip('should start out as a beginner', function () {
+    var skier = new Skier('Kayla', true);
+
+    assert.equal(skier.skillLevel, 1);
+  });
+
+  it.skip('should decide its next slope to be beginner level', function () {
+    var skier = new Skier('Kayla', true);
+
+    assert.equal(skier.nextSlope, 'green circle');
+  });
+
+  it.skip('should increase skill level with lessons', function () {
+    var skier = new Skier('Pam', true);
+
+    skier.takeLesson();
+    skier.takeLesson();
+
+    assert.equal(skier.skillLevel, 3);
+  });
+
+  it.skip('should choose an intermediate level slope after 2 lessons', function () {
+    var skier = new Skier('Hannah', true);
+
+    skier.takeLesson();
+    skier.takeLesson();
+
+    skier.pickSlope();
+
+    assert.equal(skier.skillLevel, 3);
+    assert.equal(skier.nextSlope, 'blue square');
+  });
+
+  it.skip('should choose an expert level slope after 4 lessons', function () {
+    var skier = new Skier('Hannah', true);
+
+    skier.takeLesson();
+    skier.takeLesson();
+    skier.takeLesson();
+    skier.takeLesson();
+
+    skier.pickSlope();
+
+    assert.equal(skier.skillLevel, 5);
+    assert.equal(skier.nextSlope, 'black diamond');
+  });
+});

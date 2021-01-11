@@ -1,3 +1,5 @@
-function Pet () {};
+class Pet {
+
+}
 
 module.exports = Pet;

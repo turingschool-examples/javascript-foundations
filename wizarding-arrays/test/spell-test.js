@@ -2,7 +2,7 @@ const assert = require('chai').assert;
 const Spell = require('../lib/spell');
 
 describe('Wizard spells', () => {
-  it('should have a name and a description', () => {
+  it.skip('should have a name and a description', () => {
     const spell = new Spell('wingardium leviosa', 'makes things levitate');
 
     assert.equal(spell.name, 'wingardium leviosa');
@@ -13,7 +13,7 @@ describe('Wizard spells', () => {
     const spell = new Spell('wingardium leviosa', 'makes things levitate');
     const target = "book";
 
-    assert.equal(spell.execute(target), "Success! The book is levitating.");
+    assert.equal(spell.execute(target), "Success! You've cast a spell on the book.");
   });
 
   it.skip('can execute against multiple targets', () => {
@@ -25,7 +25,7 @@ describe('Wizard spells', () => {
 
     const targets = [target1, target2, target3];
 
-    assert.equal(spell.execute(targets), "Success! The book is levitating. Success! The table is levitating. Success! The bowl is levitating.");
+    assert.equal(spell.execute(targets), "Success! You've cast a spell on the book. Success! You've cast a spell on the table. Success! You've cast a spell on the bowl.");
   });
 
   it.skip('saves all its targets in execution history', () => {

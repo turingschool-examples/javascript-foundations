@@ -9,6 +9,7 @@ describe('A wizard\'s robe', () => {
     assert.equal(robe.pockets.length, 10);
 
     for (let i = 0; i < 10; i++) {
+      assert.deepEqual(robe.pockets[i], []);
       assert.equal(robe.pockets[i].length, 0);
     }
   });
@@ -72,6 +73,7 @@ describe('A wizard\'s robe', () => {
     assert.equal(robe.pockets.length, 10);
 
     for (let i = 0; i < 10; i++) {
+      assert.deepEqual(robe.pockets[i], []);
       assert.equal(robe.pockets[i].length, 0);
     }
   });
