@@ -1,5 +1,5 @@
 # Skatepark and Skater
-Original author: [Scott Ertmer](https://github.com/sertmer)
+Original author: [Scott Ertmer](https://github.com/sertmer)  
 ![counts!](https://media.giphy.com/media/Y655D2pOIBCQU/giphy.gif)
 
 ## Installation Steps
