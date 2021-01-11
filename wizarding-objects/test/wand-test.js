@@ -4,8 +4,6 @@ const Wand = require('../lib/wand');
 describe('Wand', () => {
 
   it('should be a function', () => {
-    const wand = new Wand('Elm');
-
     assert.isFunction(Wand);
   });
 
