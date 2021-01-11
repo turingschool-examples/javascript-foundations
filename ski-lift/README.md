@@ -1,5 +1,5 @@
 # Ski and Lift!
-Original author: [Hannah Hudson](https://github.com/hannahhch)
+Original author: [Hannah Hudson](https://github.com/hannahhch)  
 ![skiing dinos](https://media.giphy.com/media/l9WsUXJcSse2ClUPXA/giphy.gif)
 
 ## Installation Steps
