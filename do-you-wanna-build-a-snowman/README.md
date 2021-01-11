@@ -1,5 +1,5 @@
 # Do you wanna build a snowman?
-Original author: [Hannah Hudson](https://github.com/hannahhch)
+Original author: [Hannah Hudson](https://github.com/hannahhch)  
 ![Do you wanna build a snowman?](https://media.giphy.com/media/OmoKW1gK6ULg4/giphy.gif)
 
 ## Installation Steps
