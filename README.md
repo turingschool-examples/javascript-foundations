@@ -39,6 +39,8 @@ First Priority:
 - [ ] ⛳️ [Golf Course](./golf-course)
 - [ ] 🛹 [Skate Park](./skate-park)
 - [ ] 🧶 [Crafting](./crafting)
+- [ ] ⛷ [Ski Lift](./ski-lift)
+- [ ] ⛄️ [Snowman](./do-you-wanna-build-a-snowman)
 - [ ] 🎃 [Trick or Treat](./trick-or-treat)
 - [ ] 🍔 [Lunch Box](./lunchbox)
 - [ ] 🏞 [Oregon Trail](./oregon-trail)
