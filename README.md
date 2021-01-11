@@ -44,7 +44,6 @@ First Priority:
 - [ ] 🏞 [Oregon Trail](./oregon-trail)
 - [ ] 🔮 [Wizarding Arrays](./wizarding-arrays)
 - [ ] ⚡️ [Wizarding Objects](./wizarding-objects)
-- [ ] ➕ [Iterator Factory](./iterator-factory)
 
 Completing all of these test suites is not necessary, but you should be working on this repo regularly. We see that students are the most successful when they establish a routine for working through these test suites. For example, you might work on them for 45 minutes every morning before class. Find a routine that works best for you and plan ahead so you remain on track to, at minimum, complete all of the mythical tests.
 
