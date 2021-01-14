@@ -115,6 +115,14 @@ describe('Ogre', () => {
     const ogre = new Ogre({name: 'Brak'});
     const human = new Human('Jane');
 
+    ogre.encounter(human);
+    ogre.encounter(human);
+    ogre.encounter(human);
+    ogre.encounter(human);
+    ogre.encounter(human);
+    ogre.encounter(human);
+    assert.equal(human.knockedOut, true);
+    
     ogre.apologize(human);
     assert.equal(human.knockedOut, false);
   });
