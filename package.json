@@ -9,7 +9,7 @@
   "author": "Turing School",
   "license": "MIT",
   "dependencies": {
-    "chai": "^4.2.0",
+    "chai": "^4.3.4",
     "mocha": "^5.2.0"
   }
 }
