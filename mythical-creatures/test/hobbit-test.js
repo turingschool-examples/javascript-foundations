@@ -3,11 +3,11 @@ var Hobbit = require('../exercises/hobbit');
 
 describe('Hobbit', function() {
 
-  it.skip('should be a function', function() {
+  it('should be a function', function() {
     assert.isFunction(Hobbit);
   });
 
-  it.skip('should have a name', function() {
+  it('should have a name', function() {
     var bilbo = new Hobbit({ name: 'Bilbo' });
     var mark = new Hobbit({ name: 'Mark' });
 
@@ -15,13 +15,13 @@ describe('Hobbit', function() {
     assert.equal(mark.name, 'Mark');
   });
 
-  it.skip('should start out 0 years old', function() {
+  it('should start out 0 years old', function() {
     var bilbo = new Hobbit({ name: 'Bilbo' });
 
     assert.equal(bilbo.age, 0);
   });
 
-  it.skip('should gain 1 year after every birthday', function() {
+  it('should gain 1 year after every birthday', function() {
     var hobbit = new Hobbit({ name: 'Meriadoc' });
 
     hobbit.celebrateBirthday();
@@ -70,7 +70,7 @@ describe('Hobbit', function() {
     assert.equal(hobbit.old, true)
   });
 
-  it.skip('should be able to get the ring if its name is Frodo', function() {
+  it('should be able to get the ring if its name is Frodo', function() {
     var hobbit1 = new Hobbit({ name: 'Frodo' });
     var hobbit2 = new Hobbit({ name: 'Samwise' });
 
