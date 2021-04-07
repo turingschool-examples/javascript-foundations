@@ -24,11 +24,23 @@ describe('Centaur', function() {
     assert.equal(centaur.breed, 'Palomino');
   });
 
+
+
+
+
+
   it('should have excellent bow skills', function() {
     var centaur = new Centaur({ name: 'Georgiana', type: 'Palomino' });
 
     assert.equal(centaur.shootBow(), 'Twang!!!');
   });
+
+
+
+
+
+
+  
 
   it.skip('should have a horse sound when it runs', function() {
     var centaur = new Centaur({ name: 'Georgiana', type: 'Palomino' });
