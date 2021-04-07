@@ -18,4 +18,4 @@ class Magician {
 
 module.exports = Magician
 
-//npm test mythical-creatures/test/magician-test.js
+// npm test mythical-creatures/test/magician-test.js
