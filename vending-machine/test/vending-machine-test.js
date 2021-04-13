@@ -4,7 +4,7 @@ var assert = require('chai').assert;
 
 describe("VendingMachine", function() {
 
-  it.skip('should have an id', function() {
+  it.skip('should have an id and broken status', function() {
     var machine1 = new VendingMachine({ id: 123, isBroken: true });
     var machine2 = new VendingMachine({ id: 456, isBroken: false });
 
@@ -29,12 +29,14 @@ describe("VendingMachine", function() {
     machine.addSnacks(candyBar);
     assert.equal(machine.snacks.length, 1);
     assert.equal(machine.snacks[0].name, 'hersey\'s milk chocolate');
+    assert.equal(machine.snacks[0].price, 0.75);
 
     machine.addSnacks(chips);
     assert.equal(machine.snacks.length, 2);
     assert.equal(machine.snacks[1].name, 'lay\'s sour cream and onion chips');
   })
 
+  // Things are about to get SPICY. The following tests are much more complex than any assessment will be. Only move on if you have completed the other test suites and you'd like exposure to complex logic.
   it.skip('should not be able to add snacks with the same name more than once', function() {
     var machine = new VendingMachine({ id: 123, isBroken: true });
     var candyBar1 = new Snack('hersey\'s milk chocolate', 0.75);
