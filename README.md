@@ -40,6 +40,7 @@ Completing all of these test suites is not necessary, but you should be working 
 - [ ] ⛳️ [Golf Course](./golf-course)
 - [ ] 🛹 [Skate Park](./skate-park)
 - [ ] 🧶 [Crafting](./crafting)
+- [ ] 🍫 [Vending Machine](./vending-machine)
 - [ ] ⛷ [Ski Lift](./ski-lift)
 - [ ] ⛄️ [Snowman](./do-you-wanna-build-a-snowman)
 - [ ] 🚀 [Spaceport](./spaceport)
