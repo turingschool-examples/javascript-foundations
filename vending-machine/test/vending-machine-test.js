@@ -4,7 +4,7 @@ var assert = require('chai').assert;
 
 describe("VendingMachine", function() {
 
-  it('should have an id', function() {
+  it.skip('should have an id', function() {
     var machine1 = new VendingMachine({ id: 123, isBroken: true });
     var machine2 = new VendingMachine({ id: 456, isBroken: false });
 
@@ -15,13 +15,13 @@ describe("VendingMachine", function() {
     assert.equal(machine2.isBroken, false);
   })
 
-  it('should start with no snacks', function() {
+  it.skip('should start with no snacks', function() {
     var machine = new VendingMachine({ id: 123, isBroken: true });
 
     assert.deepEqual(machine.snacks, []);
   })
 
-  it('should be able to add snacks', function() {
+  it.skip('should be able to add snacks', function() {
     var machine = new VendingMachine({ id: 123, isBroken: true });
     var candyBar = new Snack('hersey\'s milk chocolate', 0.75);
     var chips = new Snack('lay\'s sour cream and onion chips', 1.00);
@@ -35,7 +35,7 @@ describe("VendingMachine", function() {
     assert.equal(machine.snacks[1].name, 'lay\'s sour cream and onion chips');
   })
 
-  it('should not be able to add snacks with the same name more than once', function() {
+  it.skip('should not be able to add snacks with the same name more than once', function() {
     var machine = new VendingMachine({ id: 123, isBroken: true });
     var candyBar1 = new Snack('hersey\'s milk chocolate', 0.75);
     var candyBar2 = new Snack('hersey\'s milk chocolate', 0.75);
@@ -49,7 +49,7 @@ describe("VendingMachine", function() {
     assert.equal(sencondStock, 'Sorry, that snack is already stocked! Try adding a different snack.');
   })
 
-  it('should be able to purchase a snack by selecting snack name and paying money', function() {
+  it.skip('should be able to purchase a snack by selecting snack name and paying money', function() {
     var machine = new VendingMachine({ id: 123, isBroken: true });
     var candyBar = new Snack('hersey\'s milk chocolate', 0.75);
 
@@ -63,7 +63,7 @@ describe("VendingMachine", function() {
     assert.equal(machine.snacks[0].itemsInStock, 2);
   })
 
-  it('should be able to give change back after a customer purchases an item', function() {
+  it.skip('should be able to give change back after a customer purchases an item', function() {
     var machine = new VendingMachine({ id: 123, isBroken: true });
     var candyBar = new Snack('hersey\'s milk chocolate', 0.75);
 
@@ -76,7 +76,7 @@ describe("VendingMachine", function() {
     assert.equal(machine.snacks[0].itemsInStock, 4);
   })
 
-  it('should be able to purchase the correct item, based on the name', function() {
+  it.skip('should be able to purchase the correct item, based on the name', function() {
     var machine = new VendingMachine({ id: 123, isBroken: true });
     var candyBar = new Snack('hersey\'s milk chocolate', 0.75);
     var chips = new Snack('lay\'s sour cream and onion chips', 1.00);
@@ -92,7 +92,7 @@ describe("VendingMachine", function() {
     assert.equal(machine.snacks[1].itemsInStock, 2);
   })
 
-  it('should not be able to purchase a snack if it is out of stock', function() {
+  it.skip('should not be able to purchase a snack if it is out of stock', function() {
     var machine = new VendingMachine({ id: 123, isBroken: true });
     var candyBar = new Snack('hersey\'s milk chocolate', 0.75);
 
@@ -104,7 +104,7 @@ describe("VendingMachine", function() {
     assert.equal(machine.snacks[0].itemsInStock, 0);
   })
 
-  it('should not be able to purchase a snack if payment is not enough', function() {
+  it.skip('should not be able to purchase a snack if payment is not enough', function() {
     var machine = new VendingMachine({ id: 123, isBroken: true });
     var chips = new Snack('lay\'s sour cream and onion chips', 1.00);
 
