@@ -4,29 +4,29 @@ var Candy = require('../lib/candy');
 
 describe('Bag', function () {
 
-  it.skip('should be a function', function () {
+  it('should be a function', function () {
     assert.isFunction(Bag);
   });
 
-  it.skip('should be an empty bag', function () {
+  it('should be an empty bag', function () {
     var bag = new Bag();
     
     assert.equal(bag.empty, true);
   })
 
-  it.skip('should count candies in an empty bag', function () {
+  it('should count candies in an empty bag', function () {
     var bag = new Bag();
     
     assert.equal(bag.count, 0);
   });
 
-  it.skip('should check the bag has no candy', function () {
+  it('should check the bag has no candy', function () {
     var bag = new Bag();
     
     assert.deepEqual(bag.candies, []);
   });
 
-  it.skip('should put candy in the bag', function () {
+  it('should put candy in the bag', function () {
     var bag = new Bag();
     var candy = new Candy('Swedish Fish');
    
