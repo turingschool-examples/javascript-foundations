@@ -4,11 +4,11 @@ const Stark = require('../exercises/stark');
 
 describe('Direwolf', function() {
 
-  it.skip('should be a function', function() {
+  it('should be a function', function() {
     assert.isFunction(Direwolf);
   });
 
-  it.skip('should instantiate our good friend, Direwolf', function() {
+  it('should instantiate our good friend, Direwolf', function() {
     const direwolf = new Direwolf();
     assert.isObject(direwolf);
   });
