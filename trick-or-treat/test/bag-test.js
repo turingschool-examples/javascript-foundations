@@ -28,11 +28,11 @@ describe('Bag', function () {
 
   it('should put candy in the bag', function () {
     var bag = new Bag();
-    var candy = new Candy('Swedish Fish');
+    var newCandy = new Candy('Swedish Fish');
    
-    bag.fill(candy);
+    bag.fill(newCandy);
     
-    assert.deepEqual(bag.candies, [candy]);
+    assert.deepEqual(bag.candies, [newCandy]);
   });
 
   it.skip('should count the candies in the bag', function() {

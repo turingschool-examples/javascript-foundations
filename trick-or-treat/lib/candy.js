@@ -1,6 +1,7 @@
 class Candy {
     constructor(candyType) {
         this.type = candyType;
+        this.name = 'Hayley'
     }
 }
 
