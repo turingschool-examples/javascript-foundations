@@ -33,7 +33,7 @@ describe('Being', function() {
   it.skip('should be able to add credits', function() {
     var baby = new Being('Baby', 'feline');
 
-    baby.addCredits(2000);
+    baby.updateCredits(2000);
 
     assert.equal(baby.credits, 2000);
   });
