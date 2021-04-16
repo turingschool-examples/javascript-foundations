@@ -1,7 +1,6 @@
 # Roadrace Tests
 Original author: [Heather Faerber](https://github.com/hfaerber)  
-This test suite is spicier than an assessment.  
-It is for practice. Do not worry about time.
+This test suite is for practice. Do not worry about time.
 
 ## Installation Steps
 
