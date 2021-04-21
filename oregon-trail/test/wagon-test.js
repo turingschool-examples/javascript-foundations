@@ -24,7 +24,7 @@ describe('Wagon', function() {
     var wheel2 = new Part('wheel');
     var wagon = new Wagon({ name: 'New Horizons', wheels: [wheel1, wheel2] });
 
-    assert.deepEqual(wagon.wheels, [wheel, wheel2]);
+    assert.deepEqual(wagon.wheels, [wheel1, wheel2]);
   });
 
   it.skip('should have no axles by default', function() {
