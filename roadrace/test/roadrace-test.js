@@ -63,11 +63,9 @@ describe("Roadrace", function() {
     assert.equal(mike.completedRaces.includes('Rock N Roll Half Marathon'), true);
     assert.equal(pam.completedRaces.includes('Rock N Roll Half Marathon'), true);
     assert.equal(lazyHeather.completedRaces.includes('Rock N Roll Half Marathon'), false);
-    // hint, is there a method in the Runner class you can use?
   })
 
   it('should update each participant\'s miles and fitness when race is completed', function() {
-    // hint, are you using a method from the Runner class?
     var race = new Roadrace({title: 'Rock N Roll Half Marathon', city: "Las Vegas"});
     race.setDistance(13.1);
 
@@ -84,6 +82,7 @@ describe("Roadrace", function() {
     assert.equal(mike.milesRun, 13.1);
     assert.equal(pam.milesRun, 13.1);
     assert.equal(lazyHeather.milesRun, 0);
-
+    // challenge: Refactor to use a method in the Runner class
+        // instead of rewriting logic that already exists within the Runner class.
   })
 })
