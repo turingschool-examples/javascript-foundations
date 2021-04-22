@@ -8,7 +8,7 @@ var Shop = require('../src/shop');
 describe('Planet', function() {
   it.skip('should have a name', function() {
     var planetD = new Planet({ name: 'D1' });
-    var planetF = new Planet({ name: 'D1' });
+    var planetF = new Planet({ name: 'F2' });
 
     assert.equal(planetD.name, 'D1');
     assert.equal(planetF.name, 'F2');
