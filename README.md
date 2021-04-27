@@ -1,3 +1,5 @@
+`2020/04/27: This is a place of practice to maintain fundamentals. Additional tests have been added. Notes have been made as needed.`
+
 # JavaScript Foundations
 
 Each exercise emphasizes the fundamentals of object oriented programming in JavaScript.
