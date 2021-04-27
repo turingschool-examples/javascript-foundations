@@ -2,6 +2,7 @@ class Unicorn {
   constructor(name, color) {
     this.name = name;
     this.color = color || 'white';
+    this.friends = 0;
   }
 
   isWhite = () => {
@@ -10,6 +11,10 @@ class Unicorn {
 
   says = (words) => {
     return `**;* ${words} *;**`
+  }
+
+  makeNewFriend = () => {
+    this.friends += 1
   }
 }
 

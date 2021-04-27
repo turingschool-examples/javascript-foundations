@@ -50,5 +50,12 @@ describe('Unicorn', function() {
     assert.equal(unicorn.says('Batman has a great smile'), '**;* Batman has a great smile *;**');
   });
 
-  //added tests
+  // added tests
+  it('should have friends', function() {
+    var unicorn = new Unicorn('Joyce')
+    assert.equal(unicorn.friends, 0)
+
+    unicorn.makeNewFriend()
+    assert.equal(unicorn.friends, 1)
+  })
 });
