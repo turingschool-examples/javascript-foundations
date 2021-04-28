@@ -4,11 +4,11 @@ class Dragon {
     this.rider = rider;
     this.hungry = true;
     this.eatingCount = 0;
-    this.sick = false;
+    this.dayCount = null;
   }
 
   greet = () => {
-    return `Hi, ${this.rider}!`
+    return `Hi, ${this.rider}!`;
   }
 
   eat = () => {
@@ -16,6 +16,15 @@ class Dragon {
 
     if(this.eatingCount > 2) {
       this.hungry = false;
+      this.dayCount = Date.now();
+    }
+  }
+
+  checkLastMeal = () => {
+    const current = Date.now();
+
+    if (Math.floor(((current - this.dayCount)) / 1000) > 86399) {
+         this.hungry = true
     }
   }
 }

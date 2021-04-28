@@ -62,8 +62,25 @@ describe('Dragon', function() {
 
   });
 
-  it('', () => {
+// new test
+
+  it('Should be hungry again if it has been more than a day since eating', () => {
     var dragon = new Dragon('Max');
 
+    dragon.eat()
+    dragon.eat()
+    dragon.eat()
+    assert.equal(dragon.hungry, false)
+
+    dragon.checkLastMeal();
+
+    assert.equal(dragon.hungry, false)
+
+    // reassign dayCount to test for if the dragon has eaten since yesterday
+    dragon.dayCount = (Date.now() - (86400*1000))
+    dragon.checkLastMeal()
+    console.log(dragon.dayCount)
+
+    assert.equal(dragon.hungry, true)
   })
 });
