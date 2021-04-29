@@ -95,4 +95,63 @@ describe('Vampire', function() {
 
   //new tests
 
+  it('should wake up hungry', () => {
+   var vampire = new Vampire('Monica');
+
+   vampire.wakeUp()
+
+   assert.equal(vampire.thirsty, true)
+   assert.equal(vampire.ouncesDrank, 0)
+  })
+
+  it('should be able to transform', () => {
+      var vampire = new Vampire('John');
+
+      vampire.transform()
+
+      assert.equal(vampire.form, 'bat')
+  })
+
+  it('should not be thristy when a bat', () => {
+      var vampire = new Vampire('John');
+
+      vampire.transform()
+
+      assert.equal(vampire.thirsty, false)
+  })
+
+  it('should be able to change back into humanoid form and be thristy if has drank less than 50 oz of blood', () => {
+      var vampire = new Vampire('John');
+
+      vampire.transform()
+
+      assert.equal(vampire.form, 'bat')
+
+      vampire.transform()
+
+      assert.equal(vampire.form, 'humanoid')
+
+      assert.equal(vampire.thirsty, true)
+  })
+
+  it('should be able to change back into humanoid form and not be thristy if has drank 50 oz of blood', () => {
+      var vampire = new Vampire('John');
+
+      vampire.drink()
+      vampire.drink()
+      vampire.drink()
+      vampire.drink()
+      vampire.drink()
+
+      vampire.transform()
+
+      assert.equal(vampire.form, 'bat')
+
+      vampire.transform()
+
+      assert.equal(vampire.form, 'humanoid')
+
+      assert.equal(vampire.thirsty, false)
+  })
+
 });
