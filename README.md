@@ -36,16 +36,19 @@ There are lots of test suites in this repo! Our recommendation is to complete ea
 
 Completing all of these test suites is not necessary, but you should be working on this repo regularly. We see that students are the most successful when they establish a routine for working through these test suites. For example, you might work on them for 45 minutes every morning before class. Find a routine that works best for you and plan ahead so you remain on track to, at minimum, complete all of the mythical tests.
 
+### Greatest Hits
 - [ ] 🧚 ‍[Mythical Creatures](./mythical-creatures)
-- [ ] ⛳️ [Golf Course](./golf-course)
-- [ ] 🛹 [Skate Park](./skate-park)
 - [ ] 🧶 [Crafting](./crafting)
-- [ ] 🍫 [Vending Machine](./vending-machine)
 - [ ] 🏃🏻‍♀️ [Road Race](./roadrace)
+- [ ] ⛳️ [Golf Course](./golf-course)
+- [ ] 🎃 [Trick or Treat](./trick-or-treat)
+- [ ] 🛹 [Skate Park](./skate-park)
+- [ ] 🍫 [Vending Machine](./vending-machine)
+
+### Other Greats
 - [ ] ⛷ [Ski Lift](./ski-lift)
 - [ ] ⛄️ [Snowman](./do-you-wanna-build-a-snowman)
 - [ ] 🚀 [Spaceport](./spaceport)
-- [ ] 🎃 [Trick or Treat](./trick-or-treat)
 - [ ] 🍔 [Lunch Box](./lunchbox)
 - [ ] 🏞 [Oregon Trail](./oregon-trail)
 - [ ] 🔮 [Wizarding Arrays](./wizarding-arrays)
