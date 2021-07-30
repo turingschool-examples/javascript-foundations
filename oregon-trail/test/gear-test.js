@@ -25,11 +25,11 @@ describe('Gear', function() {
     var clothes = new Gear('clothes');
     var invalid = new Gear('mp3 player');
 
-    var valid = ammunition.checkForValidity();
-    var invalid = invalid.checkForValidity();
+    var validWhenChecked = ammunition.checkForValidity();
+    var notValidWhenChecked = invalid.checkForValidity();
 
-    assert.equal(valid, 'Great, we\'ll need lots of ammunition!');
-    assert.equal(invalid, 'I don\`t think a mp3 player will help us.');
+    assert.equal(validWhenChecked, 'Great, we\'ll need lots of ammunition!');
+    assert.equal(notValidWhenChecked, 'I don\'t think a mp3 player will help us.');
 
     assert.equal(ammunition.type, 'ammunition');
     assert.equal(food.type, 'food');
