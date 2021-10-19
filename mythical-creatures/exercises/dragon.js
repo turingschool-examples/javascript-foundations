@@ -9,13 +9,11 @@ class Dragon {
     this.mealCounter = 0;
   }
   eat() {
-    if (this.mealCounter < 2) {
-      this.mealCounter ++;
-      return;
-    }
     this.mealCounter ++;
-    this.hungry = false;
-    return;
+      if(this.mealCounter < 3) {
+        return this.hungry = true;
+      }
+      return this.hungry = false;
   }
 }
 
