@@ -6,9 +6,16 @@ class Dragon {
       return `Hi, ${this.rider}!`;
     }
     this.hungry = true;
-    this.eat = function() {
-      var counter = 0;
+    this.mealCounter = 0;
+  }
+  eat() {
+    if (this.mealCounter < 2) {
+      this.mealCounter ++;
+      return;
     }
+    this.mealCounter ++;
+    this.hungry = false;
+    return;
   }
 }
 
