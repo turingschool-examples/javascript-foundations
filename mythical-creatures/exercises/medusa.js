@@ -10,6 +10,7 @@ class Medusa {
     if (this.statues.length === 3) {
       var person = new Person(this.statues[0].name);
       this.statues.shift();
+      person.mood = 'relieved';
       this.statues.push(new Statue(victim.name));
       return person;
     }

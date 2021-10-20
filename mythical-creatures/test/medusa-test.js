@@ -108,7 +108,7 @@ describe('Medusa', function() {
     assert.equal(person.name, 'Pam');
   });
 
-  it.skip('should be relieved when returned to Person form', function () {
+  it('should be relieved when returned to Person form', function () {
     var medusa = new Medusa('Pam');
     var victim1 = new Person('Travis');
     var victim2 = new Person('Kayla');
@@ -146,7 +146,7 @@ describe('Person', function() {
     assert.equal(eric.name, 'Eric');
   });
 
-  it.skip('should feel frightened', function() {
+  it('should feel frightened', function() {
     var hannah = new Person('Hannah');
 
     assert.equal(hannah.mood, 'frightened');
@@ -154,17 +154,17 @@ describe('Person', function() {
 });
 
 describe('Statue', function () {
-  it.skip('should be a function', function () {
+  it('should be a function', function () {
     assert.isFunction(Statue);
   });
 
-  it.skip('should instantiate a Statue', function () {
+  it('should instantiate a Statue', function () {
     var statue = new Statue();
 
     assert.instanceOf(statue, Statue);
   });
 
-  it.skip('should have the name of its former self', function () {
+  it('should have the name of its former self', function () {
     var kayla = new Statue('Kayla');
     var hannah = new Statue('Hannah');
 
