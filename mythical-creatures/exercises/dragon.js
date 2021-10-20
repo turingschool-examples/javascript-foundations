@@ -2,11 +2,11 @@ class Dragon {
   constructor(name, rider) {
     this.name = name;
     this.rider = rider;
-    this.greet = function() {
-      return `Hi, ${this.rider}!`;
-    }
     this.hungry = true;
     this.mealCounter = 0;
+  }
+  greet() {
+    return `Hi, ${this.rider}!`
   }
   eat() {
     this.mealCounter ++;
@@ -17,4 +17,4 @@ class Dragon {
   }
 }
 
-module.exports = Dragon
+module.exports = Dragon;
