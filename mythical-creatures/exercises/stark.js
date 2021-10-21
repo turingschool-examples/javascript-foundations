@@ -1,8 +1,12 @@
+const Direwolf = require('../exercises/direwolf');
+
 class Stark {
-  constructor(person = {}) {
-    this.name = person.name;
-    this.location = person.area || 'Winterfell';
-    this.safe = false;
+  constructor(person) {
+    if (person) {
+      this.name = person.name;
+      this.location = person.area || 'Winterfell';
+      this.safe = false;
+    }
   }
   sayHouseWords() {
     if (this.safe === true) {
@@ -10,9 +14,11 @@ class Stark {
     }
     return 'Winter is Coming';
   }
-  callDirewolf(name, location) {
-    var direwolf = new Direwolf(name, location);
-    direwolf.protect(this)
+  callDirewolf(name, home) {
+    var direwolf = new Direwolf(name, home);
+    direwolf.home = this.location;
+    direwolf.protect(this);
+    return direwolf;
   }
 }
 
