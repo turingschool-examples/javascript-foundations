@@ -2,33 +2,35 @@ const assert = require('chai').assert;
 const Fairy = require('../exercises/fairy');
 
 describe('Fairy', () => {
-  it.skip('should be a function', () => {
+  it('should be a function', () => {
     assert.isFunction(Fairy);
   });
 
-  it.skip('should instantiate a fairy', () => {
+  it('should instantiate a fairy', () => {
     const fairy = new Fairy();
 
     assert.isObject(fairy);
   });
 
-  it.skip('should have a name', () => {
+  it('should have a name', () => {
     // instantiate a Fairy object with your name as an argument
     // instantiate another Fairy object with someone else's name as an argument
-
+    var phil = new Fairy('Phil');
+    var catherine = new Fairy('Catherine');
     // assert that the first fairy's name is your name
     // assert that the second fairy's name is the other name
-
+    assert.equal(phil.name, 'Phil');
+    assert.equal(catherine.name, 'Catherine');
     //NOTE: We will not ask you to write your own tests in a mod 1 assessment, but it is good practice to prepare for mod 2!
   });
 
-  it.skip('should have some fairy dust by default', () => {
+  it('should have some fairy dust by default', () => {
     const fairy = new Fairy('Mab');
 
     assert.equal(fairy.dust, 10);
   });
 
-  it.skip('should get a small amount of fairy dust when others believe in her', () => {
+  it('should get a small amount of fairy dust when others believe in her', () => {
     const fairy = new Fairy('Sookie');
     const dustBefore = fairy.dust;
 
@@ -39,7 +41,7 @@ describe('Fairy', () => {
     assert.equal(difference, 1);
   });
 
-  it.skip('should get a lot of fairy dust from believeing in herself', () => {
+  it('should get a lot of fairy dust from believeing in herself', () => {
     const fairy = new Fairy('Tinkerbell');
     const dustBefore = fairy.dust;
 
@@ -50,13 +52,13 @@ describe('Fairy', () => {
     assert.equal(difference, 10);
   });
 
-  it.skip('should start with an Iris flower dress', () => {
+  it('should start with an Iris flower dress', () => {
     const fairy = new Fairy('Rose');
 
     assert.deepEqual(fairy.clothes, {dresses: ['Iris']});
   });
 
-  it.skip('should turn flowers into more dresses', () => {
+  it('should turn flowers into more dresses', () => {
     const fairy = new Fairy('Honeysuckle');
 
     fairy.makeDresses(['Daffodil', 'Tulip', 'Poppy']);
@@ -64,7 +66,7 @@ describe('Fairy', () => {
     assert.deepEqual(fairy.clothes.dresses, ['Iris', 'Daffodil', 'Tulip', 'Poppy']);
   });
 
-  it.skip('should turn more flowers into even more dresses', () => {
+  it('should turn more flowers into even more dresses', () => {
     const fairy = new Fairy('Cosmo Pepperfeet');
 
     fairy.makeDresses(['Ranunculus', 'Daisy']);
@@ -73,13 +75,13 @@ describe('Fairy', () => {
     assert.deepEqual(fairy.clothes.dresses, ['Iris', 'Ranunculus', 'Daisy', 'Hydrangea', 'Forget-me-not'])
   });
 
-  it.skip('should start out good natured', () => {
+  it('should start out good natured', () => {
     const fairy = new Fairy('Cologne');
 
     assert.equal(fairy.disposition, 'Good natured');
   });
 
-  it.skip('should become real scary when provoked', () => {
+  it('should become real scary when provoked', () => {
     const fairy = new Fairy('Aine');
 
     fairy.becomeProvoked();
@@ -87,7 +89,7 @@ describe('Fairy', () => {
     assert.equal(fairy.disposition, 'Vengeful');
   });
 
-  it.skip('should steal infants and return near identical changelings when feeling vengeful', () => {
+  it('should steal infants and return near identical changelings when feeling vengeful', () => {
     const fairy = new Fairy('Claudine');
     const firstInfant = { name: 'Sue', eyes: 'Blue', disposition: 'Sweet'};
     const secondInfant = { name: 'Henry', eyes: 'Brown', disposition: 'Charming'};
@@ -100,7 +102,7 @@ describe('Fairy', () => {
     assert.deepEqual(secondInfant, { name: 'Henry', eyes: 'Brown', disposition: 'Malicious'});
   });
 
-  it.skip('should only steal infants when feeling vengeful', () => {
+  it('should only steal infants when feeling vengeful', () => {
     const fairy = new Fairy('Marceline');
     const firstInfant = { name: 'Josiah', eyes: 'Green', disposition: 'Calm' };
 
@@ -109,7 +111,7 @@ describe('Fairy', () => {
     assert.equal(firstInfant, newFirstInfant);
   });
 
-  it.skip('should raise stolen infants as its own', () => {
+  it('should raise stolen infants as its own', () => {
     const fairy = new Fairy('Winnie');
     const firstInfant = { name: 'Mary', eyes: 'Green', disposition: 'Calm' };
     const secondInfant = { name: 'Clarke', eyes: 'Brown', disposition: 'Gentle'};
@@ -123,7 +125,7 @@ describe('Fairy', () => {
     assert.deepEqual(fairy.humanWards, [ firstInfant, secondInfant ]);
   });
 
-  it.skip('should calm down after stealing three infants', () => {
+  it('should calm down after stealing three infants', () => {
     const fairy = new Fairy('Basil');
     const firstInfant = { name: 'Josiah', eyes: 'Green', disposition: 'Calm' };
     const secondInfant = { name: 'Clarence', eyes: 'Brown', disposition: 'Delightful' };
