@@ -4,7 +4,7 @@ var assert = require('chai').assert;
 
 describe("Craft", function() {
 
-  it.skip('should have a type', function() {
+  it('should have a type', function() {
     var crossStitch = new Craft({ type: 'cross stitch' });
     var macrame = new Craft({ type: 'macrame' });
 
@@ -12,7 +12,7 @@ describe("Craft", function() {
     assert.equal(macrame.name, 'macrame');
   })
 
-  it.skip('should have a list of materials', function() {
+  it('should have a list of materials', function() {
     var canvas = new Material('canvas', 15, 1, 'sheets');
     var paint = new Material('paint', 4, 3, 'bottles');
     var painting = new Craft({ type: 'painting', materials: [ canvas, paint ]});
@@ -20,7 +20,7 @@ describe("Craft", function() {
     assert.deepEqual(painting.materials, [ canvas, paint ]);
   })
 
-  it.skip('should start as incomplete', function() {
+  it('should start as incomplete', function() {
     var ink = new Material('ink', 9, 2, 'bottles');
     var paper = new Material('paper', .25, 10, 'sheets');
     var drawing = new Craft({ type: 'drawing', materials: [ ink, paper ]});
@@ -28,7 +28,7 @@ describe("Craft", function() {
     assert.equal(drawing.completed, false);
   })
 
-  it.skip('should be able to complete craft', function() {
+  it('should be able to complete craft', function() {
     var fabric = new Material('fabric', 4, .5, 'yards');
     var thread = new Material('thread', .25, 10, 'spools');
     var embroidery = new Craft({ type: 'embroidery', materials: [ fabric, thread ]});
@@ -39,7 +39,7 @@ describe("Craft", function() {
     assert.equal(finishedEmbroidery, 'All done! It looks great!')
   })
 
-  it.skip('should be able to calculate total cost of craft', function() {
+  it('should be able to calculate total cost of craft', function() {
     var canvas = new Material('canvas', 15, 1, 'sheets');
     var paint = new Material('paint', 4, 3, 'bottles');
     var painting = new Craft({ type: 'painting', materials: [ canvas, paint ]});
