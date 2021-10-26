@@ -6,13 +6,13 @@ class Magician {
     this.performIncantation = function(buzzWord) {
       return buzzWord.toUpperCase() + '!'
     }
-    this.performTrick = function() {
-      this.confidencePercentage += 10;
-      if (this.favoriteAccessory === 'top hat') {
-        return `PULL RABBIT FROM TOP HAT`
-      }
-      return `PULL DOVE FROM SLEEVE`
-    }
+    // this.performTrick = function() {
+    //   this.confidencePercentage += 10;
+    //   if (this.favoriteAccessory === 'top hat') {
+    //     return `PULL RABBIT FROM TOP HAT`
+    //   }
+    //   return `PULL DOVE FROM SLEEVE`
+    // }
     this.confidencePercentage = 10;
     this.performShowStopper = function() {
       if (this.confidencePercentage < 100 || this.assistant === false) {
@@ -20,6 +20,13 @@ class Magician {
       }
       return `WOW! The magician totally just sawed that person in half!`
     }
+  }
+  performTrick() {
+    this.confidencePercentage += 10;
+      if (this.favoriteAccessory === 'top hat') {
+        return `PULL RABBIT FROM TOP HAT`
+      }
+      return `PULL DOVE FROM SLEEVE`
   }
 }
 
