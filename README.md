@@ -43,10 +43,10 @@ Completing all of these test suites is not necessary, but you should be working 
 - [x] ⛳️ [Golf Course](./golf-course)
 - [x] 🎃 [Trick or Treat](./trick-or-treat)
 - [x] 🛹 [Skate Park](./skate-park)
-- [ ] 🍫 [Vending Machine](./vending-machine)
+- [x] 🍫 [Vending Machine](./vending-machine)
 
 ### Other Greats
-- [ ] ⛷ [Ski Lift](./ski-lift)
+- [x] ⛷ [Ski Lift](./ski-lift)
 - [ ] ⛄️ [Snowman](./do-you-wanna-build-a-snowman)
 - [ ] 🚀 [Spaceport](./spaceport)
 - [ ] 🍔 [Lunch Box](./lunchbox)
