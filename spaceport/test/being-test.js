@@ -2,13 +2,13 @@ var assert = require('chai').assert;
 var Being = require('../src/being');
 
 describe('Being', function() {
-  it.skip('should be alive by default', function() {
+  it('should be alive by default', function() {
     var scott = new Being('Scott');
 
     assert.isTrue(scott.isAlive);
   });
 
-  it.skip('should have a name', function() {
+  it('should have a name', function() {
     var kayla = new Being('Kayla');
     var hannah = new Being('Hannah');
 
@@ -16,7 +16,7 @@ describe('Being', function() {
     assert.equal(hannah.name, 'Hannah');
   });
 
-  it.skip('should have a species', function() {
+  it('should have a species', function() {
     var clementine = new Being('Clem', 'feline');
     var captain = new Being('Cap', 'canine');
 
@@ -24,13 +24,13 @@ describe('Being', function() {
     assert.equal(captain.species, 'canine');
   });
 
-  it.skip('should have 0 credits by default', function() {
+  it('should have 0 credits by default', function() {
     var krill = new Being('Scott', 'krill');
 
     assert.equal(krill.credits, 0);
   });
 
-  it.skip('should be able to add credits', function() {
+  it('should be able to add credits', function() {
     var baby = new Being('Baby', 'feline');
 
     baby.updateCredits(2000);
@@ -38,7 +38,7 @@ describe('Being', function() {
     assert.equal(baby.credits, 2000);
   });
 
-  it.skip('should be able to add even more credits', function() {
+  it('should be able to add even more credits', function() {
     var krill = new Being('Scott', 'krill');
 
     krill.updateCredits(2000);
@@ -47,7 +47,7 @@ describe('Being', function() {
     assert.equal(krill.credits, 3000);
   });
 
-  it.skip('should be able to reduce credits', function() {
+  it('should be able to reduce credits', function() {
     var alien = new Being('Kayla', 'alien');
 
     alien.updateCredits(2000);

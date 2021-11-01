@@ -2,7 +2,7 @@ var assert = require('chai').assert;
 var Part = require('../src/part');
 
 describe('Part', function() {
-  it.skip('should have a name', function() {
+  it('should have a name', function() {
     var fighterShell = new Part({ name: 'X1-shell' });
     var hyperdrive = new Part({ name: 'CV90-infinity' });
 
@@ -10,7 +10,7 @@ describe('Part', function() {
     assert.equal(hyperdrive.name, 'CV90-infinity');
   });
 
-  it.skip('should have a type', function() {
+  it('should have a type', function() {
     var fighterShell = new Part({ name: 'X1-shell', type: 'shell' });
     var hyperdrive = new Part({ name: 'CV90-infinity', type: 'hyperdrive' });
 
@@ -18,7 +18,7 @@ describe('Part', function() {
     assert.equal(hyperdrive.type, 'hyperdrive');
   });
 
-  it.skip('should be able to have different types', function() {
+  it('should be able to have different types', function() {
     var fighterShell = new Part({ name: 'X1-shell', type: 'shell' });
     var hyperdrive = new Part({ name: 'CV90-infinity', type: 'hyperdrive' });
     var computer = new Part({ name: 'Alienware 550x', type: 'computer' });
@@ -32,11 +32,11 @@ describe('Part', function() {
     assert.equal(landing.type, 'landing gear');
   });
 
-  it.skip('should be able to have a value', function() {
+  it('should be able to have a value', function() {
     var computer = new Part(
       {
-        name: 'Alienware 550x', 
-        type: 'computer', 
+        name: 'Alienware 550x',
+        type: 'computer',
         value: 200
       }
     );
@@ -44,11 +44,11 @@ describe('Part', function() {
     assert.equal(computer.value, 200);
   });
 
-  it.skip('should be able to have a different value', function() {
+  it('should be able to have a different value', function() {
     var computer = new Part(
       {
-        name: 'Alienware 550x', 
-        type: 'computer', 
+        name: 'Alienware 550x',
+        type: 'computer',
         value: 300,
       }
     );
@@ -56,11 +56,11 @@ describe('Part', function() {
     assert.equal(computer.value, 300);
   });
 
-  it.skip('should be not broken by default', function() {
+  it('should be not broken by default', function() {
     var computer = new Part(
       {
-        name: 'Alienware 550x', 
-        type: 'computer', 
+        name: 'Alienware 550x',
+        type: 'computer',
         value: 300,
       }
     );
@@ -68,7 +68,7 @@ describe('Part', function() {
     assert.equal(computer.broken, false);
   });
 
-  it.skip('should have a name to be considered valid', function() {
+  it('should have a name to be considered valid', function() {
     var computer = new Part(
       {
         type: 'computer',
@@ -80,10 +80,10 @@ describe('Part', function() {
     assert.equal(computer.isValid, false);
   });
 
-  it.skip('should have a type to be considered valid', function() {
+  it('should have a type to be considered valid', function() {
     var computer = new Part(
       {
-        name: 'Alienware 550x', 
+        name: 'Alienware 550x',
         value: 300,
       }
     );
@@ -92,10 +92,10 @@ describe('Part', function() {
     assert.equal(computer.isValid, false);
   });
 ;
-  it.skip('should have a value to be considered valid', function() {
+  it('should have a value to be considered valid', function() {
     var computer = new Part(
       {
-        name: 'Alienware 550x', 
+        name: 'Alienware 550x',
         type: 'computer',
       }
     );
@@ -104,10 +104,10 @@ describe('Part', function() {
     assert.equal(computer.isValid, false);
   });
 
-  it.skip('should be considered valid if it has a name, type and value', function() {
+  it('should be considered valid if it has a name, type and value', function() {
     var computer = new Part(
       {
-        name: 'Alienware 550x', 
+        name: 'Alienware 550x',
         type: 'computer',
         value: 300,
       }
