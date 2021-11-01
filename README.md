@@ -47,7 +47,7 @@ Completing all of these test suites is not necessary, but you should be working 
 
 ### Other Greats
 - [x] ⛷ [Ski Lift](./ski-lift)
-- [ ] ⛄️ [Snowman](./do-you-wanna-build-a-snowman)
+- [x] ⛄️ [Snowman](./do-you-wanna-build-a-snowman)
 - [ ] 🚀 [Spaceport](./spaceport)
 - [ ] 🍔 [Lunch Box](./lunchbox)
 - [ ] 🏞 [Oregon Trail](./oregon-trail)
