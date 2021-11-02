@@ -5,7 +5,7 @@ var Being = require('../src/being');
 var Ship = require('../src/ship');
 
 describe('Shop', function() {
-  it.skip('should have a name', function() {
+  it('should have a name', function() {
     var shop1 = new Shop({ name: 'EZ-way' });
     var shop2 = new Shop({ name: 'Conogo' });
 
@@ -13,13 +13,13 @@ describe('Shop', function() {
     assert.equal(shop2.name, 'Conogo');
   });
 
-  it.skip('should have no inventory by default', function() {
+  it('should have no inventory by default', function() {
     var newShop = new Shop({ name: 'Conogo' });
 
     assert.deepEqual(newShop.inventory, {});
   });
 
-  it.skip('should be able to add a piece of inventory', function() {
+  it('should be able to add a piece of inventory', function() {
     var computer = new Part({ name: 'comp', type: 'computer', value: 200 });
     var newShop = new Shop( {name: 'Conogo' });
 
@@ -28,7 +28,7 @@ describe('Shop', function() {
     assert.include(Object.values(newShop.inventory), computer);
   });
 
-  it.skip('should be able to add another piece of inventory', function() {
+  it('should be able to add another piece of inventory', function() {
     var hyperdrive = new Part({ name: 'Z1', type: 'hyperdrive', value: 200 });
     var newShop = new Shop({ name: 'Conogo' });
 
@@ -37,7 +37,7 @@ describe('Shop', function() {
     assert.include(Object.values(newShop.inventory), hyperdrive);
   });
 
-  it.skip('can add multiple pieces of inventory', function() {
+  it('can add multiple pieces of inventory', function() {
     var computer = new Part({ name: 'comp', type: 'computer', value: 200 });
     var hyperdrive = new Part({ name: 'hyperdrive', type: 'hyperdrive', value: 200 });
     var newShop = new Shop({ name: 'Conogo' });
