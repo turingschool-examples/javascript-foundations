@@ -51,7 +51,7 @@ describe('Shop', function() {
     assert.include(Object.values(newShop.inventory), hyperdrive);
   });
 
-  it.skip('should only be able to add parts and food to the inventory', function() {
+  it('should only be able to add parts and food to the inventory', function() {
     var thing = { name: 'something', type: 'anything' };
     var otherThing = { name: 'else', quantity: 100 };
     var newShop = new Shop({ name: 'Conogo' });
@@ -62,7 +62,7 @@ describe('Shop', function() {
     assert.deepEqual(newShop.inventory, {});
   });
 
-  it.skip('cannot outfit a ship without a captain', function() {
+  it('cannot outfit a ship without a captain', function() {
     var fighter = new Ship(
       {
         name: 'Atlantis',
@@ -80,7 +80,7 @@ describe('Shop', function() {
     assert.equal(result, `cannot outfit a ship without a captain`);
   });
 
-  it.skip('should not be able to outfit a ship if the captain is broke', function() {
+  it('should not be able to outfit a ship if the captain is broke', function() {
     var captain = new Being('Will', 'human');
 
     var fighter = new Ship(
@@ -101,7 +101,7 @@ describe('Shop', function() {
     assert.equal(result, "you require 200 more credits to make this purchase");
   });
 
-  it.skip('should be able outfit a ship, and charge the captain', function() {
+  it('should be able outfit a ship, and charge the captain', function() {
     var captain = new Being('Will', 'human');
     captain.credits = 1000;
 
