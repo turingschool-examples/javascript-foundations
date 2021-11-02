@@ -2,7 +2,7 @@ var assert = require('chai').assert;
 var Gear = require('../src/gear.js');
 
 describe('Gear', function() {
-  it.skip('should have a type', function() {
+  it('should have a type', function() {
     var food = new Gear('food');
     var ammunition = new Gear('ammunition');
 
@@ -10,7 +10,7 @@ describe('Gear', function() {
     assert.equal(ammunition.type, 'ammunition');
   });
 
-  it.skip('should be able to have a quantity', function () {
+  it('should be able to have a quantity', function () {
     var food = new Gear('food', 10);
     var clothes = new Gear('clothes', 12);
 
@@ -19,7 +19,7 @@ describe('Gear', function() {
   });
 
   // valid types are food, ammunition, and clothes
-  it.skip('should not be able to have an invalid type', function() {
+  it('should not be able to have an invalid type', function() {
     var ammunition = new Gear('ammunition');
     var food = new Gear('food');
     var clothes = new Gear('clothes');
