@@ -5,7 +5,7 @@ const Potion = require('../lib/potion');
 describe('A wizard\'s potions cabinet and potions', () => {
 
   describe('A potion', () => {
-    it.skip('has a name', () => {
+    it('has a name', () => {
       const potion = new Potion('truth serum');
 
       assert.equal(potion.name, 'truth serum');
