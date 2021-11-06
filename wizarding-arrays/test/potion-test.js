@@ -11,19 +11,19 @@ describe('A wizard\'s potions cabinet and potions', () => {
       assert.equal(potion.name, 'truth serum');
     });
 
-    it.skip('indicates rareness by integers, 0 being not rare', () => {
+    it('indicates rareness by integers, 0 being not rare', () => {
       const potion = new Potion('truth serum', 5);
 
       assert.equal(potion.rareness, 5);
     });
 
-    it.skip('is not rare by default', () => {
+    it('is not rare by default', () => {
       const potion = new Potion('truth serum');
 
       assert.equal(potion.rareness, 0);
     });
 
-    it.skip('indicates whether or not it is rare', () => {
+    it('indicates whether or not it is rare', () => {
       // note: potions with a `rareness` score above 7 count as rare potions.
       const potion1 = new Potion('truth serum', 0);
       assert.equal(potion1.isRare(), false);
@@ -41,17 +41,17 @@ describe('A wizard\'s potions cabinet and potions', () => {
 
   describe('A potion cabinet', () => {
 
-    it.skip('keeps all potions', () => {
+    it('keeps all potions', () => {
       const cabinet = new Cabinet();
       assert.deepEqual(cabinet.potions, []);
     });
 
-    it.skip('is empty if nothing is put in it', () => {
+    it('is empty if nothing is put in it', () => {
       const cabinet = new Cabinet();
       assert.equal(cabinet.isEmpty(), true);
     });
 
-    it.skip('is possible to put things in the cabinet', () => {
+    it('is possible to put things in the cabinet', () => {
       const cabinet = new Cabinet();
       const potion = new Potion('truth serum', 12);
 
@@ -61,7 +61,7 @@ describe('A wizard\'s potions cabinet and potions', () => {
       assert.equal(cabinet.potions[0], potion);
     });
 
-    it.skip('is possible to take things out of the cabinet', () => {
+    it('is possible to take things out of the cabinet', () => {
       const cabinet = new Cabinet();
 
       const potion1 = new Potion('truth serum', 12);
@@ -80,7 +80,7 @@ describe('A wizard\'s potions cabinet and potions', () => {
       assert.equal(retrievedPotion, potion1);
     });
 
-    it.skip('is possible to take potions out by name', () => {
+    it('is possible to take potions out by name', () => {
       const cabinet = new Cabinet();
 
       const potion1 = new Potion('truth serum', 12);
@@ -102,7 +102,7 @@ describe('A wizard\'s potions cabinet and potions', () => {
       assert.equal(cabinet.potions.length, 3);
     });
 
-    it.skip('is possible to have duplicate potions in the cabinet', () => {
+    it('is possible to have duplicate potions in the cabinet', () => {
       const cabinet = new Cabinet();
 
       const potion1 = new Potion('truth serum', 12);
