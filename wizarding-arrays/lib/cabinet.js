@@ -20,7 +20,7 @@ class Cabinet {
   takeFirstPotion() {
     return this.potions.shift();
   }
-  takePotionWithName(name) {
+  takePotionWithName(name) { 
     for (var i = 0; i < this.potions.length; i++) {
       if (this.potions[i].name === name) {
         var removedPotion = this.potions.splice(i, 1);
