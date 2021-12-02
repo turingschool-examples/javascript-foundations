@@ -1,6 +1,6 @@
 var assert = require('chai').assert;
 var Player = require('../src/player.js');
-var Game = require('../src/board-game.js');
+var Game = require('../src/game.js');
 var GameNight = require('../src/game-night.js');
 
 describe ('GameNight', function() {
@@ -9,6 +9,7 @@ describe ('GameNight', function() {
     var gameNight = new GameNight(host);
 
     assert.isFunction(GameNight);
+    assert.instanceOf(gameNight.host, Player);
     assert.equal(gameNight.host.name, 'Elizabeth');
   });
 
@@ -71,15 +72,18 @@ describe ('GameNight', function() {
     var gameNight = new GameNight(host);
     gameNight.invite([player1, player2]);
     gameNight.makeCollection();
+    
+    assert.equal(players[0].experience, 0);
+
     gameNight.playAGame(game, 'Mack');
     
-    assert.equal(host.experience, 1);
-    assert.equal(player1.experience, 1);
-    assert.equal(player1.wins[game.name], undefined);
-    assert.equal(player2.wins[game.name], 1);
+    assert.equal(players[0].experience, 1);
+    assert.equal(players[1].experience, 1);
+    assert.equal(players[1].wins[game.name], undefined);
+    assert.equal(players[2].wins[game.name], 1);
   });
-
-  it.skip('should be able to accommodate everyone', function() {
+  
+  it.skip('should be able to choose a game that accomodates everyone', function() {
     var host = new Player({name: 'Paul'});
     var player1 = new Player({name: 'Mack'});
     var player2 = new Player({name: 'Phil'});
@@ -93,11 +97,11 @@ describe ('GameNight', function() {
     host.addToCollection(game2);
     gameNight.invite([player1, player2, player3, player4]);
     gameNight.makeCollection();
-    assert.equal(gameNight.playAGame(game1, 'Dave'), 'We should choose a game that everyone can play.');
-    assert.equal(gameNight.playAGame(game2, 'Mack'), 'Rising Sun is super fun!')
+    assert.equal(gameNight.chooseGame(game1), 'We should choose a game that everyone can play.');
+    assert.equal(gameNight.chooseGame(game2), 'Rising Sun is super fun!')
   });
 
-  it.skip('should not be able to play games when there aren\'t enough people', function() {
+  it.skip('should not be able to choose games when there aren\'t enough people', function() {
     var host = new Player({name: 'John'});
     var player = new Player({name: 'Mary'});
     var game = new Game({name: 'Catan', minPlayers: 3});
@@ -106,10 +110,10 @@ describe ('GameNight', function() {
     host.addToCollection(game);
     gameNight.makeCollection();
     
-    assert.equal(gameNight.playAGame(game, 'Mary'), 'We don\'t have enough players for Catan.')
+    assert.equal(gameNight.chooseGame(game), 'We don\'t have enough players for Catan.')
   });
 
-  it.skip('should not be able to play games that are not in the collection', function() {
+  it.skip('should not be able to choose games that are not in the collection', function() {
     var host = new Player({name: 'Lindsey'});
     var player = new Player({name: 'Caitlin'});
     var game1 = new Game({name: 'Hive'});
@@ -118,12 +122,7 @@ describe ('GameNight', function() {
     host.addToCollection(game1);
     gameNight.invite([player]);
     gameNight.makeCollection();
-
-    gameNight.playAGame(game1, 'Caitlin');
-    gameNight.playAGame(game2, 'Lindsey');
     
-    assert.equal(gameNight.playAGame(game2, 'Lindsey'), `We don't have 7 Wonders Duel.`);
-    assert.equal(host.experience, 1);
-    assert.equal(player.wins[game1.name], 1);
+    assert.equal(gameNight.chooseGame(game2), `We don't have 7 Wonders Duel.`);
   });
 });

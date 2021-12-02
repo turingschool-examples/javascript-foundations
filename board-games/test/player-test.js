@@ -1,6 +1,6 @@
 var assert = require('chai').assert;
 var Player = require('../src/player.js');
-var Game = require('../src/board-game.js');
+var Game = require('../src/game.js');
 
 describe('Player', function() {
   it.skip('should have a name', function() {
@@ -27,6 +27,12 @@ describe('Player', function() {
     assert.equal(player.collection[1].name, 'Dominion');
   });
 
+  it.skip('should start with no games in the collection', function() {
+    var player = new Player({name: 'Scott'});
+
+    assert.deepEqual(player.collection, []);
+  })
+
   it.skip('should be able to add games to the collection', function() {
     var game1 = new Game({name: 'Gloomhaven'});
     var game2 = new Game({name: 'Spirit Island'});
@@ -47,6 +53,12 @@ describe('Player', function() {
     assert.equal(player.collection[1].name, 'Spirit Island');
     assert.equal(player.collection[2].name, 'Scythe');
   });
+
+  it.skip('should be able to have favorite games', function() {
+    var player = new Player({name: 'Liz'});
+
+    assert.deepEqual(player.favoriteGames, {});
+  })
 
   it.skip('should be able to have a top 3 games', function() {
     var game1 = new Game({name: 'Gaia Project'});
@@ -100,7 +112,7 @@ describe('Player', function() {
     assert.equal(player.gameNightGames[0].name, 'Splendor');
   });
 
-  it.skip('should be able to have an experience level', function(){
+  it.skip('should start with no experience', function(){
     var player = new Player({name: 'Izzy'});
 
     assert.equal(player.experience, 0);
@@ -125,4 +137,18 @@ describe('Player', function() {
     assert.equal(player.experience, 2);
     assert.equal(player.wins[game.name], 1);
   });
+
+  it.skip('should increment the wins each time they win each game', function() {
+    var player = new Player({name: 'John'});
+    var game1 = new Game({name: 'Twilight Imperium'});
+    var game2 = new Game({name: 'Mysterium'});
+    player.winGame(game1.name);
+    player.winGame(game1.name);
+    player.winGame(game1.name);
+    player.winGame(game2.name);
+    player.winGame(game2.name);
+
+    assert.equal(player.wins[game1.name], 3);
+    assert.equal(player.wins[game2.name], 2);
+  })
 });

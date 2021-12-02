@@ -1,7 +1,7 @@
 var assert = require('chai').assert;
-var Game = require('../src/board-game.js');
+var Game = require('../src/game.js');
 
-describe('Board Game', function() {
+describe('Game', function() {
   it.skip('should have a name', function() {
     var game = new Game({name: 'Checkers'});
 
@@ -39,7 +39,13 @@ describe('Board Game', function() {
     assert.equal(game.minPlayers, 3);
   });
 
-  it.skip('should hvae a maximum nuumber of players', function() {
+  it.skip('should have a maximum number of two players by default', function() {
+    var game = new Game({name: 'Cribbage'});
+
+    assert.equal(game.maxPlayers, 2);
+  })
+
+  it.skip('should be able to have a different maximum number of players', function() {
     var game = new Game({name: 'Monopoly', type: 'family', minPlayers: 2, maxPlayers: 8});
 
     assert.equal(game.maxPlayers, 8);
