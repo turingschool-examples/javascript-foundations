@@ -73,13 +73,11 @@ describe("Human", function () {
     human.gatherMaterials('snowballs', 5);
 
     var snowman = human.buildASnowman();
-    
-    snowman.canWearMagicHat();
-    
-    human.placeMagicHat();
+
+    var hatPlacement = human.placeMagicHat(snowman);
 
     assert.equal(snowman.magicHat, true);
-    assert.equal(human.placeMagicHat(), 'Woah, this snowman is coming to life!')
+    assert.equal(hatPlacement, 'Woah, this snowman is coming to life!')
   });
 
   it.skip('should be able to fail at putting a magic hat on the snowman', function () {
@@ -91,11 +89,9 @@ describe("Human", function () {
     human.gatherMaterials('snowballs', 5);
 
     var snowman = human.buildASnowman();
-
-    snowman.canWearMagicHat();
+    var hatPlacement = human.placeMagicHat(snowman)
 
     assert.equal(snowman.magicHat, false);
-
-    assert.equal(human.placeMagicHat(), 'I guess I didn\'t build it correctly.')
+    assert.equal(hatPlacement, 'I guess I didn\'t build it correctly.')
   });
 });
