@@ -53,9 +53,11 @@ describe("Snowman", function () {
     }
 
     var snowman = new Snowman(snowmanDetails);
-    snowman.canWearMagicHat();
+    var isWearingHat = snowman.canWearMagicHat();
 
     assert.equal(snowman.magicHat, true);
+    assert.equal(isWearingHat, true);
+
   });
 
   it.skip('should fail to wear a magic hat if it has less than 2 coal eyes', function() {
@@ -67,9 +69,10 @@ describe("Snowman", function () {
     }
 
     var snowman = new Snowman(snowmanDetails);
-    snowman.canWearMagicHat();
+    var isWearingHat = snowman.canWearMagicHat();
 
-    assert.deepEqual(snowman.magicHat, false);
+    assert.equal(snowman.magicHat, false);
+    assert.equal(isWearingHat, false);
   });
 
   it.skip('should fail to wear a magic hat if it has less than 5 button teeth', function () {
@@ -81,9 +84,10 @@ describe("Snowman", function () {
     }
 
     var snowman = new Snowman(snowmanDetails);
-    snowman.canWearMagicHat();
+    var isWearingHat = snowman.canWearMagicHat();
 
-    assert.deepEqual(snowman.magicHat, false);
+    assert.equal(snowman.magicHat, false);
+    assert.equal(isWearingHat, false);
   });
 
   it.skip('should fail to wear a magic hat if it has less than 1 carrot nose', function () {
@@ -95,9 +99,10 @@ describe("Snowman", function () {
     }
 
     var snowman = new Snowman(snowmanDetails);
-    snowman.canWearMagicHat();
+    var isWearingHat = snowman.canWearMagicHat();
 
-    assert.deepEqual(snowman.magicHat, false);
+    assert.equal(snowman.magicHat, false);
+    assert.equal(isWearingHat, false);
   });
 
   it.skip('should fail to wear a magic hat if it has less than 2 snowballs for its body', function () {
@@ -109,8 +114,9 @@ describe("Snowman", function () {
     }
 
     var snowman = new Snowman(snowmanDetails);
-    snowman.canWearMagicHat();
+    var isWearingHat = snowman.canWearMagicHat();
 
-    assert.deepEqual(snowman.magicHat, false);
+    assert.equal(snowman.magicHat, false);
+    assert.equal(isWearingHat, false);
   });
 });
