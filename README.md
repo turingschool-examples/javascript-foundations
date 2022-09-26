@@ -43,9 +43,10 @@ Completing all of these test suites is not necessary, but you should be working 
 - [ ] ⛳️ [Golf Course](./golf-course)
 - [ ] 🎃 [Trick or Treat](./trick-or-treat)
 - [ ] 🛹 [Skate Park](./skate-park)
+- [ ] 🐶 [Adopt a Dog](./adopt-a-dog)
 - [ ] 🍫 [Vending Machine](./vending-machine)
 
-### Other Greats 
+### Other Greats
 - [ ] ⛷ [Ski Lift](./ski-lift)
 - [ ] ⛄️ [Snowman](./do-you-wanna-build-a-snowman)
 - [ ] 🚀 [Spaceport](./spaceport)
