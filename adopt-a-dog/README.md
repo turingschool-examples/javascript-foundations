@@ -4,7 +4,7 @@ Original author: [Kayla Gordon](https://github.com/kaylagordon)
 
 ## Installation Steps
 
-In order to be able to run these tests you need to install the dependencies at the root level of this repository. Find the directions [here]([root-level of this repository](https://github.com/turingschool-examples/javascript-foundations)).
+In order to be able to run these tests you need to install the dependencies at the root level of this repository. Find the directions at the [root-level of this repository](https://github.com/turingschool-examples/javascript-foundations).
 
 ### Running the Tests
 
