@@ -1,6 +1,6 @@
 # Dog + Person Tests
 Original author: [Kayla Gordon](https://github.com/kaylagordon)  
-![dog](https://www.google.com/url?sa=i&url=https%3A%2F%2Fgiphy.com%2Fexplore%2Fdog-ears&psig=AOvVaw3TaDhroDvNhfwtOdjIk5Uj&ust=1664402856069000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCJjF6Pn9tfoCFQAAAAAdAAAAABAd)  
+![dog](https://media1.giphy.com/media/4Zo41lhzKt6iZ8xff9/giphy.gif)  
 
 ## Installation Steps
 
