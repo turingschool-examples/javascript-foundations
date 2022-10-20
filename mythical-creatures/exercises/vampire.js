@@ -8,13 +8,11 @@ class Vampire {
     drink(){
     this.thirsty = false
     if (this.ouncesDrank < 50){
-        this.ouncesDrank = this.ouncesDrank + 10
-        return this.ouncesDrank
+        this.ouncesDrank +=  10
+        // return this.ouncesDrank
     } else {
-        this.ouncesDrank = 50
+        // this.ouncesDrank = 50
         return "I'm too full to drink anymore!"
-    }
-    // why this.ouncesDrank =+ 10 does not work
     }
 }
 
