@@ -15,6 +15,7 @@ class Vampire {
         return "I'm too full to drink anymore!"
     }
 }
+}
 
 module.exports = 
     Vampire

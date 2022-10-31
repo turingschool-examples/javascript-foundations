@@ -4,17 +4,17 @@ var Victim = require('../exercises/victim');
 
 describe('Werewolf', function() {
 
-  it.skip('should be a function', function() {
+  it('should be a function', function() {
     assert.isFunction(Werewolf);
   });
 
-  it.skip('should instantiate our good friend, Werewolf', function() {
+  it('should instantiate our good friend, Werewolf', function() {
     var larry = new Werewolf();
 
     assert.instanceOf(larry, Werewolf);
   });
 
-  it.skip('should have a name', function() {
+  it('should have a name', function() {
     var werewolf = new Werewolf('Jeff');
     var werewolf2 = new Werewolf('Sal');
 
@@ -22,13 +22,13 @@ describe('Werewolf', function() {
     assert.equal(werewolf2.name, 'Sal');
   });
 
-  it.skip('should default to human form', function() {
+  it('should default to human form', function() {
     var werewolf = new Werewolf('Casey');
 
     assert.equal(werewolf.form, 'human');
   });
 
-  it.skip('should not be in human form after transforming', function() {
+  it('should not be in human form after transforming', function() {
     var werewolf = new Werewolf('Scott');
     var transformedWolf =  werewolf.completeTransformation();
 
@@ -36,7 +36,7 @@ describe('Werewolf', function() {
     assert.equal(transformedWolf, 'Aaa-Woooo!')
   });
 
-  it.skip('should be able to transform from wolf to human', function() {
+  it('should be able to transform from wolf to human', function() {
     var werewolf = new Werewolf('Lousia');
 
     assert.equal(werewolf.form, 'human');
