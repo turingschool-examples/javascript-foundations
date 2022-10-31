@@ -2,22 +2,21 @@ var assert = require('chai').assert;
 var Centaur = require('../exercises/centaur');
 
 describe('Centaur', function() {
-
   it('should be a function', function() {
     assert.isFunction(Centaur);
   });
 
   it('should have a name', function() {
     // instantiate a Centaur object with an object as an argument. The object should have a key of name and value of your name
-    var cenNo = Centaur("Doraemon")
+    var cenNo = new Centaur({ name: 'Georgiana'})
     
     // instantiate another Centaur object with a different name
-    var cenNo2 = Centaur("Nobita")
+    var cenNo2 = new Centaur({ name: 'Farabarum'})
     // assert that the first centaur's name is your name
-    assert.equal(cenNo.name,"Doraemon")
+    assert.equal(cenNo.name,"Georgiana")
    
     // assert that the second centaur's name is the other name
-    assert.equal(cenNo2.name,"Nobita")
+    assert.equal(cenNo2.name,"Farabarum")
     //NOTE: We will not ask you to write your own tests in a mod 1 assessment, but it is good practice to prepare for mod 2!
   });
 
@@ -33,7 +32,7 @@ describe('Centaur', function() {
     assert.equal(centaur.shootBow(), 'Twang!!!');
   });
 
-  it.skip('should have a horse sound when it runs', function() {
+  it('should have a horse sound when it runs', function() {
     var centaur = new Centaur({ name: 'Georgiana', type: 'Palomino' });
 
     var soundEffect = centaur.run();
@@ -41,19 +40,19 @@ describe('Centaur', function() {
     assert.equal(soundEffect, 'Clop clop clop clop!!!');
   });
 
-  it.skip('should not be cranky when first created', function() {
+  it('should not be cranky when first created', function() {
     var centaur = new Centaur({ name: 'Georgiana', type: 'Palomino' });
 
     assert.equal(centaur.cranky, false);
   });
 
-  it.skip('should be standing up when first created', function() {
+  it('should be standing up when first created', function() {
     var centaur = new Centaur({ name: 'Georgiana', type: 'Palomino' });
 
     assert.equal(centaur.standing, true);
   });
 
-  it.skip('should be cranky after running or shooting a bow three times', function() {
+  it('should be cranky after running or shooting a bow three times', function() {
     var centaur = new Centaur({ name: 'Georgiana', type: 'Palomino' });
 
     assert.equal(centaur.cranky, false);
@@ -61,7 +60,7 @@ describe('Centaur', function() {
     centaur.shootBow()
     centaur.run()
     centaur.shootBow()
-
+  
     assert.equal(centaur.cranky, true)
   });
 
