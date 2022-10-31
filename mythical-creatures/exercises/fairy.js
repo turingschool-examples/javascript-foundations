@@ -4,6 +4,8 @@ class Fairy{
         this.dust = 10
         this.clothes = {dresses: ['Iris']}
         this.disposition = 'Good natured'
+        this.humanWards = []
+        
     }
     receiveBelief(){
         this.dust +=1
@@ -17,5 +19,16 @@ class Fairy{
     becomeProvoked(){
         this.disposition = "Vengeful"
     }
+    replaceInfant(objInf){
+        if(this.disposition === "Vengeful" && this.humanWards.length < 2){
+            objInf.disposition = 'Malicious'
+            this.humanWards.push(objInf)
+        }else{
+            this.disposition = 'Good natured'
+            return objInf 
+        }
+     
+    }
+
 }
 module.exports = Fairy
