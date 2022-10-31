@@ -51,7 +51,7 @@ describe('Werewolf', function() {
     assert.equal(werewolf.form, 'human');
   });
 
-  it.skip('should show what form its in', function() {
+  it('should show what form its in', function() {
     var werewolf = new Werewolf('Lousia');
 
     assert.equal(werewolf.form, 'human');
@@ -66,13 +66,13 @@ describe('Werewolf', function() {
     assert.equal(werewolf.form, 'wolf');
   });
 
-  it.skip('should start off not hungry', function() {
+  it('should start off not hungry', function() {
     var werewolf = new Werewolf('Lousia');
 
     assert.equal(werewolf.hungry, false);
   });
 
-  it.skip('should become hungry after changing into werewolf form', function() {
+  it('should become hungry after changing into werewolf form', function() {
     var werewolf = new Werewolf('Clementine');
 
     werewolf.completeTransformation();
@@ -81,7 +81,7 @@ describe('Werewolf', function() {
     assert.equal(werewolf.hungry, true);
   });
 
-  it.skip('should not be hungry after changing back to human form', function () {
+  it('should not be hungry after changing back to human form', function () {
     var werewolf = new Werewolf('Pep');
 
     werewolf.completeTransformation();
@@ -93,7 +93,7 @@ describe('Werewolf', function() {
 
   // STOP! Scroll to the bottom and complete the Victim tests
 
-  it.skip('should be able to eat a victim once hungry', function () {
+  it('should be able to eat a victim once hungry', function () {
     var werewolf = new Werewolf('Baby');
     var victim = new Victim('Hannah');
 
@@ -104,7 +104,7 @@ describe('Werewolf', function() {
     assert.equal(fullWolf, 'Yum, Hannah was delicious.');
   });
 
-  it.skip('should transform back to human form after eating', function() {
+  it('should transform back to human form after eating', function() {
     var werewolf = new Werewolf('Baby');
     var victim = new Victim('Hannah');
 
@@ -114,7 +114,7 @@ describe('Werewolf', function() {
     assert.equal(werewolf.form, 'human');
   });
 
-  it.skip('should not be able to eat a victim while in human form', function() {
+  it('should not be able to eat a victim while in human form', function() {
     var werewolf = new Werewolf('Scott');
     var victim = new Victim('Baby');
 
@@ -129,23 +129,23 @@ describe('Werewolf', function() {
 
 describe('Victim', function() {
 
-  it.skip('should be a function', function() {
+  it('should be a function', function() {
     assert.isFunction(Victim);
   });
 
-  it.skip('should instantiate our good friend, Victim', function() {
+  it('should instantiate our good friend, Victim', function() {
     var victim = new Victim();
 
     assert.instanceOf(victim, Victim);
   });
 
-  it.skip('should have a name', function() {
+  it('should have a name', function() {
     var victim = new Victim('Leta');
 
     assert.equal(victim.name, 'Leta');
   });
 
-  it.skip('should be alive', function () {
+  it('should be alive', function () {
     var victim = new Victim('Leta');
 
     assert.equal(victim.alive, true);
