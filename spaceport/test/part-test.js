@@ -35,8 +35,8 @@ describe('Part', function() {
   it.skip('should be able to have a value', function() {
     var computer = new Part(
       {
-        name: 'Alienware 550x', 
-        type: 'computer', 
+        name: 'Alienware 550x',
+        type: 'computer',
         value: 200
       }
     );
@@ -47,8 +47,8 @@ describe('Part', function() {
   it.skip('should be able to have a different value', function() {
     var computer = new Part(
       {
-        name: 'Alienware 550x', 
-        type: 'computer', 
+        name: 'Alienware 550x',
+        type: 'computer',
         value: 300,
       }
     );
@@ -59,8 +59,8 @@ describe('Part', function() {
   it.skip('should be not broken by default', function() {
     var computer = new Part(
       {
-        name: 'Alienware 550x', 
-        type: 'computer', 
+        name: 'Alienware 550x',
+        type: 'computer',
         value: 300,
       }
     );
@@ -76,38 +76,38 @@ describe('Part', function() {
       }
     );
 
-    assert.equal(computer.checkForValidity, 'This part needs a name!');
+    assert.equal(computer.checkForValidity(), 'This part needs a name!');
     assert.equal(computer.isValid, false);
   });
 
   it.skip('should have a type to be considered valid', function() {
     var computer = new Part(
       {
-        name: 'Alienware 550x', 
+        name: 'Alienware 550x',
         value: 300,
       }
     );
 
-    assert.equal(computer.checkForValidity, 'This part needs a type!');
+    assert.equal(computer.checkForValidity(), 'This part needs a type!');
     assert.equal(computer.isValid, false);
   });
 ;
   it.skip('should have a value to be considered valid', function() {
     var computer = new Part(
       {
-        name: 'Alienware 550x', 
+        name: 'Alienware 550x',
         type: 'computer',
       }
     );
 
-    assert.equal(computer.checkForValidity, 'This part needs a value!');
+    assert.equal(computer.checkForValidity(), 'This part needs a value!');
     assert.equal(computer.isValid, false);
   });
 
   it.skip('should be considered valid if it has a name, type and value', function() {
     var computer = new Part(
       {
-        name: 'Alienware 550x', 
+        name: 'Alienware 550x',
         type: 'computer',
         value: 300,
       }
