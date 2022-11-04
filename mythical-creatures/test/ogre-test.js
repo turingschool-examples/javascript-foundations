@@ -5,22 +5,22 @@ const Human = require('../exercises/human');
 describe('Ogre', () => {
   // Oh no! It looks like there's no text in the `it` blocks! I guess you'll have to read the tests SUPER carefully to know what the test is expecting!
 
-  it.skip('', function() {
+  it('Should create class  Ogre with name object', function() {
     const ogre = new Ogre({name:'Brak'});
     assert.equal(ogre.name, 'Brak');
   });
 
-  it.skip('', function() {
+  it('Should have a home', function() {
     const ogre = new Ogre({name: 'Brak'});
     assert.equal(ogre.home, 'Swamp');
   });
 
-  it.skip('', function() {
+  it('Should be able to have a dirfferent home', function() {
     const ogre = new Ogre({name: 'Brak', abode: 'The Ritz'});
     assert.equal(ogre.home, 'The Ritz');
   });
 
-  it.skip('', function() {
+  it('Should be able to create human class with name and encounterCounter set to 0 ', function() {
     const ogre = new Ogre({name: 'Brak'});
     const human = new Human('Jane');
 
@@ -31,12 +31,14 @@ describe('Ogre', () => {
     assert.equal(human.encounterCounter, 1);
   });
 
-  it.skip('', function() {
+  it('', function() {
     const ogre = new Ogre({name: 'Brak'});
     const human = new Human('Jane');
 
+    var count = ogre.encounter(human);
+    console.log(count, '39')
     ogre.encounter(human);
-    ogre.encounter(human);
+    console.log(ogre.encounter(human), '41')
     assert.equal(human.noticesOgre(), false);
 
     ogre.encounter(human);
