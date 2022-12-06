@@ -17,4 +17,4 @@ class Unicorn {
   }
 }
 
-module.exports = Unicorn;
+module.exports = Unicorn
