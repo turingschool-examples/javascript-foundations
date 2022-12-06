@@ -49,4 +49,5 @@ describe('Unicorn', function() {
     assert.equal(unicorn.says('Wonderful!'), '**;* Wonderful! *;**');
     assert.equal(unicorn.says('Batman has a great smile'), '**;* Batman has a great smile *;**');
   });
+  
 });
