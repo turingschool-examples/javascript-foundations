@@ -12,6 +12,9 @@ class Unicorn {
       return false
     }
   }
+  says(string) {
+    return `**;* ${string} *;**`
+  }
 }
 
 module.exports = Unicorn;
