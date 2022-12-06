@@ -10,14 +10,10 @@ class Dragon {
         return `Hi, ${this.rider}!`
     }
     eat() {
-
         this.fed++
-        console.log(this.fed)
-        if (this.fed < 3) {
-            this.hungry = true
-        } else {
+        if (this.fed >= 3) {
             this.hungry = false
-        }
+        } 
     }
 }
 
