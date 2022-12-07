@@ -31,19 +31,20 @@ describe('Unicorn', function() {
     assert.equal(unicorn.color, 'blue');
   });
 
-  it.skip('should be white as default', function() {
+  it('should be white as default', function() {
     var unicorn = new Unicorn('Louisa');
 
     assert.equal(unicorn.color, 'white');
   });
 
-  it.skip('should refute isWhite', function() {
+  it('should refute isWhite', function() {
     var unicorn = new Unicorn('Steve', 'red');
 
     assert.equal(unicorn.isWhite(), false);
   });
-
-  it.skip('should say sparklying stuff', function() {
+  // isWhite() is invoking a function, second argument will be return value from that function
+  // 
+  it('should say sparklying stuff', function() {
     var unicorn = new Unicorn('Brenna');
     
     assert.equal(unicorn.says('Wonderful!'), '**;* Wonderful! *;**');
