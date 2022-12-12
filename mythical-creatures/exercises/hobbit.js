@@ -23,8 +23,8 @@ class Hobbit{
         } else {
             return 'You can\'t have it!'
         }
-    }
-}
+    } 
+} 
 
 
 
