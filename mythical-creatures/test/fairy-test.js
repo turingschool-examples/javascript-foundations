@@ -88,7 +88,7 @@ describe('Fairy', () => {
 
     const newFirstInfant = fairy.replaceInfant(firstInfant);
 
-    assert.equal(firstInfant, newFirstInfant);
+    assert.equal(newFirstInfant, firstInfant);
   });
 
   it.skip('should raise stolen infants as its own', () => {
