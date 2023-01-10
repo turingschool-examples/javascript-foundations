@@ -7,7 +7,7 @@ class TrickOrTreater{
     this.countCandies = 0;
   }
   putCandyInBag(candy) {
-    
+
     this.hasCandy = true;
     this.bag.fill(candy);
     this.countCandies++
@@ -15,10 +15,7 @@ class TrickOrTreater{
   eat() {
     this.countCandies--;
     this.bag.candies.shift();
-    // should hasCandy be false?
   }
 }
-
-
 
 module.exports = TrickOrTreater

@@ -15,7 +15,6 @@ class Bag{
       }
     }
     return false;
-
   }
 }
 
