@@ -3,7 +3,7 @@ var assert = require('chai').assert;
 
 describe("Material", function() {
 
-  it.skip('should have a name, price per unit, amount, and units', function() {
+  it('should have a name, price per unit, amount, and units', function() {
     var thread = new Material('thread', .25, 8, 'spools');
     var fabric = new Material('fabric', 4, 3, 'yards');
 
@@ -18,7 +18,7 @@ describe("Material", function() {
     assert.equal(fabric.units, 'yards');
   })
 
-  it.skip('should be able to use material', function() {
+  it('should be able to use material', function() {
     var fabric = new Material('fabric', 4, 3, 'yards');
 
     assert.equal(fabric.amount, 3);
@@ -29,7 +29,7 @@ describe("Material", function() {
     assert.equal(usedFabric, `You now have 1 yards of fabric left.`)
   })
 
-  it.skip('should be able to use a different material', function() {
+  it('should be able to use a different material', function() {
     var thread = new Material('thread', .25, 8, 'spools');
 
     assert.equal(thread.amount, 8);
@@ -40,7 +40,7 @@ describe("Material", function() {
     assert.equal(usedThread, `You now have 2 spools of thread left.`)
   })
 
-  it.skip('should not be able to use more material than available', function() {
+  it('should not be able to use more material than available', function() {
     var paint = new Material('acrylic paint', 5, 7, 'bottles');
     var canvas = new Material('canvas', 15, 2, 'sheets');
 
@@ -48,7 +48,7 @@ describe("Material", function() {
     assert.equal(canvas.useMaterial(4), 'You don\'t have enough canvas! Try using 2 sheets or less.');
   })
 
-  it.skip('should be able to calculate total cost of materials', function() {
+  it('should be able to calculate total cost of materials', function() {
     var paint = new Material('acrylic paint', 5, 7, 'bottles');
     var canvas = new Material('canvas', 15, 2, 'sheets');
 
