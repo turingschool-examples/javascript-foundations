@@ -2,19 +2,19 @@ var assert = require("chai").assert;
 var Skier = require("../src/Skier");
 
 describe("Skier", function () {
-  it.skip('should instantiate a skier object', function () {
+  it('should instantiate a skier object', function () {
     var skier = new Skier();
 
     assert.instanceOf(skier, Skier);
   });
 
-  it.skip('should have a name', function () {
+  it('should have a name', function () {
     var skier = new Skier('Hannah');
 
     assert.equal(skier.name, 'Hannah');
   });
 
-  it.skip('should be able to have a lift ticket', function() {
+  it('should be able to have a lift ticket', function() {
     var skier = new Skier('Scott', true);
 
     assert.equal(skier.hasLiftTicket, true);
