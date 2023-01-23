@@ -4,7 +4,7 @@ var assert = require('chai').assert;
 
 describe("VendingMachine", function() {
 
-  it.skip('should have an id and broken status', function() {
+  it('should have an id and broken status', function() {
     var machine1 = new VendingMachine({ id: 123, isBroken: true });
     var machine2 = new VendingMachine({ id: 456, isBroken: false });
 
@@ -15,13 +15,13 @@ describe("VendingMachine", function() {
     assert.equal(machine2.isBroken, false);
   })
 
-  it.skip('should start with no snacks', function() {
+  it('should start with no snacks', function() {
     var machine = new VendingMachine({ id: 123, isBroken: true });
 
     assert.deepEqual(machine.snacks, []);
   })
 
-  it.skip('should be able to add snacks', function() {
+  it('should be able to add snacks', function() {
     var machine = new VendingMachine({ id: 123, isBroken: true });
     var candyBar = new Snack('hersey\'s milk chocolate', 0.75);
     var chips = new Snack('lay\'s sour cream and onion chips', 1.00);

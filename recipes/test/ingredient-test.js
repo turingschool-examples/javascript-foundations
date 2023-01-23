@@ -4,7 +4,7 @@ var assert = require('chai').assert;
 
 describe('Ingredient', function() {
 
-  it.skip('should have a name and amount needed for recipe', function() {
+  it('should have a name and amount needed for recipe', function() {
     var cheese = new Ingredient({ name: 'pepper jack cheese', amount: 2 });
     var tortillas = new Ingredient({ name: 'flour tortillas', amount: 4 });
 
@@ -14,7 +14,7 @@ describe('Ingredient', function() {
     assert.equal(tortillas.amount, 4);
   });
 
-  it.skip('should be able to change the amount needed', function() {
+  it('should be able to change the amount needed', function() {
     var flour = new Ingredient({ name: 'flour', amount: 2 });
 
     assert.equal(flour.amount, 2);
