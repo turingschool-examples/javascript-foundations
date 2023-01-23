@@ -4,7 +4,7 @@ var assert = require('chai').assert;
 
 describe('Recipe', function() {
 
-  it.skip('should have a name and ingredients', function () {
+  it('should have a name and ingredients', function () {
     var cheese = new Ingredient({ name: 'pepper jack cheese', amount: 2 });
     var tortillas = new Ingredient({ name: 'flour tortillas', amount: 4 });
     var quesadillas = new Recipe({ name: 'quesadillas', ingredients: [cheese, tortillas]});
@@ -15,7 +15,7 @@ describe('Recipe', function() {
     assert.equal(quesadillas.ingredients[1].name, 'flour tortillas');
   });
 
-  it.skip('should start as unattempted with no rating', function () {
+  it('should start as unattempted with no rating', function () {
     var chocolateChips = new Ingredient({ name: 'chocolate chips', amount: 100 });
     var flour = new Ingredient({ name: 'flour', amount: 4 });
     var sugar = new Ingredient({ name: 'sugar', amount: 3 });
@@ -28,7 +28,7 @@ describe('Recipe', function() {
     assert.equal(cookies.rating, null);
   });
 
-  it.skip('should be able to rate the recipe', function () {
+  it('should be able to rate the recipe', function () {
     var cheese = new Ingredient({ name: 'pepper jack cheese', amount: 2 });
     var tortillas = new Ingredient({ name: 'flour tortillas', amount: 4 });
     var quesadillas = new Recipe({ name: 'quesadillas', ingredients: [cheese, tortillas]});
@@ -42,7 +42,7 @@ describe('Recipe', function() {
     assert.equal(quesadillas.rating, 10);
   });
 
-  it.skip('should be able to make changes to the recipe', function () {
+  it('should be able to make changes to the recipe', function () {
     var chocolateChips = new Ingredient({ name: 'chocolate chips', amount: 100 });
     var flour = new Ingredient({ name: 'flour', amount: 4 });
     var sugar = new Ingredient({ name: 'sugar', amount: 3 });

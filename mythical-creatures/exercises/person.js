@@ -1,6 +1,6 @@
 class Person {
-    constructor(name) {
-        this.name = name
+    constructor(personInfo) {
+        this.name = personInfo
         this.mood = 'frightened'
     }
 }
