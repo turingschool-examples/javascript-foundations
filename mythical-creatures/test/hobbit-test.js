@@ -1,88 +1,82 @@
 var assert = require('chai').assert;
-var Hobbit = require('../exercises/hobbit');
+var {createHobbit, celebrateBirthday, getRing} = require('../exercises/hobbit');
 
 describe('Hobbit', function() {
 
-  it.skip('should be a function', function() {
-    assert.isFunction(Hobbit);
-  });
-
-  it.skip('should have a name', function() {
-    var bilbo = new Hobbit({ name: 'Bilbo' });
-    var mark = new Hobbit({ name: 'Mark' });
+  it('should make a hobbit with a name', function() {
+    var bilbo = createHobbit('Bilbo');
+    var mark = createHobbit('Mark');
 
     assert.equal(bilbo.name, 'Bilbo');
     assert.equal(mark.name, 'Mark');
   });
 
-  it.skip('should start out 0 years old', function() {
-    var bilbo = new Hobbit({ name: 'Bilbo' });
+  it('should start out 0 years old', function() {
+    var bilbo = createHobbit('Bilbo');
 
     assert.equal(bilbo.age, 0);
   });
 
-  it.skip('should gain 1 year after every birthday', function() {
-    var hobbit = new Hobbit({ name: 'Meriadoc' });
+  it('should gain 1 year after every birthday', function() {
+    var hobbit = createHobbit('Meriadoc');
 
-    hobbit.celebrateBirthday();
-    hobbit.celebrateBirthday();
-    hobbit.celebrateBirthday();
+    var olderHobbit = celebrateBirthday(hobbit);
+    var evenOlderHobbit = celebrateBirthday(hobbit);
+    var evenOlderStillHobbit = celebrateBirthday(hobbit);
 
-    assert.equal(hobbit.age, 3);
+    assert.equal(evenOlderStillHobbit.age, 3);
   });
 
   function timeTravel(num, hobbit) {
     for (var i = 0; i < num; i++) {
-      hobbit.celebrateBirthday();
+      celebrateBirthday(hobbit);
     };
+    return hobbit
   };
 
-  it.skip('should be considered a child at the age of 32', function() {
-    var hobbit = new Hobbit({ name: 'Taylor' });
+  it('should be considered a child at the age of 32', function() {
+    var hobbit = createHobbit('Taylor');
 
     // Notice that timeTravel is a function in this file (lines 34 - 38). You do not need to put a timeTravel method in your Hobbit class. Look at the timeTravel function above...
       // - What method is being invoked within timeTravel?
       // - How many times is it being invoked?
       // - What method do you need to update in your Hobbit class?
 
-    timeTravel(32, hobbit);
+    var olderHobbit = timeTravel(32, hobbit);
 
-    assert.equal(hobbit.age, 32);
-    assert.equal(hobbit.adult, false);
+    assert.equal(olderHobbit.age, 32);
+    assert.equal(olderHobbit.isAdult, false);
   });
 
-  it.skip('should be considered an adult at 33', function() {
-    var hobbit = new Hobbit({ name: 'Taylor' });
+  it('should be considered an isAdult at 33', function() {
+    var hobbit = createHobbit({ name: 'Taylor' });
 
-    timeTravel(33, hobbit);
+    var olderHobbit = timeTravel(33, hobbit);
 
-    assert.equal(hobbit.age, 33);
-    assert.equal(hobbit.adult, true);
+    assert.equal(olderHobbit.age, 33);
+    assert.equal(olderHobbit.isAdult, true);
   });
 
-  it.skip('should be considered old at the age of 101', function() {
-    var hobbit = new Hobbit({ name: 'Samwise' });
+  it('should be considered old at the age of 101', function() {
+    var hobbit = createHobbit({ name: 'Samwise' });
 
-    assert.equal(hobbit.old, false)
+    assert.equal(hobbit.isOld, false)
 
-    timeTravel(100, hobbit);
+    var olderHobbit = timeTravel(100, hobbit);
 
-    assert.equal(hobbit.old, false)
+    assert.equal(hobbit.isOld, false)
 
-    hobbit.celebrateBirthday();
+    var evenOlderHobbit = celebrateBirthday(hobbit);
 
-    assert.equal(hobbit.age, 101);
-    assert.equal(hobbit.old, true)
+    assert.equal(evenOlderHobbit.age, 101);
+    assert.equal(evenOlderHobbit.isOld, true)
   });
 
-  it.skip('should be able to get the ring if its name is Frodo', function() {
-    var hobbit1 = new Hobbit({ name: 'Frodo' });
-    var hobbit2 = new Hobbit({ name: 'Samwise' });
+  it('should be able to get the ring if its name is Frodo', function() {
+    var hobbit1 = createHobbit('Frodo');
+    var hobbit2 = createHobbit('Samwise');
 
-    assert.equal(hobbit1.getRing(), 'Here is the ring!');
-    assert.equal(hobbit1.hasRing, true);
-
-    assert.equal(hobbit2.getRing(), 'You can\'t have it!');
-    assert.equal(hobbit2.hasRing, false);
+    assert.equal(getRing(hobbit1), 'Here is the ring!');
+    assert.equal(getRing(hobbit2), 'You can\'t have it!');
   });
 });
