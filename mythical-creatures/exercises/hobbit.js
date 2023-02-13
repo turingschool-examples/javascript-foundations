@@ -3,7 +3,8 @@ function createHobbit(name) {
     name: name,
     age: 0,
     isAdult: false,
-    isOld: false
+    isOld: false,
+    acquaintances: []
   }
   return hobbit
 }
@@ -27,4 +28,22 @@ function getRing(hobbit) {
   }
 }
 
-module.exports = {createHobbit, celebrateBirthday, getRing}
+function meetPeople(hobbit, people) {
+  for (var i = 0; i < people.length; i++) {
+    hobbit.acquaintances.push(people[i])
+  }
+  return hobbit
+}
+
+function findFriends(hobbit) {
+  var friends = []
+  
+  for(var i=0; i<hobbit.acquaintances.length; i++) {
+    if (hobbit.acquaintances[i].relationship === 'friend') {
+      friends.push(hobbit.acquaintances[i].name)
+    }
+  }
+  return friends
+}
+
+module.exports = {createHobbit, celebrateBirthday, getRing, meetPeople, findFriends}

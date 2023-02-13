@@ -1,5 +1,5 @@
 var assert = require('chai').assert;
-var {createHobbit, celebrateBirthday, getRing} = require('../exercises/hobbit');
+var {createHobbit, celebrateBirthday, getRing, meetPeople, findFriends} = require('../exercises/hobbit');
 
 describe('Hobbit', function() {
 
@@ -78,5 +78,76 @@ describe('Hobbit', function() {
 
     assert.equal(getRing(hobbit1), 'Here is the ring!');
     assert.equal(getRing(hobbit2), 'You can\'t have it!');
+  });
+
+  it('should start with no acquaintances', function() {
+    var bilbo = createHobbit('Bilbo');
+
+    assert.equal(bilbo.name, 'Bilbo');
+    assert.equal(bilbo.acquaintances.length, 0);
+    assert.deepEqual(bilbo.acquaintances, []);
+  });
+
+  it('should be able to meet people', function() {
+    var people = [ {name: 'Nick', relationship: 'friend'} ];
+    var bilbo = createHobbit('Bilbo');
+
+    var socialBilbo = meetPeople(bilbo, people)
+
+    assert.equal(socialBilbo.name, 'Bilbo');
+    assert.equal(socialBilbo.acquaintances.length, 1);
+    assert.equal(socialBilbo.acquaintances[0].name, 'Nick');
+    assert.equal(socialBilbo.acquaintances[0].relationship, 'friend');
+  });
+
+  it('should be able to meet several people at once', function() {
+    var people = [ {name: 'Nick', relationship: 'friend'}, {name: 'Ben', relationship: 'enemy'} ];
+    var bilbo = createHobbit('Bilbo');
+
+    var socialBilbo = meetPeople(bilbo, people)
+
+    assert.equal(socialBilbo.name, 'Bilbo');
+    assert.equal(socialBilbo.acquaintances.length, 2);
+    assert.deepEqual(socialBilbo.acquaintances[0], {name: 'Nick', relationship: 'friend'});
+    assert.deepEqual(socialBilbo.acquaintances[1], {name: 'Ben', relationship: 'enemy'});
+    assert.deepEqual(socialBilbo.acquaintances, people);
+  });
+
+  it('should be able to meet people on multiple occasions', function() {
+    var nick = {name: 'Nick', relationship: 'friend'};
+    var ben = {name: 'Ben', relationship: 'enemy'};
+    var people = [ nick, ben ];
+    var bilbo = createHobbit('Bilbo');
+
+    var socialBilbo = meetPeople(bilbo, people)
+
+    assert.equal(socialBilbo.acquaintances.length, 2);
+    assert.deepEqual(socialBilbo.acquaintances, people);
+
+    var trisha = {name: 'Trisha', relationship: 'enemy'};
+    var dustin = {name: 'Dustin', relationship: 'friend'};
+    var morePeople = [ trisha, dustin ];
+
+    var moreSocialBilbo = meetPeople(bilbo, morePeople);
+
+    assert.equal(moreSocialBilbo.acquaintances.length, 4);
+    assert.deepEqual(moreSocialBilbo.acquaintances, [nick, ben, trisha, dustin]);
+  });
+
+  it('should be able to identify which acquaintances are friends ', function() {
+    var foster = {name: 'Foster', relationship: 'friend'};
+    var allie = {name: 'Allie', relationship: 'enemy'};
+    var garrett = {name: 'Garrett', relationship: 'enemy'};
+    var dustin = {name: 'Dustin', relationship: 'friend'};
+    
+    var bilbo = createHobbit('Bilbo');
+    var socialBilbo = meetPeople(bilbo, [foster, allie, garrett, dustin])
+
+    var friends = findFriends(bilbo)
+
+    assert.equal(friends.length, 2);
+    assert.equal(friends[0], "Foster");
+    assert.equal(friends[1], "Dustin");
+    assert.deepEqual(friends, ["Foster", "Dustin"]);
   });
 });
