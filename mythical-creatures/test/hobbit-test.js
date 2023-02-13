@@ -88,6 +88,7 @@ describe('Hobbit', function() {
     assert.deepEqual(bilbo.acquaintances, []);
   });
 
+   //Spicy
   it('should be able to meet people', function() {
     var people = [ {name: 'Nick', relationship: 'friend'} ];
     var bilbo = createHobbit('Bilbo');
