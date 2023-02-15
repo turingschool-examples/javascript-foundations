@@ -36,6 +36,14 @@ function findBatLovers(vampires) {
   return batVampires
 }
 
+function inquirePlace(locations, place) {
+  if (locations.includes(place)) {
+    return `Yes, I have spent some time in ${place}.`
+  } else {
+    return `No, I have never been to ${place}.`
+  }
+}
+
 module.exports = {
-  createVampire, drink, findBatLovers, encounterDeliciousVictim
+  createVampire, drink, findBatLovers, encounterDeliciousVictim, inquirePlace
 }

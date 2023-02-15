@@ -1,5 +1,5 @@
 var assert = require('chai').assert;
-var {createVampire, drink, findBatLovers, encounterDeliciousVictim} = require('../exercises/vampire');
+var {createVampire, drink, findBatLovers, encounterDeliciousVictim, inquirePlace} = require('../exercises/vampire');
 
 describe('Vampire', function() {
 
@@ -108,6 +108,24 @@ describe('Vampire', function() {
     assert.equal(response, `No thanks, I am too full.`);
   });
 
+  it('should say if its been to a location', function() {
+    var locations = ['Transylvania', 'Washington', 'New Orleans', 'Mystic Falls'];
+
+    var response = inquirePlace(locations, 'New Orleans');
+    var expectedResponse = "Yes, I have spent some time in New Orleans."
+
+    assert.deepEqual(response, expectedResponse);
+  });
+
+  it('should say if its not been to a location', function() {
+    var locations = ['Transylvania', 'Washington', 'New Orleans', 'Mystic Falls'];
+
+    var response = inquirePlace(locations, 'Idaho');
+    var expectedResponse = "No, I have never been to Idaho."
+
+    assert.deepEqual(response, expectedResponse);
+  });
+
   //Spicy
   it('should be able to find the vampires with bats', function() {
     var javi = createVampire('Javi');
@@ -121,5 +139,4 @@ describe('Vampire', function() {
 
     assert.deepEqual(batLovers, ['Javi', 'Brittany']);
   });
-
 });
