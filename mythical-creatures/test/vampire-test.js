@@ -18,10 +18,10 @@ describe('Vampire', function() {
 
   it('should be able to take an argument for pet', function() {
     var vampire = createVampire('Jeff', 'fox');
-    var vampyre = createVampire('David', 'armadillo');
+    var vampira = createVampire('Esme', 'armadillo');
 
     assert.equal(vampire.pet, 'fox');
-    assert.equal(vampyre.pet, 'armadillo');
+    assert.equal(vampira.pet, 'armadillo');
   });
 
   it('should be thirsty', function() {
@@ -48,62 +48,62 @@ describe('Vampire', function() {
   it('should drink 10 ounces of blood at a time', function() {
     var vampire = createVampire('Margot');
 
-    var drinkingVampire1 = drink(vampire);
+    var drankOnceVamp = drink(vampire);
 
-    assert.equal(drinkingVampire1.ouncesDrank, 10);
+    assert.equal(drankOnceVamp.ouncesDrank, 10);
 
-    var drinkingVampire2 = drink(vampire);
+    var drankTwiceVamp = drink(drankOnceVamp);
 
-    assert.equal(drinkingVampire2.ouncesDrank, 20);
+    assert.equal(drankTwiceVamp.ouncesDrank, 20);
 
-    var drinkingVampire3 = drink(vampire);
+    var drankThriceVamp = drink(drankTwiceVamp);
 
-    assert.equal(drinkingVampire3.ouncesDrank, 30);
+    assert.equal(drankThriceVamp.ouncesDrank, 30);
   });
 
   it('should no longer be thirsty after drinking 50 ounces', function() {
     var vampire = createVampire('Javi');
 
-    var drinkingVampire1 = drink(vampire);
-    var drinkingVampire2 = drink(vampire);
-    var drinkingVampire3 = drink(vampire);
-    var drinkingVampire4 = drink(vampire);
-    var drinkingVampire5 = drink(vampire);
+    var drankOnceVamp = drink(vampire);
+    var drankTwiceVamp = drink(drankOnceVamp);
+    var drankThriceVamp = drink(drankTwiceVamp);
+    var drank4xsVamp = drink(drankThriceVamp);
+    var drank5xsVamp = drink(drank4xsVamp);
 
-    assert.equal(drinkingVampire5.ouncesDrank, 50);
-    assert.equal(drinkingVampire5.thirsty, false);
+    assert.equal(drank5xsVamp.ouncesDrank, 50);
+    assert.equal(drank5xsVamp.thirsty, false);
   });
 
   it('should not drink more ounces when not thirsty', function() {
     var vampire = createVampire('Javi');
 
-    var drinkingVampire1 = drink(vampire);
-    var drinkingVampire2 = drink(vampire);
-    var drinkingVampire3 = drink(vampire);
-    var drinkingVampire4 = drink(vampire);
-    var drinkingVampire5 = drink(vampire);
+    var drankOnceVamp = drink(vampire);
+    var drankTwiceVamp = drink(drankOnceVamp);
+    var drankThriceVamp = drink(drankTwiceVamp);
+    var drank4xsVamp = drink(drankThriceVamp);
+    var drank5xsVamp = drink(drank4xsVamp);
 
-    assert.equal(drinkingVampire5.ouncesDrank, 50);
-    assert.equal(drinkingVampire5.thirsty, false);
+    assert.equal(drank5xsVamp.ouncesDrank, 50);
+    assert.equal(drank5xsVamp.thirsty, false);
 
-    var drinkingVampire5 = drink(vampire);
+    var notDrinking6xsVamp = drink(drank5xsVamp);
 
-    assert.equal(drinkingVampire5.ouncesDrank, 50);
+    assert.equal(notDrinking6xsVamp.ouncesDrank, 50);
   });
 
   it('should refuse blood from victim when not thirsty', function() {
     var vampire = createVampire('Javi');
 
-    var drinkingVampire1 = drink(vampire);
-    var drinkingVampire2 = drink(vampire);
-    var drinkingVampire3 = drink(vampire);
-    var drinkingVampire4 = drink(vampire);
-    var drinkingVampire5 = drink(vampire);
+    var drankOnceVamp = drink(vampire);
+    var drankTwiceVamp = drink(drankOnceVamp);
+    var drankThriceVamp = drink(drankTwiceVamp);
+    var drank4xsVamp = drink(drankThriceVamp);
+    var drank5xsVamp = drink(drank4xsVamp);
 
-    assert.equal(drinkingVampire5.ouncesDrank, 50);
-    assert.equal(drinkingVampire5.thirsty, false);
+    assert.equal(drank5xsVamp.ouncesDrank, 50);
+    assert.equal(drank5xsVamp.thirsty, false);
 
-    var response = encounterDeliciousVictim(vampire)
+    var response = encounterDeliciousVictim(drank5xsVamp)
 
     assert.equal(response, `No thanks, I am too full.`);
   });

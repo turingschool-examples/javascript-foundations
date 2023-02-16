@@ -3,73 +3,76 @@ var {createHobbit, celebrateBirthday, getRing, meetPeople, findFriends} = requir
 
 describe('Hobbit', function() {
 
-  it('should make a hobbit with a name', function() {
-    var bilbo = createHobbit('Bilbo');
-    var mark = createHobbit('Mark');
+  it('should make a hobbit with a name and age', function() {
+    var bilbo = createHobbit('Bilbo', 0);
+    var mark = createHobbit('Mark', 5);
 
     assert.equal(bilbo.name, 'Bilbo');
     assert.equal(mark.name, 'Mark');
+
+    assert.equal(bilbo.age, 0);
+    assert.equal(mark.age, 5);
   });
 
-  it('should start out 0 years old', function() {
+  it('should start out 0 years old if not specified', function() {
     var bilbo = createHobbit('Bilbo');
 
     assert.equal(bilbo.age, 0);
+  });
+
+  it('should return an object with defaults if nothing passed', function() {
+    var hobbit = createHobbit();
+
+    assert.equal(hobbit.name, 'unknown');
+    assert.equal(hobbit.age, 0);
   });
 
   it('should gain 1 year after every birthday', function() {
     var hobbit = createHobbit('Meriadoc');
 
     var olderHobbit = celebrateBirthday(hobbit);
-    var evenOlderHobbit = celebrateBirthday(hobbit);
-    var evenOlderStillHobbit = celebrateBirthday(hobbit);
+    var evenOlderHobbit = celebrateBirthday(olderHobbit);
+    var evenOlderStillHobbit = celebrateBirthday(evenOlderHobbit);
 
     assert.equal(evenOlderStillHobbit.age, 3);
   });
 
-  function timeTravel(num, hobbit) {
-    for (var i = 0; i < num; i++) {
-      celebrateBirthday(hobbit);
-    };
-    return hobbit
-  };
-
   it('should be considered a child at the age of 32', function() {
-    var hobbit = createHobbit('Taylor');
+    var taylor = createHobbit('Taylor', 31);
 
-    // Notice that timeTravel is a function in this file (lines 34 - 38). You do not need to put a timeTravel method in your Hobbit class. Look at the timeTravel function above...
-      // - What method is being invoked within timeTravel?
-      // - How many times is it being invoked?
-      // - What method do you need to update in your Hobbit class?
+    assert.equal(taylor.age, 31);
+    assert.equal(taylor.isAdult, false);
 
-    var olderHobbit = timeTravel(32, hobbit);
+    var olderTaylor = celebrateBirthday(taylor)
 
-    assert.equal(olderHobbit.age, 32);
-    assert.equal(olderHobbit.isAdult, false);
+    assert.equal(olderTaylor.age, 32);
+    assert.equal(olderTaylor.isAdult, false);
   });
 
-  it('should be considered an isAdult at 33', function() {
-    var hobbit = createHobbit({ name: 'Taylor' });
+  it('should be considered an adult at 33', function() {
+    var ryan = createHobbit('Ryan', 32);
 
-    var olderHobbit = timeTravel(33, hobbit);
+    var olderRyan = celebrateBirthday(ryan);
 
-    assert.equal(olderHobbit.age, 33);
-    assert.equal(olderHobbit.isAdult, true);
+    assert.equal(olderRyan.age, 33);
+    assert.equal(olderRyan.isAdult, true);
   });
 
   it('should be considered old at the age of 101', function() {
-    var hobbit = createHobbit({ name: 'Samwise' });
+    var samwise = createHobbit('Samwise', 99);
 
-    assert.equal(hobbit.isOld, false)
+    assert.equal(samwise.age, 99)
+    assert.equal(samwise.isOld, false)
 
-    var olderHobbit = timeTravel(100, hobbit);
+    var hundredYearOldSamwise = celebrateBirthday(samwise);
 
-    assert.equal(hobbit.isOld, false)
+    assert.equal(hundredYearOldSamwise.age, 100)
+    assert.equal(hundredYearOldSamwise.isOld, false)
 
-    var evenOlderHobbit = celebrateBirthday(hobbit);
+    var hundredAndOneSamwise = celebrateBirthday(hundredYearOldSamwise);
 
-    assert.equal(evenOlderHobbit.age, 101);
-    assert.equal(evenOlderHobbit.isOld, true)
+    assert.equal(hundredAndOneSamwise.age, 101);
+    assert.equal(hundredAndOneSamwise.isOld, true)
   });
 
   it('should be able to get the ring if its name is Frodo', function() {
@@ -129,7 +132,7 @@ describe('Hobbit', function() {
     var dustin = {name: 'Dustin', relationship: 'friend'};
     var morePeople = [ trisha, dustin ];
 
-    var moreSocialBilbo = meetPeople(bilbo, morePeople);
+    var moreSocialBilbo = meetPeople(socialBilbo, morePeople);
 
     assert.equal(moreSocialBilbo.acquaintances.length, 4);
     assert.deepEqual(moreSocialBilbo.acquaintances, [nick, ben, trisha, dustin]);
@@ -144,7 +147,7 @@ describe('Hobbit', function() {
     var bilbo = createHobbit('Bilbo');
     var socialBilbo = meetPeople(bilbo, [foster, allie, garrett, dustin])
 
-    var friends = findFriends(bilbo)
+    var friends = findFriends(socialBilbo)
 
     assert.equal(friends.length, 2);
     assert.equal(friends[0], "Foster");

@@ -77,20 +77,20 @@ describe('Dragon', function() {
   it('should be full after eating 3 times', function() {
     var dragon = createDragon('Lady Vox', 'Emily', 'gentle');
 
-    var fedDragon1 = eat(dragon);
+    var fedDragon = eat(dragon);
 
-    assert.equal(fedDragon1.timesEaten, 1);
-    assert.equal(fedDragon1.hungry, true);
+    assert.equal(fedDragon.timesEaten, 1);
+    assert.equal(fedDragon.hungry, true);
 
-    var fedDragon2 = eat(dragon);
+    var doubleFedDragon = eat(fedDragon);
 
-    assert.equal(fedDragon1.timesEaten, 2);
-    assert.equal(fedDragon2.hungry, true);
+    assert.equal(doubleFedDragon.timesEaten, 2);
+    assert.equal(doubleFedDragon.hungry, true);
 
-    var fedDragon3 = eat(dragon);
+    var tripleFedDragon = eat(doubleFedDragon);
 
-    assert.equal(fedDragon1.timesEaten, 3);
-    assert.equal(fedDragon3.hungry, false);
+    assert.equal(tripleFedDragon.timesEaten, 3);
+    assert.equal(tripleFedDragon.hungry, false);
   });
 
   //Spicy:

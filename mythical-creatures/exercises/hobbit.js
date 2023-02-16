@@ -1,7 +1,7 @@
-function createHobbit(name) {
+function createHobbit(name, age) {
   var hobbit = {
-    name: name,
-    age: 0,
+    name: name || 'unknown',
+    age: age || 0,
     isAdult: false,
     isOld: false,
     acquaintances: []
