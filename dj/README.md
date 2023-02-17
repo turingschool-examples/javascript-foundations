@@ -1,4 +1,4 @@
-# Dog + Person Tests
+# DJ Tests
 Original author: [Nick Teets](https://github.com/nicktu12)  
 ![dj](https://media3.giphy.com/media/108I3aT1o4WQ48/giphy.gif)  
 

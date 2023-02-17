@@ -3,12 +3,20 @@ var assert = require('chai').assert;
 
 describe('dj', function() {
     it('should be able to create songs', function() {
-       var song = createSong('Monster Mash', 'Bobby Pickett', false)
+       var song = createSong('Zombie Shuffle', 'The Creepy Crawlers')
        
-       assert.equal(song.name, 'Monster Mash');
-       assert.equal(song.artist, 'Bobby Pickett');
-       assert.equal(song.hasBeenPlayed, false);
+       assert.equal(song.name, 'Zombie Shuffle');
+       assert.equal(song.artist, 'The Creepy Crawlers');
     })
+
+    it('should not have been played by default', function() {
+      var song = createSong('Witches\' Brew Boogie', 'The Ghostly Ghouls')
+      
+      assert.equal(song.name, 'Witches\' Brew Boogie');
+      assert.equal(song.artist, 'The Ghostly Ghouls');
+      assert.equal(song.hasBeenPlayed, false);
+
+   })
 
     it('should be able to play a song', function() {
         var song = createSong('I Put A Spell On You', 'Bette Midler, Sarah Jessica Parker & Kathy Najimy', false)
@@ -17,44 +25,47 @@ describe('dj', function() {
         assert.equal(song.artist, 'Bette Midler, Sarah Jessica Parker & Kathy Najimy');
         assert.equal(song.hasBeenPlayed, false);
 
-        song.playSong();
+        var playedSong = song.playSong()
 
-        assert.equal(song.hasBeenPlayed, true);
+        assert.equal(playedSong.hasBeenPlayed, true);
      }) 
 
      it('should be able to create a playlist', function() {
-        var ghostbusters = createSong('Ghostbusters', 'Ray Parker Jr.', false);
-        var psychoKiller = createSong('Psycho Killer', 'The Talking Heads', false);
+        var skeletonSong = createSong('Skeletons in the Closet Rock', 'The Skeletal Band', false);
+        var tangoTrack = createSong('Trick or Treat Tango', 'The Spooky Cats', false);
         
-        var playlist = makePlaylist('Halloween Songs', [ghostbusters, psychoKiller]);
+        var playlist = makePlaylist('Halloween Songs', [skeletonSong, tangoTrack]);
 
         assert.equal(playlist.name, 'Halloween Songs');
-        assert.deepEqual(playlist.songs, [ghostbusters, psychoKiller])
+        assert.deepEqual(playlist.songs, [skeletonSong, tangoTrack])
      })
 
      it('should be able to add songs to a playlist', function() {
-        var superstition = createSong('Superstition', 'Stevie Wonder', false); 
+        var jingleJive = createSong('Jingle Bell Jive', 'The Dancing Elves'); 
 
-        var halloweenPlaylist = makePlaylist('Halloween Songs', [superstition]); 
+        var holidayPlaylist = makePlaylist('Holiday Songs', [jingleJive]); 
 
-        assert.equal(halloweenPlaylist.name, 'Halloween Songs');
-        assert.deepEqual(halloweenPlaylist.songs, [superstition])
+        assert.equal(holidayPlaylist.name, 'Holiday Songs');
+        assert.deepEqual(holidayPlaylist.songs, [jingleJive])
 
-        var scaryMonsters = createSong('Scary Monsters and Nice Sprites', 'Skrillex');
+        var funkyFrosty = createSong('Frosty\'s Funky Groove', 'The Snowmen Band');
 
-        halloweenPlaylist.addSong(scaryMonsters);
+        var updatedHolidayPlaylist = holidayPlaylist.addSong(funkyFrosty);
 
-        assert.deepEqual(halloweenPlaylist.songs, [superstition, scaryMonsters])
+        assert.deepEqual(updatedHolidayPlaylist.songs, [jingleJive, funkyFrosty])
      })
 
      it('should be able to play all the songs', function() {
-        var zombie = createSong('Zombie', 'The Cranberries', false); 
-        var creep = createSong('Creep', 'Radiohead', false)
+        var rockinSong = createSong('Rockin\' Around the Christmas Treehouse', 'The Yuletide Youth'); 
+        var shuffleSong = createSong('Santa\'s Sleigh Ride Shuffle', 'The Jolly Jinglesters')
+        var reggaeSong = createSong('Rudolph\'s Reggae Jam', 'The Reindeer Rhythms')
 
-        var spookySongs = makePlaylist('Spooky Songs', [zombie, creep]); 
+        var holidayPlaylist = makePlaylist('Holiday Songs', [rockinSong, shuffleSong, reggaeSong]); 
 
-        assert.equal(spookySongs.playAllSongs(), 'All songs have been played!')
-        assert.equal(zombie.hasBeenPlayed, true)
-        assert.equal(creep.hasBeenPlayed, true)
+        var updatedHolidayPlaylist = holidayPlaylist.playAllSongs() 
+
+        assert.equal(updatedHolidayPlaylist.songs[0].hasBeenPlayed, true)
+        assert.equal(updatedHolidayPlaylist.songs[1].hasBeenPlayed, true)
+        assert.equal(updatedHolidayPlaylist.songs[2].hasBeenPlayed, true)
      })
 })
