@@ -10,4 +10,4 @@ In order to be able to run these tests you need to install the dependencies at t
 
 You can run the tests from the root of this repository. When you type `pwd` in the console, the last path location should be `javascript-foundations`.
 
-Run the command `npm test dj/test/dj-test.js`. To run other tests, just replace the test file name.
+Run the command `npm test dj/dj-test.js`. To run other tests, just replace the test file name.
