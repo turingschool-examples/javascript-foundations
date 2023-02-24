@@ -25,7 +25,7 @@ describe('dj', function() {
         assert.equal(song.artist, 'Bette Midler, Sarah Jessica Parker & Kathy Najimy');
         assert.equal(song.hasBeenPlayed, false);
 
-        var playedSong = song.playSong()
+        var playedSong = playSong(song)
 
         assert.equal(playedSong.hasBeenPlayed, true);
      }) 
@@ -50,7 +50,7 @@ describe('dj', function() {
 
         var funkyFrosty = createSong('Frosty\'s Funky Groove', 'The Snowmen Band');
 
-        var updatedHolidayPlaylist = holidayPlaylist.addSong(funkyFrosty);
+        var updatedHolidayPlaylist = addSongToPlaylist(holidayPlaylist, funkyFrosty);
 
         assert.deepEqual(updatedHolidayPlaylist.songs, [jingleJive, funkyFrosty])
      })
@@ -62,7 +62,7 @@ describe('dj', function() {
 
         var holidayPlaylist = makePlaylist('Holiday Songs', [rockinSong, shuffleSong, reggaeSong]); 
 
-        var updatedHolidayPlaylist = holidayPlaylist.playAllSongs() 
+        var updatedHolidayPlaylist = playAllSongs(holidayPlaylist) 
 
         assert.equal(updatedHolidayPlaylist.songs[0].hasBeenPlayed, true)
         assert.equal(updatedHolidayPlaylist.songs[1].hasBeenPlayed, true)
