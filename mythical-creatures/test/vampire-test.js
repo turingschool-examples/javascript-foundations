@@ -1,95 +1,142 @@
 var assert = require('chai').assert;
-var Vampire = require('../exercises/vampire');
+var {createVampire, drink, findBatLovers, encounterDeliciousVictim, inquirePlace} = require('../exercises/vampire');
 
 describe('Vampire', function() {
 
-  it.skip('should be a function', function() {
-    assert.isFunction(Vampire);
-  });
-
-  it.skip('should instantiate our good friend, Vampire', function() {
-    var dracula = new Vampire();
-
-    assert.instanceOf(dracula, Vampire);
-  });
-
-  it.skip('should have a name', function() {
-    var vampire = new Vampire('Jhun');
+  it('should create a vampire', function() {
+    var vampire = createVampire('Jhun');
 
     assert.equal(vampire.name, 'Jhun');
   });
 
-  it.skip('should have a pet bat as a default', function() {
-    var vampire = new Vampire('Brittany');
+  it('should have a pet bat as a default', function() {
+    var vampire = createVampire('Brittany');
 
+    assert.equal(vampire.name, 'Brittany');
     assert.equal(vampire.pet, 'bat');
   });
 
-  it.skip('should take an argument for pet', function() {
-    var vampire = new Vampire('Jeff', 'fox');
-    var vampyre = new Vampire('David', 'armadillo');
+  it('should be able to take an argument for pet', function() {
+    var vampire = createVampire('Jeff', 'fox');
+    var vampira = createVampire('Esme', 'armadillo');
 
     assert.equal(vampire.pet, 'fox');
-    assert.equal(vampyre.pet, 'armadillo');
+    assert.equal(vampira.pet, 'armadillo');
   });
 
-  it.skip('should be thirsty', function() {
-    var vampire = new Vampire('Andy');
+  it('should be thirsty', function() {
+    var vampire = createVampire('Andy');
 
     assert.equal(vampire.thirsty, true);
   });
 
-  it.skip('should not be thirsty if vampire has drank', function() {
-    var vampire = new Vampire('Meeka');
+  it('should should at victim when thirsty', function() {
+    var vampire = createVampire('Andy');
+    var expectedResponse = 'I WANT TO SUCK YOUR BLOOD!'
 
-    vampire.drink();
+    var shout = encounterDeliciousVictim(vampire)
 
-    assert.equal(vampire.thirsty, false);
+    assert.equal(shout, expectedResponse);
   });
 
-  it.skip('should be start with no ounces of blood drank', function() {
-    var vampire = new Vampire('Bobby');
+  it('should be start with no ounces of blood drank', function() {
+    var vampire = createVampire('Bobby');
 
     assert.equal(vampire.ouncesDrank, 0);
   });
 
-  it.skip('should drink 10 ounces of blood at a time', function() {
-    var vampire = new Vampire('Margot');
+  it('should drink 10 ounces of blood at a time', function() {
+    var vampire = createVampire('Margot');
 
-    vampire.drink();
-    vampire.drink();
-    vampire.drink();
+    var drankOnceVamp = drink(vampire);
 
-    assert.equal(vampire.ouncesDrank, 30);
+    assert.equal(drankOnceVamp.ouncesDrank, 10);
+
+    var drankTwiceVamp = drink(drankOnceVamp);
+
+    assert.equal(drankTwiceVamp.ouncesDrank, 20);
+
+    var drankThriceVamp = drink(drankTwiceVamp);
+
+    assert.equal(drankThriceVamp.ouncesDrank, 30);
   });
 
-  it.skip('should be full after drinking 50 ounces', function() {
-    var vampire = new Vampire('Javi');
+  it('should no longer be thirsty after drinking 50 ounces', function() {
+    var vampire = createVampire('Javi');
 
-    vampire.drink();
+    var drankOnceVamp = drink(vampire);
+    var drankTwiceVamp = drink(drankOnceVamp);
+    var drankThriceVamp = drink(drankTwiceVamp);
+    var drank4xsVamp = drink(drankThriceVamp);
+    var drank5xsVamp = drink(drank4xsVamp);
 
-    assert.equal(vampire.ouncesDrank, 10);
+    assert.equal(drank5xsVamp.ouncesDrank, 50);
+    assert.equal(drank5xsVamp.thirsty, false);
+  });
 
-    vampire.drink();
+  it('should not drink more ounces when not thirsty', function() {
+    var vampire = createVampire('Javi');
 
-    assert.equal(vampire.ouncesDrank, 20);
+    var drankOnceVamp = drink(vampire);
+    var drankTwiceVamp = drink(drankOnceVamp);
+    var drankThriceVamp = drink(drankTwiceVamp);
+    var drank4xsVamp = drink(drankThriceVamp);
+    var drank5xsVamp = drink(drank4xsVamp);
 
-    vampire.drink();
+    assert.equal(drank5xsVamp.ouncesDrank, 50);
+    assert.equal(drank5xsVamp.thirsty, false);
 
-    assert.equal(vampire.ouncesDrank, 30);
+    var notDrinking6xsVamp = drink(drank5xsVamp);
 
-    vampire.drink();
+    assert.equal(notDrinking6xsVamp.ouncesDrank, 50);
+  });
 
-    assert.equal(vampire.ouncesDrank, 40);
+  it('should refuse blood from victim when not thirsty', function() {
+    var vampire = createVampire('Javi');
 
-    vampire.drink();
+    var drankOnceVamp = drink(vampire);
+    var drankTwiceVamp = drink(drankOnceVamp);
+    var drankThriceVamp = drink(drankTwiceVamp);
+    var drank4xsVamp = drink(drankThriceVamp);
+    var drank5xsVamp = drink(drank4xsVamp);
 
-    assert.equal(vampire.ouncesDrank, 50);
+    assert.equal(drank5xsVamp.ouncesDrank, 50);
+    assert.equal(drank5xsVamp.thirsty, false);
 
-    vampire.drink();
+    var response = encounterDeliciousVictim(drank5xsVamp)
 
-    assert.equal(vampire.ouncesDrank, 50);
+    assert.equal(response, `No thanks, I am too full.`);
+  });
 
-    assert.equal(vampire.drink(), 'I\'m too full to drink anymore!');
+  it('should say if its been to a location', function() {
+    var locations = ['Transylvania', 'Washington', 'New Orleans', 'Mystic Falls'];
+
+    var response = inquirePlace(locations, 'New Orleans');
+    var expectedResponse = "Yes, I have spent some time in New Orleans."
+
+    assert.deepEqual(response, expectedResponse);
+  });
+
+  it('should say if its not been to a location', function() {
+    var locations = ['Transylvania', 'Washington', 'New Orleans', 'Mystic Falls'];
+
+    var response = inquirePlace(locations, 'Idaho');
+    var expectedResponse = "No, I have never been to Idaho."
+
+    assert.deepEqual(response, expectedResponse);
+  });
+
+  //Spicy
+  it('should be able to find the vampires with bats', function() {
+    var javi = createVampire('Javi');
+    var brittany = createVampire('Brittany');
+    var jeff = createVampire('Jeff', 'fox');
+    var david = createVampire('David', 'armadillo');
+
+    var vampires = [javi, brittany, jeff, david];
+
+    var batLovers = findBatLovers(vampires);
+
+    assert.deepEqual(batLovers, ['Javi', 'Brittany']);
   });
 });
