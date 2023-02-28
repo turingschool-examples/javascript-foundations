@@ -11,7 +11,7 @@ describe('Ogre', () => {
   });
 
   it.skip('', function() {
-    const ogre = new Ogre({name: 'Brak'});
+    const ogre = new Ogre({name: 'Brak', abode: 'Swamp'});
     assert.equal(ogre.home, 'Swamp');
   });
 
