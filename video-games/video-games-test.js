@@ -1,4 +1,4 @@
-var { createPlayer, createLevel } = require('./video-games');
+var { createPlayer } = require('./video-games');
 var assert = require('chai').assert;
 
 describe('video games', function () {
@@ -9,14 +9,14 @@ describe('video games', function () {
       assert.equal(player1.age, 19);
    });
 
-   it.skip('should create a new player with a name and an age', function () {
+   it.skip('should create another player with a name and an age', function () {
       var player1 = createPlayer('Guitar Heroine', 25);
       var player2 = createPlayer('Time Traveler', 35);
 
       assert.equal(player1.name, 'Guitar Heroine');
       assert.equal(player1.age, 25);
       assert.equal(player2.name, 'Time Traveler');
-      assert.equal(player1.age, 35);
+      assert.equal(player2.age, 35);
    });
 
    it.skip('should create a new player with a unique moveset', function () {
@@ -24,10 +24,10 @@ describe('video games', function () {
 
       assert.equal(player1.name, 'Super Skater');
       assert.equal(player1.age, 27);
-      assert.deepEqual(['super jump', 'board smash', 'grind rail']);
+      assert.deepEqual(player1.moveset['super jump', 'board smash', 'grind rail']);
    });
 
-   it.skip('should be able to create a new level with a name and a player', function () {
+   it.skip('should be able to create a new level with a name', function () {
       var level = createLevel('Island Oasis');
 
       assert.equal(level.name, 'Island Oasis');
@@ -97,9 +97,9 @@ describe('video games', function () {
 
       var updatedLevelPlayerDefeated = defeatPlayer(level);
       assert.equal(updatedLevelPlayerDefeated.lives, 2);
-      var updatedLevelPlayerAnnihilated  = defeatPlayer(updatedLevelPlayerFell);
+      var updatedLevelPlayerAnnihilated  = defeatPlayer(updatedLevelPlayerDefeated);
       assert.equal(updatedLevelPlayerAnnihilated.lives, 1);
-      var updatedLevelPlayerDestroyed = defeatPlayer(updatedLevelPlayerFell);
+      var updatedLevelPlayerDestroyed = defeatPlayer(updatedLevelPlayerAnnihilated);
       assert.equal(updatedLevelPlayerDestroyed, 'GAME OVER');
    }); 
 });
