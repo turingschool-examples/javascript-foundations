@@ -1,61 +1,65 @@
 const assert = require('chai').assert;
-const Direwolf = require('../exercises/direwolf');
-const Stark = require('../exercises/stark');
+const { createMyDirewolf } = require('../exercises/direwolf');
+const { buildAStark } = require('../exercises/stark');
 
 describe('Direwolf', function() {
 
   it.skip('should be a function', function() {
-    assert.isFunction(Direwolf);
+    assert.isFunction(createMyDirewolf);
   });
 
-  it.skip('should instantiate our good friend, Direwolf', function() {
-    const direwolf = new Direwolf();
+  it.skip('should create our new friend, Direwolf', function() {
+    const direwolf = createMyDirewolf();
     assert.isObject(direwolf);
   });
 
   it.skip('should have a name', function() {
-    const direwolf = new Direwolf('Nymeria');
+    const direwolf = createMyDirewolf('Nymeria');
     assert.equal(direwolf.name, 'Nymeria');
   });
 
   it.skip('should have a default home of Beyond the Wall', function() {
-    const direwolf = new Direwolf('Lady');
+    const direwolf = createMyDirewolf('Lady');
 
     assert.equal(direwolf.name, 'Lady');
     assert.equal(direwolf.home, 'Beyond the Wall');
   });
 
   it.skip('should be able to have other homes', function() {
-    const direwolf = new Direwolf('Ghost', 'Winterfell');
+    const direwolf = createMyDirewolf('Ghost', 'Winterfell');
 
     assert.equal(direwolf.home, 'Winterfell');
   });
 
   it.skip('should have a default size of massive', function() {
-    const direwolf = new Direwolf('Ghost');
+    const direwolf = createMyDirewolf('Ghost');
 
     assert.equal(direwolf.size, 'Massive');
   });
 
   it.skip('should be able to have another size', function() {
-    const direwolf = new Direwolf('Shaggydog', 'Karhold', 'Smol Pupper');
+    const direwolf = createMyDirewolf('Shaggydog', 'Karhold', 'Smol Pupper');
 
-    assert.equal(direwolf.name, 'Shaggydog');
-    assert.equal(direwolf.home, 'Karhold');
-    assert.equal(direwolf.size, 'Smol Pupper');
+    assert.deepEqual(direwolf, {
+      name: 'Shaggydog',
+      home: 'Karhold',
+      size: 'Smol Pupper'
+    });
   });
 
-  it.skip('should instantiate our good friend, Stark', function() {
-    const stark = new Stark({name: 'Bran'});
+  it.skip('should build our new friend, Stark', function() {
+    const stark = buildAStark({name: 'Bran'});
 
     assert.isObject(stark);
   });
 
   it.skip('should have a name', function() {
-    const stark = new Stark({name:'Bran'});
+    const stark = buildAStark({name:'Bran'});
 
     assert.equal(stark.name, 'Bran');
   });
+
+  //!!!!!!!!!!!!!!!! start here when you get back
 
   it.skip('should have a default location of Winterfell', function() {
     const stark = new Stark({name:'Bran'});
