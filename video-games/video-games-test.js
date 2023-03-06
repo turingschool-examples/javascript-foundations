@@ -73,6 +73,20 @@ describe('video games', function () {
       assert.equal(updatedLevel.coins, 5);
    });
 
+   it.skip('should add a life when 100 coins are collected', function () {
+      var player1 = createPlayer('The Fiery Friar', 50, ['flame spin', 'fire dance', 'smoke screen']);
+      var level = createLevel('Water Temple', [player1]);
+
+      assert.equal(level.name, 'Water Temple');
+      assert.deepEqual(level.players, [player1]);
+      assert.equal(level.coins, 0);
+      assert.equal(level.lives, 3);
+
+      var updatedLevel = findCoins(level, 100);
+      assert.equal(updatedLevel.coins, 100);
+      assert.equal(level.lives, 4);
+   });
+
    it.skip('should be able to defeat the player and cost a life', function () {
       var player1 = createPlayer('Tony Thrasher', 34, ['thrash throw', 'solving mysteries', 'thrash dance']);
       var level = createLevel('Alien Outpost', [player1]);
