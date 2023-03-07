@@ -1,12 +1,12 @@
 const assert = require('chai').assert;
-const Ogre = require('../exercises/ogre');
-const Human = require('../exercises/human');
+const { describeOgre } = require('../exercises/ogre');
+// const Human = require('../exercises/human');
 
 describe('Ogre', () => {
   // Oh no! It looks like there's no text in the `it` blocks! I guess you'll have to read the tests SUPER carefully to know what the test is expecting!
 
-  it.skip('', function() {
-    const ogre = new Ogre({name:'Brak'});
+  it('', function() {
+    const ogre = describeOgre({name:'Brak'});
     assert.equal(ogre.name, 'Brak');
   });
 
