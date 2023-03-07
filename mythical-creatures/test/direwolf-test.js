@@ -1,6 +1,5 @@
 const assert = require('chai').assert;
 const { createMyDirewolf, buildAStark } = require('../exercises/direwolf');
-// const { buildAStark } = require('../exercises/stark');
 
 describe('Direwolf', function() {
 
