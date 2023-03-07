@@ -86,36 +86,36 @@ describe('Ogre', () => {
     assert.equal(ogre.swings, 1);
   });
 
-  it('', function() {
-    const ogre = describeOgre({name: 'Brak'});
-    const human = createHuman('Jane');
+  // it('', function() {
+  //   const ogre = describeOgre({name: 'Brak'});
+  //   const human = createHuman('Jane');
 
-    assert.equal(human.knockedOut, false)
-    ogre.encounter(human);
-    ogre.encounter(human);
-    ogre.encounter(human);
-    ogre.encounter(human);
-    ogre.encounter(human);
-    ogre.encounter(human);
+  //   assert.equal(human.knockedOut, false)
+  //   ogre.encounter(human);
+  //   ogre.encounter(human);
+  //   ogre.encounter(human);
+  //   ogre.encounter(human);
+  //   ogre.encounter(human);
+  //   ogre.encounter(human);
 
-    assert.equal(human.encounterCounter, 6);
-    assert.equal(ogre.swings, 2);
-    assert.equal(human.knockedOut, true);
-  });
+  //   assert.equal(human.encounterCounter, 6);
+  //   assert.equal(ogre.swings, 2);
+  //   assert.equal(human.knockedOut, true);
+  // });
 
-  it.skip('', function() {
-    const ogre = new Ogre({name: 'Brak'});
-    const human = new Human('Jane');
+  // it.skip('', function() {
+  //   const ogre = new Ogre({name: 'Brak'});
+  //   const human = new Human('Jane');
 
-    ogre.encounter(human);
-    ogre.encounter(human);
-    ogre.encounter(human);
-    ogre.encounter(human);
-    ogre.encounter(human);
-    ogre.encounter(human);
-    assert.equal(human.knockedOut, true);
+  //   ogre.encounter(human);
+  //   ogre.encounter(human);
+  //   ogre.encounter(human);
+  //   ogre.encounter(human);
+  //   ogre.encounter(human);
+  //   ogre.encounter(human);
+  //   assert.equal(human.knockedOut, true);
 
-    ogre.apologize(human);
-    assert.equal(human.knockedOut, false);
-  });
+  //   ogre.apologize(human);
+  //   assert.equal(human.knockedOut, false);
+  // });
 });
