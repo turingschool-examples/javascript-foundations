@@ -1,63 +1,109 @@
 var assert = require('chai').assert;
-var Dragon = require('../exercises/dragon');
+var { createDragon, greetRider, eat, findFireBreathers} = require('../exercises/dragon');
 
 describe('Dragon', function() {
 
-  it.skip('should be a function', function() {
-    assert.isFunction(Dragon);
+  it.skip('should be able to create a dragon with a name', function() {
+    var dragon = createDragon('Jeff');
+
+    assert.equal(dragon.name, 'Jeff');
   });
 
-  it.skip('should instantiate our good friend, Dragon', function() {
-    var smaug = new Dragon();
+  it.skip('should be able to have a different name', function() {
+    var dragon = createDragon('Louisa');
 
-    assert.instanceOf(smaug, Dragon);
-  });
-
-  it.skip('should have name', function() {
-    var dragon1 = new Dragon('Jeff');
-    var dragon2 = new Dragon('Louisa');
-
-    assert.equal(dragon1.name, 'Jeff');
-    assert.equal(dragon2.name, 'Louisa');
+    assert.equal(dragon.name, 'Louisa');
   });
 
   it.skip('should have a rider', function() {
-    var dragon = new Dragon('Saphira', 'Eragon');
+    var dragon = createDragon('Saphira', 'Eragon');
 
     assert.equal(dragon.name, 'Saphira');
     assert.equal(dragon.rider, 'Eragon');
   });
 
-  it.skip('should greet their rider', function() {
-    var dragon1 = new Dragon('Gray', 'Marley');
-    var dragon2 = new Dragon('Sky', 'Susie');
+  it.skip('should be able to have a different rider', function() {
+    var dragon = createDragon('Elliot', 'Pete');
 
-    var greeting1 = dragon1.greet();
-    var greeting2 = dragon2.greet();
+    assert.equal(dragon.name, 'Elliot');
+    assert.equal(dragon.rider, 'Pete');
+  });
+
+  it.skip('should have a temperment', function() {
+    var dragon = createDragon('Saphira', 'Eragon', 'gentle');
+
+    assert.equal(dragon.name, 'Saphira');
+    assert.equal(dragon.rider, 'Eragon');
+    assert.equal(dragon.temperment, 'gentle');
+  });
+
+  it.skip('should be able to have different temperments', function() {
+    var dragon1 = createDragon('Gray', 'Marley', 'aggressive');
+    var dragon2 = createDragon('Sky', 'Susie', 'gentle');
+
+
+    assert.equal(dragon1.name, 'Gray');
+    assert.equal(dragon1.rider, 'Marley');
+    assert.equal(dragon1.temperment, 'aggressive');
+
+    assert.equal(dragon2.name, 'Sky');
+    assert.equal(dragon2.rider, 'Susie');
+    assert.equal(dragon2.temperment, 'gentle');
+  });
+
+  it.skip('should greet their rider', function() {
+    var dragon1 = createDragon('Gray', 'Marley', 'aggressive');
+    var dragon2 = createDragon('Sky', 'Susie', 'gentle');
+
+    var greeting1 = greetRider(dragon1);
+    var greeting2 = greetRider(dragon2);
 
     assert.equal(greeting1, 'Hi, Marley!');
     assert.equal(greeting2, 'Hi, Susie!');
   });
 
+  it.skip('should start off having eaten 0 times', function() {
+    var dragon = createDragon('Mushu', 'Mulan', 'aggressive');
+
+    assert.equal(dragon.timesEaten, 0);
+  });
+
   it.skip('should start off being hungry', function() {
-    var dragon = new Dragon('Josh');
+    var dragon = createDragon('Mushu', 'Mulan', 'aggressive');
 
     assert.equal(dragon.hungry, true);
   });
 
   it.skip('should be full after eating 3 times', function() {
-    var dragon = new Dragon('Lady Vox');
+    var dragon = createDragon('Lady Vox', 'Emily', 'gentle');
 
-    dragon.eat();
+    var fedDragon = eat(dragon);
 
-    assert.equal(dragon.hungry, true);
+    assert.equal(fedDragon.timesEaten, 1);
+    assert.equal(fedDragon.hungry, true);
 
-    dragon.eat();
+    var doubleFedDragon = eat(fedDragon);
 
-    assert.equal(dragon.hungry, true);
+    assert.equal(doubleFedDragon.timesEaten, 2);
+    assert.equal(doubleFedDragon.hungry, true);
 
-    dragon.eat();
+    var tripleFedDragon = eat(doubleFedDragon);
 
-    assert.equal(dragon.hungry, false);
+    assert.equal(tripleFedDragon.timesEaten, 3);
+    assert.equal(tripleFedDragon.hungry, false);
+  });
+
+  //Spicy:
+  it.skip('should be a fireBreather if aggressive in temperment', function() {
+    var dragon1 = createDragon('Gray', 'Marley', 'aggressive');
+    var dragon2 = createDragon('Sky', 'Susie', 'gentle');
+    var dragon3 = createDragon('Mushu', 'Mulan', 'aggressive');
+    var dragon4 = createDragon('Lady Vox', 'Emily', 'gentle');
+
+    var allDragons = [dragon1, dragon2, dragon3, dragon4];
+    
+    var fireBreathers = findFireBreathers(allDragons);
+
+    assert.deepEqual(fireBreathers, [dragon1, dragon3])
   });
 });
