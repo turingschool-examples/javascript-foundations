@@ -24,11 +24,23 @@ function eat(dragon) {
     dragon.hungry = false;
   }
   return dragon;
+};
+
+// takes in an array of dragons
+// iterate through dragons temperment to find 'aggressive'
+// return new array of aggressive dragons
+function findFireBreathers(allDragons) {
+  var meanDragons = [];
+  for (var i = 0; i < allDragons.length; i++) {
+    if (allDragons[i].temperment === 'aggressive') {
+      meanDragons.push(allDragons[i]);
+    }
+  } return meanDragons;
 }
 
 module.exports = {
   createDragon, 
   greetRider, 
   eat, 
-  // findFireBreathers
+  findFireBreathers
 }
