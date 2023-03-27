@@ -2,7 +2,7 @@
 
 module.exports = {
   createDragon, 
-  // greetRider, 
+  greetRider, 
   // eat, 
   // findFireBreathers
 }
@@ -20,4 +20,18 @@ function createDragon(name, rider, temperment) {
   }
 
   return dragon;
+};
+
+// goal: write function to greet rider of dragon
+
+// input: dragon object
+// output: 'Hi, <rider>!'
+
+// steps:
+  // use dot notation to access rider key-value pair
+  // interpolate rider into greeting
+
+function greetRider(dragon) {
+  var rider = dragon.rider;
+  return `Hi, ${rider}!`;
 };
