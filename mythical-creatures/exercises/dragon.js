@@ -24,13 +24,12 @@ function eat(dragonInfo) {
 function findFireBreathers(allDragons) {
   var fireBreathers = [];
   for (var i = 0; i < allDragons.length; i++) {
-    if (dragonInfo.temperment === 'aggressive') {
+    if (allDragons[i].temperment === 'aggressive') {
       fireBreathers.push(allDragons[i]);
     }
   }
-  console.log(allDragons)
-  return fireBreathers
-}
+  return fireBreathers;
+};
 
 module.exports = {
   createDragon, 
