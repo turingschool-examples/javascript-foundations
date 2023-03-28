@@ -62,13 +62,13 @@ describe('Dragon', function() {
     assert.equal(greeting2, 'Hi, Susie!');
   });
 
-  it.skip('should start off having eaten 0 times', function() {
+  it('should start off having eaten 0 times', function() {
     var dragon = createDragon('Mushu', 'Mulan', 'aggressive');
 
     assert.equal(dragon.timesEaten, 0);
   });
 
-  it.skip('should start off being hungry', function() {
+  it('should start off being hungry', function() {
     var dragon = createDragon('Mushu', 'Mulan', 'aggressive');
 
     assert.equal(dragon.hungry, true);

@@ -16,7 +16,10 @@ function createDragon(name, rider, temperment) {
   var dragon = {
     name: name,
     rider: rider,
-    temperment: temperment
+    temperment: temperment,
+    timesEaten: 0,
+    hungry: true
+
   }
 
   return dragon;
@@ -35,3 +38,4 @@ function greetRider(dragon) {
   var rider = dragon.rider;
   return `Hi, ${rider}!`;
 };
+
