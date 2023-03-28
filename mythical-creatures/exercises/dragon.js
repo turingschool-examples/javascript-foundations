@@ -3,7 +3,7 @@
 module.exports = {
   createDragon, 
   greetRider, 
-  // eat, 
+  eat, 
   // findFireBreathers
 }
 
@@ -38,4 +38,18 @@ function greetRider(dragon) {
   var rider = dragon.rider;
   return `Hi, ${rider}!`;
 };
+
+// write function that takes in a dragon object and returns + 1 to timesEaten key-value pair and also returns true or false in hungry key value pair
+
+// input: dragon object
+// output: timesEaten++ conditional to check for number of times eaten < 3
+
+function eat(dragon) {
+  dragon.timesEaten++;
+  if (dragon.timesEaten === 3) {
+    dragon.hungry = false;
+  };
+  return dragon;
+};
+
 

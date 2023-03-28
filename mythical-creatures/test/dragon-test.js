@@ -74,7 +74,7 @@ describe('Dragon', function() {
     assert.equal(dragon.hungry, true);
   });
 
-  it.skip('should be full after eating 3 times', function() {
+  it('should be full after eating 3 times', function() {
     var dragon = createDragon('Lady Vox', 'Emily', 'gentle');
 
     var fedDragon = eat(dragon);
