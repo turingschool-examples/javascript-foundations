@@ -92,7 +92,7 @@ describe('Hobbit', function() {
   });
 
    
-  it.skip('should be able to meet people', function() {
+  it('should be able to meet people', function() {
     var people = [ {name: 'Nick', relationship: 'friend'} ];
     var bilbo = createHobbit('Bilbo');
 
@@ -104,7 +104,7 @@ describe('Hobbit', function() {
     assert.equal(socialBilbo.acquaintances[0].relationship, 'friend');
   });
 
-  it.skip('should be able to meet several people at once', function() {
+  it('should be able to meet several people at once', function() {
     var people = [ {name: 'Nick', relationship: 'friend'}, {name: 'Ben', relationship: 'enemy'} ];
     var bilbo = createHobbit('Bilbo');
 
@@ -117,7 +117,7 @@ describe('Hobbit', function() {
     assert.deepEqual(socialBilbo.acquaintances, people);
   });
 
-  it.skip('should be able to meet people on multiple occasions', function() {
+  it('should be able to meet people on multiple occasions', function() {
     var nick = {name: 'Nick', relationship: 'friend'};
     var ben = {name: 'Ben', relationship: 'enemy'};
     var people = [ nick, ben ];

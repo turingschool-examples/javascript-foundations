@@ -33,10 +33,17 @@ function getRing(hobbit) {
   }
 };
 
+function meetPeople(hobbit, people) {
+  for (var i = 0; i < people.length; i++) {
+    hobbit.acquaintances.push(people[i]);
+  }
+  return hobbit;
+};
+
 module.exports = {
   createHobbit, 
   celebrateBirthday, 
   getRing, 
-  // meetPeople, 
+  meetPeople, 
   // findFriends
 }
