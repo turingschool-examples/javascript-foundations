@@ -4,7 +4,7 @@ module.exports = {
   createDragon, 
   greetRider, 
   eat, 
-  // findFireBreathers
+  findFireBreathers
 }
 
 // goal: write a function that creates an object of dragons with name, rider, and temperment
@@ -48,8 +48,29 @@ function eat(dragon) {
   dragon.timesEaten++;
   if (dragon.timesEaten === 3) {
     dragon.hungry = false;
-  };
+  }
   return dragon;
 };
 
 
+// write a function that checks an array of objects for aggressive temperment and returns those dragons
+
+// input: array of dragon objects
+// output: dragons with aggressive temperment
+
+// steps:
+  // write variable for new dragon array
+  // iterate through each element in the array of dragons
+    // access the temperment of each dragon
+      // if temperment === aggressive, push that dragon to new array
+  // return new array of dragons
+
+function findFireBreathers(dragons) {
+  var aggressiveDragons = [];
+  for (var i = 0; i < dragons.length; i++) {
+    if (dragons[i].temperment === 'aggressive') {
+      aggressiveDragons.push(dragons[i]);
+    }
+  }
+  return aggressiveDragons;
+};
