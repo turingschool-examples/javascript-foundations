@@ -138,7 +138,7 @@ describe('Hobbit', function() {
     assert.deepEqual(moreSocialBilbo.acquaintances, [nick, ben, trisha, dustin]);
   });
 
-  it.skip('should be able to identify which acquaintances are friends ', function() {
+  it('should be able to identify which acquaintances are friends ', function() {
     var foster = {name: 'Foster', relationship: 'friend'};
     var allie = {name: 'Allie', relationship: 'enemy'};
     var garrett = {name: 'Garrett', relationship: 'enemy'};
