@@ -3,7 +3,7 @@ var {createHobbit, celebrateBirthday, getRing, meetPeople, findFriends} = requir
 
 describe('Hobbit', function() {
 
-  it.skip('should make a hobbit with a name and age', function() {
+  it('should make a hobbit with a name and age', function() {
     var bilbo = createHobbit('Bilbo', 0);
     var mark = createHobbit('Mark', 5);
 
