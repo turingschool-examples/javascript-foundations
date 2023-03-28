@@ -4,6 +4,7 @@ function createHobbit(name, age) {
     age: age ? age : 0,
     isAdult: age <= 32 ? false : true,
     isOld: age > 100 ? true : false,
+    acquaintances: [],
   } 
   return hobbit;
 }
@@ -24,12 +25,18 @@ function celebrateBirthday(hobbit) {
   return hobbit;
 };
 
-
+function getRing(hobbit) {
+  if (hobbit.name === 'Frodo') {
+    return `Here is the ring!`
+  } else {
+    return `You can't have it!`
+  }
+};
 
 module.exports = {
   createHobbit, 
   celebrateBirthday, 
-  // getRing, 
+  getRing, 
   // meetPeople, 
   // findFriends
 }
