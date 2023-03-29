@@ -3,7 +3,7 @@ var {createVampire, drink, findBatLovers, encounterDeliciousVictim, inquirePlace
 
 describe('Vampire', function() {
 
-  it.skip('should create a vampire', function() {
+  it('should create a vampire', function() {
     var vampire = createVampire('Jhun');
 
     assert.equal(vampire.name, 'Jhun');

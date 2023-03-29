@@ -1,7 +1,11 @@
-
+function createVampire(name) {
+  return vampire = {
+    name: name
+  }
+}
 
 module.exports = {
-  // createVampire, 
+  createVampire, 
   // drink, 
   // findBatLovers, 
   // encounterDeliciousVictim, 
