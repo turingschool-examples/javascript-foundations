@@ -21,7 +21,7 @@ describe('Vampire', function() {
     var vampira = createVampire('Esme', 'armadillo');
 
     assert.equal(vampire.pet, 'fox');
-    assert.equal(vampira.pet, 'armadillo');
+    assert.equal(vampire.pet, 'armadillo');
   });
 
   it.skip('should be thirsty', function() {
