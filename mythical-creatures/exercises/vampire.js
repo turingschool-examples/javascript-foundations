@@ -1,6 +1,7 @@
-function createVampire(name) {
+function createVampire(name, pet = 'bat') {
   return vampire = {
-    name: name
+    name: name,
+    pet: pet
   }
 }
 
