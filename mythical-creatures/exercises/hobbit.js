@@ -2,7 +2,7 @@
 
 module.exports = {
   createHobbit, 
-  // celebrateBirthday, 
+  celebrateBirthday, 
   // getRing, 
   // meetPeople, 
   // findFriends
@@ -16,7 +16,9 @@ module.exports = {
 function createHobbit(name, age) {
   var hobbit = {
     name: name,
-    age: age
+    age: age,
+    isAdult: false,
+    isOld: false
   }
   if (name === undefined) {
     hobbit.name = 'unknown';
@@ -24,5 +26,22 @@ function createHobbit(name, age) {
   if (age === undefined) {
     hobbit.age = 0;
   }
+  maturityLevel(hobbit);
   return hobbit;
 };
+
+function maturityLevel(hobbit) {
+  if (hobbit.age > 32) {
+    hobbit.isAdult = true;
+  } 
+  if (hobbit.age >= 101) {
+    hobbit.isOld = true;
+  }
+};
+
+function celebrateBirthday(hobbit) {
+  hobbit.age++;
+  maturityLevel(hobbit);
+  return hobbit;
+};
+
