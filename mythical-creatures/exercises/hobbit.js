@@ -3,7 +3,7 @@
 module.exports = {
   createHobbit, 
   celebrateBirthday, 
-  // getRing, 
+  getRing, 
   // meetPeople, 
   // findFriends
 }
@@ -45,3 +45,12 @@ function celebrateBirthday(hobbit) {
   return hobbit;
 };
 
+function getRing(hobbit) {
+  if (hobbit.name === 'Frodo') {
+    return 'Here is the ring!';
+  } else {
+    return 'You can\'t have it!';
+  }
+}
+
+//should start with no acquaintances

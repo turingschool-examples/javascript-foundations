@@ -75,7 +75,7 @@ describe('Hobbit', function() {
     assert.equal(hundredAndOneSamwise.isOld, true)
   });
 
-  it.skip('should be able to get the ring if its name is Frodo', function() {
+  it('should be able to get the ring if its name is Frodo', function() {
     var hobbit1 = createHobbit('Frodo');
     var hobbit2 = createHobbit('Samwise');
 
