@@ -127,7 +127,7 @@ describe('Vampire', function() {
   });
 
   //Spicy
-  it.skip('should be able to find the vampires with bats', function() {
+  it('should be able to find the vampires with bats', function() {
     var javi = createVampire('Javi');
     var brittany = createVampire('Brittany');
     var jeff = createVampire('Jeff', 'fox');
