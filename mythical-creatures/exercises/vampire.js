@@ -3,7 +3,7 @@
 module.exports = {
   createVampire, 
   drink, 
-  // findBatLovers, 
+  findBatLovers, 
   encounterDeliciousVictim, 
   inquirePlace
 }
@@ -55,4 +55,18 @@ function inquirePlace(locations, location) {
     }
   }
   return `No, I have never been to ${location}.`;
-}
+};
+
+// should be able to find the vampires with bats.
+// function has one parameter for vampire object
+  // use filter or for loop to find vampires with pet bats
+
+function findBatLovers(vampire) {
+  var batLovers = []; 
+  for (var i = 0; i < vampire.length; i++) {
+    if(vampire[i].pet === 'bat') {
+      batLovers.push(vampire[i].name);
+    }
+  }
+  return batLovers;
+};
