@@ -39,13 +39,13 @@ describe('Vampire', function() {
     assert.equal(shout, expectedResponse);
   });
 
-  it.skip('should be start with no ounces of blood drank', function() {
+  it('should be start with no ounces of blood drank', function() {
     var vampire = createVampire('Bobby');
 
     assert.equal(vampire.ouncesDrank, 0);
   });
 
-  it.skip('should drink 10 ounces of blood at a time', function() {
+  it('should drink 10 ounces of blood at a time', function() {
     var vampire = createVampire('Margot');
 
     var drankOnceVamp = drink(vampire);
@@ -61,7 +61,7 @@ describe('Vampire', function() {
     assert.equal(drankThriceVamp.ouncesDrank, 30);
   });
 
-  it.skip('should no longer be thirsty after drinking 50 ounces', function() {
+  it('should no longer be thirsty after drinking 50 ounces', function() {
     var vampire = createVampire('Javi');
 
     var drankOnceVamp = drink(vampire);
@@ -74,7 +74,7 @@ describe('Vampire', function() {
     assert.equal(drank5xsVamp.thirsty, false);
   });
 
-  it.skip('should not drink more ounces when not thirsty', function() {
+  it('should not drink more ounces when not thirsty', function() {
     var vampire = createVampire('Javi');
 
     var drankOnceVamp = drink(vampire);
@@ -91,7 +91,7 @@ describe('Vampire', function() {
     assert.equal(notDrinking6xsVamp.ouncesDrank, 50);
   });
 
-  it.skip('should refuse blood from victim when not thirsty', function() {
+  it('should refuse blood from victim when not thirsty', function() {
     var vampire = createVampire('Javi');
 
     var drankOnceVamp = drink(vampire);

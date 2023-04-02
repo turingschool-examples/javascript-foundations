@@ -2,7 +2,7 @@
 
 module.exports = {
   createVampire, 
-  // drink, 
+  drink, 
   // findBatLovers, 
   encounterDeliciousVictim, 
   // inquirePlace
@@ -15,7 +15,8 @@ function createVampire(name, pet) {
   var vampire = {
     name: name,
     pet: pet,
-    thirsty: true
+    thirsty: true,
+    ouncesDrank: 0
   }
   if (vampire.pet === undefined) {
     vampire.pet = 'bat';
@@ -29,5 +30,18 @@ function createVampire(name, pet) {
 function encounterDeliciousVictim(vampire) {
   if (vampire.thirsty === true) {
     return 'I WANT TO SUCK YOUR BLOOD!';
+  } else {
+    return 'No thanks, I am too full.'
   }
+};
+
+// create a function that adds 10 ounces to ouncesDrank key.
+function drink(vampire) {
+  if (vampire.thirsty === true) {
+  vampire.ouncesDrank = vampire.ouncesDrank + 10;
+  }
+  if (vampire.ouncesDrank >= 50) {
+    vampire.thirsty = false;
+  }
+  return vampire;
 };
