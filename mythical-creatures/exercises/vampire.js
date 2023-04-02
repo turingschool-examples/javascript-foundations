@@ -4,7 +4,7 @@ module.exports = {
   createVampire, 
   // drink, 
   // findBatLovers, 
-  // encounterDeliciousVictim, 
+  encounterDeliciousVictim, 
   // inquirePlace
 }
 
@@ -21,4 +21,13 @@ function createVampire(name, pet) {
     vampire.pet = 'bat';
   }
   return vampire;
+};
+
+// create a function that takes vampire object as argument and outputs a response
+  // if thirst === true return 'I WANT TO SUCK YOUR BLOOD!'
+
+function encounterDeliciousVictim(vampire) {
+  if (vampire.thirsty === true) {
+    return 'I WANT TO SUCK YOUR BLOOD!';
+  }
 };
