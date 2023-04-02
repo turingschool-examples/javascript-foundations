@@ -4,8 +4,8 @@ module.exports = {
   createHobbit, 
   celebrateBirthday, 
   getRing, 
-  // meetPeople, 
-  // findFriends
+  meetPeople, 
+  findFriends
 }
 
 // goal: write a function that creates an object for a Hobbit with name and age as keys. 
@@ -18,7 +18,8 @@ function createHobbit(name, age) {
     name: name,
     age: age,
     isAdult: false,
-    isOld: false
+    isOld: false,
+    acquaintances: []
   }
   if (name === undefined) {
     hobbit.name = 'unknown';
@@ -51,6 +52,21 @@ function getRing(hobbit) {
   } else {
     return 'You can\'t have it!';
   }
-}
+};
 
-//should start with no acquaintances
+function meetPeople(hobbit, people) {
+  for (var i = 0; i < people.length; i++) {
+    hobbit.acquaintances.push(people[i]);
+  }
+  return hobbit;
+};
+
+function findFriends(socialHobbit) {
+  var friends = [];
+  for (var i = 0; i < socialHobbit.acquaintances.length; i++) {
+    if (socialHobbit.acquaintances[i].relationship === "friend") {
+      friends.push(socialHobbit.acquaintances[i].name);
+    }
+  }
+  return friends;
+};
