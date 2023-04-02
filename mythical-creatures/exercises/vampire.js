@@ -5,7 +5,7 @@ module.exports = {
   drink, 
   // findBatLovers, 
   encounterDeliciousVictim, 
-  // inquirePlace
+  inquirePlace
 }
 
 
@@ -45,3 +45,14 @@ function drink(vampire) {
   }
   return vampire;
 };
+
+// create a function that takes in an array of location and a locations and if the location === something in the array, return a statement
+
+function inquirePlace(locations, location) {
+  for (var i = 0; i < locations.length; i++) {
+    if (locations[i] === location) {
+      return `Yes, I have spent some time in ${locations[i]}.`;
+    }
+  }
+  return `No, I have never been to ${location}.`;
+}
