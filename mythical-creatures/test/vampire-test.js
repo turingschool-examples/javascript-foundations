@@ -108,7 +108,7 @@ describe('Vampire', function() {
     assert.equal(response, `No thanks, I am too full.`);
   });
 
-  it.skip('should say if its been to a location', function() {
+  it('should say if its been to a location', function() {
     var locations = ['Transylvania', 'Washington', 'New Orleans', 'Mystic Falls'];
 
     var response = inquirePlace(locations, 'New Orleans');

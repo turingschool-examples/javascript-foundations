@@ -1,9 +1,10 @@
-function createVampire(name, pet = 'bat', thirsty = true, ouncesDrank  = 0) {
+function createVampire(name, pet = 'bat', thirsty = true, ouncesDrank  = 0, locations) {
   return vampire = {
     name: name,
     pet: pet,
     thirsty: thirsty,
-    ouncesDrank: ouncesDrank
+    ouncesDrank: ouncesDrank,
+    locations: locations
   }
 }
 
@@ -17,14 +18,20 @@ function encounterDeliciousVictim(vampire) {
 
 function drink(vampire) {
   if (vampire.ouncesDrank >= 50) {
-    vampire.thirsty = false
+    vampire.thirsty = false;
   } else if (vampire.ouncesDrank >= 40) {
     vampire.ouncesDrank += 10;
-    vampire.thirsty = false
+    vampire.thirsty = false;
   } else {
     vampire.ouncesDrank += 10;
   }
-  return vampire
+  return vampire;
+}
+
+function inquirePlace(locations, location) {
+  if (locations.includes(location)) {
+    return `Yes, I have spent some time in ${location}.`;
+  }
 }
 
 module.exports = {
@@ -32,5 +39,5 @@ module.exports = {
   drink, 
   // findBatLovers, 
   encounterDeliciousVictim, 
-  // inquirePlace
+  inquirePlace
 }
