@@ -1,9 +1,9 @@
-function createVampire(name, pet = 'bat', thirsty = true, ouncesDrank) {
+function createVampire(name, pet = 'bat', thirsty = true, ouncesDrank  = 0) {
   return vampire = {
     name: name,
     pet: pet,
     thirsty: thirsty,
-    ouncesDrank: 0
+    ouncesDrank: ouncesDrank
   }
 }
 
@@ -15,6 +15,9 @@ function encounterDeliciousVictim(vampire) {
 
 function drink(vampire) {
   vampire.ouncesDrank += 10;
+  if (vampire.ouncesDrank >= 50) {
+    vampire.thirsty = false
+  }
   return vampire
 }
 
