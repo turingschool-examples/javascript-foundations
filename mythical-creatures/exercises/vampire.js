@@ -1,8 +1,9 @@
-function createVampire(name, pet = 'bat', thirsty = true) {
+function createVampire(name, pet = 'bat', thirsty = true, ouncesDrank) {
   return vampire = {
     name: name,
     pet: pet,
-    thirsty: thirsty
+    thirsty: thirsty,
+    ouncesDrank: 0
   }
 }
 
