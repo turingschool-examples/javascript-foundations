@@ -30,7 +30,7 @@ describe('Vampire', function() {
     assert.equal(vampire.thirsty, true);
   });
 
-  it.skip('should should at victim when thirsty', function() {
+  it('should shout at victim when thirsty', function() {
     var vampire = createVampire('Andy');
     var expectedResponse = 'I WANT TO SUCK YOUR BLOOD!'
 
