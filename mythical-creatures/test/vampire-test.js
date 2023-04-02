@@ -91,7 +91,7 @@ describe('Vampire', function() {
     assert.equal(notDrinking6xsVamp.ouncesDrank, 50);
   });
 
-  it.skip('should refuse blood from victim when not thirsty', function() {
+  it('should refuse blood from victim when not thirsty', function() {
     var vampire = createVampire('Javi');
 
     var drankOnceVamp = drink(vampire);
