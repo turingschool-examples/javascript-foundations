@@ -61,7 +61,7 @@ describe('Order', function() {
     var meal2 = createMeal('Sombra Shroom Griddled Tacos', ['crema'], 3);
     var meal3 = createMeal('The Situation Gordita', ["cilantro", "onion"], 3);
     var meals = [meal1, meal2, meal3];
-    var order = createOrder({ name: 3, meals: meals });
+    var order = createOrder({ tableNumber: 3, meals: meals });
 
     assert.deepEqual(order.completedMeals, []);
   });
@@ -88,7 +88,7 @@ describe('Order', function() {
     var meal2 = createMeal('Sombra Shroom Griddled Tacos', ['crema'], 3);
     var meal3 = createMeal('The Situation Gordita', ['cilantro', 'onion'], 5);
     var meals = [meal1, meal2, meal3];
-    var order = createOrder({ name: 3, meals: meals });
+    var order = createOrder({ tableNumber: 3, meals: meals });
 
     var updatedOrder3 = cookMeal(order,meal3);
     assert.deepEqual(updatedOrder3.completedMeals.length, 0);
