@@ -16,9 +16,27 @@ function createLevel(name, players) {
     }
     return level;
 }
-console.log(createLevel('Island Oasis'))
+
+function findCoins(level, coinNum) {
+    level.coins += coinNum;
+    if (level.coins === 100){
+        level.lives += 1;
+    }
+    return level;
+}
+
+function defeatPlayer(level) {
+    level.lives -= 1;
+    if (level.lives === 0) {
+        return 'GAME OVER'
+    } else {
+        return level;
+    }
+}
 
 module.exports = {
     createPlayer,
-    createLevel
+    createLevel,
+    findCoins,
+    defeatPlayer
  };
