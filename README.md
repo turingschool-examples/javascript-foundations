@@ -1,6 +1,6 @@
 # JavaScript Foundations
 
-Each exercise emphasizes the fundamentals of object oriented programming in JavaScript.
+Each exercise emphasizes the fundamentals of functional programming in JavaScript.
 
 ## Installation Steps
 
