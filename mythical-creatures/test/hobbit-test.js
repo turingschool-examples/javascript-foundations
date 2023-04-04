@@ -75,7 +75,7 @@ describe('Hobbit', function() {
     assert.equal(hundredAndOneSamwise.isOld, true)
   });
 
-  it.skip('should be able to get the ring if its name is Frodo', function() {
+  it('should be able to get the ring if its name is Frodo', function() {
     var hobbit1 = createHobbit('Frodo');
     var hobbit2 = createHobbit('Samwise');
 
@@ -83,7 +83,7 @@ describe('Hobbit', function() {
     assert.equal(getRing(hobbit2), 'You can\'t have it!');
   });
 
-  it.skip('should start with no acquaintances', function() {
+  it('should start with no acquaintances', function() {
     var bilbo = createHobbit('Bilbo');
 
     assert.equal(bilbo.name, 'Bilbo');
@@ -92,7 +92,7 @@ describe('Hobbit', function() {
   });
 
    //Spicy
-  it.skip('should be able to meet people', function() {
+  it('should be able to meet people', function() {
     var people = [ {name: 'Nick', relationship: 'friend'} ];
     var bilbo = createHobbit('Bilbo');
 
@@ -104,7 +104,7 @@ describe('Hobbit', function() {
     assert.equal(socialBilbo.acquaintances[0].relationship, 'friend');
   });
 
-  it.skip('should be able to meet several people at once', function() {
+  it('should be able to meet several people at once', function() {
     var people = [ {name: 'Nick', relationship: 'friend'}, {name: 'Ben', relationship: 'enemy'} ];
     var bilbo = createHobbit('Bilbo');
 
@@ -117,7 +117,7 @@ describe('Hobbit', function() {
     assert.deepEqual(socialBilbo.acquaintances, people);
   });
 
-  it.skip('should be able to meet people on multiple occasions', function() {
+  it('should be able to meet people on multiple occasions', function() {
     var nick = {name: 'Nick', relationship: 'friend'};
     var ben = {name: 'Ben', relationship: 'enemy'};
     var people = [ nick, ben ];
@@ -138,7 +138,7 @@ describe('Hobbit', function() {
     assert.deepEqual(moreSocialBilbo.acquaintances, [nick, ben, trisha, dustin]);
   });
 
-  it.skip('should be able to identify which acquaintances are friends ', function() {
+  it('should be able to identify which acquaintances are friends ', function() {
     var foster = {name: 'Foster', relationship: 'friend'};
     var allie = {name: 'Allie', relationship: 'enemy'};
     var garrett = {name: 'Garrett', relationship: 'enemy'};
