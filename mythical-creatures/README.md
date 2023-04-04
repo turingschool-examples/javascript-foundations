@@ -14,7 +14,7 @@ Run the command `npm test mythical-creatures/test/dragon-test.js`. To run other 
 
 - [x] `dragon`
 - [x] `vampire`
-- [ ] `hobbit`
+- [x] `hobbit`
 
 ### Extra Challenge: Make a New Creature!
 
