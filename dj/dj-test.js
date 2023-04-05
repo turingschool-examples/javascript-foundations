@@ -2,14 +2,14 @@ var { createSong } = require('./dj');
 var assert = require('chai').assert;
 
 describe('dj', function() {
-    it.skip('should be able to create songs', function() {
+    it('should be able to create songs', function() {
        var song = createSong('Zombie Shuffle', 'The Creepy Crawlers')
        
        assert.equal(song.name, 'Zombie Shuffle');
        assert.equal(song.artist, 'The Creepy Crawlers');
     })
 
-    it.skip('should not have been played by default', function() {
+    it('should not have been played by default', function() {
       var song = createSong('Witches\' Brew Boogie', 'The Ghostly Ghouls')
       
       assert.equal(song.name, 'Witches\' Brew Boogie');
@@ -18,7 +18,7 @@ describe('dj', function() {
 
    })
 
-    it.skip('should be able to play a song', function() {
+    it('should be able to play a song', function() {
         var song = createSong('I Put A Spell On You', 'Bette Midler, Sarah Jessica Parker & Kathy Najimy', false)
         
         assert.equal(song.name, 'I Put A Spell On You');
