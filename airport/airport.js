@@ -12,12 +12,14 @@ function welcomeGuests(airport) {
 
 function landPlanes(airport, planesLanded) {
   airport.availableGates -= planesLanded;
-  var overflow = airport.availableGates
+  
+
   if (airport.availableGates > 0) {
     return `Success! Current availability is ${airport.availableGates}.`;
   } else {
+    var overflow = -airport.availableGates
     airport.availableGates = 0;
-    return `Oh no! Not enough gates available. Current overflow is ${-overflow}.`;
+    return `Oh no! Not enough gates available. Current overflow is ${overflow}.`;
   }
 }
 
