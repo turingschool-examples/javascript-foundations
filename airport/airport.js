@@ -21,8 +21,8 @@ function landPlanes(airport, planesLandedCt) {
   }
 }
 
-function checkAirlineLocations(airport, airline) {
-
+function checkAirlineLocations(allAirport, airline) {
+  // 
 }
 
 module.exports = { 
