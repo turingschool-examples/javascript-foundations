@@ -46,6 +46,7 @@ Completing all of these test suites is not necessary, but you should be working 
 - [ ] ✈️ [Airport](./airport)
 - [ ] 🎧 [DJ](./dj)
 - [ ] 🍔 [Favorite Foods](./favorite-foods)
+- [ ] 🧶 [Crafting](./crafting/)
 - [ ] 🎮 [Video Games](./video-games/)
 - [ ] 🎂 [Birthdays](./birthdays)
 - [ ] 🗓 [Calendar](./calendar/)
