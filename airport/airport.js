@@ -9,7 +9,7 @@ function createAirport(name, airlines, availableGates) {
 
 function welcomeGuests(airport) {
   return `Welcome to ${airport.name}!`
-}
+};
 
 function landPlanes(airport, planesLandedCt) {
   airport.availableGates -= planesLandedCt;
@@ -19,11 +19,17 @@ function landPlanes(airport, planesLandedCt) {
     airport.availableGates = 0;
     return `Oh no! Not enough gates available. Current overflow is 1.`
   }
-}
+};
 
-function checkAirlineLocations(allAirport, airline) {
-  // 
-}
+function checkAirlineLocations(allAirports, airline) {
+  var flightLocations = [];
+  for (var i = 0; i < allAirports.length; i++) {
+    if (allAirports[i].airlines.includes(airline)) {
+      flightLocations.push(allAirports[i].name)
+    }
+  }
+  return flightLocations;
+};
 
 module.exports = { 
   createAirport, 
