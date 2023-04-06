@@ -2,13 +2,13 @@ var assert = require('chai').assert;
 var { createBarber, giveCompliment, cutHair, listStyles } = require('./barber');
 
 describe('Barber', function() {
-  it.skip('should create a barber with a name', function() {
+  it('should create a barber with a name', function() {
     var sam = createBarber('Sam');
 
     assert.equal(sam.name, 'Sam');
   })
 
-  it.skip('should be able to have earnings and known haircuts', function() {
+  it('should be able to have earnings and known haircuts', function() {
     var cut1 = { style: 'mohawk', hairLength: 'short', price: 11.00 };
     var cut2 = { style: 'side part', hairLength: 'medium', price: 12.00 };
 
@@ -19,7 +19,7 @@ describe('Barber', function() {
     assert.deepEqual(erin.haircuts, [cut1, cut2]);
   });
 
-  it.skip('should default to no earnings and no haircuts if none provided', function() {
+  it('should default to no earnings and no haircuts if none provided', function() {
     var buzzCut = { style: 'buzz', hairLength: 'short', price: 8.00 };
     var nick = createBarber('Nick', 8.00, [buzzCut]);
 
@@ -32,7 +32,7 @@ describe('Barber', function() {
     assert.deepEqual(pam.haircuts, []);
   });
 
-  it.skip('should be able to offer a compliment', function() {
+  it('should be able to offer a compliment', function() {
     var mohawkCut = { style: 'mohawk', hairLength: 'short', price: 11.00 };
     var buzzCut = { style: 'buzz', hairLength: 'short', price: 8.00 };
 
