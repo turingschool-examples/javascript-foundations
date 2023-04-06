@@ -20,12 +20,31 @@ function orderFood(dish) {
     return dish;
 }
 
+    // iterator method:
+// function createShoppingList(dishes) {
+//     var shoppingList = [];
+//     for (var i = 0; i < dishes.length; i++) {
+//         shoppingList.push(dishes[i].ingredients);
+//     }
+//     return shoppingList.flat();
+// }
+
 function createShoppingList(dishes) {
-    var shoppingList = [];
+    var nestedList = [];
     for (var i = 0; i < dishes.length; i++) {
-        shoppingList.push(dishes[i].ingredients);
+        nestedList.push(dishes[i].ingredients)
+        }
+        
+    var shoppingList = [];
+    for (var i = 0; i < nestedList.length; i++) {
+        if (Array.isArray(nestedList[i])) {
+            for (var j = 0; j < nestedList[i].length; j++) {
+                shoppingList.push(nestedList[i][j])
+            }
+        }
     }
-    return shoppingList.flat();
+
+    return shoppingList;
 }
 
 module.exports = { 
