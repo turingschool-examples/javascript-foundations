@@ -1,4 +1,4 @@
-var { createSong } = require('./dj');
+var { createSong, playSong } = require('./dj');
 var assert = require('chai').assert;
 
 describe('dj', function() {
@@ -16,7 +16,7 @@ describe('dj', function() {
       assert.equal(song.artist, 'The Ghostly Ghouls');
       assert.equal(song.hasBeenPlayed, false);
 
-   })
+      })
 
     it('should be able to play a song', function() {
         var song = createSong('I Put A Spell On You', 'Bette Midler, Sarah Jessica Parker & Kathy Najimy', false)
