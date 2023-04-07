@@ -45,7 +45,7 @@ describe('Barber', function() {
     assert.equal(buzzCompliment, 'This buzz looks great!');
   });
 
-  it.skip('should be able to cut hair', function() {
+  it('should be able to cut hair', function() {
     var matt = createBarber('Matt');
 
     var mohawkCut = { style: 'mohawk', hairLength: 'short', price: 11.00 };

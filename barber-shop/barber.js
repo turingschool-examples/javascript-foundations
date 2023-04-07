@@ -7,11 +7,17 @@ function createBarber(name, earnings, haircuts) {
     return barber;
 }
 
-function giveCompliment(cutType) {
+function giveCompliment(hairStyle) {
+    return `This ${hairStyle.style} looks great!`;
+}
+
+function cutHair(customer, hairStyle) {
+    var haircuts = [];
     
 }
 
 module.exports = {  
     createBarber,
-    giveCompliment
+    giveCompliment,
+    cutHair
 };
