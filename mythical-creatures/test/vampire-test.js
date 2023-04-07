@@ -30,7 +30,7 @@ describe('Vampire', function() {
     assert.equal(vampire.thirsty, true);
   });
 
-  it.skip('should should at victim when thirsty', function() {
+  it.skip('should shout at victim when thirsty', function() {
     var vampire = createVampire('Andy');
     var expectedResponse = 'I WANT TO SUCK YOUR BLOOD!'
 
@@ -40,9 +40,7 @@ describe('Vampire', function() {
   });
 
   it.skip('should be start with no ounces of blood drank', function() {
-    var vampire = createVampire('Bobby');
-
-    assert.equal(vampire.ouncesDrank, 0);
+    assert.equal(createVampire('Bobby').ouncesDrank, 0);
   });
 
   it.skip('should drink 10 ounces of blood at a time', function() {
@@ -103,9 +101,7 @@ describe('Vampire', function() {
     assert.equal(drank5xsVamp.ouncesDrank, 50);
     assert.equal(drank5xsVamp.thirsty, false);
 
-    var response = encounterDeliciousVictim(drank5xsVamp)
-
-    assert.equal(response, `No thanks, I am too full.`);
+    assert.equal(encounterDeliciousVictim(drank5xsVamp), `No thanks, I am too full.`);
   });
 
   it.skip('should say if its been to a location', function() {
@@ -133,9 +129,7 @@ describe('Vampire', function() {
     var jeff = createVampire('Jeff', 'fox');
     var david = createVampire('David', 'armadillo');
 
-    var vampires = [javi, brittany, jeff, david];
-
-    var batLovers = findBatLovers(vampires);
+    var batLovers = findBatLovers([javi, brittany, jeff, david]);
 
     assert.deepEqual(batLovers, ['Javi', 'Brittany']);
   });
