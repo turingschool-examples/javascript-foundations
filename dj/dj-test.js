@@ -1,4 +1,4 @@
-var { createSong } = require('./dj');
+var { createSong, playSong, makePlaylist, addSongToPlaylist, playAllSongs } = require('./dj');
 var assert = require('chai').assert;
 
 describe('dj', function() {
