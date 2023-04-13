@@ -1,5 +1,5 @@
 var assert = require('chai').assert;
-var {createMeal, getMade, createOrder, cookMeal, listOrders, announceMeal} = require('./meal');
+var {createMeal, getMade, createOrder, cookMeal, listOrders, announceMeal, listSpecialRequests} = require('./meal');
 
 describe('Meal', function() {
 
@@ -95,7 +95,7 @@ describe('Order', function() {
     assert.deepEqual(updatedOrder3.completedMeals.length, 0);
   });
 
-  it.skip('should be able to list all special requests', function() {
+  it.skip('should be able to list all orders', function() {
     var meal1 = createMeal('Pico de Gallo Quesadillas', ['to go'], 3);
     var meal2 = createMeal('Sombra Shroom Griddled Tacos', ['crema on the side'], 3);
     var meal3 = createMeal('The Situation Gordita', ['add cilantro', 'no onion'], 3);
@@ -105,6 +105,16 @@ describe('Order', function() {
     assert.equal(orderNames.length, 3);
     assert.deepEqual(orderNames, ['Pico de Gallo Quesadillas','Sombra Shroom Griddled Tacos','The Situation Gordita']);
   });
+
+  it.skip('should be able to list all special requests', function() {
+    var meal1 = createMeal('Pico de Gallo Quesadillas', ['to go'], 3);
+    var meal2 = createMeal('Sombra Shroom Griddled Tacos', ['crema on the side'], 3);
+    var meal3 = createMeal('The Situation Gordita', ['add cilantro', 'no onion'], 3);
+    var meals = [meal1, meal2, meal3];
+    var order = createOrder({ name: 'Table 3', meals: meals });
+    var specialRequests = listSpecialRequests(order)
+    assert.equal(specialRequests.length, 4);
+    assert.deepEqual(specialRequests, ['to go', 'crema on the side', 'add cilantro', 'no onion']);
 });
 
 
