@@ -2,7 +2,7 @@ var assert = require('chai').assert;
 var { createBirthday, celebrateBirthday, countBirthdays } = require('./birthdays');
 
 describe('Birthdays', function() {
-  it.skip('should create birthdays', function() {
+  it('should create birthdays', function() {
     var leahBirthday = createBirthday('Leah', 2, 10);
     var christyBirthday = createBirthday('Christy', 3, 8);
 
@@ -15,7 +15,7 @@ describe('Birthdays', function() {
     assert.deepEqual(christyBirthday.day, 8);
   });
 
-  it.skip('should celebrate birthdays', function() {
+  it('should celebrate birthdays', function() {
     var alexBirthday = createBirthday('Alex', 5, 19);
 
     var celebrateAlex = celebrateBirthday(alexBirthday);
@@ -29,7 +29,7 @@ describe('Birthdays', function() {
     assert.equal(celebrateHeather, 'Today is 6/29! Happy birthday, Heather!');
   })
 
-  it.skip('should count how many birthdays are in a given month', function() {
+  it('should count how many birthdays are in a given month', function() {
     var leahBirthday = createBirthday('Leah', 2, 10);
     var christyBirthday = createBirthday('Christy', 3, 8);
     var alexBirthday = createBirthday('Alex', 5, 19);
