@@ -3,7 +3,7 @@ var {createHobbit, celebrateBirthday, getRing, meetPeople, findFriends} = requir
 
 describe('Hobbit', function() {
 
-  it.skip('should make a hobbit with a name and age', function() {
+  it('should make a hobbit with a name and age', function() {
     var bilbo = createHobbit('Bilbo', 0);
     var mark = createHobbit('Mark', 5);
 
@@ -14,20 +14,20 @@ describe('Hobbit', function() {
     assert.equal(mark.age, 5);
   });
 
-  it.skip('should start out 0 years old if not specified', function() {
+  it('should start out 0 years old if not specified', function() {
     var bilbo = createHobbit('Bilbo');
 
     assert.equal(bilbo.age, 0);
   });
 
-  it.skip('should return an object with defaults if nothing passed', function() {
+  it('should return an object with defaults if nothing passed', function() {
     var hobbit = createHobbit();
 
     assert.equal(hobbit.name, 'unknown');
     assert.equal(hobbit.age, 0);
   });
 
-  it.skip('should gain 1 year after every birthday', function() {
+  it('should gain 1 year after every birthday', function() {
     var hobbit = createHobbit('Meriadoc');
 
     var olderHobbit = celebrateBirthday(hobbit);
@@ -37,7 +37,7 @@ describe('Hobbit', function() {
     assert.equal(evenOlderStillHobbit.age, 3);
   });
 
-  it.skip('should be considered a child at the age of 32', function() {
+  it('should be considered a child at the age of 32', function() {
     var taylor = createHobbit('Taylor', 31);
 
     assert.equal(taylor.age, 31);
@@ -49,7 +49,7 @@ describe('Hobbit', function() {
     assert.equal(olderTaylor.isAdult, false);
   });
 
-  it.skip('should be considered an adult at 33', function() {
+  it('should be considered an adult at 33', function() {
     var ryan = createHobbit('Ryan', 32);
 
     var olderRyan = celebrateBirthday(ryan);
@@ -58,7 +58,7 @@ describe('Hobbit', function() {
     assert.equal(olderRyan.isAdult, true);
   });
 
-  it.skip('should be considered old at the age of 101', function() {
+  it('should be considered old at the age of 101', function() {
     var samwise = createHobbit('Samwise', 99);
 
     assert.equal(samwise.age, 99)
@@ -75,7 +75,7 @@ describe('Hobbit', function() {
     assert.equal(hundredAndOneSamwise.isOld, true)
   });
 
-  it.skip('should be able to get the ring if its name is Frodo', function() {
+  it('should be able to get the ring if its name is Frodo', function() {
     var hobbit1 = createHobbit('Frodo');
     var hobbit2 = createHobbit('Samwise');
 
@@ -83,7 +83,7 @@ describe('Hobbit', function() {
     assert.equal(getRing(hobbit2), 'You can\'t have it!');
   });
 
-  it.skip('should start with no acquaintances', function() {
+  it('should start with no acquaintances', function() {
     var bilbo = createHobbit('Bilbo');
 
     assert.equal(bilbo.name, 'Bilbo');
@@ -92,7 +92,7 @@ describe('Hobbit', function() {
   });
 
    //Spicy
-  it.skip('should be able to meet people', function() {
+  it('should be able to meet people', function() {
     var people = [ {name: 'Nick', relationship: 'friend'} ];
     var bilbo = createHobbit('Bilbo');
 
@@ -104,7 +104,7 @@ describe('Hobbit', function() {
     assert.equal(socialBilbo.acquaintances[0].relationship, 'friend');
   });
 
-  it.skip('should be able to meet several people at once', function() {
+  it('should be able to meet several people at once', function() {
     var people = [ {name: 'Nick', relationship: 'friend'}, {name: 'Ben', relationship: 'enemy'} ];
     var bilbo = createHobbit('Bilbo');
 
@@ -117,7 +117,7 @@ describe('Hobbit', function() {
     assert.deepEqual(socialBilbo.acquaintances, people);
   });
 
-  it.skip('should be able to meet people on multiple occasions', function() {
+  it('should be able to meet people on multiple occasions', function() {
     var nick = {name: 'Nick', relationship: 'friend'};
     var ben = {name: 'Ben', relationship: 'enemy'};
     var people = [ nick, ben ];
@@ -138,7 +138,7 @@ describe('Hobbit', function() {
     assert.deepEqual(moreSocialBilbo.acquaintances, [nick, ben, trisha, dustin]);
   });
 
-  it.skip('should be able to identify which acquaintances are friends ', function() {
+  it('should be able to identify which acquaintances are friends ', function() {
     var foster = {name: 'Foster', relationship: 'friend'};
     var allie = {name: 'Allie', relationship: 'enemy'};
     var garrett = {name: 'Garrett', relationship: 'enemy'};
