@@ -11,7 +11,7 @@ function giveCompliment(hairStyle) {
     return `This ${hairStyle.style} looks great!`;
 }
 
-function cutHair(customer, hairStyle) {
+function cutHair(barber, hairStyle) {
     var haircuts = [];
     
 }
