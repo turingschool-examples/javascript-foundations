@@ -3,7 +3,7 @@ var { createItemStock, collectChange, makePurchase } = require('./index')
 
 describe('dollar store vending machine functions', function() {
   describe('createItemStock', function() {
-    it.skip('can collect the details of a stocked item', function() {
+    it('can collect the details of a stocked item', function() {
       const name = 'chips'
       const quantity = 10
       const price = 1.25
@@ -18,7 +18,7 @@ describe('dollar store vending machine functions', function() {
       assert.deepEqual(itemStock, expectedResult)
     })
 
-    it.skip('should return an item with defaults if nothing is passed', function() {
+    it('should return an item with defaults if nothing is passed', function() {
       const expectedResult = { 
         name: 'unknown', 
         quantity: 0, 
@@ -31,7 +31,7 @@ describe('dollar store vending machine functions', function() {
   })
 
   describe('makePurchase', function() {
-    it.skip('does not allow a purchase if given less than price', function() {
+    it('does not allow a purchase if given less than price', function() {
       const selectedItem = createItemStock('chips', 2, 2.00)
       const moneyForPurchase = 0.35
       const expectedResult = 'Sorry, you need at least $2 to make that purchase'
@@ -41,7 +41,7 @@ describe('dollar store vending machine functions', function() {
       assert.equal(transactionResult, expectedResult)
     })
 
-    it.skip('does not allow a purchase if given less than different price', function() {
+    it('does not allow a purchase if given less than different price', function() {
       const selectedItem = createItemStock('soda', 2, 1.00)
       const moneyForPurchase = 0.35
       const expectedResult = 'Sorry, you need at least $1 to make that purchase'
@@ -51,7 +51,7 @@ describe('dollar store vending machine functions', function() {
       assert.equal(transactionResult, expectedResult)
     })
 
-    it.skip('does not allow a purchase if no items of that type are available', function() {
+    it('does not allow a purchase if no items of that type are available', function() {
       const selectedItem = createItemStock('chips', 0, 2.00)
       const moneyForPurchase = 2.00
       const expectedResult = 'Sorry, there are none left'
@@ -61,7 +61,7 @@ describe('dollar store vending machine functions', function() {
       assert.equal(transactionResult, expectedResult)
     })
 
-    it.skip('allows the transaction if successful', function() {
+    it('allows the transaction if successful', function() {
       const selectedItem = createItemStock('chips', 1, 2.00)
       const moneyForPurchase = 2.00
       const expectedResult = 'Here are your chips'
@@ -73,7 +73,7 @@ describe('dollar store vending machine functions', function() {
       assert.deepEqual(transactionResult, expectedResult)
     })
 
-    it.skip('allows a different transaction if successful', function() {
+    it('allows a different transaction if successful', function() {
       const selectedItem = createItemStock('skittles', 1, 1.00)
       const moneyForPurchase = 1.00
       const expectedResult = 'Here are your skittles'
@@ -87,7 +87,7 @@ describe('dollar store vending machine functions', function() {
   })
 
   describe('collectChange', function() {
-    it.skip('can calculate the total of a single coin', function() {
+    it('can calculate the total of a single coin', function() {
       const looseChange = [0.25]
       const expectedTotal = 0.25
 
@@ -96,7 +96,7 @@ describe('dollar store vending machine functions', function() {
       assert.deepEqual(total, expectedTotal)
     })
 
-    it.skip('can calculate the total of two coins', function() {
+    it('can calculate the total of two coins', function() {
       const looseChange = [0.25, 0.10]
       const expectedTotal = 0.35
 
@@ -105,7 +105,7 @@ describe('dollar store vending machine functions', function() {
       assert.deepEqual(total, expectedTotal)
     })
 
-    it.skip('can calculate the total of many coins', function() {
+    it('can calculate the total of many coins', function() {
       const looseChange = [0.25, 0.10, 0.25, 0.05, 1.00]
       const expectedTotal = 1.65
 

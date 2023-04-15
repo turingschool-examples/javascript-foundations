@@ -2,13 +2,13 @@ var assert = require('chai').assert;
 var { createBarber, giveCompliment, cutHair, listStyles } = require('./barber');
 
 describe('Barber', function() {
-  it.skip('should create a barber with a name', function() {
+  it('should create a barber with a name', function() {
     var sam = createBarber('Sam');
 
     assert.equal(sam.name, 'Sam');
   })
 
-  it.skip('should be able to have earnings and known haircuts', function() {
+  it('should be able to have earnings and known haircuts', function() {
     var cut1 = { style: 'mohawk', hairLength: 'short', price: 11.00 };
     var cut2 = { style: 'side part', hairLength: 'medium', price: 12.00 };
 
@@ -19,7 +19,7 @@ describe('Barber', function() {
     assert.deepEqual(erin.haircuts, [cut1, cut2]);
   });
 
-  it.skip('should default to no earnings and no haircuts if none provided', function() {
+  it('should default to no earnings and no haircuts if none provided', function() {
     var buzzCut = { style: 'buzz', hairLength: 'short', price: 8.00 };
     var nick = createBarber('Nick', 8.00, [buzzCut]);
 
@@ -32,7 +32,7 @@ describe('Barber', function() {
     assert.deepEqual(pam.haircuts, []);
   });
 
-  it.skip('should be able to offer a compliment', function() {
+  it('should be able to offer a compliment', function() {
     var mohawkCut = { style: 'mohawk', hairLength: 'short', price: 11.00 };
     var buzzCut = { style: 'buzz', hairLength: 'short', price: 8.00 };
 
@@ -45,7 +45,7 @@ describe('Barber', function() {
     assert.equal(buzzCompliment, 'This buzz looks great!');
   });
 
-  it.skip('should be able to cut hair', function() {
+  it('should be able to cut hair', function() {
     var matt = createBarber('Matt');
 
     var mohawkCut = { style: 'mohawk', hairLength: 'short', price: 11.00 };
@@ -64,7 +64,7 @@ describe('Barber', function() {
     assert.deepEqual(mattCanDoMohawkAndBuzz.haircuts, [ mohawkCut, buzzCut ]);
   });
 
-  it.skip('should earn money for hair cuts', function() {
+  it('should earn money for hair cuts', function() {
     var erin = createBarber('Erin');
  
     var buzzCut = { style: 'buzz', hairLength: 'short', price: 8.00 };
@@ -79,7 +79,7 @@ describe('Barber', function() {
     assert.equal(erinCanDoBuzzAndSidePart.earnings, 18.00);
   });
 
-  it.skip('should be able to list style options based on desired length', function() {
+  it('should be able to list style options based on desired length', function() {
     var buzzCut = { style: 'buzz', hairLength: 'short', price: 8.00 };
     var sidePartCut = { style: 'side part', hairLength: 'medium', price: 10.00 };
     var bobCut = { style: 'bob', hairLength: 'short', price: 12.00 };

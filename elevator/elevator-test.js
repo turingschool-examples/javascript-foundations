@@ -2,7 +2,7 @@ var assert = require('chai').assert;
 var { createElevator, changeFloors, dropOffPassenger } = require('./elevator');
 
 describe('Elevator', function() {
-  it.skip('should create an elevator', function() {
+  it('should create an elevator', function() {
     var elevator = createElevator('Empire State Building', 102, 5, ['Stacey', 'Javier', 'Tom']);
 
     assert.equal(elevator.building, 'Empire State Building');
@@ -11,7 +11,7 @@ describe('Elevator', function() {
     assert.deepEqual(elevator.passengers, ['Stacey', 'Javier', 'Tom']);
   });
 
-  it.skip('should be able to change floors', function() {
+  it('should be able to change floors', function() {
     var elevator = createElevator('Empire State Building', 102, 5, []);
 
     var message = changeFloors(elevator, 10);
@@ -19,7 +19,7 @@ describe('Elevator', function() {
     assert.equal(message, 'Taking you to floor 10!');
   });
 
-  it.skip('should not be able to change floors if already on that floor', function() {
+  it('should not be able to change floors if already on that floor', function() {
     var elevator = createElevator('West High School', 3, 2, ['Sarah', 'Ari']);
 
     var message = changeFloors(elevator, 2);
@@ -27,7 +27,7 @@ describe('Elevator', function() {
     assert.equal(message, 'You\'re already on floor 2!');
   });
 
-  it.skip('should not be able to take you to a floor that does not exist', function() {
+  it('should not be able to take you to a floor that does not exist', function() {
     var elevator = createElevator('West High School', 3, 2, ['Katherine', 'Erika']);
 
     var message = changeFloors(elevator, 100);
@@ -35,7 +35,7 @@ describe('Elevator', function() {
     assert.equal(message, 'Floor 100 does not exist!');
   });
 
-  it.skip('should be able to drop off passenger', function() {
+  it('should be able to drop off passenger', function() {
     var elevator = createElevator('Upper Valley Mall', 4, 1, ['Scott', 'Mark', 'Joey']);
 
     var remainingPassengers = dropOffPassenger(elevator, 'Mark');

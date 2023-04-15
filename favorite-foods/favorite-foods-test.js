@@ -1,27 +1,27 @@
-var { createFavoriteFood } = require('./favorite-foods');
+var { createFavoriteFood, commentOnSpiciness, orderFood, createShoppingList } = require('./favorite-foods');
 var assert = require('chai').assert;
 
 describe('favorite foods', function () {
-   it.skip('should create a new dish with a name', function () {
+   it('should create a new dish with a name', function () {
       var pizza = createFavoriteFood({ dish: 'Pizza' });
 
       assert.equal(pizza.name, 'Pizza');
    });
 
-   it.skip('should be able to create a different dish', function () {
+   it('should be able to create a different dish', function () {
       var smoothie = createFavoriteFood({ dish: 'Smoothie' });
 
       assert.equal(smoothie.name, 'Smoothie');
    });
 
-   it.skip('should have ingredients', function () {
+   it('should have ingredients', function () {
       var tacos = createFavoriteFood({ dish: 'Tacos', ingredients: ['Tortilla', 'Ground Beef', 'Lettuce', 'Tomatoes', 'Sour Cream', 'Salsa'] });
 
       assert.equal(tacos.name, 'Tacos');
       assert.deepEqual(tacos.ingredients, ['Tortilla', 'Ground Beef', 'Lettuce', 'Tomatoes', 'Sour Cream', 'Salsa']);
    });
 
-   it.skip('should be able to have different ingredients', function () {
+   it('should be able to have different ingredients', function () {
       var burger = createFavoriteFood({ dish: 'Burger', ingredients: ['Bun', 'Beef Patty', 'Lettuce', 'Tomato', 'Cheese', 'Ketchup', 'Mustard'] });
       var sushi = createFavoriteFood({ dish: 'Sushi', ingredients: ['Rice', 'Salmon', 'Tuna', 'Avocado', 'Cucumber', 'Soy Sauce', 'Wasabi'] });
 
@@ -32,7 +32,7 @@ describe('favorite foods', function () {
       assert.deepEqual(sushi.ingredients, ['Rice', 'Salmon', 'Tuna', 'Avocado', 'Cucumber', 'Soy Sauce', 'Wasabi']);
    });
 
-   it.skip('should be spicy or not', function () {
+   it('should be spicy or not', function () {
       var pancakes = createFavoriteFood({ dish: 'Pancakes', ingredients: ['Flour', 'Egg', 'Milk', 'Butter', 'Maple Syrup'], isSpicy: false });
       var padThai = createFavoriteFood({ dish: 'Pad Thai', ingredients: ['Rice Noodles', 'Shrimp', 'Tofu', 'Egg', 'Bean Sprouts', 'Peanuts', 'Lime'], isSpicy: true });
 
@@ -45,7 +45,7 @@ describe('favorite foods', function () {
       assert.equal(padThai.isSpicy, true);
    });
 
-   it.skip('should be able to taste the food and comment on how spicy it is', function () {
+   it('should be able to taste the food and comment on how spicy it is', function () {
       var dish1 = createFavoriteFood({ dish: 'Pho', ingredients: ['Rice Noodles', 'Beef', 'Bean Sprouts', 'Basil', 'Lime', 'Sriracha'], isSpicy: true });
       var dish2 = createFavoriteFood({ dish: 'Lasagna', ingredients: ['Lasagna Noodles', 'Ground Beef', 'Tomato Sauce', 'Ricotta Cheese', 'Mozzarella Cheese'], isSpicy: false });
 
@@ -56,13 +56,13 @@ describe('favorite foods', function () {
       assert.equal(comment2, 'Phew, this Lasagna is not very spicy.');
    });
 
-   it.skip('should start off having ordered 0 times', function () {
+   it('should start off having ordered 0 times', function () {
       var dish = createFavoriteFood('Falafel', ['Chickpeas', 'Garlic', 'Onion', 'Cumin', 'Tahini', 'Pita Bread'], true);
 
       assert.equal(dish.timesOrdered, 0);
    });
 
-   it.skip('should be able to order dishes', function () {
+   it('should be able to order dishes', function () {
       var dish1 = createFavoriteFood({ dish: 'Fish and Chips', ingredients: ['Fish Fillet', 'Potatoes', 'Flour', 'Egg', 'Beer', 'Tartar Sauce'], isSpicy: false });
       var dish2 = createFavoriteFood({ dish: 'Chicken Curry', ingredients: ['Chicken', 'Coconut Milk', 'Onion', 'Garlic', 'Rice'], isSpicy: true });
       var dish3 = createFavoriteFood({ dish: 'Ice Cream', ingredients: ['Milk', 'Cream', 'Sugar', 'Vanilla Extract', 'Chocolate Chips'], isSpicy: false });
@@ -81,7 +81,7 @@ describe('favorite foods', function () {
    })
 
    // spicy 🌶️
-   it.skip('should be able to make a list of all ingredients needed for multiple dishes', function () {
+   it('should be able to make a list of all ingredients needed for multiple dishes', function () {
       var pizza = createFavoriteFood({ dish: 'Pizza', ingredients: ['Tomato Sauce', 'Cheese', 'Pepperoni', 'Mushrooms'], isSpicy: false });
       var smoothie = createFavoriteFood({ dish: 'Smoothie', ingredients: ['Banana', 'Strawberry', 'Blueberry', 'Milk', 'Honey'], isSpicy: false })
 
