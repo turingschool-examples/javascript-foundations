@@ -3,7 +3,7 @@ var assert = require('chai').assert;
 
 describe('Library', function() {
   
-  it.skip('should issue a library card', function() {
+  it('should issue a library card', function() {
     var card = issueCard('George', 32);
 
     assert.equal(card.name, 'George');
@@ -11,7 +11,7 @@ describe('Library', function() {
     assert.equal(card.numBooksCheckedOut, 0);
   });
 
-  it.skip('should issue a card and check if it belongs to a child younger than 12 years old', function() {
+  it('should issue a card and check if it belongs to a child younger than 12 years old', function() {
     var card = issueCard('George', 32);
 
     assert.equal(card.name, 'George');
@@ -27,7 +27,7 @@ describe('Library', function() {
     assert.equal(childCard.isChild, true);
   });
 
-  it.skip('should be able to search through a catalog by author and return book result', function() {
+  it('should be able to search through a catalog by author and return book result', function() {
     var collection = [
       {title: 'My Life', author: 'Alex', status: 'on shelf'},
       {title: 'Adventures', author: 'Sam', status: 'checked out'},
@@ -39,7 +39,7 @@ describe('Library', function() {
     assert.deepEqual(searchResults, [{title: 'Adventures', author: 'Sam', status: 'checked out'}]);
   });
 
-  it.skip('should be able to handle a search with multiple results', function() {
+  it('should be able to handle a search with multiple results', function() {
     var collection = [
       {title: 'My Life', author: 'Alex', status: 'on shelf'},
       {title: 'Adventures', author: 'Sam', status: 'checked out'},
@@ -55,7 +55,7 @@ describe('Library', function() {
     ]);
   });
 
-  it.skip('should be able to handle a search with no results', function() {
+  it('should be able to handle a search with no results', function() {
     var collection = [
       {title: 'My Life', author: 'Alex', status: 'on shelf'},
       {title: 'Adventures', author: 'Sam', status: 'checked out'},
