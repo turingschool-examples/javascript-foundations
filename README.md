@@ -51,7 +51,7 @@ Completing all of these test suites is not necessary, but you should be working 
 - [x] 🗓 [Calendar](./calendar/)
 - [x] 💵 [Vending Machine](./dollar-store-vending-machine/)
 - [x] 🛗 [Elevator](./elevator/)
-- [ ] 📚 [Library](./library)
+- [x] 📚 [Library](./library)
 - [ ] 🌮 [Taco Stand](./tacoStand/)
 - [ ] ✂️ [Barber Shop](./barber-shop/)
 - [ ] 🥗 [Meal Planning](./meal-planning/)
