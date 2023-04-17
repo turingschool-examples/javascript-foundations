@@ -1,28 +1,28 @@
-var { createCollection, createTrack,reviewTrack,  addTrack,getTotalDuration, findTracksByArtist } = require("./collection")
+var { createCollection, createTrack, reviewTrack,  addTrack, getTotalDuration, findTracksByArtist } = require("./collection")
 var assert = require('chai').assert;
 
 describe('Spotify collections', function() {
 
-    it.skip('should create a collection', function() {
+    it('should create a collection', function() {
         var chillHits = createCollection('Chill Hits', 'A collection of relaxing songs');
         assert.equal(chillHits.name, 'Chill Hits');
         assert.equal(chillHits.description, 'A collection of relaxing songs');
         assert.deepEqual(chillHits.tracks, []);
     });
 
-    it.skip('should create track', function() {
+    it('should create track', function() {
         var track1 = createTrack('Sunset', 'The Midnight', 270);
         assert.deepEqual(track1.title,'Sunset');
         assert.deepEqual(track1.duration,270);
         assert.deepEqual(track1.artist, 'The Midnight')
       });
 
-    it.skip("should return default if nothing is passed", function(){
+    it("should return default if nothing is passed", function(){
         var emptyTrack = createTrack()
         assert.deepEqual(emptyTrack, {title:'unknown',artist:'unknown',  duration:0, });
       })
 
-    it.skip('should only appreciate the talent of Red Hot Chili Peppers', function() {
+    it('should only appreciate the talent of Red Hot Chili Peppers', function() {
         var track1 = createTrack('Californication', 'Red Hot Chili Peppers', 321);
         var track2 = createTrack('Otherside', 'Red Hot Chili Peppers', 255);
         var track3 = createTrack('Beautiful Day', 'U2', 246);
@@ -37,7 +37,7 @@ describe('Spotify collections', function() {
         assert.equal(review3, 'I wish this was a Red Hot Chili Peppers song.'); 
       });
 
-      it.skip('should add one track to a collection', function() {
+      it('should add one track to a collection', function() {
         var chillHits = createCollection('Chill Hits', 'A collection of relaxing songs');
         var track1 = createTrack('Sunset', 'The Midnight', 270);
         var chillHitsWith1Track = addTrack(chillHits, track1);
@@ -45,7 +45,7 @@ describe('Spotify collections', function() {
         assert.deepEqual(chillHitsWith1Track.tracks, [track1]);
       });
 
-    it.skip('should add tracks to a collection', function() {
+    it('should add tracks to a collection', function() {
         var chillHits = createCollection('Chill Hits', 'A collection of relaxing songs');
         var track1 = createTrack('Sunset', 'The Midnight', 270);
         var track2 = createTrack('Dreaming', 'Small Sails', 215);
@@ -55,7 +55,7 @@ describe('Spotify collections', function() {
         assert.deepEqual(chillHitsWith2Track.tracks, [track1, track2]);
       });
 
-    it.skip('should calculate the total duration of a collection', function() {
+    it('should calculate the total duration of a collection', function() {
         var chillHits = createCollection('Chill Hits', 'A collection of relaxing songs');
         var track1 = createTrack('Sunset', 'The Midnight', 270);
         var track2 = createTrack('Dreaming', 'Small Sails', 215);
@@ -64,7 +64,7 @@ describe('Spotify collections', function() {
         assert.equal(getTotalDuration(chillHitsWith2Track), 485);
       });
 
-    it.skip('should find tracks by artist in a collection', function() {
+    it('should find tracks by artist in a collection', function() {
         var chillHits = createCollection('Chill Hits', 'A collection of relaxing songs');
         var track1 = createTrack('Sunset', 'The Midnight', 270);
         var track2 = createTrack('Dreaming', 'Small Sails', 215);
