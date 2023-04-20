@@ -39,7 +39,7 @@ describe('Vampire', function() {
     assert.equal(shout, expectedResponse);
   });
 
-  it.skip('should be start with no ounces of blood drank', function() {
+  it.skip('should start with no ounces of blood drank', function() {
     assert.equal(createVampire('Bobby').ouncesDrank, 0);
   });
 
