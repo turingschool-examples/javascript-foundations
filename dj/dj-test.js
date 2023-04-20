@@ -15,6 +15,7 @@ describe('dj', function() {
       
       assert.equal(song.name, 'Witches\' Brew Boogie');
       assert.equal(song.artist, 'The Ghostly Ghouls');
+      assert.equal(song.favorite, true);
       assert.equal(song.hasBeenPlayed, false);
    })
 
