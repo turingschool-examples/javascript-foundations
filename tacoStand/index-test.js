@@ -23,21 +23,18 @@ describe('taco stand', function() {
 
   describe('createTaco', function() {
     it.skip('should have a name', function() {
-      const southwestTaco = createTaco('southwestern')
 
-      assert.equal(southwestTaco.name, 'southwestern')
+      assert.equal(createTaco('southwestern').name, 'southwestern')
     })
 
     it.skip('should have a default name if none provided', function() {
-      const southwestTaco = createTaco()
 
-      assert.equal(southwestTaco.name, 'custom')
+      assert.equal(createTaco().name, 'custom')
     })
 
     it.skip('should have no ingredients by default', function() {
-      const bajaTaco = createTaco('baja')
 
-      assert.deepEqual(bajaTaco.ingredients, [])
+      assert.deepEqual(createTaco('baja').ingredients, [])
     })
 
     it.skip('should be able to create a taco with ingredients', function() {
@@ -78,9 +75,7 @@ describe('taco stand', function() {
       const steak = createIngredient('steak', 3.50)
       const basicSteakTaco = createTaco('basic steak', [steak])
 
-      const price = calculatePrice(basicSteakTaco)
-
-      assert.equal(price, 3.50)
+      assert.equal(calculatePrice(basicSteakTaco), 3.50)
     })
 
     it.skip('should calculate the price of a 2 ingredient taco', function() {
@@ -88,9 +83,7 @@ describe('taco stand', function() {
       const lettuce = createIngredient('lettuce', 0.50)
       const steakTaco = createTaco('steak', [steak, lettuce])
 
-      const price = calculatePrice(steakTaco)
-
-      assert.equal(price, 4.00)
+      assert.equal(calculatePrice(steakTaco), 4.00)
     })
 
     it.skip('should calculate the price of a many ingredient taco', function() {
@@ -100,9 +93,8 @@ describe('taco stand', function() {
       const salsa = createIngredient('salsa', 0.75)
 
       const steakTaco = createTaco('steak', [steak, lettuce, hotSauce, salsa])
-      const price = calculatePrice(steakTaco)
-
-      assert.equal(price, 5.70)
+  
+      assert.equal(calculatePrice(steakTaco), 5.70)
     })
   })
 })

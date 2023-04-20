@@ -122,7 +122,6 @@ describe('Vampire', function() {
     assert.deepEqual(response, expectedResponse);
   });
 
-  //Spicy
   it.skip('should be able to find the vampires with bats', function() {
     var javi = createVampire('Javi');
     var brittany = createVampire('Brittany');
