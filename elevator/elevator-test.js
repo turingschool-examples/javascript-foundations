@@ -14,9 +14,7 @@ describe('Elevator', function() {
   it.skip('should be able to change floors', function() {
     var elevator = createElevator('Empire State Building', 102, 5, []);
 
-    var message = changeFloors(elevator, 10);
-
-    assert.equal(message, 'Taking you to floor 10!');
+    assert.equal(changeFloors(elevator, 10), 'Taking you to floor 10!');
   });
 
   it.skip('should not be able to change floors if already on that floor', function() {
