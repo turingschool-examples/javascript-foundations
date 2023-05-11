@@ -5,4 +5,4 @@
 Here is the test command. Run the command in the terminal
 
 ```
-npm test spotify/collection-test.js
+npm test spotify/spotify-test.js

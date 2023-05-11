@@ -5,5 +5,5 @@
 Here is the test command. Run the command in the terminal
 
 ```
-npm test spa/customer-test.js
+npm test spa/spa-test.js
 ```
