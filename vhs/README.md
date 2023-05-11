@@ -5,7 +5,7 @@
 Start by passing the Tape tests using:
 
 ```
-npm test vhs/tape-test.js
+npm test vhs/vhs-test.js
 ```
 
 
