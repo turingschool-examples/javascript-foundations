@@ -1,5 +1,5 @@
 const { describe } = require("mocha");
-var {createTape, reset, createCollection} =  require("./tape")
+var {createTape, reset, createCollection} =  require("./vhs")
 var assert = require('chai').assert;
 
 describe("Tape", function() {
