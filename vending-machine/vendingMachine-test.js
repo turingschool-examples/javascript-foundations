@@ -1,5 +1,5 @@
 var assert = require('chai').assert
-var { createItemStock, collectChange, makePurchase } = require('./index')
+var { createItemStock, collectChange, makePurchase } = require('./vendingMachine')
 
 describe('dollar store vending machine functions', function() {
   describe('createItemStock', function() {

@@ -1,4 +1,4 @@
-var { createCollection, createTrack,reviewTrack,  addTrack,getTotalDuration, findTracksByArtist } = require("./collection")
+var { createCollection, createTrack,reviewTrack,  addTrack,getTotalDuration, findTracksByArtist } = require("./spotify")
 var assert = require('chai').assert;
 
 describe('Spotify collections', function() {

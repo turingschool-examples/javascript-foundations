@@ -1,5 +1,5 @@
 var assert = require('chai').assert;
-var { createMeal, getMade, createOrder, cookMeal, listOrders, announceMeal, listSpecialRequests } = require('./meal');
+var { createMeal, getMade, createOrder, cookMeal, listOrders, announceMeal, listSpecialRequests } = require('./restaurant');
 
 describe('Meal', function () {
 
