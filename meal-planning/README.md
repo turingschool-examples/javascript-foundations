@@ -5,6 +5,6 @@
 Run the test command:
 
 ```
-npm test meal-planning/meal-planning-test.js
+npm test meal-planning/mealPlanning-test.js
 ```
 

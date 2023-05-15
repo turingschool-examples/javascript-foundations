@@ -1,4 +1,4 @@
-var { createCustomer, greeting, bookServices, createService, applyGiftCard } = require("./customer")
+var { createCustomer, greeting, bookServices, createService, applyGiftCard } = require("./spa")
 var assert = require('chai').assert;
 
 

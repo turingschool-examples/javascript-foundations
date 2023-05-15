@@ -26,25 +26,25 @@ describe('Airport', function() {
     var bakersfieldAirport = createAirport('Meadows Field Airport', ['United', 'American'], 12);
     var sanDiegoAirport = createAirport('San Diego International Airport', ['Frontier', 'American'], 48);
 
-    landPlanes(bakersfieldAirport, 11);
-    landPlanes(sanDiegoAirport, 2);
+    var bakersfieldGates = landPlanes(bakersfieldAirport, 11);
+    var sanDiegoGates = landPlanes(sanDiegoAirport, 2);
 
-    assert.equal(bakersfieldAirport.availableGates, 1);
-    assert.equal(sanDiegoAirport.availableGates, 46);
+    assert.equal(bakersfieldGates.availableGates, 1);
+    assert.equal(sanDiegoGates.availableGates, 46);
   });
 
   it.skip('should not be able to occupy more gates than available', function() {
     var columbusAiport = createAirport('John Glenn Airport', ['Southwest', 'Frontier'], 24);
 
-    var occupiedGates1 = landPlanes(columbusAiport, 22);
+    var updatedAirportGates = landPlanes(columbusAiport, 22);
 
-    assert.equal(columbusAiport.availableGates, 2);
-    assert.equal(occupiedGates1, 'Success! Current availability is 2.')
+    assert.equal(occupiedGates1.availableGates, 2);
+    assert.equal(occupiedGates1.message, 'Success! Current availability is 2.')
 
-    var occupiedGates2 = landPlanes(columbusAiport, 3);
+    var updatedAirportGates2 = landPlanes(updatedAirportGates, 3);
 
-    assert.equal(columbusAiport.availableGates, 0);
-    assert.equal(occupiedGates2, 'Oh no! Not enough gates available. Current overflow is 1.')
+    assert.equal(updatedAirportGates2.availableGates, 0);
+    assert.equal(updatedAirportGates2.message, 'Oh no! Not enough gates available. Current overflow is 1.')
   });
 
   it.skip('should be able to tell you where an airline flies to', function() {

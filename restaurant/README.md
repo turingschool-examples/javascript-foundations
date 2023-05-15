@@ -5,5 +5,5 @@
 Start by passing with Meal tests using:
 
 ```
-npm test restaurant/meal-test.js
+npm test restaurant/restaurant-test.js
 ```

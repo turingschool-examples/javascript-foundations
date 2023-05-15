@@ -5,5 +5,5 @@ Delicious tacos, all homemade!
 ## How to Run The Tests
 
 ```
-npm test tacoStand/index-test.js
+npm test tacoStand/tacoStand-test.js
 ```

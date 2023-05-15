@@ -1,5 +1,5 @@
 var assert = require('chai').assert
-var { createIngredient, createTaco, addIngredientToTaco, calculatePrice } = require('./index')
+var { createIngredient, createTaco, addIngredientToTaco, calculatePrice } = require('./tacoStand')
 
 describe('taco stand', function() {
   describe('createIngredient', function() {
