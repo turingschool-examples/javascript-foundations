@@ -36,15 +36,15 @@ describe('Airport', function() {
   it.skip('should not be able to occupy more gates than available', function() {
     var columbusAiport = createAirport('John Glenn Airport', ['Southwest', 'Frontier'], 24);
 
-    var occupiedGates1 = landPlanes(columbusAiport, 22);
+    var updatedAirportGates = landPlanes(columbusAiport, 22);
 
     assert.equal(occupiedGates1.availableGates, 2);
     assert.equal(occupiedGates1.message, 'Success! Current availability is 2.')
 
-    var occupiedGates2 = landPlanes(columbusAiport, 3);
+    var updatedAirportGates2 = landPlanes(updatedAirportGates, 3);
 
-    assert.equal(occupiedGates2.availableGates, 0);
-    assert.equal(occupiedGates2.message, 'Oh no! Not enough gates available. Current overflow is 1.')
+    assert.equal(updatedAirportGates2.availableGates, 0);
+    assert.equal(updatedAirportGates2.message, 'Oh no! Not enough gates available. Current overflow is 1.')
   });
 
   it.skip('should be able to tell you where an airline flies to', function() {
