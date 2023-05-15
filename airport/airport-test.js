@@ -38,8 +38,8 @@ describe('Airport', function() {
 
     var updatedAirportGates = landPlanes(columbusAiport, 22);
 
-    assert.equal(occupiedGates1.availableGates, 2);
-    assert.equal(occupiedGates1.message, 'Success! Current availability is 2.')
+    assert.equal(updatedAirportGates.availableGates, 2);
+    assert.equal(updatedAirportGates.message, 'Success! Current availability is 2.')
 
     var updatedAirportGates2 = landPlanes(updatedAirportGates, 3);
 
