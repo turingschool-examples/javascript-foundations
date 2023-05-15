@@ -52,7 +52,7 @@ describe("Collection", function(){
     var landBeforeTime = createTape("The Land Before Time")
    
     var collection = createCollection(fargo, betterOffDead, landBeforeTime)
-    assert(collection, [{title:"Fargo", readyToPlay: true}, {title:"Better Off Dead", readyToPlay: false}, {title:"The Land Before Time", readyToPlay: false}])
+    assert.deepEqual(collection, [{title:"Fargo", readyToPlay: true}, {title:"Better Off Dead", readyToPlay: false}, {title:"The Land Before Time", readyToPlay: false}])
   })
 
   it.skip('should be able to handle an empty collection', function() {
