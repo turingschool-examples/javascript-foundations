@@ -19,7 +19,7 @@ describe("Tape", function() {
   })
 
   it.skip("should have a readyToPlay status by default", function() {
-    var littleMermaid = createTape("The Little Mermaid", false);
+    var littleMermaid = createTape("The Little Mermaid");
     var landBeforeTime = createTape("The Land Before Time", false);
 
     assert.equal(littleMermaid.readyToPlay, false);
