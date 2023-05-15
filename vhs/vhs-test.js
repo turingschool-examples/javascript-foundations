@@ -47,17 +47,18 @@ describe("Tape", function() {
 describe("Collection", function(){
 
   it.skip("should add tapes to collection", function(){
-    var fargo = createTape("Fargo",true)
+    var fargo = createTape("Fargo", true)
     var betterOffDead = createTape("Better Off Dead", false);
+    var landBeforeTime = createTape("The Land Before Time")
    
-    var collection = createCollection(fargo, betterOffDead)
-    assert(collection, [{title:"Fargo", readyToPlay:true}, {title:"Better Off Dead", readyToPlay:false}])
+    var collection = createCollection(fargo, betterOffDead, landBeforeTime)
+    assert(collection, [{title:"Fargo", readyToPlay: true}, {title:"Better Off Dead", readyToPlay: false}, {title:"The Land Before Time", readyToPlay: false}])
   })
 
   it.skip('should be able to handle an empty collection', function() {
     var collection = createCollection()
 
-    assert(collection, 'Your collection is empty.')
+    assert.equal(collection, 'Your collection is empty.')
   })
 
   it.skip("should print out all the tape titles that are in the collection", function(){
