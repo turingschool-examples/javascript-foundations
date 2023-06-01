@@ -38,7 +38,7 @@ describe('Meal', function () {
     var appetizer = createMeal('Chips & Queso', [], 4);
     var pizza = createMeal('Margarita pizza', [], 5)
     var completeAppetizer = getMade(appetizer);
-    var messageOne = announceMeal(appetizer)
+    var messageOne = announceMeal(completeAppetizer)
     var messageTwo = announceMeal(pizza)
     assert.equal(messageOne, 'Order up - Chips & Queso for table 4!');
     assert.equal(messageTwo, 'This Margarita pizza is not completed yet');
