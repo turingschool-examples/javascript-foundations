@@ -1,13 +1,18 @@
-function createDragon(name, rider) {
+function createDragon(name, rider, temperament) {
   return {
     name: name,
-    rider: rider
+    rider: rider,
+    temperament: temperament
   }
+}
+
+function greetRider(dragon){
+  return `Hi, ${dragon.rider}!`
 }
 
 module.exports = {
   createDragon, 
-  // greetRider, 
+  greetRider, 
   // eat, 
   // findFireBreathers
 }
