@@ -20,13 +20,13 @@ You should see something like:
     - should be able to have a different name
     - should have a rider
     - should be able to have a different rider
-    - should have a temperment
-    - should be able to have different temperments
+    - should have a temperament
+    - should be able to have different temperaments
     - should greet their rider
     - should start off having eaten 0 times
     - should start off being hungry
     - should be full after eating 3 times
-    - should be a fireBreather if aggressive in temperment
+    - should be a fireBreather if aggressive in temperament
 
   0 passing (6ms)
   11 pending

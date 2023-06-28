@@ -29,26 +29,26 @@ describe('Dragon', function() {
     assert.equal(dragon.rider, 'Pete');
   });
 
-  it.skip('should have a temperment', function() {
+  it.skip('should have a temperament', function() {
     var dragon = createDragon('Saphira', 'Eragon', 'gentle');
 
     assert.equal(dragon.name, 'Saphira');
     assert.equal(dragon.rider, 'Eragon');
-    assert.equal(dragon.temperment, 'gentle');
+    assert.equal(dragon.temperament, 'gentle');
   });
 
-  it.skip('should be able to have different temperments', function() {
+  it.skip('should be able to have different temperaments', function() {
     var dragon1 = createDragon('Gray', 'Marley', 'aggressive');
     var dragon2 = createDragon('Sky', 'Susie', 'gentle');
 
 
     assert.equal(dragon1.name, 'Gray');
     assert.equal(dragon1.rider, 'Marley');
-    assert.equal(dragon1.temperment, 'aggressive');
+    assert.equal(dragon1.temperament, 'aggressive');
 
     assert.equal(dragon2.name, 'Sky');
     assert.equal(dragon2.rider, 'Susie');
-    assert.equal(dragon2.temperment, 'gentle');
+    assert.equal(dragon2.temperament, 'gentle');
   });
 
   it.skip('should greet their rider', function() {
@@ -94,7 +94,7 @@ describe('Dragon', function() {
   });
 
   //Spicy:
-  it.skip('should be a fireBreather if aggressive in temperment', function() {
+  it.skip('should be a fireBreather if aggressive in temperament', function() {
     var dragon1 = createDragon('Gray', 'Marley', 'aggressive');
     var dragon2 = createDragon('Sky', 'Susie', 'gentle');
     var dragon3 = createDragon('Mushu', 'Mulan', 'aggressive');
