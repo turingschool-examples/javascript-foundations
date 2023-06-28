@@ -62,31 +62,31 @@ describe('Dragon', function() {
     assert.equal(greeting2, 'Hi, Susie!');
   });
 
-  it.skip('should start off having eaten 0 times', function() {
+  it('should start off having eaten 0 times', function() {
     var dragon = createDragon('Mushu', 'Mulan', 'aggressive');
 
     assert.equal(dragon.timesEaten, 0);
   });
 
-  it.skip('should start off being hungry', function() {
+  it('should start off being hungry', function() {
     var dragon = createDragon('Mushu', 'Mulan', 'aggressive');
 
     assert.equal(dragon.hungry, true);
   });
 
-  it.skip('should be full after eating 3 times', function() {
+  it('should be full after eating 3 times', function() {
     var dragon = createDragon('Lady Vox', 'Emily', 'gentle');
 
     var fedDragon = eat(dragon);
-
+    
     assert.equal(fedDragon.timesEaten, 1);
     assert.equal(fedDragon.hungry, true);
-
+    
     var doubleFedDragon = eat(fedDragon);
-
+    
     assert.equal(doubleFedDragon.timesEaten, 2);
     assert.equal(doubleFedDragon.hungry, true);
-
+    
     var tripleFedDragon = eat(doubleFedDragon);
 
     assert.equal(tripleFedDragon.timesEaten, 3);
