@@ -3,7 +3,7 @@ var {createHobbit, celebrateBirthday, getRing, meetPeople, findFriends} = requir
 
 describe('Hobbit', function() {
 
-  it.skip('should make a hobbit with a name and age', function() {
+  it('should make a hobbit with a name and age', function() {
     var bilbo = createHobbit('Bilbo', 0);
     var mark = createHobbit('Mark', 5);
 
@@ -14,20 +14,20 @@ describe('Hobbit', function() {
     assert.equal(mark.age, 5);
   });
 
-  it.skip('should start out 0 years old if not specified', function() {
+  it('should start out 0 years old if not specified', function() {
     var bilbo = createHobbit('Bilbo');
 
     assert.equal(bilbo.age, 0);
   });
 
-  it.skip('should return an object with defaults if nothing passed', function() {
+  it('should return an object with defaults if nothing passed', function() {
     var hobbit = createHobbit();
 
     assert.equal(hobbit.name, 'unknown');
     assert.equal(hobbit.age, 0);
   });
 
-  it.skip('should gain 1 year after every birthday', function() {
+  it('should gain 1 year after every birthday', function() {
     var hobbit = createHobbit('Meriadoc');
 
     var olderHobbit = celebrateBirthday(hobbit);
