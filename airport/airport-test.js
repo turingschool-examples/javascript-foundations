@@ -22,7 +22,7 @@ describe('Airport', function() {
     assert.equal(sanDiegoWelcome, 'Welcome to San Diego International Airport!');
   });
 
-  it.skip('should keep track of open gates', function() {
+  it('should keep track of open gates', function() {
     var bakersfieldAirport = createAirport('Meadows Field Airport', ['United', 'American'], 12);
     var sanDiegoAirport = createAirport('San Diego International Airport', ['Frontier', 'American'], 48);
 

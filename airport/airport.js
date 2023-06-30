@@ -10,10 +10,15 @@ function welcomeGuests(airport) {
   return `Welcome to ${airport.name}!`;
 }
 
+function landPlanes(airport, gateCount) {
+  airport.availableGates -= gateCount;
+  return airport;
+}
+
 
 module.exports = { 
   createAirport, 
   welcomeGuests, 
-  // landPlanes, 
+  landPlanes, 
   // checkAirlineLocations
 };
