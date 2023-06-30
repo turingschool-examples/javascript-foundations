@@ -20,14 +20,19 @@ function eat(dragon){
   return dragon
 }
 
-// function findFireBreathers(dragons){
-//   var fireBreathers = dragons.find(dragon => dragon.temperament === "aggressive")
-//   return fireBreathers
-// }
+function findFireBreathers(dragons){
+  var fireBreathers = [];
+  for (i = 0; i < dragons.length; i++) {
+    if (dragons[i].temperament == 'aggressive') {
+      fireBreathers.push(dragons[i]);
+    }
+  }
+  return fireBreathers;
+}
 
 module.exports = {
   createDragon, 
   greetRider, 
   eat, 
-  // findFireBreathers
+  findFireBreathers
 }

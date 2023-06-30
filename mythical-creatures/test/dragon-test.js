@@ -94,7 +94,7 @@ describe('Dragon', function() {
   });
 
   //Spicy:
-  it.skip('should be a fireBreather if aggressive in temperament', function() {
+  it('should be a fireBreather if aggressive in temperament', function() {
     var dragon1 = createDragon('Gray', 'Marley', 'aggressive');
     var dragon2 = createDragon('Sky', 'Susie', 'gentle');
     var dragon3 = createDragon('Mushu', 'Mulan', 'aggressive');
