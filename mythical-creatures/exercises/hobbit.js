@@ -32,10 +32,20 @@ function meetPeople(person, newAcquiantances) {
   return person;
 }
 
+function findFriends(person) {
+  var friends = []
+  for (var i = 0; i < person.acquaintances.length; i++) {
+    if (person.acquaintances[i].relationship === 'friend') {
+      friends.push(person.acquaintances[i].name);
+    }
+  }
+  return friends;
+}
+
 module.exports = {
   createHobbit, 
   celebrateBirthday, 
   getRing, 
   meetPeople, 
-  // findFriends
+  findFriends
 }
