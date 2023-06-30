@@ -27,10 +27,19 @@ function drink(vampire) {
   return vampire;
 }
 
+function inquirePlace(locations, place) {
+  for (var i = 0; i < locations.length; i++) {
+    if (locations[i] === place) {
+      return 'Yes, I have spent some time in ' + place + '.';
+    } 
+  }
+  return "No, I have never been to " + place + '.';
+}
+
 module.exports = {
   createVampire, 
   drink, 
   // findBatLovers, 
   encounterDeliciousVictim, 
-  // inquirePlace
+  inquirePlace
 }
