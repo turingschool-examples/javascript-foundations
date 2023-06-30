@@ -104,7 +104,7 @@ describe('Hobbit', function() {
     assert.equal(socialBilbo.acquaintances[0].relationship, 'friend');
   });
 
-  it.skip('should be able to meet several people at once', function() {
+  it('should be able to meet several people at once', function() {
     var people = [ {name: 'Nick', relationship: 'friend'}, {name: 'Ben', relationship: 'enemy'} ];
     var bilbo = createHobbit('Bilbo');
 
