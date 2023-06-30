@@ -14,9 +14,13 @@ function encounterDeliciousVictim(vampire) {
 }
 
 function drink(vampire) {
-  vampire.ouncesDrank += 10;
-  if (vampire.ouncesDrank >= 50) {
-    vampire.thirsty = false;
+  if (vampire.thirsty === false) {
+    return vampire;
+  } else {
+    vampire.ouncesDrank += 10;
+    if (vampire.ouncesDrank >= 50) {
+      vampire.thirsty = false;
+    }
   }
   return vampire;
 }
