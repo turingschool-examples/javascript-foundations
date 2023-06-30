@@ -1,8 +1,14 @@
-
+function createAirport(name, airlines, availableGates) {
+  return {
+    name: name,
+    airlines: airlines,
+    availableGates: availableGates
+  };
+}
 
 
 module.exports = { 
-  // createAirport, 
+  createAirport, 
   // welcomeGuests, 
   // landPlanes, 
   // checkAirlineLocations

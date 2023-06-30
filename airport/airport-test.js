@@ -2,7 +2,7 @@ var assert = require('chai').assert;
 var { createAirport, welcomeGuests, landPlanes, checkAirlineLocations } = require('./airport');
 
 describe('Airport', function() {
-  it.skip('should create an airport', function() {
+  it('should create an airport', function() {
     var airport = createAirport('Denver International Airport', ['United', 'Southwest', 'Delta'], 144);
 
     assert.equal(airport.name, 'Denver International Airport');
@@ -10,7 +10,7 @@ describe('Airport', function() {
     assert.equal(airport.airlines[0], 'United');
   });
 
-  it.skip('should welcome people to the airport', function() {
+  it('should welcome people to the airport', function() {
     var denverAirport = createAirport('Denver International Airport', ['United', 'Southwest', 'Delta'], 144);
     var sanDiegoAirport = createAirport('San Diego International Airport', ['Frontier', 'American'], 48);
 
