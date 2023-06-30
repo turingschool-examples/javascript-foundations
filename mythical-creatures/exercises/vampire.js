@@ -13,9 +13,14 @@ function encounterDeliciousVictim(vampire) {
   }
 }
 
+function drink(vampire) {
+  vampire.ouncesDrank += 10;
+  return vampire;
+}
+
 module.exports = {
   createVampire, 
-  // drink, 
+  drink, 
   // findBatLovers, 
   encounterDeliciousVictim, 
   // inquirePlace
