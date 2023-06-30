@@ -37,7 +37,7 @@ describe('Hobbit', function() {
     assert.equal(evenOlderStillHobbit.age, 3);
   });
 
-  it.skip('should be considered a child at the age of 32', function() {
+  it('should be considered a child at the age of 32', function() {
     var taylor = createHobbit('Taylor', 31);
 
     assert.equal(taylor.age, 31);
@@ -49,7 +49,7 @@ describe('Hobbit', function() {
     assert.equal(olderTaylor.isAdult, false);
   });
 
-  it.skip('should be considered an adult at 33', function() {
+  it('should be considered an adult at 33', function() {
     var ryan = createHobbit('Ryan', 32);
 
     var olderRyan = celebrateBirthday(ryan);
@@ -58,7 +58,7 @@ describe('Hobbit', function() {
     assert.equal(olderRyan.isAdult, true);
   });
 
-  it.skip('should be considered old at the age of 101', function() {
+  it('should be considered old at the age of 101', function() {
     var samwise = createHobbit('Samwise', 99);
 
     assert.equal(samwise.age, 99)
