@@ -2,7 +2,8 @@ function createVampire(name, pet = 'bat') {
   return {
     name: name,
     pet: pet,
-    thirsty: true
+    thirsty: true,
+    ouncesDrank: 0
   };
 }
 
