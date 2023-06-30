@@ -6,10 +6,14 @@ function createAirport(name, airlines, availableGates) {
   };
 }
 
+function welcomeGuests(airport) {
+  return `Welcome to ${airport.name}!`;
+}
+
 
 module.exports = { 
   createAirport, 
-  // welcomeGuests, 
+  welcomeGuests, 
   // landPlanes, 
   // checkAirlineLocations
 };
