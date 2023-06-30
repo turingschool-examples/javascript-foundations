@@ -10,6 +10,8 @@ function createVampire(name, pet = 'bat') {
 function encounterDeliciousVictim(vampire) {
   if (vampire.thirsty) {
     return 'I WANT TO SUCK YOUR BLOOD!';
+  } else {
+    return 'No thanks, I am too full.';
   }
 }
 
