@@ -20,13 +20,13 @@ You should see something like:
     - should be able to have a different name
     - should have a rider
     - should be able to have a different rider
-    - should have a temperment
-    - should be able to have different temperments
+    - should have a temperament
+    - should be able to have different temperaments
     - should greet their rider
     - should start off having eaten 0 times
     - should start off being hungry
     - should be full after eating 3 times
-    - should be a fireBreather if aggressive in temperment
+    - should be a fireBreather if aggressive in temperament
 
   0 passing (6ms)
   11 pending
@@ -42,7 +42,7 @@ We find that when students complete the same test suite over and over, memorizat
 Completing all of these test suites is not necessary, but you should be working on this repo regularly. We see that students are the most successful when they establish a routine for working through these test suites. For example, you might work on them for 45 minutes every morning before class. Find a routine that works best for you and plan ahead so you remain on track to complete the majority of the tests.
 
 ### Test Suites
-- [ ] 🧚 ‍[Mythical Creatures](./mythical-creatures)
+- [x] 🧚 ‍[Mythical Creatures](./mythical-creatures)
 - [ ] ✈️ [Airport](./airport)
 - [ ] 🎧 [DJ](./dj)
 - [ ] 🍔 [Favorite Foods](./favorite-foods)
