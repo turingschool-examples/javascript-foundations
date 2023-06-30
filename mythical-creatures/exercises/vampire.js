@@ -6,10 +6,16 @@ function createVampire(name, pet = 'bat') {
   };
 }
 
+function encounterDeliciousVictim(vampire) {
+  if (vampire.thirsty) {
+    return 'I WANT TO SUCK YOUR BLOOD!';
+  }
+}
+
 module.exports = {
   createVampire, 
   // drink, 
   // findBatLovers, 
-  // encounterDeliciousVictim, 
+  encounterDeliciousVictim, 
   // inquirePlace
 }
