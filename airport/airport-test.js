@@ -33,12 +33,13 @@ describe('Airport', function() {
     assert.equal(sanDiegoGates.availableGates, 46);
   });
 
-  it.skip('should not be able to occupy more gates than available', function() {
+  it('should not be able to occupy more gates than available', function() {
     var columbusAiport = createAirport('John Glenn Airport', ['Southwest', 'Frontier'], 24);
 
     var updatedAirportGates = landPlanes(columbusAiport, 22);
 
     assert.equal(updatedAirportGates.availableGates, 2);
+    console.log(updatedAirportGates.message);
     assert.equal(updatedAirportGates.message, 'Success! Current availability is 2.')
 
     var updatedAirportGates2 = landPlanes(updatedAirportGates, 3);
