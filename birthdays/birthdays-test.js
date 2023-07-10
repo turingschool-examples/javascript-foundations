@@ -2,7 +2,7 @@ var assert = require('chai').assert;
 var { createBirthday, celebrateBirthday, countBirthdays } = require('./birthdays');
 
 describe('Birthdays', function() {
-  it.skip('should create birthdays', function() {
+  it('should create birthdays', function() {
     var leahBirthday = createBirthday('Leah', 2, 10);
     var christyBirthday = createBirthday('Christy', 3, 8);
 
