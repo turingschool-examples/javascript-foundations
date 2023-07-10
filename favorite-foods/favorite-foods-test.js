@@ -56,7 +56,7 @@ describe('favorite foods', function () {
       assert.equal(comment2, 'Phew, this Lasagna is not very spicy.');
    });
 
-   it.skip('should start off having ordered 0 times', function () {
+   it('should start off having ordered 0 times', function () {
       var dish = createFavoriteFood('Falafel', ['Chickpeas', 'Garlic', 'Onion', 'Cumin', 'Tahini', 'Pita Bread'], true);
 
       assert.equal(dish.timesOrdered, 0);
