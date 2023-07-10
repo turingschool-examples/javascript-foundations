@@ -19,7 +19,7 @@ describe('dj', function() {
       assert.equal(song.hasBeenPlayed, false);
    })
 
-   it.skip('should not be a favorite by default', function() {
+   it('should not be a favorite by default', function() {
       var song = createSong('Witches\' Brew Boogie', 'The Ghostly Ghouls')
       
       assert.equal(song.favorite, false);

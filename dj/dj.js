@@ -1,4 +1,4 @@
-function createSong(name, artist, favorite) {
+function createSong(name, artist, favorite = false) {
   return {
     name: name,
     artist: artist,
