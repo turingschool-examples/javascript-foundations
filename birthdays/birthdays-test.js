@@ -15,7 +15,7 @@ describe('Birthdays', function() {
     assert.deepEqual(christyBirthday.day, 8);
   });
 
-  it.skip('should celebrate birthdays', function() {
+  it('should celebrate birthdays', function() {
     var alexBirthday = createBirthday('Alex', 5, 19);
 
     var celebrateAlex = celebrateBirthday(alexBirthday);
