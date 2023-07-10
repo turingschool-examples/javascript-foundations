@@ -8,13 +8,13 @@ describe('favorite foods', function () {
       assert.equal(pizza.name, 'Pizza');
    });
 
-   it.skip('should be able to create a different dish', function () {
+   it('should be able to create a different dish', function () {
       var smoothie = createFavoriteFood({ dish: 'Smoothie' });
 
       assert.equal(smoothie.name, 'Smoothie');
    });
 
-   it.skip('should have ingredients', function () {
+   it('should have ingredients', function () {
       var tacos = createFavoriteFood({ dish: 'Tacos', ingredients: ['Tortilla', 'Ground Beef', 'Lettuce', 'Tomatoes', 'Sour Cream', 'Salsa'] });
 
       assert.equal(tacos.name, 'Tacos');

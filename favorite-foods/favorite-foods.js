@@ -1,6 +1,7 @@
 function createFavoriteFood(dish) {
   return {
-    name: dish.dish
+    name: dish.dish,
+    ingredients: dish.ingredients
   }
 }
 
