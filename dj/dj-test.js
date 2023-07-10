@@ -2,7 +2,7 @@ var { createSong, playSong, makePlaylist, addSongToPlaylist, playSongs, playFavo
 var assert = require('chai').assert;
 
 describe('dj', function() {
-   it.skip('should be able to create songs', function() {
+   it('should be able to create songs', function() {
       var song = createSong('Zombie Shuffle', 'The Creepy Crawlers', true)
       
       assert.equal(song.name, 'Zombie Shuffle');
