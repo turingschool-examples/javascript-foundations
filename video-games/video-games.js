@@ -6,7 +6,14 @@ function createPlayer(name, age, moveset) {
   }
 }
 
+function createLevel(name) {
+  return{
+    name: name
+  }
+}
+
 
 module.exports = {
-  createPlayer
+  createPlayer,
+  createLevel
 };

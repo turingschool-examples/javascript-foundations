@@ -1,4 +1,4 @@
-var { createPlayer } = require('./video-games');
+var { createPlayer, createLevel } = require('./video-games');
 var assert = require('chai').assert;
 
 describe('video games', function () {
@@ -27,7 +27,7 @@ describe('video games', function () {
       assert.deepEqual(player1.moveset['super jump', 'board smash', 'grind rail']);
    });
 
-   it.skip('should be able to create a new level with a name', function () {
+   it('should be able to create a new level with a name', function () {
       var level = createLevel('Island Oasis');
 
       assert.equal(level.name, 'Island Oasis');
