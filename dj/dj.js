@@ -24,9 +24,17 @@ function addSongToPlaylist(playlist, song) {
   return playlist
 }
 
-function playSongs(playlist) {
-  for (var i = 0; i < playlist.songs.length; i++) {
-    playSong(playlist.songs[i]);
+function playSongs(playlist, specs) {
+  if (specs) {
+    for (var i = 0; i < playlist.songs.length; i++) {
+      if (playlist.songs[i].favorite) {
+        playSong(playlist.songs[i]);
+      }
+    }
+  } else {
+    for (var i = 0; i < playlist.songs.length; i++) {
+      playSong(playlist.songs[i]);
+    }
   }
   return playlist;
 }
