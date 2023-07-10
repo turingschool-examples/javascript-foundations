@@ -7,9 +7,14 @@ function createSong(name, artist, favorite = false) {
   }
 }
 
+function playSong(song) {
+  song.hasBeenPlayed=true;
+  return song;
+}
+
 module.exports = { 
   createSong, 
-  // playSong, 
+  playSong, 
   // makePlaylist, 
   // addSongToPlaylist, 
   // playSongs

@@ -26,7 +26,7 @@ describe('dj', function() {
    })
 
 
-   it.skip('should be able to play a song', function() {
+   it('should be able to play a song', function() {
       var song = createSong('I Put A Spell On You', 'Bette Midler, Sarah Jessica Parker & Kathy Najimy')
       
       assert.equal(song.name, 'I Put A Spell On You');
