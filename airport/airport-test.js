@@ -48,7 +48,7 @@ describe('Airport', function() {
     assert.equal(updatedAirportGates2.message, 'Oh no! Not enough gates available. Current overflow is 1.')
   });
 
-  it.skip('should be able to tell you where an airline flies to', function() {
+  it('should be able to tell you where an airline flies to', function() {
     var columbusAiport = createAirport('John Glenn Airport', ['Southwest', 'Frontier'], 24);
     var bakersfieldAirport = createAirport('Meadows Field Airport', ['United', 'American'], 12);
     var sanDiegoAirport = createAirport('San Diego International Airport', ['Frontier', 'American'], 48);
