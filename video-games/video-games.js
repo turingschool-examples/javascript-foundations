@@ -6,9 +6,10 @@ function createPlayer(name, age, moveset) {
   }
 }
 
-function createLevel(name) {
+function createLevel(name, players) {
   return{
-    name: name
+    name: name,
+    players: players
   }
 }
 

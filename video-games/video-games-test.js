@@ -33,7 +33,7 @@ describe('video games', function () {
       assert.equal(level.name, 'Island Oasis');
    });
 
-   it.skip('should be able to create a new level with a name and a player', function () {
+   it('should be able to create a new level with a name and a player', function () {
       var player1 = createPlayer('The Future Savior', 18, ['time travel', 'combat training', 'futuristic weapon']);
       var level = createLevel('Zombie Infested City', [player1]);
 
