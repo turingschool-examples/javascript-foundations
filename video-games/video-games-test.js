@@ -2,7 +2,7 @@ var { createPlayer } = require('./video-games');
 var assert = require('chai').assert;
 
 describe('video games', function () {
-   it.skip('should create a new player with a name and an age', function () {
+   it('should create a new player with a name and an age', function () {
       var player1 = createPlayer('Ace Skateboarder', 19);
 
       assert.equal(player1.name, 'Ace Skateboarder');
