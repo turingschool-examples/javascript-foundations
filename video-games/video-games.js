@@ -15,8 +15,13 @@ function createLevel(name, players) {
   }
 }
 
+function findCoins(level, coinCount) {
+  level.coins = coinCount;
+  return level
+}
 
 module.exports = {
   createPlayer,
-  createLevel
+  createLevel,
+  findCoins
 };
