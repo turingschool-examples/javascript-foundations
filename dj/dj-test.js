@@ -49,7 +49,7 @@ describe('dj', function() {
       assert.deepEqual(playlist.songs, [skeletonSong, tangoTrack])
    })
 
-   it.skip('should be able to add songs to a playlist', function() {
+   it('should be able to add songs to a playlist', function() {
       var jingleJive = createSong('Jingle Bell Jive', 'The Dancing Elves'); 
 
       var holidayPlaylist = makePlaylist('Holiday Songs', [jingleJive]); 

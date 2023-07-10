@@ -19,6 +19,11 @@ function makePlaylist(name, songs) {
   }
 }
 
+function addSongToPlaylist(playlist, song) {
+  playlist.songs.push(song);
+  return playlist
+}
+
 function playSongs(playlist) {
   for (var i = 0; i < playlist.songs.length; i++) {
     playSong(playlist.songs[i]);
@@ -30,6 +35,6 @@ module.exports = {
   createSong, 
   playSong, 
   makePlaylist, 
-  // addSongToPlaylist, 
+  addSongToPlaylist, 
   playSongs
 };
