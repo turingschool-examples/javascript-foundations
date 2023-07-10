@@ -19,10 +19,17 @@ function makePlaylist(name, songs) {
   }
 }
 
+function playSongs(playlist) {
+  for (var i = 0; i < playlist.songs.length; i++) {
+    playSong(playlist.songs[i]);
+  }
+  return playlist;
+}
+
 module.exports = { 
   createSong, 
   playSong, 
   makePlaylist, 
   // addSongToPlaylist, 
-  // playSongs
+  playSongs
 };
