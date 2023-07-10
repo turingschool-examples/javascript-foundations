@@ -9,7 +9,7 @@ describe('video games', function () {
       assert.equal(player1.age, 19);
    });
 
-   it.skip('should create another player with a name and an age', function () {
+   it('should create another player with a name and an age', function () {
       var player1 = createPlayer('Guitar Heroine', 25);
       var player2 = createPlayer('Time Traveler', 35);
 
@@ -19,7 +19,7 @@ describe('video games', function () {
       assert.equal(player2.age, 35);
    });
 
-   it.skip('should create a new player with a unique moveset', function () {
+   it('should create a new player with a unique moveset', function () {
       var player1 = createPlayer('Super Skater', 27, ['super jump', 'board smash', 'grind rail']);
 
       assert.equal(player1.name, 'Super Skater');

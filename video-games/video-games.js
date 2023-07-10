@@ -1,7 +1,8 @@
-function createPlayer(name, age) {
+function createPlayer(name, age, moveset) {
   return {
     name: name,
-    age: age
+    age: age,
+    moveset: moveset
   }
 }
 
