@@ -1,4 +1,4 @@
-var { createFavoriteFood } = require('./favorite-foods');
+var { createFavoriteFood, commentOnSpiciness } = require('./favorite-foods');
 var assert = require('chai').assert;
 
 describe('favorite foods', function () {
@@ -45,7 +45,7 @@ describe('favorite foods', function () {
       assert.equal(padThai.isSpicy, true);
    });
 
-   it.skip('should be able to taste the food and comment on how spicy it is', function () {
+   it('should be able to taste the food and comment on how spicy it is', function () {
       var dish1 = createFavoriteFood({ dish: 'Pho', ingredients: ['Rice Noodles', 'Beef', 'Bean Sprouts', 'Basil', 'Lime', 'Sriracha'], isSpicy: true });
       var dish2 = createFavoriteFood({ dish: 'Lasagna', ingredients: ['Lasagna Noodles', 'Ground Beef', 'Tomato Sauce', 'Ricotta Cheese', 'Mozzarella Cheese'], isSpicy: false });
 

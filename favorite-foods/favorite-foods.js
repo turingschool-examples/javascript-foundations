@@ -6,7 +6,16 @@ function createFavoriteFood(dish) {
   }
 }
 
+function commentOnSpiciness(dish) {
+  if (dish.isSpicy) {
+    return `Wow, this ${dish.name} is so spicy!`
+  } else {
+    return `Phew, this ${dish.name} is not very spicy.`
+  }
+}
+
 
 module.exports = {
-  createFavoriteFood
+  createFavoriteFood,
+  commentOnSpiciness,
  };
