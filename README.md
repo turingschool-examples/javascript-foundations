@@ -43,7 +43,7 @@ Completing all of these test suites is not necessary, but you should be working 
 
 ### Test Suites
 - [x] 🧚 ‍[Mythical Creatures](./mythical-creatures)
-- [ ] ✈️ [Airport](./airport)
+- [x] ✈️ [Airport](./airport)
 - [ ] 🎧 [DJ](./dj)
 - [ ] 🍔 [Favorite Foods](./favorite-foods)
 - [ ] 🎮 [Video Games](./video-games/)
