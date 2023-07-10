@@ -12,10 +12,17 @@ function playSong(song) {
   return song;
 }
 
+function makePlaylist(name, songs) {
+  return {
+    name: name,
+    songs: songs,
+  }
+}
+
 module.exports = { 
   createSong, 
   playSong, 
-  // makePlaylist, 
+  makePlaylist, 
   // addSongToPlaylist, 
   // playSongs
 };

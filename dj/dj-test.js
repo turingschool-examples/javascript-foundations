@@ -39,7 +39,7 @@ describe('dj', function() {
       assert.equal(playedSong.hasBeenPlayed, true);
    }) 
 
-   it.skip('should be able to create a playlist', function() {
+   it('should be able to create a playlist', function() {
       var skeletonSong = createSong('Skeletons in the Closet Rock', 'The Skeletal Band');
       var tangoTrack = createSong('Trick or Treat Tango', 'The Spooky Cats');
       
