@@ -23,8 +23,14 @@ function findCoins(level, coinCount) {
   return level
 }
 
+function defeatPlayer(level) {
+  level.lives -= 1;
+  return level
+}
+
 module.exports = {
   createPlayer,
   createLevel,
-  findCoins
+  findCoins,
+  defeatPlayer
 };

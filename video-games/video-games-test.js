@@ -1,4 +1,4 @@
-var { createPlayer, createLevel, findCoins } = require('./video-games');
+var { createPlayer, createLevel, findCoins, defeatPlayer } = require('./video-games');
 var assert = require('chai').assert;
 
 describe('video games', function () {
@@ -87,7 +87,7 @@ describe('video games', function () {
       assert.equal(level.lives, 4);
    });
 
-   it.skip('should be able to defeat the player and cost a life', function () {
+   it('should be able to defeat the player and cost a life', function () {
       var player1 = createPlayer('Tony Thrasher', 34, ['thrash throw', 'solving mysteries', 'thrash dance']);
       var level = createLevel('Alien Outpost', [player1]);
 
