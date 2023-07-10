@@ -20,9 +20,18 @@ function orderFood(dish) {
   return dish
 }
 
+function createShoppingList(dishes) {
+  const list = [];
+  for (i = 0; i < dishes.length; i++) {
+    list.push(dishes[i].ingredients);
+  }
+  return list.flat()
+}
+
 
 module.exports = {
   createFavoriteFood,
   commentOnSpiciness,
-  orderFood
+  orderFood,
+  createShoppingList
  };
