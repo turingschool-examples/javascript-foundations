@@ -3,6 +3,7 @@ function createSong(name, artist, favorite) {
     name: name,
     artist: artist,
     favorite: favorite,
+    hasBeenPlayed: false,
   }
 }
 
