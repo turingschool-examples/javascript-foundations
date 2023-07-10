@@ -1,7 +1,8 @@
 function createFavoriteFood(dish) {
   return {
     name: dish.dish,
-    ingredients: dish.ingredients
+    ingredients: dish.ingredients,
+    isSpicy: dish.isSpicy
   }
 }
 
