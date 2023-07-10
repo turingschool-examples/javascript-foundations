@@ -17,6 +17,9 @@ function createLevel(name, players) {
 
 function findCoins(level, coinCount) {
   level.coins = coinCount;
+  if (level.coins >= 100) {
+    level.lives += 1;
+  }
   return level
 }
 

@@ -73,7 +73,7 @@ describe('video games', function () {
       assert.equal(updatedLevel.coins, 5);
    });
 
-   it.skip('should add a life when 100 coins are collected', function () {
+   it('should add a life when 100 coins are collected', function () {
       var player1 = createPlayer('The Fiery Friar', 50, ['flame spin', 'fire dance', 'smoke screen']);
       var level = createLevel('Water Temple', [player1]);
 
