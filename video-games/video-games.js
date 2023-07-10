@@ -9,7 +9,9 @@ function createPlayer(name, age, moveset) {
 function createLevel(name, players) {
   return{
     name: name,
-    players: players
+    players: players,
+    coins: 0,
+    lives: 3
   }
 }
 

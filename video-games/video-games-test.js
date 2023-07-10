@@ -41,7 +41,7 @@ describe('video games', function () {
       assert.deepEqual(level.players, [player1]);
    });
 
-   it.skip('should be able to create a new level with a name and many players', function () {
+   it('should be able to create a new level with a name and many players', function () {
       var player1 = createPlayer('Rock Star Rebel', 21, ['power chord', 'stage dive', 'crowd surf']);
       var player2 = createPlayer('Pro Skater Prodigy', 16, ['360 flip', 'board slide', 'gap transfer']);
       var level = createLevel('Candy Cane Canyon', [player1, player2]);
@@ -50,7 +50,7 @@ describe('video games', function () {
       assert.deepEqual(level.players, [player1, player2]);
    });
 
-   it.skip('should initiate a level with a player and 3 lives and 0 coins', function () {
+   it('should initiate a level with a player and 3 lives and 0 coins', function () {
       var player1 = createPlayer('Quantum Jumper', 30, ['dimension jump', 'portal creation', 'alternate reality explosion']);
       var level = createLevel('Carnival of Terror', [player1]);
 
