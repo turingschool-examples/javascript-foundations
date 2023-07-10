@@ -25,6 +25,9 @@ function findCoins(level, coinCount) {
 
 function defeatPlayer(level) {
   level.lives -= 1;
+  if (level.lives == 0) {
+    return 'GAME OVER'
+  }
   return level
 }
 

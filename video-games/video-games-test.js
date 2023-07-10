@@ -100,7 +100,7 @@ describe('video games', function () {
       assert.equal(updatedLevelPlayerFell.lives, 2);
    }); 
 
-   it.skip('should print `GAME OVER` when a player is defeated and has no lives left', function () {
+   it('should print `GAME OVER` when a player is defeated and has no lives left', function () {
       var player1 = createPlayer('Ant Cat', 3, ['tiny roar', 'six-legged claws', 'dig tunnel']);
       var level = createLevel('Alien Outpost', [player1]);
 
