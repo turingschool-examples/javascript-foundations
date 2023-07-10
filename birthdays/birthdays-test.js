@@ -29,7 +29,7 @@ describe('Birthdays', function() {
     assert.equal(celebrateHeather, 'Today is 6/29! Happy birthday, Heather!');
   })
 
-  it.skip('should count how many birthdays are in a given month', function() {
+  it('should count how many birthdays are in a given month', function() {
     var leahBirthday = createBirthday('Leah', 2, 10);
     var christyBirthday = createBirthday('Christy', 3, 8);
     var alexBirthday = createBirthday('Alex', 5, 19);
