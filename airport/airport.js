@@ -7,12 +7,11 @@ function createAirport(name, airlines, availableGates) {
       if (this.availableGates > 0) {
         return `Success! Current availability is ${this.availableGates}.`;
       } else {
-        return `Oh no! Not enough gates available. Current overflow is ${this.availableGates}.`;
+        return `Oh no! Not enough gates available. Current overflow is ${Math.abs(this.overflow)}.`;
       }
     }
   };
 }
-
 
 function welcomeGuests(airport) {
   return `Welcome to ${airport.name}!`;
@@ -21,21 +20,11 @@ function welcomeGuests(airport) {
 function landPlanes(airport, gateCount) {
   airport.availableGates -= gateCount;
   if (airport.availableGates < 0) {
+    airport.overflow = airport.availableGates;
     airport.availableGates = 0;
   }
-  // airport.message = function() {
-  //   if (this.availableGates > 0) {
-  //     return `Success! Current availability is ${this.availableGates}.`;
-  //   } else {
-  //     return `Oh no! Not enough gates available. Current overflow is ${this.availableGates}.`;
-  //   }
-  // };
   return airport;
 }
-
-// function checkAvailability(availableGates) {
-  
-// }
 
 module.exports = { 
   createAirport, 
