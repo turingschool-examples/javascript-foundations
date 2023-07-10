@@ -2,7 +2,7 @@ var { createFavoriteFood } = require('./favorite-foods');
 var assert = require('chai').assert;
 
 describe('favorite foods', function () {
-   it.skip('should create a new dish with a name', function () {
+   it('should create a new dish with a name', function () {
       var pizza = createFavoriteFood({ dish: 'Pizza' });
 
       assert.equal(pizza.name, 'Pizza');
