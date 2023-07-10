@@ -15,8 +15,14 @@ function commentOnSpiciness(dish) {
   }
 }
 
+function orderFood(dish) {
+  dish.timesOrdered +=1;
+  return dish
+}
+
 
 module.exports = {
   createFavoriteFood,
   commentOnSpiciness,
+  orderFood
  };
