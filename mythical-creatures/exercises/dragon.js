@@ -25,7 +25,7 @@ function eat(dragon) {
 
 function findFireBreathers(allDragons){
   var fireBreathers = []
-  for (let i = 0; i < allDragons.length; i++) {
+  for (var i = 0; i < allDragons.length; i++) {
     if (allDragons[i].temperment === "aggressive"){
       fireBreathers.push(allDragons[i]);
     }
