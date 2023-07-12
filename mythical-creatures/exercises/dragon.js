@@ -14,19 +14,19 @@ function greetRider(dragon) {
 }
 
 function eat(dragon) {
-      if (dragon.timesEaten < 3) {
-        dragon.timesEaten++;
-      }
-      if (dragon.timesEaten >= 3){
-        dragon.hungry = false;
-      }
+  if (dragon.timesEaten < 3) {
+    dragon.timesEaten++;
+  }
+  if (dragon.timesEaten >= 3) {
+    dragon.hungry = false;
+  }
   return dragon;
 }
 
-function findFireBreathers(allDragons){
+function findFireBreathers(allDragons) {
   var fireBreathers = []
   for (var i = 0; i < allDragons.length; i++) {
-    if (allDragons[i].temperment === "aggressive"){
+    if (allDragons[i].temperment === "aggressive") {
       fireBreathers.push(allDragons[i]);
     }
   }
@@ -34,8 +34,8 @@ function findFireBreathers(allDragons){
 }
 
 module.exports = {
-  createDragon, 
-  greetRider, 
-  eat, 
+  createDragon,
+  greetRider,
+  eat,
   findFireBreathers
 }
