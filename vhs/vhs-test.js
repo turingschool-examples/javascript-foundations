@@ -1,4 +1,3 @@
-const { describe } = require("mocha");
 var {createTape, reset, createCollection, previewCollection} =  require("./vhs")
 var assert = require('chai').assert;
 

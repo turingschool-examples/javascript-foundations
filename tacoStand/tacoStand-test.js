@@ -4,8 +4,8 @@ var { createIngredient, createTaco, addIngredientToTaco, calculatePrice } = requ
 describe('taco stand', function() {
   describe('createIngredient', function() {
     it.skip('should take a name and price', function() {
-      const ingredient1 = createIngredient('chicken', 2.50)
-      const ingredient2 = createIngredient('steak', 3.25)
+      var ingredient1 = createIngredient('chicken', 2.50)
+      var ingredient2 = createIngredient('steak', 3.25)
 
       assert.equal(ingredient1.name, 'chicken')
       assert.equal(ingredient1.price, 2.50)
@@ -14,7 +14,7 @@ describe('taco stand', function() {
     })
 
     it.skip('should return an ingredient with defaults if nothing is passed', function() {
-      const defaultIngredient = createIngredient()
+      var defaultIngredient = createIngredient()
 
       assert.equal(defaultIngredient.name, 'unknown')
       assert.equal(defaultIngredient.price, 0.00)
@@ -38,12 +38,12 @@ describe('taco stand', function() {
     })
 
     it.skip('should be able to create a taco with ingredients', function() {
-      const fish = createIngredient('fish', 2.95)
-      const hotSauce = createIngredient('siracha mayo', 0.95)
-      const lettuce = createIngredient('lettuce', 0.50)
+      var fish = createIngredient('fish', 2.95)
+      var hotSauce = createIngredient('siracha mayo', 0.95)
+      var lettuce = createIngredient('lettuce', 0.50)
 
-      const ingredients = [fish, hotSauce, lettuce]
-      const bajaTaco = createTaco('baja', ingredients)
+      var ingredients = [fish, hotSauce, lettuce]
+      var bajaTaco = createTaco('baja', ingredients)
 
       assert.deepEqual(bajaTaco.ingredients, ingredients)
     })
@@ -51,20 +51,20 @@ describe('taco stand', function() {
 
   describe('addIngredientToTaco', function() {
     it.skip('should be able to add an ingredient to a taco', function() {
-      const steak = createIngredient('steak', 3.50)
-      const basicSteakTaco = createTaco('basic steak', [steak])
+      var steak = createIngredient('steak', 3.50)
+      var basicSteakTaco = createTaco('basic steak', [steak])
 
-      const lettuce = createIngredient('lettuce', 0.50)
-      const lettuceAddedTaco = addIngredientToTaco(basicSteakTaco, lettuce)
+      var lettuce = createIngredient('lettuce', 0.50)
+      var lettuceAddedTaco = addIngredientToTaco(basicSteakTaco, lettuce)
 
       assert.deepEqual(lettuceAddedTaco.ingredients, [steak, lettuce])
     })
 
     it.skip('should return the taco unchanged if no ingredient is included', function() {
-      const steak = createIngredient('steak', 3.50)
-      const basicSteakTaco = createTaco('basic steak', [steak])
+      var steak = createIngredient('steak', 3.50)
+      var basicSteakTaco = createTaco('basic steak', [steak])
 
-      const nothingAddedTaco = addIngredientToTaco(basicSteakTaco)
+      var nothingAddedTaco = addIngredientToTaco(basicSteakTaco)
 
       assert.deepEqual(nothingAddedTaco, basicSteakTaco)
     })
@@ -72,27 +72,27 @@ describe('taco stand', function() {
 
   describe('calculatePrice', function() {
     it.skip('should calculate the price of a single ingredient taco', function() {
-      const steak = createIngredient('steak', 3.50)
-      const basicSteakTaco = createTaco('basic steak', [steak])
+      var steak = createIngredient('steak', 3.50)
+      var basicSteakTaco = createTaco('basic steak', [steak])
 
       assert.equal(calculatePrice(basicSteakTaco), 3.50)
     })
 
     it.skip('should calculate the price of a 2 ingredient taco', function() {
-      const steak = createIngredient('steak', 3.50)
-      const lettuce = createIngredient('lettuce', 0.50)
-      const steakTaco = createTaco('steak', [steak, lettuce])
+      var steak = createIngredient('steak', 3.50)
+      var lettuce = createIngredient('lettuce', 0.50)
+      var steakTaco = createTaco('steak', [steak, lettuce])
 
       assert.equal(calculatePrice(steakTaco), 4.00)
     })
 
     it.skip('should calculate the price of a many ingredient taco', function() {
-      const steak = createIngredient('steak', 3.50)
-      const lettuce = createIngredient('lettuce', 0.50)
-      const hotSauce = createIngredient('siracha mayo', 0.95)
-      const salsa = createIngredient('salsa', 0.75)
+      var steak = createIngredient('steak', 3.50)
+      var lettuce = createIngredient('lettuce', 0.50)
+      var hotSauce = createIngredient('siracha mayo', 0.95)
+      var salsa = createIngredient('salsa', 0.75)
 
-      const steakTaco = createTaco('steak', [steak, lettuce, hotSauce, salsa])
+      var steakTaco = createTaco('steak', [steak, lettuce, hotSauce, salsa])
   
       assert.equal(calculatePrice(steakTaco), 5.70)
     })
