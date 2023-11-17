@@ -9,6 +9,7 @@
   "author": "Turing School",
   "license": "MIT",
   "dependencies": {
+    "binding-pry-js": "^0.2.0",
     "chai": "^4.2.0",
     "mocha": "^5.2.0"
   }
