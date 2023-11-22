@@ -2,7 +2,7 @@ var { createSong, playSong, makePlaylist, addSongToPlaylist, playSongs, playFavo
 var assert = require('chai').assert;
 
 describe('dj', function() {
-   it.skip('should be able to create songs', function() {
+   it('should be able to create songs', function() {
       var song = createSong('Zombie Shuffle', 'The Creepy Crawlers', true)
       
       assert.equal(song.name, 'Zombie Shuffle');
@@ -10,7 +10,7 @@ describe('dj', function() {
       assert.equal(song.favorite, true);
    })
 
-   it.skip('should not have been played by default', function() {
+   it('should not have been played by default', function() {
       var song = createSong('Witches\' Brew Boogie', 'The Ghostly Ghouls', true)
       
       assert.equal(song.name, 'Witches\' Brew Boogie');
@@ -19,14 +19,14 @@ describe('dj', function() {
       assert.equal(song.hasBeenPlayed, false);
    })
 
-   it.skip('should not be a favorite by default', function() {
+   it('should not be a favorite by default', function() {
       var song = createSong('Witches\' Brew Boogie', 'The Ghostly Ghouls')
       
       assert.equal(song.favorite, false);
    })
 
 
-   it.skip('should be able to play a song', function() {
+   it('should be able to play a song', function() {
       var song = createSong('I Put A Spell On You', 'Bette Midler, Sarah Jessica Parker & Kathy Najimy')
       
       assert.equal(song.name, 'I Put A Spell On You');
@@ -39,7 +39,7 @@ describe('dj', function() {
       assert.equal(playedSong.hasBeenPlayed, true);
    }) 
 
-   it.skip('should be able to create a playlist', function() {
+   it('should be able to create a playlist', function() {
       var skeletonSong = createSong('Skeletons in the Closet Rock', 'The Skeletal Band');
       var tangoTrack = createSong('Trick or Treat Tango', 'The Spooky Cats');
       
@@ -49,7 +49,7 @@ describe('dj', function() {
       assert.deepEqual(playlist.songs, [skeletonSong, tangoTrack])
    })
 
-   it.skip('should be able to add songs to a playlist', function() {
+   it('should be able to add songs to a playlist', function() {
       var jingleJive = createSong('Jingle Bell Jive', 'The Dancing Elves'); 
 
       var holidayPlaylist = makePlaylist('Holiday Songs', [jingleJive]); 
@@ -64,7 +64,7 @@ describe('dj', function() {
       assert.deepEqual(updatedHolidayPlaylist.songs, [jingleJive, funkyFrosty])
    })
 
-   it.skip('should be able to play all the songs', function() {
+   it('should be able to play all the songs', function() {
       var rockinSong = createSong('Rockin\' Around the Christmas Treehouse', 'The Yuletide Youth'); 
       var shuffleSong = createSong('Santa\'s Sleigh Ride Shuffle', 'The Jolly Jinglesters')
       var reggaeSong = createSong('Rudolph\'s Reggae Jam', 'The Reindeer Rhythms')
@@ -78,7 +78,7 @@ describe('dj', function() {
       assert.equal(updatedHolidayPlaylist.songs[2].hasBeenPlayed, true)
    })
 
-   it.skip('should play only the favorite songs when "favorites only" is specified', function() {
+   it('should play only the favorite songs when "favorites only" is specified', function() {
        // Create three songs, two of which are marked as favorites.
       var rockinSong = createSong('Rockin\' Around the Christmas Treehouse', 'The Yuletide Youth', true); 
       var shuffleSong = createSong('Santa\'s Sleigh Ride Shuffle', 'The Jolly Jinglesters')
