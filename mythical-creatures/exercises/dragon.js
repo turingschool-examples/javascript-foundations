@@ -33,12 +33,6 @@ function findFireBreathers(dragons) {
   });
 
   return fireBreather
-  
-  // Dragons.each do |dragon|
-    // if dragon.temperment = 'aggressive'
-      // firebreather << dragon
-    // end
-  // end
 }
 
 
