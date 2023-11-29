@@ -1,15 +1,15 @@
-var { createPlayer } = require('./video-games');
+var { createPlayer, createLevel, findCoins, defeatPlayer } = require('./video-games');
 var assert = require('chai').assert;
 
 describe('video games', function () {
-   it.skip('should create a new player with a name and an age', function () {
+   it('should create a new player with a name and an age', function () {
       var player1 = createPlayer('Ace Skateboarder', 19);
 
       assert.equal(player1.name, 'Ace Skateboarder');
       assert.equal(player1.age, 19);
    });
 
-   it.skip('should create another player with a name and an age', function () {
+   it('should create another player with a name and an age', function () {
       var player1 = createPlayer('Guitar Heroine', 25);
       var player2 = createPlayer('Time Traveler', 35);
 
@@ -19,7 +19,7 @@ describe('video games', function () {
       assert.equal(player2.age, 35);
    });
 
-   it.skip('should create a new player with a unique moveset', function () {
+   it('should create a new player with a unique moveset', function () {
       var player1 = createPlayer('Super Skater', 27, ['super jump', 'board smash', 'grind rail']);
 
       assert.equal(player1.name, 'Super Skater');
@@ -27,13 +27,13 @@ describe('video games', function () {
       assert.deepEqual(player1.moveset['super jump', 'board smash', 'grind rail']);
    });
 
-   it.skip('should be able to create a new level with a name', function () {
+   it('should be able to create a new level with a name', function () {
       var level = createLevel('Island Oasis');
 
       assert.equal(level.name, 'Island Oasis');
    });
 
-   it.skip('should be able to create a new level with a name and a player', function () {
+   it('should be able to create a new level with a name and a player', function () {
       var player1 = createPlayer('The Future Savior', 18, ['time travel', 'combat training', 'futuristic weapon']);
       var level = createLevel('Zombie Infested City', [player1]);
 
@@ -41,7 +41,7 @@ describe('video games', function () {
       assert.deepEqual(level.players, [player1]);
    });
 
-   it.skip('should be able to create a new level with a name and many players', function () {
+   it('should be able to create a new level with a name and many players', function () {
       var player1 = createPlayer('Rock Star Rebel', 21, ['power chord', 'stage dive', 'crowd surf']);
       var player2 = createPlayer('Pro Skater Prodigy', 16, ['360 flip', 'board slide', 'gap transfer']);
       var level = createLevel('Candy Cane Canyon', [player1, player2]);
@@ -50,7 +50,7 @@ describe('video games', function () {
       assert.deepEqual(level.players, [player1, player2]);
    });
 
-   it.skip('should initiate a level with a player and 3 lives and 0 coins', function () {
+   it('should initiate a level with a player and 3 lives and 0 coins', function () {
       var player1 = createPlayer('Quantum Jumper', 30, ['dimension jump', 'portal creation', 'alternate reality explosion']);
       var level = createLevel('Carnival of Terror', [player1]);
 
@@ -60,7 +60,7 @@ describe('video games', function () {
       assert.equal(level.lives, 3);
    });
 
-   it.skip('should be able to collect coins', function () {
+   it('should be able to collect coins', function () {
       var player1 = createPlayer('The Timeless Troubadour', 500, ['piano sonata', 'violin concerto', 'fllamenco guitar']);
       var level = createLevel('Infernal Inferno of Flames', [player1]);
 
@@ -73,7 +73,7 @@ describe('video games', function () {
       assert.equal(updatedLevel.coins, 5);
    });
 
-   it.skip('should add a life when 100 coins are collected', function () {
+   it('should add a life when 100 coins are collected', function () {
       var player1 = createPlayer('The Fiery Friar', 50, ['flame spin', 'fire dance', 'smoke screen']);
       var level = createLevel('Water Temple', [player1]);
 
@@ -87,7 +87,7 @@ describe('video games', function () {
       assert.equal(level.lives, 4);
    });
 
-   it.skip('should be able to defeat the player and cost a life', function () {
+   it('should be able to defeat the player and cost a life', function () {
       var player1 = createPlayer('Tony Thrasher', 34, ['thrash throw', 'solving mysteries', 'thrash dance']);
       var level = createLevel('Alien Outpost', [player1]);
 
@@ -100,7 +100,7 @@ describe('video games', function () {
       assert.equal(updatedLevelPlayerFell.lives, 2);
    }); 
 
-   it.skip('should print `GAME OVER` when a player is defeated and has no lives left', function () {
+   it('should print `GAME OVER` when a player is defeated and has no lives left', function () {
       var player1 = createPlayer('Ant Cat', 3, ['tiny roar', 'six-legged claws', 'dig tunnel']);
       var level = createLevel('Alien Outpost', [player1]);
 
