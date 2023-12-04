@@ -3,7 +3,7 @@ var { createEvent, createCalendar, reportMonthlyEvents } = require('./calendar')
 
 describe('Calendar', function () {
 
-  it.skip('should create an event', function () {
+  it('should create an event', function () {
     var event = createEvent("Go to the Park", "August", 25);
 
     assert.equal(event.title, "Go to the Park");
@@ -18,7 +18,7 @@ describe('Calendar', function () {
     assert.equal(event2.day, 1);
   });
 
-  it.skip('should return an error if an invalid day is passed in', function () {
+  it('should return an error if an invalid day is passed in', function () {
     var event1 = createEvent("Go to the Park", "August", 35);
     assert.equal(event1, "Error: 35 is not a valid day");
 
@@ -26,7 +26,7 @@ describe('Calendar', function () {
     assert.equal(event2, "Error: 0 is not a valid day");
   });
 
-  it.skip('should create a calendar with events', function () {
+  it('should create a calendar with events', function () {
     var event1 = createEvent("Go to the Park", "August", 25);
     var event2 = createEvent("Dinner with Lucy", "September", 10);
     var events = [event1, event2];
@@ -43,7 +43,7 @@ describe('Calendar', function () {
     assert.deepEqual(calendar2.events, [event1, event2]);
   });
 
-  it.skip('should gather events from the same month', function () {
+  it('should gather events from the same month', function () {
     var event1 = createEvent("Go to the Park", "August", 25);
     var event2 = createEvent("Dinner with Lucy", "July", 10);
     var event3 = createEvent("Order More Batteries", "July", 2);
