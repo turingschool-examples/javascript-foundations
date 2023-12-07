@@ -42,24 +42,24 @@ We find that when students complete the same test suite over and over, memorizat
 Completing all of these test suites is not necessary, but you should be working on this repo regularly. We see that students are the most successful when they establish a routine for working through these test suites. For example, you might work on them for 45 minutes every morning before class. Find a routine that works best for you and plan ahead so you remain on track to complete the majority of the tests.
 
 ### Test Suites
-- [ ] 🧚 ‍[Mythical Creatures](./mythical-creatures)
-- [ ] ✈️ [Airport](./airport)
-- [ ] 🎧 [DJ](./dj)
-- [ ] 🍔 [Favorite Foods](./favorite-foods)
-- [ ] 🎮 [Video Games](./video-games/)
+- [1/3] 🧚 ‍[Mythical Creatures](./mythical-creatures)
 - [ ] 🎂 [Birthdays](./birthdays)
 - [ ] 🗓 [Calendar](./calendar/)
-- [ ] 💵 [Vending Machine](./vending-machine/)
-- [ ] 🛗 [Elevator](./elevator/)
-- [ ] 📚 [Library](./library)
+- [ ] 🎮 [Video Games](./video-games/)
 - [ ] 🌮 [Taco Stand](./tacoStand/)
-- [ ] 🧶 [Crafting](./crafting/)
-- [ ] ✂️ [Barber Shop](./barber-shop/)
 - [ ] 🥗 [Meal Planning](./meal-planning/)
-- [ ] 🍜 [Restaurant](./restaurant/)
-- [ ] 🧖‍♀️ [Spa](./spa/)
+- [ ] 🛗 [Elevator](./elevator/)
 - [ ] 🎵 [Spotify](./spotify/)
+- [ ] 🧖‍♀️ [Spa](./spa/)
+- [ ] ✂️ [Barber Shop](./barber-shop/)
+- [ ] 💵 [Vending Machine](./vending-machine/)
 - [ ] 📼 [VHS](./vhs/)
+- [ ] 🎧 [DJ](./dj)
+- [ ] 🍔 [Favorite Foods](./favorite-foods)
+- [ ] 📚 [Library](./library)
+- [ ] 🧶 [Crafting](./crafting/)
+- [ ] 🍜 [Restaurant](./restaurant/)
+- [ ] ✈️ [Airport](./airport)
 
 - [x] Want to track your progress? First, make sure you're on a forked version of this repo. Then, you can edit the README and change `[ ]` to `[x]` on the suites you've completed!
 
