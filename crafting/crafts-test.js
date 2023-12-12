@@ -4,7 +4,7 @@ var { createMaterial, calculateMaterialCost, createSupplyCloset, addSupply, crea
 describe('Crafting', function() {
 
   describe('Material', function() {
-    it.skip('should create a new material', function() {
+    it('should create a new material', function() {
       var yarn = createMaterial('yarn', 'skein', 6.99);
 
       assert.equal(yarn.name, 'yarn');
@@ -12,7 +12,7 @@ describe('Crafting', function() {
       assert.equal(yarn.costPerUnit, 6.99);
     });
 
-    it.skip('should calculate cost of material', function() {
+    it('should calculate cost of material', function() {
       var fabric = createMaterial('fabric', 'yard', 12.50);
 
       var fabricCost = calculateMaterialCost(fabric, 4);

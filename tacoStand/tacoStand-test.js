@@ -3,7 +3,7 @@ var { createIngredient, createTaco, addIngredientToTaco, calculatePrice } = requ
 
 describe('taco stand', function() {
   describe('createIngredient', function() {
-    it.skip('should take a name and price', function() {
+    it('should take a name and price', function() {
       var ingredient1 = createIngredient('chicken', 2.50)
       var ingredient2 = createIngredient('steak', 3.25)
 
@@ -13,7 +13,7 @@ describe('taco stand', function() {
       assert.equal(ingredient2.price, 3.25)
     })
 
-    it.skip('should return an ingredient with defaults if nothing is passed', function() {
+    it('should return an ingredient with defaults if nothing is passed', function() {
       var defaultIngredient = createIngredient()
 
       assert.equal(defaultIngredient.name, 'unknown')

@@ -42,14 +42,14 @@ We find that when students complete the same test suite over and over, memorizat
 Completing all of these test suites is not necessary, but you should be working on this repo regularly. We see that students are the most successful when they establish a routine for working through these test suites. For example, you might work on them for 45 minutes every morning before class. Find a routine that works best for you and plan ahead so you remain on track to complete the majority of the tests.
 
 ### Test Suites
-- [1/3] 🧚 ‍[Mythical Creatures](./mythical-creatures)
+- [1/3] 🧚 ‍[Mythical Creatures](./mythical-creatures) - dragons done
 - [ ] 🎂 [Birthdays](./birthdays)
 - [ ] 🗓 [Calendar](./calendar/)
 - [ ] 🎮 [Video Games](./video-games/)
-- [ ] 🌮 [Taco Stand](./tacoStand/)
+- [ ] 🌮 [Taco Stand](./tacoStand/) - started
 - [ ] 🥗 [Meal Planning](./meal-planning/)
 - [ ] 🛗 [Elevator](./elevator/)
-- [ ] 🎵 [Spotify](./spotify/)
+- [ ] 🎵 [Spotify](./spotify/) - started
 - [ ] 🧖‍♀️ [Spa](./spa/)
 - [ ] ✂️ [Barber Shop](./barber-shop/)
 - [ ] 💵 [Vending Machine](./vending-machine/)
