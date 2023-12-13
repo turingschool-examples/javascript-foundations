@@ -57,7 +57,7 @@ Completing all of these test suites is not necessary, but you should be working 
 - [ ] 🎧 [DJ](./dj)
 - [ ] 🍔 [Favorite Foods](./favorite-foods)
 - [ ] 📚 [Library](./library)
-- [ ] 🧶 [Crafting](./crafting/)
+- [x] 🧶 [Crafting](./crafting/) - DONE
 - [ ] 🍜 [Restaurant](./restaurant/)
 - [ ] ✈️ [Airport](./airport)
 

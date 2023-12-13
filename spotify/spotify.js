@@ -4,30 +4,27 @@ function createCollection(name, description) {
     name: name,
     description: description,
     tracks: []
-  } 
+  };
   return createCollection 
-}
+};
 
-function createTrack(title, artist, duration) {
-  if (title == undefined) {
-    title = 'unknown'
-  }
-  if (artist == undefined) {
-    artist = 'unknown'
-  }
-  if (duration == undefined) {
-    duration = 0
-  }
+function createTrack(title1, artist1, duration1) {
   var createTrack = {
-    title: title,
-    artist: artist,
-    duration: duration,
-    }
+    title: title1,
+    artist: artist1,
+    duration: duration1,
+  };
+  if (title1 == undefined) {
+      createTrack.title = 'unknown'
+  };
+  if (artist1 == undefined) {
+      createTrack.artist = 'unknown'
+  };
+  if (duration1 == undefined) {
+      createTrack.duration = 0
+  };
   return createTrack
-}
-
-
-
+};
 
   module.exports = {
     createCollection,
