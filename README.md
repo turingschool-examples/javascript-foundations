@@ -46,7 +46,7 @@ Completing all of these test suites is not necessary, but you should be working 
 - [ ] 🎂 [Birthdays](./birthdays)
 - [ ] 🗓 [Calendar](./calendar/)
 - [ ] 🎮 [Video Games](./video-games/)
-- [ ] 🌮 [Taco Stand](./tacoStand/) - started
+- [x] 🌮 [Taco Stand](./tacoStand/) - DONE
 - [ ] 🥗 [Meal Planning](./meal-planning/)
 - [ ] 🛗 [Elevator](./elevator/)
 - [x] 🎵 [Spotify](./spotify/) - DONE
