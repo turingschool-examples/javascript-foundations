@@ -43,7 +43,7 @@ Completing all of these test suites is not necessary, but you should be working 
 
 ### Test Suites
 - [x] 🧚 ‍[Mythical Creatures](./mythical-creatures) - DONE
-- [ ] 🎂 [Birthdays](./birthdays)
+- [x] 🎂 [Birthdays](./birthdays)
 - [ ] 🗓 [Calendar](./calendar/)
 - [ ] 🎮 [Video Games](./video-games/)
 - [x] 🌮 [Taco Stand](./tacoStand/) - DONE
