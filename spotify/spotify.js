@@ -52,7 +52,7 @@ function getTotalDuration(songCollection) {
 function findTracksByArtist(collection, artist) {
   var midNight = [];
   for (var i = 0; i < collection.tracks.length; i++) {
-    if(artist === collection.tracks[i].artist) {
+    if(collection.tracks[i].artist === artist) {
       midNight.push(collection.tracks[i])
     };
   };
