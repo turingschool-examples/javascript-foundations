@@ -50,7 +50,7 @@ Completing all of these test suites is not necessary, but you should be working 
 - [ ] 🥗 [Meal Planning](./meal-planning/)
 - [ ] 🛗 [Elevator](./elevator/)
 - [x] 🎵 [Spotify](./spotify/) - DONE
-- [ ] 🧖‍♀️ [Spa](./spa/)
+- [x] 🧖‍♀️ [Spa](./spa/) - DONE
 - [ ] ✂️ [Barber Shop](./barber-shop/)
 - [ ] 💵 [Vending Machine](./vending-machine/)
 - [ ] 📼 [VHS](./vhs/)
