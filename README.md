@@ -45,7 +45,7 @@ Completing all of these test suites is not necessary, but you should be working 
 - [x] 🧚 ‍[Mythical Creatures](./mythical-creatures) - DONE
 - [x] 🎂 [Birthdays](./birthdays) - DONE
 - [x] 🗓 [Calendar](./calendar/) - DONE
-- [ ] 🎮 [Video Games](./video-games/)
+- [x] 🎮 [Video Games](./video-games/) - DONE
 - [x] 🌮 [Taco Stand](./tacoStand/) - DONE
 - [ ] 🥗 [Meal Planning](./meal-planning/)
 - [ ] 🛗 [Elevator](./elevator/)
