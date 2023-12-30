@@ -47,7 +47,7 @@ Completing all of these test suites is not necessary, but you should be working 
 - [x] 🗓 [Calendar](./calendar/) - DONE
 - [x] 🎮 [Video Games](./video-games/) - DONE
 - [x] 🌮 [Taco Stand](./tacoStand/) - DONE
-- [ ] 🥗 [Meal Planning](./meal-planning/)
+- [x] 🥗 [Meal Planning](./meal-planning/) - DONE
 - [ ] 🛗 [Elevator](./elevator/)
 - [x] 🎵 [Spotify](./spotify/) - DONE
 - [x] 🧖‍♀️ [Spa](./spa/) - DONE
@@ -55,7 +55,7 @@ Completing all of these test suites is not necessary, but you should be working 
 - [ ] 💵 [Vending Machine](./vending-machine/)
 - [ ] 📼 [VHS](./vhs/)
 - [ ] 🎧 [DJ](./dj)
-- [ ] 🍔 [Favorite Foods](./favorite-foods)
+- [x] 🍔 [Favorite Foods](./favorite-foods) - DONE
 - [ ] 📚 [Library](./library)
 - [x] 🧶 [Crafting](./crafting/) - DONE
 - [ ] 🍜 [Restaurant](./restaurant/)
