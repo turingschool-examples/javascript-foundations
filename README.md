@@ -48,7 +48,7 @@ Completing all of these test suites is not necessary, but you should be working 
 - [x] 🎮 [Video Games](./video-games/) - DONE
 - [x] 🌮 [Taco Stand](./tacoStand/) - DONE
 - [x] 🥗 [Meal Planning](./meal-planning/) - DONE
-- [ ] 🛗 [Elevator](./elevator/)
+- [x] 🛗 [Elevator](./elevator/) - DONE
 - [x] 🎵 [Spotify](./spotify/) - DONE
 - [x] 🧖‍♀️ [Spa](./spa/) - DONE
 - [ ] ✂️ [Barber Shop](./barber-shop/)
@@ -59,7 +59,7 @@ Completing all of these test suites is not necessary, but you should be working 
 - [ ] 📚 [Library](./library)
 - [x] 🧶 [Crafting](./crafting/) - DONE
 - [ ] 🍜 [Restaurant](./restaurant/)
-- [ ] ✈️ [Airport](./airport)
+- [x] ✈️ [Airport](./airport) - DONE
 
 - [x] Want to track your progress? First, make sure you're on a forked version of this repo. Then, you can edit the README and change `[ ]` to `[x]` on the suites you've completed!
 
