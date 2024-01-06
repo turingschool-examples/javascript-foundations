@@ -42,24 +42,24 @@ We find that when students complete the same test suite over and over, memorizat
 Completing all of these test suites is not necessary, but you should be working on this repo regularly. We see that students are the most successful when they establish a routine for working through these test suites. For example, you might work on them for 45 minutes every morning before class. Find a routine that works best for you and plan ahead so you remain on track to complete the majority of the tests.
 
 ### Test Suites
-- [ ] 🧚 ‍[Mythical Creatures](./mythical-creatures)
-- [ ] ✈️ [Airport](./airport)
-- [ ] 🎧 [DJ](./dj)
-- [ ] 🍔 [Favorite Foods](./favorite-foods)
-- [ ] 🎮 [Video Games](./video-games/)
-- [ ] 🎂 [Birthdays](./birthdays)
-- [ ] 🗓 [Calendar](./calendar/)
-- [ ] 💵 [Vending Machine](./vending-machine/)
-- [ ] 🛗 [Elevator](./elevator/)
-- [ ] 📚 [Library](./library)
-- [ ] 🌮 [Taco Stand](./tacoStand/)
-- [ ] 🧶 [Crafting](./crafting/)
+- [x] 🧚 ‍[Mythical Creatures](./mythical-creatures) - DONE
+- [x] 🎂 [Birthdays](./birthdays) - DONE
+- [x] 🗓 [Calendar](./calendar/) - DONE
+- [x] 🎮 [Video Games](./video-games/) - DONE
+- [x] 🌮 [Taco Stand](./tacoStand/) - DONE
+- [x] 🥗 [Meal Planning](./meal-planning/) - DONE
+- [x] 🛗 [Elevator](./elevator/) - DONE
+- [x] 🎵 [Spotify](./spotify/) - DONE
+- [x] 🧖‍♀️ [Spa](./spa/) - DONE
 - [ ] ✂️ [Barber Shop](./barber-shop/)
-- [ ] 🥗 [Meal Planning](./meal-planning/)
-- [ ] 🍜 [Restaurant](./restaurant/)
-- [ ] 🧖‍♀️ [Spa](./spa/)
-- [ ] 🎵 [Spotify](./spotify/)
+- [ ] 💵 [Vending Machine](./vending-machine/)
 - [ ] 📼 [VHS](./vhs/)
+- [ ] 🎧 [DJ](./dj)
+- [x] 🍔 [Favorite Foods](./favorite-foods) - DONE
+- [ ] 📚 [Library](./library)
+- [x] 🧶 [Crafting](./crafting/) - DONE
+- [ ] 🍜 [Restaurant](./restaurant/)
+- [x] ✈️ [Airport](./airport) - DONE
 
 - [x] Want to track your progress? First, make sure you're on a forked version of this repo. Then, you can edit the README and change `[ ]` to `[x]` on the suites you've completed!
 

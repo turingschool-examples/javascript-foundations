@@ -3,7 +3,7 @@ var assert = require('chai').assert;
 
 
 describe('Customer', function () {
-  it.skip('should create a customer', function () {
+  it('should create a customer', function () {
     var kayla = createCustomer('Kayla', 100, ['acupuncture', 'seaweed wrap'])
     var ramiro = createCustomer('Ramiro', 0,[])
     assert.equal(kayla.name, 'Kayla')
@@ -14,12 +14,12 @@ describe('Customer', function () {
     assert.deepEqual(ramiro.bookings, [])
   })
 
-  it.skip('should start with no booked services',function(){
+  it('should start with no booked services',function(){
     var customer = createCustomer('Leta', 0)
     assert.deepEqual(customer.bookings, [])
   })
 
-  it.skip('should greet customers and know if they have been there before (previous bookings)', function () {
+  it('should greet customers and know if they have been there before (previous bookings)', function () {
     var nick  = createCustomer('Nick', 0, [])
     var tracey = createCustomer('Tracey', 50, ['facial']) 
     var welcomeNick = greeting(nick)
@@ -29,14 +29,14 @@ describe('Customer', function () {
     assert.equal(welcomeTracey, 'Tracey! Welcome back to Happy Spa')
   })
 
-  it.skip('should create service', function(){
+  it('should create service', function(){
     var facialService = createService('facial', 50)
     var emptyService = createService()
     assert.deepEqual(facialService, {name: 'facial', cost:50 })
     assert.deepEqual(emptyService,'Please provide service name and cost.')
   })
 
-  it.skip('should book services', function(){
+  it('should book services', function(){
     var travis = createCustomer('Travis', 10, ['steam room'])
     var will = createCustomer('Will', 0, [])
     var massage = createService('massage', 50)
@@ -50,7 +50,7 @@ describe('Customer', function () {
 
   })
 
-  it.skip('should rack up a bill', function(){
+  it('should rack up a bill', function(){
     var nik = createCustomer('Nik', 0 , [])
     var footMassage = createService('foot massage', 65)
     var facial = createService('facial', 50)
@@ -61,7 +61,7 @@ describe('Customer', function () {
     assert.deepEqual(nikFacial.bill, 115)
   })
 
-  it.skip('should be able to find which services are affordable based on gift card amount', function(){
+  it('should be able to find which services are affordable based on gift card amount', function(){
     var allServices = [
       {name:'sauna', price:10}, 
       {name:'massage', price:50}, 
