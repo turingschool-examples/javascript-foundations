@@ -60,6 +60,7 @@ Completing all of these test suites is not necessary, but you should be working 
 - [ ] 🧖‍♀️ [Spa](./spa/)
 - [ ] 🎵 [Spotify](./spotify/)
 - [ ] 📼 [VHS](./vhs/)
+- [ ] 🐉 [RPG](./rpg/)
 
 - [x] Want to track your progress? First, make sure you're on a forked version of this repo. Then, you can edit the README and change `[ ]` to `[x]` on the suites you've completed!
 
