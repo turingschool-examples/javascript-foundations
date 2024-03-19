@@ -63,13 +63,14 @@ describe('Customer', function () {
 
   it.skip('should be able to find which services are affordable based on gift card amount', function(){
     var allServices = [
-      {name:'sauna', price:10}, 
-      {name:'massage', price:50}, 
-      {name:'facial', price:50}, 
-      {name: 'foot massage', price:65},
-      {name:'acupuncture', price:50},
-      {name: "steam room", price:10}
-  ]
+      createService('sauna', 10),
+      createService('massage', 50),
+      createService('facial', 50),
+      createService('foot massage', 65),
+      createService('acupuncture', 50),
+      createService('steam room', 10)
+    ]
+
     var affordableServices1 = applyGiftCard(allServices, 30)
     var affordableServices2 = applyGiftCard(allServices, 50)
     
